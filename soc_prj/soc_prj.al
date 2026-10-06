@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project Version="3" Minor="2" Path="D:/FPGAproject/AnLuRun/mipi_HDMI/mipi_HDMI/soc_prj">
+<Project Version="3" Minor="2" Path="E:/FPGA/anlu_prj/Image_process/soc_prj">
     <Project_Created_Time></Project_Created_Time>
     <TD_Encoding>UTF-8</TD_Encoding>
-    <TD_Version>6.2.200067</TD_Version>
+    <TD_Version>6.2.168116</TD_Version>
     <Name>soc_prj</Name>
     <HardWare>
         <Family>DR1</Family>
