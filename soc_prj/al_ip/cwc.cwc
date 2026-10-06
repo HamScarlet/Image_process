@@ -1,0 +1,124 @@
+<chipwatcher project_name="soc_prj" bit_file="soc_prj_Runs/phy_1/soc_prj.bit" bid_file="soc_prj_Runs/phy_1/soc_prj_inst.bid" chip_name="DR1M90GEG400">
+<!-- HMAC is: 51d02e7a953beb861223f4b57f3b6256415aa8ac72a9e85ba6b3182a16ddd755 -->
+	<instance name="auto_chipwatcher_0" id="0" enabled="yes">
+		<clock clk_name="pclkx1" polarity="posedge"/>
+		<config bram_name="auto_chipwatcher_0_logicbram" sample_depth="2048"/>
+		<signal_vec>
+			<data_nets>
+				<net name="I_video_in_data[0]"/>
+				<net name="I_video_in_data[10]"/>
+				<net name="I_video_in_data[11]"/>
+				<net name="I_video_in_data[12]"/>
+				<net name="I_video_in_data[13]"/>
+				<net name="I_video_in_data[14]"/>
+				<net name="I_video_in_data[15]"/>
+				<net name="I_video_in_data[16]"/>
+				<net name="I_video_in_data[17]"/>
+				<net name="I_video_in_data[18]"/>
+				<net name="I_video_in_data[19]"/>
+				<net name="I_video_in_data[1]"/>
+				<net name="I_video_in_data[20]"/>
+				<net name="I_video_in_data[21]"/>
+				<net name="I_video_in_data[22]"/>
+				<net name="I_video_in_data[23]"/>
+				<net name="I_video_in_data[2]"/>
+				<net name="I_video_in_data[3]"/>
+				<net name="I_video_in_data[4]"/>
+				<net name="I_video_in_data[5]"/>
+				<net name="I_video_in_data[6]"/>
+				<net name="I_video_in_data[7]"/>
+				<net name="I_video_in_data[8]"/>
+				<net name="I_video_in_data[9]"/>
+				<net name="I_video_in_last"/>
+				<net name="I_video_in_user"/>
+				<net name="I_video_in_valid"/>
+				<net name="c_cnt[0]"/>
+				<net name="c_cnt[10]"/>
+				<net name="c_cnt[1]"/>
+				<net name="c_cnt[2]"/>
+				<net name="c_cnt[3]"/>
+				<net name="c_cnt[4]"/>
+				<net name="c_cnt[5]"/>
+				<net name="c_cnt[6]"/>
+				<net name="c_cnt[7]"/>
+				<net name="c_cnt[8]"/>
+				<net name="c_cnt[9]"/>
+				<net name="h_cnt[0]"/>
+				<net name="h_cnt[10]"/>
+				<net name="h_cnt[1]"/>
+				<net name="h_cnt[2]"/>
+				<net name="h_cnt[3]"/>
+				<net name="h_cnt[4]"/>
+				<net name="h_cnt[5]"/>
+				<net name="h_cnt[6]"/>
+				<net name="h_cnt[7]"/>
+				<net name="h_cnt[8]"/>
+				<net name="h_cnt[9]"/>
+			</data_nets>
+			<watcher_nodes>
+				<bus name="I_video_in_data" radix="bin" state="collapse" op="dont_care" type="comb">
+					<net name="I_video_in_data[23]" type="comb" trigger="enable"/>
+					<net name="I_video_in_data[22]" type="comb" trigger="enable"/>
+					<net name="I_video_in_data[21]" type="comb" trigger="enable"/>
+					<net name="I_video_in_data[20]" type="comb" trigger="enable"/>
+					<net name="I_video_in_data[19]" type="comb" trigger="enable"/>
+					<net name="I_video_in_data[18]" type="comb" trigger="enable"/>
+					<net name="I_video_in_data[17]" type="comb" trigger="enable"/>
+					<net name="I_video_in_data[16]" type="comb" trigger="enable"/>
+					<net name="I_video_in_data[15]" type="comb" trigger="enable"/>
+					<net name="I_video_in_data[14]" type="comb" trigger="enable"/>
+					<net name="I_video_in_data[13]" type="comb" trigger="enable"/>
+					<net name="I_video_in_data[12]" type="comb" trigger="enable"/>
+					<net name="I_video_in_data[11]" type="comb" trigger="enable"/>
+					<net name="I_video_in_data[10]" type="comb" trigger="enable"/>
+					<net name="I_video_in_data[9]" type="comb" trigger="enable"/>
+					<net name="I_video_in_data[8]" type="comb" trigger="enable"/>
+					<net name="I_video_in_data[7]" type="comb" trigger="enable"/>
+					<net name="I_video_in_data[6]" type="comb" trigger="enable"/>
+					<net name="I_video_in_data[5]" type="comb" trigger="enable"/>
+					<net name="I_video_in_data[4]" type="comb" trigger="enable"/>
+					<net name="I_video_in_data[3]" type="comb" trigger="enable"/>
+					<net name="I_video_in_data[2]" type="comb" trigger="enable"/>
+					<net name="I_video_in_data[1]" type="comb" trigger="enable"/>
+					<net name="I_video_in_data[0]" type="comb" trigger="enable"/>
+				</bus>
+				<net name="I_video_in_last" op="equal" type="comb" trigger="enable"/>
+				<net name="I_video_in_user" op="equal" type="comb" trigger="enable"/>
+				<net name="I_video_in_valid" op="equal" type="comb" trigger="enable"/>
+				<bus name="c_cnt" radix="bin" state="collapse" op="dont_care" type="reg">
+					<net name="c_cnt[10]" type="reg" trigger="enable"/>
+					<net name="c_cnt[9]" type="reg" trigger="enable"/>
+					<net name="c_cnt[8]" type="reg" trigger="enable"/>
+					<net name="c_cnt[7]" type="reg" trigger="enable"/>
+					<net name="c_cnt[6]" type="reg" trigger="enable"/>
+					<net name="c_cnt[5]" type="reg" trigger="enable"/>
+					<net name="c_cnt[4]" type="reg" trigger="enable"/>
+					<net name="c_cnt[3]" type="reg" trigger="enable"/>
+					<net name="c_cnt[2]" type="reg" trigger="enable"/>
+					<net name="c_cnt[1]" type="reg" trigger="enable"/>
+					<net name="c_cnt[0]" type="reg" trigger="enable"/>
+				</bus>
+				<bus name="h_cnt" radix="bin" state="collapse" op="dont_care" type="reg">
+					<net name="h_cnt[10]" type="reg" trigger="enable"/>
+					<net name="h_cnt[9]" type="reg" trigger="enable"/>
+					<net name="h_cnt[8]" type="reg" trigger="enable"/>
+					<net name="h_cnt[7]" type="reg" trigger="enable"/>
+					<net name="h_cnt[6]" type="reg" trigger="enable"/>
+					<net name="h_cnt[5]" type="reg" trigger="enable"/>
+					<net name="h_cnt[4]" type="reg" trigger="enable"/>
+					<net name="h_cnt[3]" type="reg" trigger="enable"/>
+					<net name="h_cnt[2]" type="reg" trigger="enable"/>
+					<net name="h_cnt[1]" type="reg" trigger="enable"/>
+					<net name="h_cnt[0]" type="reg" trigger="enable"/>
+				</bus>
+			</watcher_nodes>
+		</signal_vec>
+		<trigger name="auto_chipwatcher_0_trigger" position="pre">
+			<condition level="1" enabled="yes" type="basic_and">
+				I_video_in_data[0] == low && I_video_in_data[10] == low && I_video_in_data[11] == low && I_video_in_data[12] == low && I_video_in_data[13] == low && I_video_in_data[14] == low && I_video_in_data[15] == low && I_video_in_data[16] == low && I_video_in_data[17] == low && I_video_in_data[18] == low && I_video_in_data[19] == low && I_video_in_data[1] == low && I_video_in_data[20] == low && I_video_in_data[21] == low && I_video_in_data[22] == low && I_video_in_data[23] == low && I_video_in_data[2] == low && I_video_in_data[3] == low && I_video_in_data[4] == low && I_video_in_data[5] == low && I_video_in_data[6] == low && I_video_in_data[7] == low && I_video_in_data[8] == low && I_video_in_data[9] == low && I_video_in_last == any && I_video_in_user == any && I_video_in_valid == any && c_cnt[0] == low && c_cnt[10] == low && c_cnt[1] == low && c_cnt[2] == low && c_cnt[3] == low && c_cnt[4] == low && c_cnt[5] == low && c_cnt[6] == low && c_cnt[7] == low && c_cnt[8] == low && c_cnt[9] == low && h_cnt[0] == low && h_cnt[10] == low && h_cnt[1] == low && h_cnt[2] == low && h_cnt[3] == low && h_cnt[4] == low && h_cnt[5] == low && h_cnt[6] == low && h_cnt[7] == low && h_cnt[8] == low && h_cnt[9] == low
+			</condition>
+			<log>
+			</log>
+		</trigger>
+	</instance>
+</chipwatcher>

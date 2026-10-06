@@ -1,0 +1,20 @@
+AL_US_AXI_ID_WIDTH : 8 : U : En :  : 1 : 32
+AXI_ADDR_WIDTH_Min : 12 : G : En :  :  : 
+AL_US_AXI_DATA_WIDTH : 128 : U : En : 32;;64;;128;;256;;512;;1024 :  : 
+AL_AXI_ADDR_WIDTH : 32 : U : En :  : 12 : 64
+AL_DS_AXI_DATA_WIDTH : 64 : U : En : 32;;64;;256;;512;;1024 :  : 
+AL_AXI_SUPPORTS_WRITE : 1 : G : En :  :  : 
+AL_AXI_SUPPORTS_READ : 1 : G : En :  :  : 
+AL_MAX_SPLIT_BEATS : 16 : U : En : 16;;256 :  : 
+packing_level_de : 0 : G : En :  :  : 
+PROTOCOL_DISP : AXI4 : U : En : AXI4;;AXI3;;AXI4LITE :  : 
+READ_WRITE_Mode : READ WRITE : U : En : READ WRITE;;READ ONLY;;WRITE ONLY :  : 
+AL_AXI_PROTOCOL : 0 : G : En :  :  : 
+axlen : 7 : G : En :  :  : 
+axlock : 0 : G : En :  :  : 
+Packing_level_disp : Always : U : En : Always;;Only when CACHE[1] High :  : 
+AL_PACKING_LEVEL : 2 : G : En :  :  : 
+COMMON_CLK_EN_PC : 1 : G : En :  :  : 
+BRAM_AUTO : 1 : G : En :  :  : 
+Protocol_not_axi4lite : 1 : G : En :  :  : 
+Protocol_is_axi4 : 1 : G : En :  :  : 

@@ -1,0 +1,7 @@
+CHIP=dr1m90
+HPF_FILE=soc_prj.hpf
+MSS_FILE=system.mss
+OS=standalone
+PROCESSOR=apu-0
+PROJECT_LOCATION=E:/FPGA/anlu_prj/mymipi_hdmi3/soc_sdk/soc_base
+PROJECT_NAME=soc_base

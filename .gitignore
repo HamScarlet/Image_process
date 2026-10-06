@@ -1,0 +1,38 @@
+# Anlogic TD generated synthesis and implementation runs
+soc_hw/al_ip/
+soc_hw/design_0/
+soc_hw/log/
+soc_hw/soc_prj_Runs/
+soc_prj/soc_prj_Runs/
+
+# Anlogic TD logs and transient GUI state
+soc_prj/log/
+soc_prj/*.log
+soc_prj/*.log.*
+soc_prj/*.logw
+soc_prj/.design.recent
+soc_prj/.recent_user_depot.ini
+
+# Generated FPGA and firmware images
+soc_prj/uisrc/05_boot/BOOT.bin
+soc_sdk/soc_base/platform/soc_prj.bit
+
+# Eclipse / Anlogic SDK workspace state
+soc_sdk/.metadata/
+soc_sdk/.fdworkspace
+
+# SDK build outputs
+soc_sdk/**/build/
+
+# Common compiled object and dependency files
+*.o
+*.o.d
+*.elf
+*.map
+
+# Editor and OS metadata
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

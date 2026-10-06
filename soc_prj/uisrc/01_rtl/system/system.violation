@@ -1,0 +1,3 @@
+[warn - InstPort] input port lack of connectioin
+    SocInstPort input:ARM_Processor_System_0::GPIO::pl_gpio_in[0:0]
+

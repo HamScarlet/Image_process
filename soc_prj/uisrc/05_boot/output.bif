@@ -1,0 +1,7 @@
+//arch = dr1m90; format = BIN
+the_ROM_image:
+{
+	[bootloader, destination_cpu = apu-0, destination_device = ps]E:\FPGA\anlu_prj\Image_process\soc_sdk\fsbl\build\fsbl.elf
+	[partition_owner = fsbl, destination_cpu = apu-0, destination_device = pl]E:\FPGA\anlu_prj\Image_process\soc_prj\soc_prj_Runs\best_result\soc_prj.bit
+	[partition_owner = fsbl, destination_cpu = apu-0, destination_device = ps]E:\FPGA\anlu_prj\Image_process\soc_sdk\fdma_en\build\fdma_en.elf
+}

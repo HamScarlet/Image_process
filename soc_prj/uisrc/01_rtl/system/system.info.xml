@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:root xmlns:xsi="http" xmlns:ipxact="http" xmlns:anlogic="http" xsi:schemaLocation="http">
+    <ipxact:compositeFile compositeFileTopName="system">
+        <ipxact:fileCollection>
+            <ipxact:file name="ip/system_ARM_Processor_System_0/system_ARM_Processor_System_0.xml">
+                <ipxact:instanceName>ARM_Processor_System_0</ipxact:instanceName>
+                <ipxact:customTool>use_ps</ipxact:customTool>
+            </ipxact:file>
+            <ipxact:file name="ip/system_uiFDMA_0/system_uiFDMA_0.xml">
+                <ipxact:instanceName>uiFDMA_0</ipxact:instanceName>
+                <ipxact:ipPath>C:/Users/ui/Desktop/dr1/sdk_pl_fdma_/soc_prj/uisrc/03_ip/uifdma/uiFDMA.v</ipxact:ipPath>
+                <ipxact:customTool>use_rtl</ipxact:customTool>
+            </ipxact:file>
+            <ipxact:file name="ip/system_AXI_Width_Converter_0/system_AXI_Width_Converter_0.xml">
+                <ipxact:instanceName>AXI_Width_Converter_0</ipxact:instanceName>
+            </ipxact:file>
+        </ipxact:fileCollection>
+    </ipxact:compositeFile>
+</ipxact:root>
