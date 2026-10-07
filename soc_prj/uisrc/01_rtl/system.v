@@ -280,6 +280,8 @@ end
  localparam IMG_HEIGHT = 1080;
  localparam HDMI_ACTIVE_WIDTH = 1024;
  localparam HDMI_ACTIVE_HEIGHT = 600;
+  localparam SCALED_IMAGE_WIDTH = 1024;
+ localparam SCALED_IMAGE_HEIGHT = 576;
 	//将数据转为stream流
 	uial2axis #(
 	.IMG_WIDTH(IMG_WIDTH),
@@ -394,6 +396,23 @@ end
       //   .O_fdma_rirq  (fdma_rirq)
   );
 
+/*
+  // Downscale before DDR so the HDMI reader only needs one pixel per pixel clock.
+  rgb4_downscale_8_15 u_rgb4_downscale_8_15 (
+      .I_clk    (S_hs_rx_clk),
+      .I_rst_n  (locked),
+      .I_tdata  (ISP_O_tdata),
+      .I_tlast  (ISP_O_tlast),
+      .I_tuser  (ISP_O_tuser),
+      .I_tvalid (ISP_O_tvalid),
+      .I_tready (scale_I_tready),
+      .O_tdata  (scale_O_tdata),
+      .O_tlast  (scale_O_tlast),
+      .O_tuser  (scale_O_tuser),
+      .O_tvalid (scale_O_tvalid),
+      .O_tready (ISP_O_tready)
+  );
+*/
 
   uirgb32to24 u_uirgb32to24 (
       .rgb24(fdma_O_R_tdata_24),
@@ -407,13 +426,13 @@ end
   end
 
 localparam H_ActiveSize    =   (HDMI_ACTIVE_WIDTH);              //视频时间参数,行视频信号，一行有效(需要显示的部分)像素所占的时钟数，一个时钟对应一个有效像素
-localparam H_SyncStart     =   (1024+24);           //视频时间参数,行同步开始，即多少时钟数后开始产生行同步信号 
-localparam H_SyncEnd       =   (1024+24+136);        //视频时间参数,行同步结束，即多少时钟数后停止产生行同步信号，之后就是行有效数据部分
-localparam H_FrameSize     =   (1024+24+136+122);     //视频时间参数,行视频信号，一行视频信号总计占用的时钟数
+localparam H_SyncStart     =   (HDMI_ACTIVE_WIDTH+24);           //视频时间参数,行同步开始，即多少时钟数后开始产生行同步信号 
+localparam H_SyncEnd       =   (HDMI_ACTIVE_WIDTH+24+136);        //视频时间参数,行同步结束，即多少时钟数后停止产生行同步信号，之后就是行有效数据部分
+localparam H_FrameSize     =   (HDMI_ACTIVE_WIDTH+24+136+122);     //视频时间参数,行视频信号，一行视频信号总计占用的时钟数
 localparam V_ActiveSize    =   (HDMI_ACTIVE_HEIGHT);              //视频时间参数,场视频信号，一帧图像所占用的有效(需要显示的部分)行数量，通常说的视频分辨率即H_ActiveSize*V_ActiveSize
-localparam V_SyncStart     =   (600+3);            //视频时间参数,场同步开始，即多少行数后开始产生场同步信号 
-localparam V_SyncEnd       =   (600+3+6);          //视频时间参数,场同步结束，多少行后停止产生长同步信号  
-localparam V_FrameSize     =   (600+3+6+29);       //视频时间参数,场视频信号，一帧视频信号总计占用的行数量   
+localparam V_SyncStart     =   (HDMI_ACTIVE_HEIGHT+3);            //视频时间参数,场同步开始，即多少行数后开始产生场同步信号 
+localparam V_SyncEnd       =   (HDMI_ACTIVE_HEIGHT+3+6);          //视频时间参数,场同步结束，多少行后停止产生长同步信号  
+localparam V_FrameSize     =   (HDMI_ACTIVE_HEIGHT+3+6+29);       //视频时间参数,场视频信号，一帧视频信号总计占用的行数量   
 
 
   uivtc #(

@@ -403,6 +403,15 @@
                     <Attr Name="CompileOrder" Val="55"/>
                 </FileInfo>
             </File>
+            <File Path="uisrc/01_rtl/my_image_process/rgb4_downscale_8_15.v">
+                <FileInfo>
+                    <Attr Name="AutoExcluded" Val="true"/>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="58"/>
+                </FileInfo>
+            </File>
         </Verilog>
         <System_Verilog>
             <File Path="uisrc/03_ip/alip/mipi_rx/channel_aligner_wrapper.enc.sv">
