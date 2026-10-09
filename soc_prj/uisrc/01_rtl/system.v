@@ -46,6 +46,14 @@ module system_top (
     output wire [2:0] 	O_hdmi_tx_p	   //HDMI数据输出差分P
 );
 
+  localparam IMG_WIDTH = 1920;
+  localparam IMG_HEIGHT = 1080;
+  localparam HDMI_ACTIVE_WIDTH = 1024;
+  localparam HDMI_ACTIVE_HEIGHT = 600;
+  localparam SCALED_IMAGE_WIDTH = 1024;
+  localparam SCALED_IMAGE_HEIGHT = 576;
+  localparam IMAGE_TOP_OFFSET = (HDMI_ACTIVE_HEIGHT - SCALED_IMAGE_HEIGHT) / 2;
+
   wire pclkx1;  //synthesis keep  
   wire pclkx5;  //synthesis keep 
   wire clk70m;
@@ -105,6 +113,13 @@ module system_top (
   wire          ISP_O_tuser;  //synthesis keep
   wire          ISP_O_tvalid; //synthesis keep
 
+  wire          scale_I_tready;
+  wire [127:0]  scale_O_tdata;
+  wire          scale_O_tlast;
+  wire          scale_O_tuser;
+  wire          scale_O_tvalid;
+  wire          scale_O_tready;
+
   
   wire [7 : 0] 	wbuf_sync; 
   wire [7 : 0] 	rbuf_sync; 
@@ -123,6 +138,9 @@ module system_top (
   wire 			vtc_user;  		//synthesis keep  //满足stream时序产生 user 信号,用于帧同步
   wire 			vtc_last;  		//synthesis keep  //满足stream时序产生 later 信号,用于每行结束
 
+  reg  [9:0] display_y;
+  wire       display_image_line;
+
   wire 			I_video_in_user;  //synthesis keep  
   wire 			I_video_in_valid; //synthesis keep  
   wire 			I_video_in_last;  //synthesis keep  
@@ -132,11 +150,28 @@ module system_top (
   assign S_clk_lane_idelay  = 20;
   assign S_clk_70m 			= clk70m;  
   assign fdma_rstn 			= p2f_rst0_n & locked;
-  assign fdma_I_R_tready 	= vtc_de_valid & hdmi_video_ready;
-  assign I_video_in_user 	= fdma_O_R_tuser;  					//视频输入帧起始信号
-  assign I_video_in_valid 	= fdma_O_R_tvalid & vtc_de_valid;   //视频输入有效信号
-  assign I_video_in_last 	= fdma_O_R_tlast;  					//视频输入行结束信号
-  assign I_video_in_data 	= fdma_O_R_tdata_24;  				//视频输入数据
+  assign display_image_line = (display_y >= IMAGE_TOP_OFFSET) &&
+                              (display_y < IMAGE_TOP_OFFSET + SCALED_IMAGE_HEIGHT);
+  assign fdma_I_R_tready = vtc_de_valid & hdmi_video_ready & display_image_line;
+  assign I_video_in_user = vtc_user;
+  assign I_video_in_valid = vtc_de_valid & hdmi_video_ready;
+  assign I_video_in_last = vtc_last;
+  assign I_video_in_data = (display_image_line && fdma_O_R_tvalid) ?
+                              fdma_O_R_tdata_24 : 24'd0;
+
+  // Align the 576-line image with each 600-line HDMI frame using 12-line top/bottom bars.
+  always @(posedge pclkx1 or negedge locked) begin
+    if (!locked)
+      display_y <= 10'd0;
+    else if (vtc_user)
+      display_y <= 10'd0;
+    else if (vtc_last) begin
+      if (display_y == HDMI_ACTIVE_HEIGHT - 1)
+        display_y <= 10'd0;
+      else
+        display_y <= display_y + 1'b1;
+    end
+  end
 
 reg [10:0] h_cnt;//synthesis keep
 reg [10:0] c_cnt;//synthesis keep
@@ -276,12 +311,6 @@ end
   );
 
 
- localparam IMG_WIDTH = 1920;
- localparam IMG_HEIGHT = 1080;
- localparam HDMI_ACTIVE_WIDTH = 1024;
- localparam HDMI_ACTIVE_HEIGHT = 600;
-  localparam SCALED_IMAGE_WIDTH = 1024;
- localparam SCALED_IMAGE_HEIGHT = 576;
 	//将数据转为stream流
 	uial2axis #(
 	.IMG_WIDTH(IMG_WIDTH),
@@ -337,18 +366,18 @@ end
       .W_DATAWIDTH(128),  	//写通道AXI设置数据位宽大小
       .W_BASEADDR(32'h0A000000),//写通道设置内存起始地址
       .W_DSIZEBITS(23), 	//写通道设置缓存数据的增量地址大小，用于FDMA DBUF 计算帧缓存起始地址
-      .W_XSIZE(IMG_WIDTH/4), 		//写通道设置X方向的数据大小，代表了每次FDMA 传输的数据长度
-      .W_XSTRIDE(IMG_WIDTH/4),  	//写通道设置X方向的Stride值，主要用于图形缓存应用
-      .W_YSIZE(IMG_HEIGHT),  		//写通道设置Y方向值，代表了进行了多少次XSIZE传输
+      .W_XSIZE(SCALED_IMAGE_WIDTH/4), 		//写通道设置X方向的数据大小，代表了每次FDMA 传输的数据长度
+      .W_XSTRIDE(SCALED_IMAGE_WIDTH/4),  	//写通道设置X方向的Stride值，主要用于图形缓存应用
+      .W_YSIZE(SCALED_IMAGE_HEIGHT),  		//写通道设置Y方向值，代表了进行了多少次XSIZE传输
       .W_XDIV(2),  			//写通道对X方向数据拆分为XDIV次传输，减少FIFO的使用
       .W_BUFSIZE(3) , 		//写通道设置帧缓存大小，目前最大支持128帧，可以修改参数支持更缓存数.
       .R_BUFDEPTH(2048),  	//读通道AXI设置FIFO缓存大小
       .R_DATAWIDTH(32),  	//读通道AXI设置数据位宽大小
       .R_BASEADDR(32'h0A000000),//读通道设置内存起始地址
       .R_DSIZEBITS(23), 	//读通道设置缓存数据的增量地址大小，用于FDMA DBUF 计算帧缓存起始地址
-      .R_XSIZE(HDMI_ACTIVE_WIDTH), 		//读通道设置X方向的数据大小，代表了每次FDMA 传输的数据长度
-      .R_XSTRIDE(IMG_WIDTH),  	//读通道设置X方向的Stride值，主要用于图形缓存应用
-      .R_YSIZE(HDMI_ACTIVE_HEIGHT),  		//读通道设置Y方向值，代表了进行了多少次XSIZE传输
+      .R_XSIZE(SCALED_IMAGE_WIDTH), 		//读通道设置X方向的数据大小，代表了每次FDMA 传输的数据长度
+      .R_XSTRIDE(SCALED_IMAGE_WIDTH),  	//读通道设置X方向的Stride值，主要用于图形缓存应用
+      .R_YSIZE(SCALED_IMAGE_HEIGHT),  		//读通道设置Y方向值，代表了进行了多少次XSIZE传输
       .R_XDIV(2),  			//读通道对X方向数据拆分为XDIV次传输，减少FIFO的使用
       .R_BUFSIZE(3)  		//读通道设置帧缓存大小，目前最大支持128帧，可以修改参数支持更缓存数
   ) u_uidbuf (
@@ -357,11 +386,11 @@ end
 
       .I_W_en      (1),
       .I_W_wclk    (S_hs_rx_clk),
-      .I_W_tuser   (ISP_O_tuser),
-      .I_W_tvalid  (ISP_O_tvalid),
-      .I_W_tdata   (ISP_O_tdata),
-      .I_W_tlast   (ISP_O_tlast),
-      .O_W_tready  (ISP_O_tready),
+      .I_W_tuser   (scale_O_tuser),
+      .I_W_tvalid  (scale_O_tvalid),
+      .I_W_tdata   (scale_O_tdata),
+      .I_W_tlast   (scale_O_tlast),
+      .O_W_tready  (scale_O_tready),
       .O_W_sync_cnt(wbuf_sync),
       .I_W_buf     (wbuf_sync),
 
@@ -396,8 +425,6 @@ end
       //   .O_fdma_rirq  (fdma_rirq)
   );
 
-/*
-  // Downscale before DDR so the HDMI reader only needs one pixel per pixel clock.
   rgb4_downscale_8_15 u_rgb4_downscale_8_15 (
       .I_clk    (S_hs_rx_clk),
       .I_rst_n  (locked),
@@ -410,9 +437,10 @@ end
       .O_tlast  (scale_O_tlast),
       .O_tuser  (scale_O_tuser),
       .O_tvalid (scale_O_tvalid),
-      .O_tready (ISP_O_tready)
+      .O_tready (scale_O_tready)
   );
-*/
+
+  assign ISP_O_tready = scale_I_tready;
 
   uirgb32to24 u_uirgb32to24 (
       .rgb24(fdma_O_R_tdata_24),

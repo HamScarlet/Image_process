@@ -116,8 +116,13 @@ module rgb4_downscale_8_15 (
             O_tuser <= 1'b0;
             O_tvalid <= 1'b0;
         end else begin
-            if (O_tvalid && O_tready)
+            // Keep line/frame markers aligned with valid data, and clear them
+            // when the output beat is consumed.
+            if (O_tvalid && O_tready) begin
                 O_tvalid <= 1'b0;
+                O_tlast <= 1'b0;
+                O_tuser <= 1'b0;
+            end
 
             if (I_tvalid && I_tready) begin
                 h_phase <= h_phase_next;

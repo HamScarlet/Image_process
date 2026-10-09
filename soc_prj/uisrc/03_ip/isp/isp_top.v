@@ -238,8 +238,8 @@ contrast_adj #(
 );
 
 Brightness_adjustment #(
-    .BRIGHTNESS_ADD  (0),
-    .BRIGHTNESS_MINUS(20)
+    .BRIGHTNESS_ADD  (20),
+    .BRIGHTNESS_MINUS(0)
 ) u_Brightness_adjustment (
     .I_clk   (axi4s_video_aclk),
     .I_rst_n (I_rst_n),

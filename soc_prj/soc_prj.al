@@ -405,7 +405,6 @@
             </File>
             <File Path="uisrc/01_rtl/my_image_process/rgb4_downscale_8_15.v">
                 <FileInfo>
-                    <Attr Name="AutoExcluded" Val="true"/>
                     <Attr Name="UsedInSyn" Val="true"/>
                     <Attr Name="UsedInP&R" Val="true"/>
                     <Attr Name="BelongTo" Val="design_1"/>
