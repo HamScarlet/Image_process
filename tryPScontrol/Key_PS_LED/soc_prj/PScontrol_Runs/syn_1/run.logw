@@ -1,0 +1,21 @@
+============================================================
+   TD Release_2026.1_SP2
+   Copyright (c) 2012-2026 Anlogic Inc.
+   Executable = D:/exe/Anlu/TD/bin/run.exe
+   Build number = 6.2.2.200067
+   Built at =   16:15:53 Apr 23 2026
+   Run by =     21996
+   Run Date =   Sun Oct 11 19:39:29 2026
+
+   Run on =     HYZY-X7-1
+============================================================
+HDL-5007 WARNING: actual bit length 32 differs from formal bit length 64 for port 'slave_hp0_axi_wdata' in ../../ARMandgpioDesign/ip/system_ARM_Processor_System_0/RTL/ARM_Processor_System_system_ARM_Processor_System_0.v(424)
+HDL-5007 WARNING: actual bit length 4 differs from formal bit length 8 for port 'slave_hp0_axi_wstrb' in ../../ARMandgpioDesign/ip/system_ARM_Processor_System_0/RTL/ARM_Processor_System_system_ARM_Processor_System_0.v(426)
+HDL-5007 WARNING: actual bit length 32 differs from formal bit length 64 for port 'slave_hp1_axi_wdata' in ../../ARMandgpioDesign/ip/system_ARM_Processor_System_0/RTL/ARM_Processor_System_system_ARM_Processor_System_0.v(454)
+HDL-5007 WARNING: actual bit length 4 differs from formal bit length 8 for port 'slave_hp1_axi_wstrb' in ../../ARMandgpioDesign/ip/system_ARM_Processor_System_0/RTL/ARM_Processor_System_system_ARM_Processor_System_0.v(456)
+HDL-5007 WARNING: actual bit length 2 differs from formal bit length 64 for port 'gpio_in' in ../../ARMandgpioDesign/ip/system_ARM_Processor_System_0/RTL/ARM_Processor_System_system_ARM_Processor_System_0.v(577)
+HDL-5007 WARNING: actual bit length 2 differs from formal bit length 64 for port 'gpio_oe' in ../../ARMandgpioDesign/ip/system_ARM_Processor_System_0/RTL/ARM_Processor_System_system_ARM_Processor_System_0.v(578)
+HDL-5007 WARNING: actual bit length 2 differs from formal bit length 64 for port 'gpio_out' in ../../ARMandgpioDesign/ip/system_ARM_Processor_System_0/RTL/ARM_Processor_System_system_ARM_Processor_System_0.v(579)
+USR-6134 CRITICAL-WARNING: Clock definition problem: primary clock sysclk is defined on a dangling pin.
+USR-6134 CRITICAL-WARNING: Clock definition problem: primary clock sysclk is defined on a dangling pin.
+USR-6134 CRITICAL-WARNING: Clock definition problem: primary clock sysclk is defined on a dangling pin.

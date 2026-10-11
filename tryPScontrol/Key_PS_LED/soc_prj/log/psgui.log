@@ -1,0 +1,13 @@
+#[INFO] alps V2025.10 (APP main), Windows 64bit (Release), Build 177648 2025/10/21, 09:44:09 Oct 22 2025 on WIN10-204
+#[INFO] Run at Sun Oct 11 18:51:03 2026
+
+ps_gui_graphics_view_scroll Processor_System PsDiagram.GraphicsView horizontal 0
+ps_gui_graphics_view_scroll Processor_System PsDiagram.GraphicsView vertical 0
+ps_gui_select_dialog Processor_System
+ps_design_select_block Processor_System FPSoC_Design GPIO
+ps_gui_click_tree_item Processor_System psIpCfgPinMuxTree I/O_Peripherals.14.0 1
+ps_gui_close_dialog Processor_System
+ps_gui_select_dialog StandardMessageBox #Info
+ps_gui_click_push_button StandardMessageBox Yes
+#Func:closeBtnClickCB, Line:25, Click close message >> PSGUI-002 : The IP have been clicked cancel.
+

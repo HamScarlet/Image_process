@@ -1,0 +1,17 @@
+#[INFO] design_integrator V2026.05 (APP main), Windows 64bit (Release), Build 197563 2026/05/12, 13:37:10 May 12 2026 on WIN10-204
+#[INFO] Run at Sun Oct 11 18:54:29 2026
+#[INFO] The Design.xml (D:/FPGAproject/AnLuRun/PScontrol/soc_prj/log/Design.xml) does not exist.
+#[INFO] The Design.xml (D:/FPGAproject/AnLuRun/PScontrol/soc_prj/uisrc/Design.xml) does not exist.
+si_select_window DesignIntegrator
+si_resize_window DesignIntegrator 2880 1659
+si_click_tree_item DesignIntegrator RecentDesign ARMandgpioDesign 0
+si_select_dialog Open_Design_ProgressDialog
+#[INFO] si_open_design D:/FPGAproject/AnLuRun/PScontrol/soc_prj/ARMandgpioDesign
+si_select_window DesignIntegrator
+si_click_toolbar_item DesignIntegrator DesignIntegrator.Flow.Generate_Design
+si_select_dialog Generate_Design
+si_click_push_button Generate_Design GenerateDesign.Generate
+#[INFO] GUI-2000 : The Design Integrator files have been generated successfully. :{DR1M90GEG400(D:/FPGAproject/AnLuRun/PScontrol/soc_prj/ARMandgpioDesign/ARMandgpioDesign.xml)}
+#[INFO] si_generate_design
+si_exit
+#[INFO] Exit 0

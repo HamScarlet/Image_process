@@ -1,0 +1,7 @@
+[Info] device: DR1M90GEG400
+[Info] cfgRoot: D:/exe/Anlu/TD/ip/depot
+psPath: D:/FPGAproject/AnLuRun/PScontrol/soc_prj/ARMandgpioDesign/ip/system_ARM_Processor_System_0
+designPath: D:/FPGAproject/AnLuRun/PScontrol/soc_prj/ARMandgpioDesign
+[Info] Export Ps File Pass: ARM_Processor_System_0
+[Error] addressFile parse Error: D:/FPGAproject/AnLuRun/PScontrol/soc_prj/ARMandgpioDesign/ARMandgpioDesign.address.xml
+[Info] export Bm Driver Pass: ARM_Processor_System_0

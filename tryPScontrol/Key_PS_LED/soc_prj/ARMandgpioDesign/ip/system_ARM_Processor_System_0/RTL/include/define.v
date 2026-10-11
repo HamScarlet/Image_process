@@ -1,0 +1,3 @@
+`define GPIO_PL_Dot_Enable_system_ARM_Processor_System_0
+`define SD0_cd_Dot_Enable_system_ARM_Processor_System_0
+`define SD1_cd_Dot_Enable_system_ARM_Processor_System_0
