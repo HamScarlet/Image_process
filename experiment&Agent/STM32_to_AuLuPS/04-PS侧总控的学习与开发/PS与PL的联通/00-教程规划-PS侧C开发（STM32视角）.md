@@ -107,7 +107,7 @@
 <text x="60" y="300" font-size="13" font-weight="500" fill="#0C447C">应用侧初始化：永远是这四步</text>
 <rect x="60" y="310" width="131" height="48" rx="6" fill="#FFFFFF" stroke="#185FA5" stroke-width="0.5"/>
 <text x="72" y="329" font-size="11" font-weight="500" fill="#0C447C">① 定 DevId</text>
-<text x="72" y="346" font-size="11" fill="#185FA5">查 cfg.c 表序</text>
+<text x="72" y="346" font-size="11" fill="#185FA5">按 DeviceId 匹配</text>
 <line x1="191" y1="334" x2="199" y2="334" stroke="#888780" stroke-width="1.5" marker-end="url(#m2)"/>
 <rect x="199" y="310" width="131" height="48" rx="6" fill="#FFFFFF" stroke="#185FA5" stroke-width="0.5"/>
 <text x="211" y="329" font-size="11" font-weight="500" fill="#0C447C">② 填结构体</text>
@@ -123,7 +123,7 @@
 <text x="40" y="394" font-size="11" fill="#5F5E5A">注：Hal_Init 的第一个参数是二级指针（AL_Xxx_HalStruct **Handle），与 STM32 传 &amp;hxxx 的写法一致。</text>
 </svg>
 
-**读图口诀**：上半部分是**代码仓库的目录结构**（① 是你调用的，④ 是你永远不用碰的）；下半部分是**每次初始化的固定四步**。记住一句话：**DevId 是"第几个实例"的序号，不是 STM32 里的 `UART1` 这种宏**——填错就操作到别的外设上。
+**读图口诀**：上半部分是**代码仓库的目录结构**（① 是你调用的，④ 是你永远不用碰的）；下半部分是**每次初始化的固定四步**。记住一句话：**DevId 不是数组下标，而是 `cfg.c` 里 `DeviceId` 字段的值**——驱动靠**线性扫描比对该字段**来取配置（`al_uart_dev.c:56` 那个 `for` 循环）。填错不但会操作到别的外设，还可能命中"零填充空洞"而**静默失效**（详见 8.4）。
 
 | 层 | 文件 | 你什么时候用它 | 对应 STM32 |
 |---|---|---|---|
@@ -158,7 +158,7 @@
 <text x="54" y="192" font-size="11" fill="#854F0B">UART0 0xF8400000 · UART1 0xF8401000</text>
 <text x="54" y="210" font-size="11" fill="#854F0B">AlUart_Hal_Init(&amp;h, DevId, &amp;cfg, cb)</text>
 <text x="54" y="228" font-size="11" fill="#854F0B">SendData / RecvData（阻塞）</text>
-<text x="54" y="246" font-size="11" fill="#C83C3C">UART1 被日志占用 ⇒ 屏建议用 UART0</text>
+<text x="54" y="246" font-size="11" fill="#C83C3C">PS 侧只有 UART1 被使能（UART0 未使能）</text>
 <rect x="345" y="150" width="295" height="110" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
 <text x="359" y="172" font-size="12" font-weight="500" fill="#3C3489">④ 通信协议 I2C / SPI</text>
 <text x="359" y="192" font-size="11" fill="#534AB7">I2C0 0xF8414000 · I2C1 0xF8415000</text>
@@ -169,9 +169,9 @@
 
 **读图口诀**：四块按"由简到难"排列（左右两列各成一组）。🔴 红色那几行是**你一定会踩的坑**，不是补充说明：
 
-1. **GPIO 引脚号是全局线性编号**——`MAX_PIN_NUMBER_IN_BANK_0 = 31`、`BANK1 = 53`、`BANK2 = 85`、`BANK3 = 117`，没有 `PA5` 这种写法。
+1. **GPIO 引脚号 = MIO 编号**——BANK0 = MIO0–31、BANK1 = MIO32–53。`MAX_PIN_NUMBER_IN_BANK_0/1/2/3 = 31/53/85/117` 里**只有前两段有物理落点**：BANK2/3（54–117）对应 EMIO，而 DR1 没有 EMIO。没有 `PA5` 这种写法。
 2. **PWM 不是独立外设**——TC（Timer Counter）用"比较匹配 + 波形输出"两件事拼出 PWM，对应关系是 `EnableMatchMode` + `SetMatchVal` + `EnableWaveOutput` + `SetWaveformPolarity`。
-3. **UART1 已被日志占用**——`printf` 走的就是它（`0xF8401000`，板上 Type-C 口）。串口屏或外部模块要用 **UART0**，否则和日志打架。
+3. **PS 侧只有 UART1 一路串口可用**——`UART0` 在本平台的实例表里**根本不存在**（`soc_plat.h:186` 的 `UART0PS_ENABLE` 是注释），`AL_UART_NUM_INSTANCE = 2` 只是个"数组长度常量"。而 UART1（`0xF8401000`）就是日志口，物理上接到板载 USB 转双串口桥 **U26（CH342K）**。**想让串口屏走 PS，只能与日志共口**；想独占一路，就得改 TD 的 PS 引脚配置（见 8.4 与 L2）。
 4. **I2C / SPI 各有 2 个实例、都提供"块传输"与"轮询"两套**——先会用块传输，需要高吞吐再换 DMA 版。
 
 ---
@@ -241,6 +241,7 @@
 | 消抖 | 软件实现 | `AlGpio_ll_EnableDebounce(BaseAddr, Mask)`（**硬件消抖**，白送的） |
 | Bank 枚举 | `GPIOA`/`GPIOB`/… | `AL_GPIO_BANK0` … `AL_GPIO_BANK3` |
 | 电平枚举 | `GPIO_PIN_SET` / `RESET` | `AL_GPIO_ENABLE` (1) / `AL_GPIO_DISABLE` (0) |
+| 引脚复用（pinmux） | CubeMX 里的引脚配置页 | 无 HAL 封装：`UI_Out32(0xF8803000 + 4×n, 4)`；**FUNCSEL = 4 才是 GPIO**，默认由 FSBL 的 `psio_data_0` 表写入。本板只有 **MIO0/7/8/9/46/47/50/51** 是 GPIO（全表见 8.3） |
 
 ### 6.3 UART
 
@@ -312,20 +313,20 @@
 |---|---|
 | 目标 | 建立"外设 → 地址 / 中断号 / DevId"的索引能力 |
 | 读什么 | `al_hwcfg.h`（全部基址）· `al_chip.h`（全部中断号）· `ps_driver/*/src/al_*_cfg.c`（实例表序）· `fdma_en/main.c`（现有用法） |
-| 练习 | 手抄一张表：UART0 / UART1 / GPIO / TC0__TC0 / I2C0 / SPI0 各自的**基址、中断号、DevId** |
+| 练习 | 手抄一张表：UART1 / GPIO / TC0__TC0 / I2C0 / SPI0 各自的**基址、中断号、DevId、以及"该实例到底存不存在"** |
 | 验收判据 | 任给一个需求（如"用 I2C1 读传感器"），能在 1 分钟内说出它的基址、中断号、DevId |
-| 常见坑 | 把 DevId 当成"引脚号"；把 `AL_UART_NUM_INSTANCE = 2` 当成"UART1" |
+| 常见坑 | 把 DevId 当成"引脚号"；把 `AL_UART_NUM_INSTANCE = 2` 当成"有两个可用 UART"（**宏是数组长度，`#ifdef` 才决定实际条目**） |
 
 ### L2 · 串口闭环（最小可观测系统）
 
 | 项目 | 内容 |
 |---|---|
 | 为什么排第一 | **没有日志，后面全是盲调**。串口是唯一的输出通道 |
-| 目标 | 用 `AlUart_Hal_Init` 初始化 **UART0**，发一行字符串；同时保留 UART1 的 printf |
+| 目标 | 用 `AlUart_Hal_Init` 初始化 **UART1（DevId = 1）**——这是 PS 侧唯一存在的串口；发一行字符串，并轮询收字符回显 |
 | 关键 API | `AlUart_Hal_Init` → `AlUart_Hal_SendDataBlock` → 循环 `AlUart_Hal_RecvDataPolling` |
 | 练习 | ① 发 `"hello\r\n"`；② 收到 `'a'` 回一个自增值；③ 把收发封装成 `my_uart_init()` / `my_uart_puts()` 两个函数放独立文件 |
 | 验收判据 | 串口助手（115200, 8N1）能看到输出；发字符能收到回应 |
-| 常见坑 | ① 接了 Type-C 口却以为是 UART0（**Type-C = UART1 = 日志口**）；② 忘记波特率要两边一致；③ 把 UART0 的引脚复用漏配（见 `psio_data_0` 表） |
+| 常见坑 | ① 按老习惯去初始化 **UART0**——它在本平台**没有实例**，`AlUart_Hal_Init(&h, 0, ...)` 会**静默命中一个全零配置**（基址 0，详见 8.4）；② 忘记波特率要两边一致；③ 以为"Type-C 口"和"UART1"是两个口——**它们就是同一个口**：板上 U26 = CH342K，通道 0 接 PS 的 MIO48/49，通道 1 才接 PL 的 J16/K16 |
 
 > **L2 的隐藏收获**：你会第一次体会到"**在 `fdma_en/` 下新建 `.c`/`.h` 文件不需要改 Makefile**"——因为 Makefile 用 `find "./" -type d` 递归扫描目录，任何子目录里的 `.c` 都会被自动加入编译。这意味着你可以按功能建 `my_drv/` 子目录组织代码。
 
@@ -338,13 +339,53 @@
 | 关键 API | `AlGpio_Hal_Init(&h, 0, CallBack)` → `AlGpio_ll_SetDirection(...)` → `AlGpio_Hal_WritePin` / `ReadPinInput` |
 | 练习 | ① 把一个引脚设成输出，1 Hz 翻转（用 `AlSys_MDelay(500)`）；② 把一个引脚设成输入，读回值随电平变化；③ 启用硬件消抖 `AlGpio_ll_EnableDebounce` 做按键 |
 | 验收判据 | 输出波形在示波器上可见；按键按下时读值稳定翻转（无抖动毛刺） |
-| 常见坑 | ① 想控制 FPGA 引脚却去操作 PS GPIO（**必须走 PL 逻辑或 pl_gpio**）；② 引脚号写成 `PA5` 风格（**这里只有 0–117 的全局编号**）；③ 忘记设方向，默认可能不是想要的 |
+| 现成可用引脚 | **MIO50 = 按键 KEY3**（输入）· **MIO51 = LED5**（输出，经 MOS 管驱动）。这两个是板上仅有的"复用已经是 GPIO、且物理上就是给人用的"引脚——**L3 直接拿它们做实验：不改编译配置、不动 TD、不飞线。** |
+| 常见坑 | ① 想控制 FPGA 引脚却去操作 PS GPIO（**必须走 PL 逻辑或 `pl_gpio`**）；② 引脚号写成 `PA5` 风格（**这里只有 0–53 的 MIO 编号**，54 以上是 DR1 没有的 EMIO）；③ 忘记设方向，默认可能不是想要的；④ 挑了一个 **FUNCSEL ≠ 4** 的 MIO，配置全对但毫无反应——本板只有 8 个 MIO 是 GPIO（全表见 8.3） |
+
+#### 先分清：你要控制的是谁的引脚
+
+⚠️ 这一步做错，后面全白费。**PS 的 GPIO 与 PL 的 IO 是两套完全独立的硬件。**
+
+| 你要控制谁 | 谁在控制 | 要写 Verilog | 要动 TD | PS 怎么访问 |
+|---|---|---|---|---|
+| **PS 的 MIO 引脚** | PS 内 GPIO 控制器 `0xF8411000` | 不用 | **不用**（复用已是 GPIO 时） | `AlGpio_Hal_WritePin()` 直接写 |
+| **PL 的 `pl_gpio` 专用脚** | PL 引脚，但由 PS 的 TOP 寄存器直驱（`Design.xml` adHoc 直连） | 不用 | 已配好，不用改 | 写 TOP 寄存器 |
+| **PL 的任意 FPGA IO** | PL 逻辑 | **必须** | **必须**（综合 + `.adc` 引脚约束） | 只能经 PL 中转 |
+
+> **结论**：用 PS 的 MIO，**完全不需要 PL 做中介，也不需要为这个 GPIO 写任何 TD 内容**——只要它的复用功能已经是 GPIO。
+
+#### 唯一的"配置"是引脚复用（pinmux）
+
+每个 PS MIO 引脚有一个复用寄存器：**`0xF8803000 + 4×n`**（n = 引脚号），低 4 位是 FUNCSEL。
+
+| 事实 | 值 / 出处 |
+|---|---|
+| FUNCSEL = **4** | 该引脚为 **GPIO** |
+| 默认配置（实测） | 整张表已解出：**FUNCSEL = 4（GPIO）的只有 8 个引脚 —— MIO0 / 7 / 8 / 9 / 46 / 47 / 50 / 51**；其余全被 QSPI、SD1、ETH0、USB0、SD0、UART1、MDIO 占满（全表见 8.3） |
+| 谁写这些寄存器 | FSBL 上电时执行 `psio_data_0` 表；该表由 hpfTool 从 **TD 的 PS 引脚配置**导出 |
+
+所以判断只有两种：
+
+| 情况 | 做法 |
+|---|---|
+| 该引脚 FUNCSEL **已经是 4** | **零配置**，直接写 C 代码 |
+| 该引脚**已被别的功能占用** | ① 回 **TD 的 PS 引脚配置**里改 → 重导 HPF → 重新生成 `psio_data_0` → 重编 FSBL（**要动 TD**）；② 运行时 `UI_Out32(0xF8803000 + 4*n, 4)` 自行改写（**不动 TD**，但必须先确认该引脚的原功能确实不再使用，否则会弄断 QSPI / UART 等） |
+
+> ⚠️ **一个容易误判的点**：`soc_plat.h` 里 **`GPIOPL_ENABLE` 虽已定义，但 `Design.xml` 里没有任何 GPIO IP** ⇒ **不存在"PS 通过 AXI 控制 PL 通用 GPIO"的现成通路**。别看到这个宏就以为可用；想控 FPGA 引脚，现阶段只有"PL 自己写 Verilog"和"走 `pl_gpio` 那几根专用直连脚"两条实路。
+> ✅ **已核实（2026-10-11，底板原理图 + FSBL `psio_data_0` 双证）**：DR1M90GEG400 的 PS 侧 **MIO0–MIO53 共 54 个，全部经 B2B 连接器引到底板**（核心板 B2B 表逐条列出）。但其中**只有 8 个的复用是 GPIO**，而这 8 个在板上又大多已被别的电路占用：
+>
+> - **MIO50 = 按键 KEY3**（VCC_1V8 上拉 + 100R + 100nF 去抖）→ **现成的输入**
+> - **MIO51 = LED5**（经 MOS 管 Q5 驱动）→ **现成的输出**
+> - MIO46 = USB PHY 复位 · MIO47 = TF 卡插入检测 · MIO7/MIO8 并接在同一根网线上（带上拉与红色 LED D2）· MIO0/MIO9 底板上未接外设（空脚）
+>
+> ⇒ **L3 的最佳实验对象就是"读 MIO50 按键 → 写 MIO51 LED"**；想扩展成任意数量的 IO，请往 PL 侧去，别在 MIO 上打转。全表见 8.3。
 
 ### L4 · 定时器与 PWM
 
 | 项目 | 内容 |
 |---|---|
 | 目标 | 用 TC 产生**周期固定、占空比可调**的方波 |
+| 前置条件 | 🔴 **TC 当前一个实例都没有**：`soc_plat.h:184-185` 的 `TC0PS_ENABLE` / `TC1PS_ENABLE` **都是注释** ⇒ `AlTc_HwConfig[6]` 六个槽全部被零填充，`AlTc_Dev_LookupConfig()` 返回的是**零配置而不是 NULL**，而 `AlTc_Hal_Init` 只判 `if (HwConfig != AL_NULL)` ⇒ 照样放行 ⇒ `BaseAddr = 0`，**不报错、静默失效**。**必须先放开这两个宏并重编 `soc_base`**——这一步改到的是 `PS与PL的联通` 目录之外的文件，**需单独授权** |
 | 关键认知 | 安路 PS **没有独立的 PWM 外设**，PWM = TC 的"比较匹配（Match）+ 波形输出（Wave）"两件事组合。与 STM32 的 TIM 通道思路相同，但 API 拆成了四个函数 |
 | 关键 API | `AlTc_Hal_Init` → `SetWaveformPolarity` → `EnableMatchMode(1)` → `SetMatchVal(Match1, v)` → `EnableWaveOutput(1)` → `EnableCounter(1)` |
 | 练习 | ① 先出固定 50% 占空比；② 在主循环里改 `SetMatchVal` 做呼吸灯；③ 用 `EnableIntr` + 回调做一个 1 ms 软定时器，替代 `AlSys_MDelay` 轮询 |
@@ -380,7 +421,7 @@
 
 | 外设 | 实例数 | 基址 | 备注 |
 |---|---|---|---|
-| UART | 2 | UART0 `0xF8400000` · UART1 `0xF8401000` | **UART1 = 日志口（Type-C）** |
+| UART | 2（宏）／**1（实际）** | UART0 `0xF8400000` · UART1 `0xF8401000` | ⚠️ `UART0PS_ENABLE` 是注释 ⇒ **UART0 没有实例**；UART1 = 日志口 = 板上 **U26（CH342K）通道 0**，通道 1 接 PL 的 J16/K16 |
 | GPIO | 1（4 bank） | `0xF8411000` | 中断号 `GPIO0_IRQn = 84` |
 | I2C | 2 | I2C0 `0xF8414000` · I2C1 `0xF8415000` | I2C 时钟 100 MHz |
 | SPI | 2 | SPI0 `0xF8404000` · SPI1 `0xF8405000` | FIFO 深度 32 |
@@ -405,7 +446,7 @@
 | `SOC_TC0_TC1_IRQn` | 62 | `SOC_TC1_TC1_IRQn` | 65 |
 | `SOC_TC0_TC2_IRQn` | 63 | `SOC_TC1_TC2_IRQn` | 66 |
 
-### 8.3 GPIO Bank 与引脚号（出自 `al_gpio_hal.h`）
+### 8.3 GPIO Bank、引脚号与 MIO 占用（双证：`al_gpio_hw.h` + 底板原理图）
 
 | Bank 枚举 | 引脚号范围 | 该 Bank 最大引脚号常量 |
 |---|---|---|
@@ -414,23 +455,62 @@
 | `AL_GPIO_BANK2` | 54 – 85 | `MAX_PIN_NUMBER_IN_BANK_2 = 85` |
 | `AL_GPIO_BANK3` | 86 – 117 | `MAX_PIN_NUMBER_IN_BANK_3 = 117` |
 
-> **引脚号是累加的**：BANK1 的起始不是 0，而是 `BANK0 最大号 + 1`。写引脚号前先确认它在哪个 Bank。
-> ⚠️ **待确认**：具体哪些引脚号被 MIO 复用占用了（UART1 占了 MIO48/49），需查 `psio_data_0` 配置表或原理图 pinlist。**不要凭猜测写引脚号**。
+> **引脚号 = MIO 编号**：BANK0 = MIO0–31、BANK1 = MIO32–53，两段加起来恰好是 MIO0–53 这 54 个。**BANK2/3（54–117）对应 EMIO，而 DR1 没有 EMIO**（`Design.xml` 里也没有任何 GPIO IP）⇒ **传 ≥54 的引脚号没有物理落点**。
+
+**MIO 占用全表**（左半列出自 `soc_plat.c` 的 `psio_data_0` 出厂复用；右半列由底板原理图逐页核实）
+
+| MIO | FUNCSEL | 复用功能 | 底板上实际接到 | 能当自由 GPIO 吗 |
+|---|---|---|---|---|
+| 0 | 4 | **GPIO** | 底板上未接外设 | ⚠️ 空脚，要飞线才用得上 |
+| 1–6 | 0 | Quad_SPI_Flash | QSPI Flash（U4）；其中 MIO2–MIO5 另接启动拨码 SW1 | ❌ |
+| 7 · 8 | 4 | **GPIO** | MIO7/MIO8 并接在同一根网线上，带上拉 + 红色 LED（D2） | ⚠️ 已被 LED 占用 |
+| 9 | 4 | **GPIO**（原 SD1_cd） | 底板上未接外设 | ⚠️ 空脚，要飞线才用得上 |
+| 10–15 | 0xA | SD1 | eMMC（U11） | ❌ |
+| 16–27 | 0xE | ETH0（RGMII） | PS 侧以太网 PHY | ❌ |
+| 28–39 | 0xF | USB0（ULPI） | USB2.0 PHY | ❌ |
+| 40–45 | 0xA | SD0 | TF 卡座 | ❌ |
+| 46 | 4 | **GPIO** | `MIO46_OTG_RESETN` = USB PHY 复位 | ⚠️ 被 USB 复位占用 |
+| 47 | 4 | **GPIO**（原 SD0_cd） | `MIO47_SD0_DETECT` = TF 卡插入检测 | ⚠️ 被卡检测占用 |
+| 48–49 | 3 | UART1 | U26（CH342K）通道 0 = **日志口** | ❌ |
+| 50 | 4 | **GPIO** | **按键 KEY3**（VCC_1V8 上拉 + 100R + 100nF 去抖） | ✅ **现成输入** |
+| 51 | 4 | **GPIO** | **LED5**（经 MOS 管 Q5 驱动） | ✅ **现成输出** |
+| 52–53 | 0xE | MDIO0 | PS 侧以太网 MDC/MDIO | ❌ |
+
+> **一句话结论**：PS 侧 **54 个 MIO 里只有 8 个的复用是 GPIO**，而这 8 个里真正"空着等你用"的只有 **MIO50（按键）与 MIO51（LED）**。**在 PS 侧扩展 GPIO 几乎一定会撞上引脚复用这一关**；需要不受限的 IO，就下到 PL 侧。
 
 ### 8.4 实例编号（DevId）怎么定
 
-`DevId` 是**该外设在 `al_xxx_cfg.c` 数组里的下标，从 0 开始**：
+**先纠正一个危险的直觉**：`DevId` **不是数组下标**，也不必是连续序号。驱动的实现是**线性扫描 + 字段比对**（以 `al_uart_dev.c:51` 为例）：
 
-| 外设 | `_NUM_INSTANCE` | DevId 取值 | 对应关系 |
-|---|---|---|---|
-| GPIO | 1 | `0` | 唯一的 GPIO 控制器 |
-| UART | 2 | `0` / `1` | 0 = UART0 · 1 = UART1 |
-| I2C | 2 | `0` / `1` | 0 = I2C0 · 1 = I2C1 |
-| SPI | 2 | `0` / `1` | 0 = SPI0 · 1 = SPI1 |
-| TC | 6 | `0` … `5` | 0–2 = TC0__TC0/1/2 · 3–5 = TC1__TC0/1/2 |
-| DMA | 1 | `0` | 8 个通道在通道配置结构体里区分 |
+```c
+AL_UART_HwConfigStruct *AlUart_Dev_LookupConfig(AL_U32 DevId)
+{
+    for (Index = 0; Index < AL_UART_NUM_INSTANCE; Index++) {
+        if (AlUart_HwConfig[Index].DeviceId == DevId) {   /* ← 比的是字段，不是下标 */
+            ConfigPtr = &AlUart_HwConfig[Index];
+            break;
+        }
+    }
+    return ConfigPtr;
+}
+```
 
-> ⚠️ **待确认**：TC 与 DMA 的 DevId 顺序需在 `al_tc_cfg.c` / `al_dma_cfg.c` 的数组里**逐个核对**（本表按基址递增推断，未逐行验证）。**这是唯一不能用"顾名思义"的地方**——填错就操作到别的实例。
+所以**唯一权威**是 `cfg.c` 里每个条目的 `.DeviceId` / `.DevId` 字段值。⚠️ 注意字段名各家不统一：**TC 用 `.DevId`，UART/GPIO/DMA 用 `.DeviceId`**。
+
+**⚠️ 零填充陷阱（必读）**：`_NUM_INSTANCE` 是**固定长度的宏常量**，而条目由 `#ifdef` 决定。**没写初始化器的槽会被零填充，其 `DeviceId` 恰好是 0** ⇒ 用一个不存在的 DevId 去查，**不会返回 NULL，而是返回一个"全零配置"**（`BaseAddress = 0`）。驱动只判 `if (HwConfig != AL_NULL)` 就放行，于是**所有寄存器访问都落到地址 0**——不报错、静默失效。
+
+| 外设 | `_NUM_INSTANCE` | 实际有效条目 | 可用的 DevId | 依据 |
+|---|---|---|---|---|
+| GPIO | 1 | 1 | **0**（`0xF8411000`） | `al_gpio_cfg.c`：`.DeviceId = 0` |
+| UART | 2 | **1** | **只有 1**（`0xF8401000`） | `UART0PS_ENABLE` 是注释 ⇒ 另一槽零填充 |
+| I2C | 2 | 见 `al_iic_cfg.c` | 待核 | 未逐行核 |
+| SPI | 2 | 见 `al_spi_cfg.c` | 待核 | 未逐行核 |
+| TC | 6 | **0** | **无可用**（`DevId 0–5` 全部命中零配置） | `TC0PS_ENABLE`/`TC1PS_ENABLE` 均为注释 |
+| DMA | 1 | 1 | **0** | `al_dma_cfg.c`：`.DeviceId = 0`，8 通道在通道配置结构体里区分 |
+
+> ⚠️ **两条已定案的坑**：
+> ① **UART 传 `0` 是错的**——`UART0PS_ENABLE` 被注释后，数组只剩一个初始化器写 `.DeviceId = 1`，**另一个槽零填充成 `DeviceId = 0`**；传 0 命中的正是那个空槽。**正确值是 `1`**（TC 的 DevId 顺序也已核实：`0/1/2` = TC0__TC0/1/2，`3/4/5` = TC1__TC0/1/2）。
+> ② **TC 目前完全不可用**——两个使能宏都是注释，6 个槽全是零填充，`AlTc_Dev_LookupConfig()` 返回零配置而非 NULL。**写 PWM 之前必须先放开 `soc_plat.h` 的 `TC0PS_ENABLE` 并重编 `soc_base`**（改到的是本目录之外的文件，需单独授权）。
 
 ### 8.5 工程骨架（在 `fdma_en/` 里怎么组织代码）
 
@@ -474,13 +554,19 @@ APP_INC_DIR += $(abspath $(sort $(dir $(foreach dir, $(shell find "./" -type d),
 | PL 复位 | `"al_top.h"` |
 | 地址宏 | `"al_hwcfg.h"` |
 
+> **省事写法**：SDK 里有一个**总头 `al_hal.h`**（在 `soc_base/dr1m90_fpsoc_cpu0/inc/`），一行 `#include "al_hal.h"` 就能把上表里**除前 5 类以外的全部外设 HAL** 一次带进来（GPIO / UART / TC / I2C / SPI / DMA / WDT / QSPI / GBE / MMC / ADC / CAN / USB，外加一批 AXI 版接口与 `al_core.h`）。
+>
+> ⚠️ **但它不管这 5 个，必须单独写**：`al_intr.h`（中断注册）、`al_top.h`（PL 复位）、`al_hwcfg.h`（地址宏）、`al_systimer.h`（延时）、`al_cache.h`（缓存维护）—— 这是最容易被"总头"漏掉的地方。
+>
+> 工程里现成的范例是 `fdma_en/main.c:31-40`，它**没用**总头，而是逐个包含 7 个（`al_core.h` · `ui_io.h` · `ui_type.h` · `al_cache.h` · `al_systimer.h` · `al_gpio_hal.h` + 3 个标准库）。**不确定就照抄它**。
+
 ---
 
 ## 九、总结
 
 1. **心态**：安路 PS 侧**有库、且分层与 STM32 同构**（HAL / LL / DEV+CFG / HW），只是命名是 `Al*_Hal_*` / `Al*_ll_*`，且没有 CubeMX。门槛是**索引缺失**，不是能力缺失。
 2. **通用四步**：定 DevId → 填 Init 结构体 → `AlXxx_Hal_Init(&h, ...)` 拿句柄 → 调业务 API。19 个外设一套逻辑。
-3. **四个必踩的坑**：DevId 是数组下标不是宏；GPIO 引脚号是 0–117 的全局线性编号；PWM 要靠 TC 的 Match + Wave 组合；UART1 已被日志占用。
+3. **四个必踩的坑**：DevId 是 `cfg.c` 里的 `DeviceId` 字段值（**不是数组下标**，且查不到时返回的是"零填充空配置"而不是报错）；GPIO 引脚号 = MIO 编号（0–53；≥54 是 DR1 没有的 EMIO）；PWM 要靠 TC 的 Match + Wave 组合（**而 TC 目前还没使能**）；PS 侧只有 UART1 一路串口，且它就是日志口。
 4. **PS 独有能力**是调度 PL，但三条通路里只有 TOP 寄存器与 `pl_gpio` 现在可用；"发阈值、读状态"要先改造 PL 侧开 AXI-GP0。
 5. **学习顺序**：L1 认清家底 → L2 串口闭环 → L3 GPIO → L4 定时器/PWM → L5 协议与 DMA → 进阶 PL 调度。**每级都能在不改 PL 的前提下独立下板验证**。
 
@@ -500,8 +586,11 @@ APP_INC_DIR += $(abspath $(sort $(dir $(foreach dir, $(shell find "./" -type d),
 | 寄存器读写与类型 | `fdma_en/ui_io.h` · `fdma_en/ui_type.h` |
 | 链接脚本 | `fdma_en/lds/gcc_dr1m90_ddr_aarch64.ld` |
 
-| 关联文档 | 路径 |
+| 相关文档 | 路径 |
 |---|---|
 | 总控架构（要建成的样子） | `../总控架构.md` |
 | PS 软件架构（现状全解） | `../推进总控前/推进总控前的PS架构.md` |
+| 引脚复用配置表（`psio_data_0` 出处） | `<D:\项目\FPGA工程\02-工程实操\10-平台\GetStabilityPS(base-fdma_en)\稳定的平台存档\mipiHDMIbySD\soc_sdk\soc_base\platform\src\soc_plat.c>` |
+| 底板原理图（MIO / KEY / LED 接法） | `<D:\项目\FPGA工程\安路平台资料\硬件数据手册\硬件资料_MLK_F3P_CZ02_DR1_20250526\02_原理图\MLK_F3P_DR1_250526.pdf>` |
+| 外设分组引脚表（PS-ETH / PS-USB / PS-TF / UART / 按钮-LED） | `<D:\项目\FPGA工程\安路平台资料\硬件数据手册\硬件资料_MLK_F3P_CZ02_DR1_20250526\08_框图及pinlist\MLK-F3P>` |
 | PS 侧风险清单 | `../推进总控前/总控平台建立起的问题.md` |
