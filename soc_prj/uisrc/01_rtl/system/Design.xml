@@ -64,106 +64,21 @@
                 <ipxact:configurableElementValue referenceId="DDRC_DDR_SPEED">1333</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="DDRC_DDR_TYPE">&quot;DDR3&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="DDRC_DELAY_B0">1</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="DDRC_DELAY_B0_AC">0</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="DDRC_DELAY_B0_DQ">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="DDRC_DELAY_B1">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="DDRC_DELAY_B2">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="DDRC_DELAY_B3">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="DDRC_DQ_WIDTH">32</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="DDRC_DRAM_DRV">40</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="DDRC_DRAM_ODT">&quot;40&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="DDRC_ECC_EN">&quot;NONE&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="DDRC_EN">1</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="DDRC_Host_DRV_for_AC">40</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="DDRC_Host_DRV_for_DX">40</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="DDRC_Host_ODT_for_DX">40</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="DDRC_IO_VOL">1.35</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="DDRC_IO_VOL">1.5</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="DDRC_PZQ_CONF">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="DDRC_SPEED_BIN">&quot;DDR3_1333G&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="DDRC_TRAINING_EN">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="DDRC_VREF">&quot;Internal&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="DDRC_WDM_WDBI">&quot;NONE&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_Dot_Actual_IO_Frequency">124.9875</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_Dot_Actual_Inside_Frequency">499.95</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_Dot_Clock_Source">&quot;IO PLL&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_Dot_Enable">1</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_Dot_IO">&quot;PS IO 16...27&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_Dot_Requested_Frequency">1000</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_Dot_Type">&quot;RGMII&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ETH0_Dot_Enable">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ETH0_MII_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ETH0_MII_GMII_Available">0</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_PTP_Dot_Actual_Inside_Frequency">100</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_PTP_Dot_Clock_Source">&quot;IO PLL&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_mdc_Dot_Direction">&quot;out&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_mdc_Dot_Drive_Strength">8</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_mdc_Dot_IO">&quot;PS IO 52&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_mdc_Dot_Pullup">&quot;pullup 25k&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_mdc_Dot_Speed">&quot;medium&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_mdio_Dot_Direction">&quot;inout&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_mdio_Dot_Drive_Strength">8</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_mdio_Dot_IO">&quot;PS IO 53&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_mdio_Dot_Pullup">&quot;pullup 25k&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_mdio_Dot_Speed">&quot;medium&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_rx_clk_Dot_Direction">&quot;in&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_rx_clk_Dot_Drive_Strength">16</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_rx_clk_Dot_IO">&quot;PS IO 22&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_rx_clk_Dot_Pullup">&quot;pullup 25k&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_rx_clk_Dot_Speed">&quot;fast&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_rx_ctl_Dot_Direction">&quot;in&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_rx_ctl_Dot_Drive_Strength">16</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_rx_ctl_Dot_IO">&quot;PS IO 27&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_rx_ctl_Dot_Pullup">&quot;pullup 25k&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_rx_ctl_Dot_Speed">&quot;fast&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_rxd0_Dot_Direction">&quot;in&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_rxd0_Dot_Drive_Strength">16</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_rxd0_Dot_IO">&quot;PS IO 23&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_rxd0_Dot_Pullup">&quot;pullup 25k&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_rxd0_Dot_Speed">&quot;fast&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_rxd1_Dot_Direction">&quot;in&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_rxd1_Dot_Drive_Strength">16</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_rxd1_Dot_IO">&quot;PS IO 24&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_rxd1_Dot_Pullup">&quot;pullup 25k&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_rxd1_Dot_Speed">&quot;fast&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_rxd2_Dot_Direction">&quot;in&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_rxd2_Dot_Drive_Strength">16</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_rxd2_Dot_IO">&quot;PS IO 25&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_rxd2_Dot_Pullup">&quot;pullup 25k&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_rxd2_Dot_Speed">&quot;fast&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_rxd3_Dot_Direction">&quot;in&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_rxd3_Dot_Drive_Strength">16</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_rxd3_Dot_IO">&quot;PS IO 26&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_rxd3_Dot_Pullup">&quot;pullup 25k&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_rxd3_Dot_Speed">&quot;fast&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_tx_clk_Dot_Direction">&quot;out&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_tx_clk_Dot_Drive_Strength">16</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_tx_clk_Dot_IO">&quot;PS IO 16&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_tx_clk_Dot_Pullup">&quot;high Z&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_tx_clk_Dot_Speed">&quot;fast&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_tx_ctl_Dot_Direction">&quot;out&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_tx_ctl_Dot_Drive_Strength">16</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_tx_ctl_Dot_IO">&quot;PS IO 21&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_tx_ctl_Dot_Pullup">&quot;high Z&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_tx_ctl_Dot_Speed">&quot;fast&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_txd0_Dot_Direction">&quot;out&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_txd0_Dot_Drive_Strength">16</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_txd0_Dot_IO">&quot;PS IO 17&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_txd0_Dot_Pullup">&quot;high Z&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_txd0_Dot_Speed">&quot;fast&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_txd1_Dot_Direction">&quot;out&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_txd1_Dot_Drive_Strength">16</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_txd1_Dot_IO">&quot;PS IO 18&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_txd1_Dot_Pullup">&quot;high Z&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_txd1_Dot_Speed">&quot;fast&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_txd2_Dot_Direction">&quot;out&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_txd2_Dot_Drive_Strength">16</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_txd2_Dot_IO">&quot;PS IO 19&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_txd2_Dot_Pullup">&quot;high Z&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_txd2_Dot_Speed">&quot;fast&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_txd3_Dot_Direction">&quot;out&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_txd3_Dot_Drive_Strength">16</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_txd3_Dot_IO">&quot;PS IO 20&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_txd3_Dot_Pullup">&quot;high Z&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ETH0_txd3_Dot_Speed">&quot;fast&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ETH1_Dot_Enable">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ETH1_MII_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ETH1_MII_GMII_Available">0</ipxact:configurableElementValue>
@@ -191,19 +106,79 @@
                 <ipxact:configurableElementValue referenceId="GPIO_PS_IO13_Present">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="GPIO_PS_IO14_Present">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="GPIO_PS_IO15_Present">0</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="GPIO_PS_IO16_Present">0</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="GPIO_PS_IO17_Present">0</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="GPIO_PS_IO18_Present">0</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="GPIO_PS_IO19_Present">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO16_Dot_Direction">&quot;inout&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO16_Dot_Drive_Strength">8</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO16_Dot_IO">&quot;PS IO 16&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO16_Dot_Pullup">&quot;pullup 25k&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO16_Dot_Speed">&quot;slow&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO16_Present">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO17_Dot_Direction">&quot;inout&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO17_Dot_Drive_Strength">8</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO17_Dot_IO">&quot;PS IO 17&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO17_Dot_Pullup">&quot;pullup 25k&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO17_Dot_Speed">&quot;slow&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO17_Present">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO18_Dot_Direction">&quot;inout&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO18_Dot_Drive_Strength">8</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO18_Dot_IO">&quot;PS IO 18&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO18_Dot_Pullup">&quot;pullup 25k&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO18_Dot_Speed">&quot;slow&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO18_Present">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO19_Dot_Direction">&quot;inout&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO19_Dot_Drive_Strength">8</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO19_Dot_IO">&quot;PS IO 19&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO19_Dot_Pullup">&quot;pullup 25k&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO19_Dot_Speed">&quot;slow&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO19_Present">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="GPIO_PS_IO1_Present">0</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="GPIO_PS_IO20_Present">0</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="GPIO_PS_IO21_Present">0</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="GPIO_PS_IO22_Present">0</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="GPIO_PS_IO23_Present">0</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="GPIO_PS_IO24_Present">0</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="GPIO_PS_IO25_Present">0</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="GPIO_PS_IO26_Present">0</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="GPIO_PS_IO27_Present">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO20_Dot_Direction">&quot;inout&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO20_Dot_Drive_Strength">8</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO20_Dot_IO">&quot;PS IO 20&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO20_Dot_Pullup">&quot;pullup 25k&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO20_Dot_Speed">&quot;slow&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO20_Present">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO21_Dot_Direction">&quot;inout&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO21_Dot_Drive_Strength">8</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO21_Dot_IO">&quot;PS IO 21&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO21_Dot_Pullup">&quot;pullup 25k&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO21_Dot_Speed">&quot;slow&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO21_Present">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO22_Dot_Direction">&quot;inout&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO22_Dot_Drive_Strength">8</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO22_Dot_IO">&quot;PS IO 22&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO22_Dot_Pullup">&quot;pullup 25k&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO22_Dot_Speed">&quot;slow&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO22_Present">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO23_Dot_Direction">&quot;inout&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO23_Dot_Drive_Strength">8</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO23_Dot_IO">&quot;PS IO 23&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO23_Dot_Pullup">&quot;pullup 25k&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO23_Dot_Speed">&quot;slow&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO23_Present">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO24_Dot_Direction">&quot;inout&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO24_Dot_Drive_Strength">8</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO24_Dot_IO">&quot;PS IO 24&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO24_Dot_Pullup">&quot;pullup 25k&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO24_Dot_Speed">&quot;slow&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO24_Present">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO25_Dot_Direction">&quot;inout&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO25_Dot_Drive_Strength">8</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO25_Dot_IO">&quot;PS IO 25&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO25_Dot_Pullup">&quot;pullup 25k&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO25_Dot_Speed">&quot;slow&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO25_Present">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO26_Dot_Direction">&quot;inout&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO26_Dot_Drive_Strength">8</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO26_Dot_IO">&quot;PS IO 26&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO26_Dot_Pullup">&quot;pullup 25k&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO26_Dot_Speed">&quot;slow&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO26_Present">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO27_Dot_Direction">&quot;inout&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO27_Dot_Drive_Strength">8</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO27_Dot_IO">&quot;PS IO 27&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO27_Dot_Pullup">&quot;pullup 25k&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO27_Dot_Speed">&quot;slow&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO27_Present">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="GPIO_PS_IO28_Present">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="GPIO_PS_IO29_Present">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="GPIO_PS_IO2_Present">0</ipxact:configurableElementValue>
@@ -246,8 +221,18 @@
                 <ipxact:configurableElementValue referenceId="GPIO_PS_IO51_Dot_Pullup">&quot;pullup 25k&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="GPIO_PS_IO51_Dot_Speed">&quot;slow&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="GPIO_PS_IO51_Present">1</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="GPIO_PS_IO52_Present">0</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="GPIO_PS_IO53_Present">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO52_Dot_Direction">&quot;inout&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO52_Dot_Drive_Strength">8</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO52_Dot_IO">&quot;PS IO 52&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO52_Dot_Pullup">&quot;pullup 25k&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO52_Dot_Speed">&quot;slow&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO52_Present">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO53_Dot_Direction">&quot;inout&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO53_Dot_Drive_Strength">8</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO53_Dot_IO">&quot;PS IO 53&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO53_Dot_Pullup">&quot;pullup 25k&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO53_Dot_Speed">&quot;slow&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO_PS_IO53_Present">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="GPIO_PS_IO5_Present">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="GPIO_PS_IO6_Present">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="GPIO_PS_IO7_Dot_Direction">&quot;inout&quot;</ipxact:configurableElementValue>
@@ -285,22 +270,20 @@
                 <ipxact:configurableElementValue referenceId="Internal_ETH0_PTP_Clk">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="Internal_ETH1_PTP_Clk">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="MDIO0_Available">0</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="MDIO0_Dot_Enable">1</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="MDIO0_Dot_IO">&quot;PS IO 52...53&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="MDIO1_Available">0</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="Master_AXI_GP0_Interface">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="Master_AXI_GP0_Interface">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="Master_AXI_GP1_Interface">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="NAND_Flash_Dot_Enable">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="NPU_Dot_Enable">&quot;Disable&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P2F_IRQ_DDR_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P2F_IRQ_DMAC_AHB_Available">0</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="P2F_IRQ_ETH_PHY0_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P2F_IRQ_GPIO0_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P2F_IRQ_GPIO1_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P2F_IRQ_GPIO2_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P2F_IRQ_QSPI_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P2F_IRQ_SDIO0_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P2F_IRQ_SDIO1_Available">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="P2F_IRQ_UART0_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P2F_IRQ_UART1_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P2F_IRQ_USB0_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P2F_Reset0_Available">1</ipxact:configurableElementValue>
@@ -309,7 +292,6 @@
                 <ipxact:configurableElementValue referenceId="P2F_Reset3_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="PJTAG_Dot_Enable">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="PTP0_Available">0</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="PTP0_Dot_Enable">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="PTP1_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="Peripheral_request_interface0">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="Peripheral_request_interface1">0</ipxact:configurableElementValue>
@@ -447,8 +429,16 @@
                 <ipxact:configurableElementValue referenceId="Timer0_Dot_Enable">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="Timer1_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="Timer1_Dot_Enable">0</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="UART0_Available">0</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="UART0_Dot_Enable">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="UART0_Available">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="UART0_Dot_Actual_IO_Frequency">115200</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="UART0_Dot_Actual_Inside_Frequency">49.995</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="UART0_Dot_Clock_Source">&quot;IO PLL&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="UART0_Dot_Enable">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="UART0_Dot_IO">&quot;PL IO&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="UART0_Dot_Requested_Frequency">115200</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="UART0_Modem_Signals_Dot_Enable">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="UART0_rx_Dot_IO">&quot;PL IO&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="UART0_tx_Dot_IO">&quot;PL IO&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="UART1_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="UART1_Dot_Actual_IO_Frequency">115200</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="UART1_Dot_Actual_Inside_Frequency">49.995</ipxact:configurableElementValue>
@@ -583,6 +573,56 @@
             <ipxact:ipPath>C:/Users/ui/Desktop/dr1/sdk_pl_fdma_/soc_prj/uisrc/03_ip/uifdma/uiFDMA.v</ipxact:ipPath>
             <ipxact:customTool>use_rtl</ipxact:customTool>
         </ipxact:componentInstance>
+        <ipxact:componentInstance>
+            <ipxact:instanceName>AXI_GPIO_0</ipxact:instanceName>
+            <ipxact:componentRef vendor="anlogic.com" library="ip" name="AXI_GPIO" version="1.0"/>
+            <ipxact:instancePath>ip/system_AXI_GPIO_0</ipxact:instancePath>
+            <ipxact:configurableElementValues>
+                <ipxact:configurableElementValue referenceId="AL_ALL_IN_PORTS">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_ALL_OUT_PORTS">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_AXIS_ADDR_WD">9</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_AXIS_DATA_WD">32</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_DUAL_CHANNEL">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_GPIO2_WD">32</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_GPIO_WD">4</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_INTR_ENABLE">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_RESET_DOUT">4'h00000000</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_RESET_DOUT_2">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_RESET_TRI">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_RESET_TRI_2">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="DOUT_DEFAULT">'h00000000</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="IN_OUT_USE">0</ipxact:configurableElementValue>
+            </ipxact:configurableElementValues>
+        </ipxact:componentInstance>
+        <ipxact:componentInstance>
+            <ipxact:instanceName>AXI_Protocol_Converter_0</ipxact:instanceName>
+            <ipxact:componentRef vendor="anlogic.com" library="ip" name="AXI_Protocol_Converter" version="1.0"/>
+            <ipxact:instancePath>ip/system_AXI_Protocol_Converter_0</ipxact:instancePath>
+            <ipxact:configurableElementValues>
+                <ipxact:configurableElementValue referenceId="AL_AXI_ADDR_WIDTH">32</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_AXI_DATA_WIDTH">32</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_AXI_ID_WIDTH">4</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_AXI_SUPPORTS_READ">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_AXI_SUPPORTS_WRITE">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_DS_AXI_PROTOCOL">2</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_US_AXI_PROTOCOL">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="READ_WRITE_Mode">&quot;READ_WRITE&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="USER_SIGNALS__reponse_enable">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="USER_SIGNALS_enable">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="axi3_de_ds">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="axi3_de_us">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="axilite_de">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="aximm_ds">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="aximm_us">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds_axi_awlen_de">7</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds_axi_awlock_de">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="protocol_ds_num">&quot;AXI4LITE&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="protocol_us_num">&quot;AXI4&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="rw_mode_num">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="us_axi_awlen_de">7</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="us_axi_awlock_de">0</ipxact:configurableElementValue>
+            </ipxact:configurableElementValues>
+        </ipxact:componentInstance>
     </ipxact:componentInstances>
     <ipxact:designPorts>
         <ipxact:designPort>
@@ -665,6 +705,12 @@
             <ipxact:name>pl_gpio_out</ipxact:name>
             <ipxact:direction>output</ipxact:direction>
         </ipxact:designPort>
+        <ipxact:designPort>
+            <ipxact:name>code_driver</ipxact:name>
+            <ipxact:vectorL>3</ipxact:vectorL>
+            <ipxact:vectorR>0</ipxact:vectorR>
+            <ipxact:direction>output</ipxact:direction>
+        </ipxact:designPort>
     </ipxact:designPorts>
     <ipxact:adHocConnections>
         <ipxact:adHocConnection>
@@ -674,6 +720,9 @@
                 <ipxact:externalPortReference portRef="p2f_clk0"/>
                 <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="slave_hp0_axi_aclk"/>
                 <ipxact:internalPortReference componentRef="uiFDMA_0" portRef="M_AXI_ACLK"/>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_0" portRef="s_axi_aclk"/>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_aclk"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="aclk"/>
                 <anlogic:freqMhz>199.98</anlogic:freqMhz>
             </ipxact:portReferences>
         </ipxact:adHocConnection>
@@ -683,6 +732,8 @@
                 <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="p2f_rst0_n"/>
                 <ipxact:externalPortReference portRef="p2f_rst0_n"/>
                 <ipxact:internalPortReference componentRef="uiFDMA_0" portRef="M_AXI_ARESETN"/>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_0" portRef="s_axi_aresetn"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="aresetn"/>
             </ipxact:portReferences>
         </ipxact:adHocConnection>
         <ipxact:adHocConnection>
@@ -767,6 +818,13 @@
             <ipxact:portReferences>
                 <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="slave_hp0_axi_wready"/>
                 <ipxact:internalPortReference componentRef="uiFDMA_0" portRef="M_AXI_WREADY"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_GPIO_0__gpio_io_o</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_0" portRef="gpio_io_o"/>
+                <ipxact:externalPortReference portRef="code_driver"/>
             </ipxact:portReferences>
         </ipxact:adHocConnection>
         <ipxact:adHocConnection>
@@ -1049,8 +1107,383 @@
                 <ipxact:externalPortReference portRef="O_fdma_wvalid"/>
             </ipxact:portReferences>
         </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_0__ds_axi_awaddr</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="ds_axi_awaddr"/>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_0" portRef="s_axi_awaddr"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_0__ds_axi_awvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="ds_axi_awvalid"/>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_0" portRef="s_axi_awvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_GPIO_0__s_axi_awready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_0" portRef="s_axi_awready"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="ds_axi_awready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_0__ds_axi_wdata</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="ds_axi_wdata"/>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_0" portRef="s_axi_wdata"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_0__ds_axi_wstrb</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="ds_axi_wstrb"/>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_0" portRef="s_axi_wstrb"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_0__ds_axi_wvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="ds_axi_wvalid"/>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_0" portRef="s_axi_wvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_GPIO_0__s_axi_wready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_0" portRef="s_axi_wready"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="ds_axi_wready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_GPIO_0__s_axi_bresp</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_0" portRef="s_axi_bresp"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="ds_axi_bresp"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_GPIO_0__s_axi_bvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_0" portRef="s_axi_bvalid"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="ds_axi_bvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_0__ds_axi_bready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="ds_axi_bready"/>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_0" portRef="s_axi_bready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_0__ds_axi_araddr</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="ds_axi_araddr"/>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_0" portRef="s_axi_araddr"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_0__ds_axi_arvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="ds_axi_arvalid"/>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_0" portRef="s_axi_arvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_GPIO_0__s_axi_arready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_0" portRef="s_axi_arready"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="ds_axi_arready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_GPIO_0__s_axi_rdata</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_0" portRef="s_axi_rdata"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="ds_axi_rdata"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_GPIO_0__s_axi_rresp</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_0" portRef="s_axi_rresp"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="ds_axi_rresp"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_GPIO_0__s_axi_rvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_0" portRef="s_axi_rvalid"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="ds_axi_rvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_0__ds_axi_rready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="ds_axi_rready"/>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_0" portRef="s_axi_rready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_araddr</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_araddr"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_araddr"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_arburst</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_arburst"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_arburst"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_arcache</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_arcache"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_arcache"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_arid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_arid"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_arid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_arlen</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_arlen"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_arlen"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_arlock</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_arlock"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_arlock"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_arprot</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_arprot"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_arprot"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_arready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_arready"/>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_arready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_arsize</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_arsize"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_arsize"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_arvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_arvalid"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_arvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_awaddr</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_awaddr"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_awaddr"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_awburst</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_awburst"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_awburst"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_awcache</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_awcache"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_awcache"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_awid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_awid"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_awid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_awlen</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_awlen"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_awlen"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_awlock</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_awlock"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_awlock"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_awprot</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_awprot"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_awprot"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_awready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_awready"/>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_awready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_awsize</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_awsize"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_awsize"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_awvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_awvalid"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_awvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_bid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_bid"/>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_bid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_bready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_bready"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_bready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_bresp</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_bresp"/>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_bresp"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_bvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_bvalid"/>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_bvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_rdata</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_rdata"/>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_rdata"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_rid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_rid"/>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_rid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_rlast</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_rlast"/>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_rlast"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_rready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_rready"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_rready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_rresp</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_rresp"/>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_rresp"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_rvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_rvalid"/>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_rvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_wdata</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_wdata"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_wdata"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_wlast</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_wlast"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_wlast"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_wready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_wready"/>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_wready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_wstrb</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_wstrb"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_wstrb"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_wvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_wvalid"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_wvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
     </ipxact:adHocConnections>
-    <ipxact:interconnections/>
+    <ipxact:interconnections>
+        <ipxact:interconnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_0__DS_AXI</ipxact:name>
+            <ipxact:activeInterface componentRef="AXI_Protocol_Converter_0" busRef="DS_AXI"/>
+            <ipxact:activeInterface componentRef="AXI_GPIO_0" busRef="S_AXI_Lite"/>
+        </ipxact:interconnection>
+        <ipxact:interconnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__M_AXI_GP0</ipxact:name>
+            <ipxact:activeInterface componentRef="ARM_Processor_System_0" busRef="M_AXI_GP0"/>
+            <ipxact:activeInterface componentRef="AXI_Protocol_Converter_0" busRef="US_AXI"/>
+        </ipxact:interconnection>
+    </ipxact:interconnections>
     <ipxact:ipCatalogDir>
         <ipxact:name>E:/FPGA/Anlu/ip/depot</ipxact:name>
         <ipxact:name>E:/Anlogic/TD_5.9.1_DR1_2025.1_151.508/ip/depot</ipxact:name>

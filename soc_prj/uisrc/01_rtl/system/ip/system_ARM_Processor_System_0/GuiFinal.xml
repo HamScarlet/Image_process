@@ -3,7 +3,7 @@
     <name>ARM_Processor_System_F9F0D0P0</name>
     <version>1.0</version>
     <library>user.config</library>
-    <number>148868 2025/02/07</number>
+    <number>165205 2025/06/17</number>
     <parameters>
         <parameter parameterId="F2P_IRQ_Available" value="0" enable="1"/>
         <parameter parameterId="APU_Core0_PPI_16" value="0" enable="1"/>
@@ -28,12 +28,12 @@
         <parameter parameterId="P2F_IRQ_GPIO2_Available" value="0" enable="1"/>
         <parameter parameterId="P2F_IRQ_GPIO3_Available" value="0" enable="0"/>
         <parameter parameterId="P2F_IRQ_USB0_Available" value="0" enable="1"/>
-        <parameter parameterId="P2F_IRQ_ETH_PHY0_Available" value="0" enable="1"/>
+        <parameter parameterId="P2F_IRQ_ETH_PHY0_Available" value="0" enable="0"/>
         <parameter parameterId="P2F_IRQ_SDIO0_Available" value="0" enable="1"/>
         <parameter parameterId="P2F_IRQ_I2C0_Available" value="0" enable="0"/>
         <parameter parameterId="P2F_IRQ_SPI0_SLAVE_Available" value="0" enable="0"/>
         <parameter parameterId="P2F_IRQ_SPI0_MASTER_Available" value="0" enable="0"/>
-        <parameter parameterId="P2F_IRQ_UART0_Available" value="0" enable="0"/>
+        <parameter parameterId="P2F_IRQ_UART0_Available" value="0" enable="1"/>
         <parameter parameterId="P2F_IRQ_CAN0_Available" value="0" enable="0"/>
         <parameter parameterId="P2F_IRQ_USB1_Available" value="0" enable="0"/>
         <parameter parameterId="P2F_IRQ_ETH_PHY1_Available" value="0" enable="0"/>
@@ -48,7 +48,7 @@
         <parameter parameterId="P2F_Reset1_Available" value="0" enable="1"/>
         <parameter parameterId="P2F_Reset2_Available" value="0" enable="1"/>
         <parameter parameterId="P2F_Reset3_Available" value="0" enable="1"/>
-        <parameter parameterId="Master_AXI_GP0_Interface" value="0" enable="1"/>
+        <parameter parameterId="Master_AXI_GP0_Interface" value="1" enable="1"/>
         <parameter parameterId="Master_AXI_GP1_Interface" value="0" enable="1"/>
         <parameter parameterId="Slave_AXI_GP0_Interface" value="0" enable="1"/>
         <parameter parameterId="Slave_AXI_GP1_Interface" value="0" enable="1"/>
@@ -268,100 +268,100 @@
         <parameter parameterId="nand_d15_Dot_Speed" value="slow" enable="0"/>
         <parameter parameterId="nand_d15_Dot_Pullup" value="pullup 25k" enable="0"/>
         <parameter parameterId="nand_d15_Dot_Direction" value="inout" enable="0"/>
-        <parameter parameterId="ETH0_Dot_Enable" value="1" enable="1"/>
-        <parameter parameterId="ETH0_Dot_Type" value="RGMII" enable="1"/>
-        <parameter parameterId="ETH0_Dot_IO" value="PS IO 16...27" enable="1"/>
+        <parameter parameterId="ETH0_Dot_Enable" value="0" enable="1"/>
+        <parameter parameterId="ETH0_Dot_Type" value="RGMII" enable="0"/>
+        <parameter parameterId="ETH0_Dot_IO" value="PS IO 16...27" enable="0"/>
         <parameter parameterId="ETH0_MII_GMII_Available" value="0" enable="1"/>
         <parameter parameterId="ETH0_MII_Available" value="0" enable="1"/>
         <parameter parameterId="GBE0_INTF_TYP" value="0" enable="0"/>
-        <parameter parameterId="ETH0_tx_clk_Dot_peripheralSignal" value="nan" enable="1"/>
-        <parameter parameterId="ETH0_tx_clk_Dot_IO" value="PS IO 16" enable="1"/>
-        <parameter parameterId="ETH0_tx_clk_Dot_Drive_Strength" value="16" enable="1"/>
-        <parameter parameterId="ETH0_tx_clk_Dot_Speed" value="fast" enable="1"/>
-        <parameter parameterId="ETH0_tx_clk_Dot_Pullup" value="high Z" enable="1"/>
-        <parameter parameterId="ETH0_tx_clk_Dot_Direction" value="out" enable="1"/>
-        <parameter parameterId="ETH0_tx_ctl_Dot_peripheralSignal" value="nan" enable="1"/>
-        <parameter parameterId="ETH0_tx_ctl_Dot_IO" value="PS IO 21" enable="1"/>
-        <parameter parameterId="ETH0_tx_ctl_Dot_Drive_Strength" value="16" enable="1"/>
-        <parameter parameterId="ETH0_tx_ctl_Dot_Speed" value="fast" enable="1"/>
-        <parameter parameterId="ETH0_tx_ctl_Dot_Pullup" value="high Z" enable="1"/>
-        <parameter parameterId="ETH0_tx_ctl_Dot_Direction" value="out" enable="1"/>
-        <parameter parameterId="ETH0_txd3_Dot_peripheralSignal" value="nan" enable="1"/>
-        <parameter parameterId="ETH0_txd3_Dot_IO" value="PS IO 20" enable="1"/>
-        <parameter parameterId="ETH0_txd3_Dot_Drive_Strength" value="16" enable="1"/>
-        <parameter parameterId="ETH0_txd3_Dot_Speed" value="fast" enable="1"/>
-        <parameter parameterId="ETH0_txd3_Dot_Pullup" value="high Z" enable="1"/>
-        <parameter parameterId="ETH0_txd3_Dot_Direction" value="out" enable="1"/>
-        <parameter parameterId="ETH0_txd2_Dot_peripheralSignal" value="nan" enable="1"/>
-        <parameter parameterId="ETH0_txd2_Dot_IO" value="PS IO 19" enable="1"/>
-        <parameter parameterId="ETH0_txd2_Dot_Drive_Strength" value="16" enable="1"/>
-        <parameter parameterId="ETH0_txd2_Dot_Speed" value="fast" enable="1"/>
-        <parameter parameterId="ETH0_txd2_Dot_Pullup" value="high Z" enable="1"/>
-        <parameter parameterId="ETH0_txd2_Dot_Direction" value="out" enable="1"/>
-        <parameter parameterId="ETH0_txd1_Dot_peripheralSignal" value="nan" enable="1"/>
-        <parameter parameterId="ETH0_txd1_Dot_IO" value="PS IO 18" enable="1"/>
-        <parameter parameterId="ETH0_txd1_Dot_Drive_Strength" value="16" enable="1"/>
-        <parameter parameterId="ETH0_txd1_Dot_Speed" value="fast" enable="1"/>
-        <parameter parameterId="ETH0_txd1_Dot_Pullup" value="high Z" enable="1"/>
-        <parameter parameterId="ETH0_txd1_Dot_Direction" value="out" enable="1"/>
-        <parameter parameterId="ETH0_txd0_Dot_peripheralSignal" value="nan" enable="1"/>
-        <parameter parameterId="ETH0_txd0_Dot_IO" value="PS IO 17" enable="1"/>
-        <parameter parameterId="ETH0_txd0_Dot_Drive_Strength" value="16" enable="1"/>
-        <parameter parameterId="ETH0_txd0_Dot_Speed" value="fast" enable="1"/>
-        <parameter parameterId="ETH0_txd0_Dot_Pullup" value="high Z" enable="1"/>
-        <parameter parameterId="ETH0_txd0_Dot_Direction" value="out" enable="1"/>
-        <parameter parameterId="ETH0_rx_clk_Dot_peripheralSignal" value="nan" enable="1"/>
-        <parameter parameterId="ETH0_rx_clk_Dot_IO" value="PS IO 22" enable="1"/>
-        <parameter parameterId="ETH0_rx_clk_Dot_Drive_Strength" value="16" enable="1"/>
-        <parameter parameterId="ETH0_rx_clk_Dot_Speed" value="fast" enable="1"/>
-        <parameter parameterId="ETH0_rx_clk_Dot_Pullup" value="pullup 25k" enable="1"/>
-        <parameter parameterId="ETH0_rx_clk_Dot_Direction" value="in" enable="1"/>
-        <parameter parameterId="ETH0_rx_ctl_Dot_peripheralSignal" value="nan" enable="1"/>
-        <parameter parameterId="ETH0_rx_ctl_Dot_IO" value="PS IO 27" enable="1"/>
-        <parameter parameterId="ETH0_rx_ctl_Dot_Drive_Strength" value="16" enable="1"/>
-        <parameter parameterId="ETH0_rx_ctl_Dot_Speed" value="fast" enable="1"/>
-        <parameter parameterId="ETH0_rx_ctl_Dot_Pullup" value="pullup 25k" enable="1"/>
-        <parameter parameterId="ETH0_rx_ctl_Dot_Direction" value="in" enable="1"/>
-        <parameter parameterId="ETH0_rxd3_Dot_peripheralSignal" value="nan" enable="1"/>
-        <parameter parameterId="ETH0_rxd3_Dot_IO" value="PS IO 26" enable="1"/>
-        <parameter parameterId="ETH0_rxd3_Dot_Drive_Strength" value="16" enable="1"/>
-        <parameter parameterId="ETH0_rxd3_Dot_Speed" value="fast" enable="1"/>
-        <parameter parameterId="ETH0_rxd3_Dot_Pullup" value="pullup 25k" enable="1"/>
-        <parameter parameterId="ETH0_rxd3_Dot_Direction" value="in" enable="1"/>
-        <parameter parameterId="ETH0_rxd2_Dot_peripheralSignal" value="nan" enable="1"/>
-        <parameter parameterId="ETH0_rxd2_Dot_IO" value="PS IO 25" enable="1"/>
-        <parameter parameterId="ETH0_rxd2_Dot_Drive_Strength" value="16" enable="1"/>
-        <parameter parameterId="ETH0_rxd2_Dot_Speed" value="fast" enable="1"/>
-        <parameter parameterId="ETH0_rxd2_Dot_Pullup" value="pullup 25k" enable="1"/>
-        <parameter parameterId="ETH0_rxd2_Dot_Direction" value="in" enable="1"/>
-        <parameter parameterId="ETH0_rxd1_Dot_peripheralSignal" value="nan" enable="1"/>
-        <parameter parameterId="ETH0_rxd1_Dot_IO" value="PS IO 24" enable="1"/>
-        <parameter parameterId="ETH0_rxd1_Dot_Drive_Strength" value="16" enable="1"/>
-        <parameter parameterId="ETH0_rxd1_Dot_Speed" value="fast" enable="1"/>
-        <parameter parameterId="ETH0_rxd1_Dot_Pullup" value="pullup 25k" enable="1"/>
-        <parameter parameterId="ETH0_rxd1_Dot_Direction" value="in" enable="1"/>
-        <parameter parameterId="ETH0_rxd0_Dot_peripheralSignal" value="nan" enable="1"/>
-        <parameter parameterId="ETH0_rxd0_Dot_IO" value="PS IO 23" enable="1"/>
-        <parameter parameterId="ETH0_rxd0_Dot_Drive_Strength" value="16" enable="1"/>
-        <parameter parameterId="ETH0_rxd0_Dot_Speed" value="fast" enable="1"/>
-        <parameter parameterId="ETH0_rxd0_Dot_Pullup" value="pullup 25k" enable="1"/>
-        <parameter parameterId="ETH0_rxd0_Dot_Direction" value="in" enable="1"/>
-        <parameter parameterId="MDIO0_Dot_Enable" value="1" enable="1"/>
-        <parameter parameterId="MDIO0_Dot_IO" value="PS IO 52...53" enable="1"/>
+        <parameter parameterId="ETH0_tx_clk_Dot_peripheralSignal" value="nan" enable="0"/>
+        <parameter parameterId="ETH0_tx_clk_Dot_IO" value="PS IO 16" enable="0"/>
+        <parameter parameterId="ETH0_tx_clk_Dot_Drive_Strength" value="16" enable="0"/>
+        <parameter parameterId="ETH0_tx_clk_Dot_Speed" value="fast" enable="0"/>
+        <parameter parameterId="ETH0_tx_clk_Dot_Pullup" value="high Z" enable="0"/>
+        <parameter parameterId="ETH0_tx_clk_Dot_Direction" value="out" enable="0"/>
+        <parameter parameterId="ETH0_tx_ctl_Dot_peripheralSignal" value="nan" enable="0"/>
+        <parameter parameterId="ETH0_tx_ctl_Dot_IO" value="PS IO 21" enable="0"/>
+        <parameter parameterId="ETH0_tx_ctl_Dot_Drive_Strength" value="16" enable="0"/>
+        <parameter parameterId="ETH0_tx_ctl_Dot_Speed" value="fast" enable="0"/>
+        <parameter parameterId="ETH0_tx_ctl_Dot_Pullup" value="high Z" enable="0"/>
+        <parameter parameterId="ETH0_tx_ctl_Dot_Direction" value="out" enable="0"/>
+        <parameter parameterId="ETH0_txd3_Dot_peripheralSignal" value="nan" enable="0"/>
+        <parameter parameterId="ETH0_txd3_Dot_IO" value="PS IO 20" enable="0"/>
+        <parameter parameterId="ETH0_txd3_Dot_Drive_Strength" value="16" enable="0"/>
+        <parameter parameterId="ETH0_txd3_Dot_Speed" value="fast" enable="0"/>
+        <parameter parameterId="ETH0_txd3_Dot_Pullup" value="high Z" enable="0"/>
+        <parameter parameterId="ETH0_txd3_Dot_Direction" value="out" enable="0"/>
+        <parameter parameterId="ETH0_txd2_Dot_peripheralSignal" value="nan" enable="0"/>
+        <parameter parameterId="ETH0_txd2_Dot_IO" value="PS IO 19" enable="0"/>
+        <parameter parameterId="ETH0_txd2_Dot_Drive_Strength" value="16" enable="0"/>
+        <parameter parameterId="ETH0_txd2_Dot_Speed" value="fast" enable="0"/>
+        <parameter parameterId="ETH0_txd2_Dot_Pullup" value="high Z" enable="0"/>
+        <parameter parameterId="ETH0_txd2_Dot_Direction" value="out" enable="0"/>
+        <parameter parameterId="ETH0_txd1_Dot_peripheralSignal" value="nan" enable="0"/>
+        <parameter parameterId="ETH0_txd1_Dot_IO" value="PS IO 18" enable="0"/>
+        <parameter parameterId="ETH0_txd1_Dot_Drive_Strength" value="16" enable="0"/>
+        <parameter parameterId="ETH0_txd1_Dot_Speed" value="fast" enable="0"/>
+        <parameter parameterId="ETH0_txd1_Dot_Pullup" value="high Z" enable="0"/>
+        <parameter parameterId="ETH0_txd1_Dot_Direction" value="out" enable="0"/>
+        <parameter parameterId="ETH0_txd0_Dot_peripheralSignal" value="nan" enable="0"/>
+        <parameter parameterId="ETH0_txd0_Dot_IO" value="PS IO 17" enable="0"/>
+        <parameter parameterId="ETH0_txd0_Dot_Drive_Strength" value="16" enable="0"/>
+        <parameter parameterId="ETH0_txd0_Dot_Speed" value="fast" enable="0"/>
+        <parameter parameterId="ETH0_txd0_Dot_Pullup" value="high Z" enable="0"/>
+        <parameter parameterId="ETH0_txd0_Dot_Direction" value="out" enable="0"/>
+        <parameter parameterId="ETH0_rx_clk_Dot_peripheralSignal" value="nan" enable="0"/>
+        <parameter parameterId="ETH0_rx_clk_Dot_IO" value="PS IO 22" enable="0"/>
+        <parameter parameterId="ETH0_rx_clk_Dot_Drive_Strength" value="16" enable="0"/>
+        <parameter parameterId="ETH0_rx_clk_Dot_Speed" value="fast" enable="0"/>
+        <parameter parameterId="ETH0_rx_clk_Dot_Pullup" value="pullup 25k" enable="0"/>
+        <parameter parameterId="ETH0_rx_clk_Dot_Direction" value="in" enable="0"/>
+        <parameter parameterId="ETH0_rx_ctl_Dot_peripheralSignal" value="nan" enable="0"/>
+        <parameter parameterId="ETH0_rx_ctl_Dot_IO" value="PS IO 27" enable="0"/>
+        <parameter parameterId="ETH0_rx_ctl_Dot_Drive_Strength" value="16" enable="0"/>
+        <parameter parameterId="ETH0_rx_ctl_Dot_Speed" value="fast" enable="0"/>
+        <parameter parameterId="ETH0_rx_ctl_Dot_Pullup" value="pullup 25k" enable="0"/>
+        <parameter parameterId="ETH0_rx_ctl_Dot_Direction" value="in" enable="0"/>
+        <parameter parameterId="ETH0_rxd3_Dot_peripheralSignal" value="nan" enable="0"/>
+        <parameter parameterId="ETH0_rxd3_Dot_IO" value="PS IO 26" enable="0"/>
+        <parameter parameterId="ETH0_rxd3_Dot_Drive_Strength" value="16" enable="0"/>
+        <parameter parameterId="ETH0_rxd3_Dot_Speed" value="fast" enable="0"/>
+        <parameter parameterId="ETH0_rxd3_Dot_Pullup" value="pullup 25k" enable="0"/>
+        <parameter parameterId="ETH0_rxd3_Dot_Direction" value="in" enable="0"/>
+        <parameter parameterId="ETH0_rxd2_Dot_peripheralSignal" value="nan" enable="0"/>
+        <parameter parameterId="ETH0_rxd2_Dot_IO" value="PS IO 25" enable="0"/>
+        <parameter parameterId="ETH0_rxd2_Dot_Drive_Strength" value="16" enable="0"/>
+        <parameter parameterId="ETH0_rxd2_Dot_Speed" value="fast" enable="0"/>
+        <parameter parameterId="ETH0_rxd2_Dot_Pullup" value="pullup 25k" enable="0"/>
+        <parameter parameterId="ETH0_rxd2_Dot_Direction" value="in" enable="0"/>
+        <parameter parameterId="ETH0_rxd1_Dot_peripheralSignal" value="nan" enable="0"/>
+        <parameter parameterId="ETH0_rxd1_Dot_IO" value="PS IO 24" enable="0"/>
+        <parameter parameterId="ETH0_rxd1_Dot_Drive_Strength" value="16" enable="0"/>
+        <parameter parameterId="ETH0_rxd1_Dot_Speed" value="fast" enable="0"/>
+        <parameter parameterId="ETH0_rxd1_Dot_Pullup" value="pullup 25k" enable="0"/>
+        <parameter parameterId="ETH0_rxd1_Dot_Direction" value="in" enable="0"/>
+        <parameter parameterId="ETH0_rxd0_Dot_peripheralSignal" value="nan" enable="0"/>
+        <parameter parameterId="ETH0_rxd0_Dot_IO" value="PS IO 23" enable="0"/>
+        <parameter parameterId="ETH0_rxd0_Dot_Drive_Strength" value="16" enable="0"/>
+        <parameter parameterId="ETH0_rxd0_Dot_Speed" value="fast" enable="0"/>
+        <parameter parameterId="ETH0_rxd0_Dot_Pullup" value="pullup 25k" enable="0"/>
+        <parameter parameterId="ETH0_rxd0_Dot_Direction" value="in" enable="0"/>
+        <parameter parameterId="MDIO0_Dot_Enable" value="0" enable="0"/>
+        <parameter parameterId="MDIO0_Dot_IO" value="PS IO 52...53" enable="0"/>
         <parameter parameterId="MDIO0_Available" value="0" enable="1"/>
-        <parameter parameterId="ETH0_mdc_Dot_peripheralSignal" value="nan" enable="1"/>
-        <parameter parameterId="ETH0_mdc_Dot_IO" value="PS IO 52" enable="1"/>
-        <parameter parameterId="ETH0_mdc_Dot_Drive_Strength" value="8" enable="1"/>
-        <parameter parameterId="ETH0_mdc_Dot_Speed" value="medium" enable="1"/>
-        <parameter parameterId="ETH0_mdc_Dot_Pullup" value="pullup 25k" enable="1"/>
-        <parameter parameterId="ETH0_mdc_Dot_Direction" value="out" enable="1"/>
-        <parameter parameterId="ETH0_mdio_Dot_peripheralSignal" value="nan" enable="1"/>
-        <parameter parameterId="ETH0_mdio_Dot_IO" value="PS IO 53" enable="1"/>
-        <parameter parameterId="ETH0_mdio_Dot_Drive_Strength" value="8" enable="1"/>
-        <parameter parameterId="ETH0_mdio_Dot_Speed" value="medium" enable="1"/>
-        <parameter parameterId="ETH0_mdio_Dot_Pullup" value="pullup 25k" enable="1"/>
-        <parameter parameterId="ETH0_mdio_Dot_Direction" value="inout" enable="1"/>
-        <parameter parameterId="PTP0_Dot_Enable" value="0" enable="1"/>
+        <parameter parameterId="ETH0_mdc_Dot_peripheralSignal" value="nan" enable="0"/>
+        <parameter parameterId="ETH0_mdc_Dot_IO" value="PS IO 52" enable="0"/>
+        <parameter parameterId="ETH0_mdc_Dot_Drive_Strength" value="8" enable="0"/>
+        <parameter parameterId="ETH0_mdc_Dot_Speed" value="medium" enable="0"/>
+        <parameter parameterId="ETH0_mdc_Dot_Pullup" value="pullup 25k" enable="0"/>
+        <parameter parameterId="ETH0_mdc_Dot_Direction" value="out" enable="0"/>
+        <parameter parameterId="ETH0_mdio_Dot_peripheralSignal" value="nan" enable="0"/>
+        <parameter parameterId="ETH0_mdio_Dot_IO" value="PS IO 53" enable="0"/>
+        <parameter parameterId="ETH0_mdio_Dot_Drive_Strength" value="8" enable="0"/>
+        <parameter parameterId="ETH0_mdio_Dot_Speed" value="medium" enable="0"/>
+        <parameter parameterId="ETH0_mdio_Dot_Pullup" value="pullup 25k" enable="0"/>
+        <parameter parameterId="ETH0_mdio_Dot_Direction" value="inout" enable="0"/>
+        <parameter parameterId="PTP0_Dot_Enable" value="0" enable="0"/>
         <parameter parameterId="PTP0_Dot_IO" value="PL IO" enable="0"/>
         <parameter parameterId="PTP0_Available" value="0" enable="1"/>
         <parameter parameterId="ETH1_Dot_Enable" value="0" enable="1"/>
@@ -369,7 +369,7 @@
         <parameter parameterId="ETH1_Dot_IO" value="PL IO" enable="0"/>
         <parameter parameterId="ETH1_MII_GMII_Available" value="0" enable="1"/>
         <parameter parameterId="ETH1_MII_Available" value="0" enable="1"/>
-        <parameter parameterId="GBE1_INTF_TYP" value="1" enable="0"/>
+        <parameter parameterId="GBE1_INTF_TYP" value="0" enable="0"/>
         <parameter parameterId="ETH1_tx_clk_Dot_peripheralSignal" value="nan" enable="0"/>
         <parameter parameterId="ETH1_tx_clk_Dot_IO" value="PS IO 28" enable="0"/>
         <parameter parameterId="ETH1_tx_clk_Dot_Drive_Strength" value="16" enable="0"/>
@@ -755,22 +755,22 @@
         <parameter parameterId="SD1_pwr_Dot_Speed" value="fast" enable="0"/>
         <parameter parameterId="SD1_pwr_Dot_Pullup" value="pullup 25k" enable="0"/>
         <parameter parameterId="SD1_pwr_Dot_Direction" value="out" enable="0"/>
-        <parameter parameterId="UART0_Dot_Enable" value="0" enable="1"/>
-        <parameter parameterId="UART0_Dot_IO" value="PL IO" enable="0"/>
-        <parameter parameterId="UART0_Available" value="0" enable="1"/>
-        <parameter parameterId="UART0_tx_Dot_peripheralSignal" value="nan" enable="0"/>
-        <parameter parameterId="UART0_tx_Dot_IO" value="PL IO" enable="0"/>
+        <parameter parameterId="UART0_Dot_Enable" value="1" enable="1"/>
+        <parameter parameterId="UART0_Dot_IO" value="PL IO" enable="1"/>
+        <parameter parameterId="UART0_Available" value="1" enable="1"/>
+        <parameter parameterId="UART0_tx_Dot_peripheralSignal" value="nan" enable="1"/>
+        <parameter parameterId="UART0_tx_Dot_IO" value="PL IO" enable="1"/>
         <parameter parameterId="UART0_tx_Dot_Drive_Strength" value="8" enable="0"/>
         <parameter parameterId="UART0_tx_Dot_Speed" value="slow" enable="0"/>
         <parameter parameterId="UART0_tx_Dot_Pullup" value="pullup 25k" enable="0"/>
         <parameter parameterId="UART0_tx_Dot_Direction" value="out" enable="0"/>
-        <parameter parameterId="UART0_rx_Dot_peripheralSignal" value="nan" enable="0"/>
-        <parameter parameterId="UART0_rx_Dot_IO" value="PL IO" enable="0"/>
+        <parameter parameterId="UART0_rx_Dot_peripheralSignal" value="nan" enable="1"/>
+        <parameter parameterId="UART0_rx_Dot_IO" value="PL IO" enable="1"/>
         <parameter parameterId="UART0_rx_Dot_Drive_Strength" value="8" enable="0"/>
         <parameter parameterId="UART0_rx_Dot_Speed" value="slow" enable="0"/>
         <parameter parameterId="UART0_rx_Dot_Pullup" value="pullup 25k" enable="0"/>
         <parameter parameterId="UART0_rx_Dot_Direction" value="in" enable="0"/>
-        <parameter parameterId="UART0_Modem_Signals_Dot_Enable" value="0" enable="0"/>
+        <parameter parameterId="UART0_Modem_Signals_Dot_Enable" value="0" enable="1"/>
         <parameter parameterId="UART0_Modem_Signals_Dot_IO" value="PL IO" enable="0"/>
         <parameter parameterId="UART1_Dot_Enable" value="1" enable="1"/>
         <parameter parameterId="UART1_Dot_IO" value="PS IO 48...49" enable="1"/>
@@ -846,13 +846,13 @@
         <parameter parameterId="SPI0_ss0_Dot_Speed" value="fast" enable="0"/>
         <parameter parameterId="SPI0_ss0_Dot_Pullup" value="pullup 25k" enable="0"/>
         <parameter parameterId="SPI0_ss0_Dot_Direction" value="inout" enable="0"/>
-        <parameter parameterId="SPI0_ss1_Dot_Enable" value="0" enable="0"/>
+        <parameter parameterId="SPI0_ss1_Dot_Enable" value="nan" enable="0"/>
         <parameter parameterId="SPI0_ss1_Dot_IO" value="PL IO" enable="0"/>
         <parameter parameterId="SPI0_ss1_Dot_Drive_Strength" value="8" enable="0"/>
         <parameter parameterId="SPI0_ss1_Dot_Speed" value="fast" enable="0"/>
         <parameter parameterId="SPI0_ss1_Dot_Pullup" value="pullup 25k" enable="0"/>
         <parameter parameterId="SPI0_ss1_Dot_Direction" value="out" enable="0"/>
-        <parameter parameterId="SPI0_ss2_Dot_Enable" value="0" enable="0"/>
+        <parameter parameterId="SPI0_ss2_Dot_Enable" value="nan" enable="0"/>
         <parameter parameterId="SPI0_ss2_Dot_IO" value="PL IO" enable="0"/>
         <parameter parameterId="SPI0_ss2_Dot_Drive_Strength" value="8" enable="0"/>
         <parameter parameterId="SPI0_ss2_Dot_Speed" value="fast" enable="0"/>
@@ -885,13 +885,13 @@
         <parameter parameterId="SPI1_ss0_Dot_Speed" value="fast" enable="0"/>
         <parameter parameterId="SPI1_ss0_Dot_Pullup" value="pullup 25k" enable="0"/>
         <parameter parameterId="SPI1_ss0_Dot_Direction" value="inout" enable="0"/>
-        <parameter parameterId="SPI1_ss1_Dot_Enable" value="0" enable="0"/>
+        <parameter parameterId="SPI1_ss1_Dot_Enable" value="nan" enable="0"/>
         <parameter parameterId="SPI1_ss1_Dot_IO" value="PL IO" enable="0"/>
         <parameter parameterId="SPI1_ss1_Dot_Drive_Strength" value="8" enable="0"/>
         <parameter parameterId="SPI1_ss1_Dot_Speed" value="fast" enable="0"/>
         <parameter parameterId="SPI1_ss1_Dot_Pullup" value="pullup 25k" enable="0"/>
         <parameter parameterId="SPI1_ss1_Dot_Direction" value="out" enable="0"/>
-        <parameter parameterId="SPI1_ss2_Dot_Enable" value="0" enable="0"/>
+        <parameter parameterId="SPI1_ss2_Dot_Enable" value="nan" enable="0"/>
         <parameter parameterId="SPI1_ss2_Dot_IO" value="PL IO" enable="0"/>
         <parameter parameterId="SPI1_ss2_Dot_Drive_Strength" value="8" enable="0"/>
         <parameter parameterId="SPI1_ss2_Dot_Speed" value="fast" enable="0"/>
@@ -1055,90 +1055,90 @@
         <parameter parameterId="GPIO_PS_IO15_Dot_Pullup" value="pullup 25k" enable="0"/>
         <parameter parameterId="GPIO_PS_IO15_Dot_Direction" value="inout" enable="0"/>
         <parameter parameterId="GPIO_PS_IO15_Present" value="0" enable="1"/>
-        <parameter parameterId="GPIO_PS_IO16_Dot_peripheralSignal" value="nan" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO16_Dot_IO" value="PS IO 16" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO16_Dot_Drive_Strength" value="8" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO16_Dot_Speed" value="slow" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO16_Dot_Pullup" value="pullup 25k" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO16_Dot_Direction" value="inout" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO16_Present" value="0" enable="1"/>
-        <parameter parameterId="GPIO_PS_IO17_Dot_peripheralSignal" value="nan" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO17_Dot_IO" value="PS IO 17" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO17_Dot_Drive_Strength" value="8" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO17_Dot_Speed" value="slow" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO17_Dot_Pullup" value="pullup 25k" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO17_Dot_Direction" value="inout" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO17_Present" value="0" enable="1"/>
-        <parameter parameterId="GPIO_PS_IO18_Dot_peripheralSignal" value="nan" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO18_Dot_IO" value="PS IO 18" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO18_Dot_Drive_Strength" value="8" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO18_Dot_Speed" value="slow" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO18_Dot_Pullup" value="pullup 25k" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO18_Dot_Direction" value="inout" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO18_Present" value="0" enable="1"/>
-        <parameter parameterId="GPIO_PS_IO19_Dot_peripheralSignal" value="nan" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO19_Dot_IO" value="PS IO 19" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO19_Dot_Drive_Strength" value="8" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO19_Dot_Speed" value="slow" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO19_Dot_Pullup" value="pullup 25k" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO19_Dot_Direction" value="inout" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO19_Present" value="0" enable="1"/>
-        <parameter parameterId="GPIO_PS_IO20_Dot_peripheralSignal" value="nan" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO20_Dot_IO" value="PS IO 20" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO20_Dot_Drive_Strength" value="8" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO20_Dot_Speed" value="slow" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO20_Dot_Pullup" value="pullup 25k" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO20_Dot_Direction" value="inout" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO20_Present" value="0" enable="1"/>
-        <parameter parameterId="GPIO_PS_IO21_Dot_peripheralSignal" value="nan" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO21_Dot_IO" value="PS IO 21" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO21_Dot_Drive_Strength" value="8" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO21_Dot_Speed" value="slow" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO21_Dot_Pullup" value="pullup 25k" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO21_Dot_Direction" value="inout" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO21_Present" value="0" enable="1"/>
-        <parameter parameterId="GPIO_PS_IO22_Dot_peripheralSignal" value="nan" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO22_Dot_IO" value="PS IO 22" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO22_Dot_Drive_Strength" value="8" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO22_Dot_Speed" value="slow" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO22_Dot_Pullup" value="pullup 25k" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO22_Dot_Direction" value="inout" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO22_Present" value="0" enable="1"/>
-        <parameter parameterId="GPIO_PS_IO23_Dot_peripheralSignal" value="nan" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO23_Dot_IO" value="PS IO 23" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO23_Dot_Drive_Strength" value="8" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO23_Dot_Speed" value="slow" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO23_Dot_Pullup" value="pullup 25k" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO23_Dot_Direction" value="inout" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO23_Present" value="0" enable="1"/>
-        <parameter parameterId="GPIO_PS_IO24_Dot_peripheralSignal" value="nan" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO24_Dot_IO" value="PS IO 24" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO24_Dot_Drive_Strength" value="8" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO24_Dot_Speed" value="slow" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO24_Dot_Pullup" value="pullup 25k" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO24_Dot_Direction" value="inout" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO24_Present" value="0" enable="1"/>
-        <parameter parameterId="GPIO_PS_IO25_Dot_peripheralSignal" value="nan" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO25_Dot_IO" value="PS IO 25" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO25_Dot_Drive_Strength" value="8" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO25_Dot_Speed" value="slow" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO25_Dot_Pullup" value="pullup 25k" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO25_Dot_Direction" value="inout" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO25_Present" value="0" enable="1"/>
-        <parameter parameterId="GPIO_PS_IO26_Dot_peripheralSignal" value="nan" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO26_Dot_IO" value="PS IO 26" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO26_Dot_Drive_Strength" value="8" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO26_Dot_Speed" value="slow" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO26_Dot_Pullup" value="pullup 25k" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO26_Dot_Direction" value="inout" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO26_Present" value="0" enable="1"/>
-        <parameter parameterId="GPIO_PS_IO27_Dot_peripheralSignal" value="nan" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO27_Dot_IO" value="PS IO 27" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO27_Dot_Drive_Strength" value="8" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO27_Dot_Speed" value="slow" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO27_Dot_Pullup" value="pullup 25k" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO27_Dot_Direction" value="inout" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO27_Present" value="0" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO16_Dot_peripheralSignal" value="nan" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO16_Dot_IO" value="PS IO 16" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO16_Dot_Drive_Strength" value="8" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO16_Dot_Speed" value="slow" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO16_Dot_Pullup" value="pullup 25k" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO16_Dot_Direction" value="inout" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO16_Present" value="1" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO17_Dot_peripheralSignal" value="nan" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO17_Dot_IO" value="PS IO 17" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO17_Dot_Drive_Strength" value="8" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO17_Dot_Speed" value="slow" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO17_Dot_Pullup" value="pullup 25k" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO17_Dot_Direction" value="inout" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO17_Present" value="1" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO18_Dot_peripheralSignal" value="nan" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO18_Dot_IO" value="PS IO 18" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO18_Dot_Drive_Strength" value="8" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO18_Dot_Speed" value="slow" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO18_Dot_Pullup" value="pullup 25k" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO18_Dot_Direction" value="inout" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO18_Present" value="1" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO19_Dot_peripheralSignal" value="nan" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO19_Dot_IO" value="PS IO 19" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO19_Dot_Drive_Strength" value="8" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO19_Dot_Speed" value="slow" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO19_Dot_Pullup" value="pullup 25k" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO19_Dot_Direction" value="inout" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO19_Present" value="1" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO20_Dot_peripheralSignal" value="nan" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO20_Dot_IO" value="PS IO 20" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO20_Dot_Drive_Strength" value="8" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO20_Dot_Speed" value="slow" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO20_Dot_Pullup" value="pullup 25k" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO20_Dot_Direction" value="inout" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO20_Present" value="1" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO21_Dot_peripheralSignal" value="nan" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO21_Dot_IO" value="PS IO 21" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO21_Dot_Drive_Strength" value="8" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO21_Dot_Speed" value="slow" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO21_Dot_Pullup" value="pullup 25k" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO21_Dot_Direction" value="inout" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO21_Present" value="1" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO22_Dot_peripheralSignal" value="nan" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO22_Dot_IO" value="PS IO 22" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO22_Dot_Drive_Strength" value="8" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO22_Dot_Speed" value="slow" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO22_Dot_Pullup" value="pullup 25k" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO22_Dot_Direction" value="inout" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO22_Present" value="1" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO23_Dot_peripheralSignal" value="nan" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO23_Dot_IO" value="PS IO 23" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO23_Dot_Drive_Strength" value="8" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO23_Dot_Speed" value="slow" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO23_Dot_Pullup" value="pullup 25k" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO23_Dot_Direction" value="inout" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO23_Present" value="1" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO24_Dot_peripheralSignal" value="nan" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO24_Dot_IO" value="PS IO 24" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO24_Dot_Drive_Strength" value="8" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO24_Dot_Speed" value="slow" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO24_Dot_Pullup" value="pullup 25k" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO24_Dot_Direction" value="inout" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO24_Present" value="1" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO25_Dot_peripheralSignal" value="nan" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO25_Dot_IO" value="PS IO 25" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO25_Dot_Drive_Strength" value="8" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO25_Dot_Speed" value="slow" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO25_Dot_Pullup" value="pullup 25k" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO25_Dot_Direction" value="inout" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO25_Present" value="1" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO26_Dot_peripheralSignal" value="nan" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO26_Dot_IO" value="PS IO 26" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO26_Dot_Drive_Strength" value="8" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO26_Dot_Speed" value="slow" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO26_Dot_Pullup" value="pullup 25k" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO26_Dot_Direction" value="inout" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO26_Present" value="1" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO27_Dot_peripheralSignal" value="nan" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO27_Dot_IO" value="PS IO 27" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO27_Dot_Drive_Strength" value="8" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO27_Dot_Speed" value="slow" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO27_Dot_Pullup" value="pullup 25k" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO27_Dot_Direction" value="inout" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO27_Present" value="1" enable="1"/>
         <parameter parameterId="GPIO_PS_IO28_Dot_peripheralSignal" value="nan" enable="0"/>
         <parameter parameterId="GPIO_PS_IO28_Dot_IO" value="PS IO 28" enable="0"/>
         <parameter parameterId="GPIO_PS_IO28_Dot_Drive_Strength" value="8" enable="0"/>
@@ -1307,20 +1307,20 @@
         <parameter parameterId="GPIO_PS_IO51_Dot_Pullup" value="pullup 25k" enable="1"/>
         <parameter parameterId="GPIO_PS_IO51_Dot_Direction" value="inout" enable="1"/>
         <parameter parameterId="GPIO_PS_IO51_Present" value="1" enable="1"/>
-        <parameter parameterId="GPIO_PS_IO52_Dot_peripheralSignal" value="nan" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO52_Dot_IO" value="PS IO 52" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO52_Dot_Drive_Strength" value="8" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO52_Dot_Speed" value="slow" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO52_Dot_Pullup" value="pullup 25k" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO52_Dot_Direction" value="inout" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO52_Present" value="0" enable="1"/>
-        <parameter parameterId="GPIO_PS_IO53_Dot_peripheralSignal" value="nan" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO53_Dot_IO" value="PS IO 53" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO53_Dot_Drive_Strength" value="8" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO53_Dot_Speed" value="slow" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO53_Dot_Pullup" value="pullup 25k" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO53_Dot_Direction" value="inout" enable="0"/>
-        <parameter parameterId="GPIO_PS_IO53_Present" value="0" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO52_Dot_peripheralSignal" value="nan" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO52_Dot_IO" value="PS IO 52" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO52_Dot_Drive_Strength" value="8" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO52_Dot_Speed" value="slow" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO52_Dot_Pullup" value="pullup 25k" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO52_Dot_Direction" value="inout" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO52_Present" value="1" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO53_Dot_peripheralSignal" value="nan" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO53_Dot_IO" value="PS IO 53" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO53_Dot_Drive_Strength" value="8" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO53_Dot_Speed" value="slow" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO53_Dot_Pullup" value="pullup 25k" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO53_Dot_Direction" value="inout" enable="1"/>
+        <parameter parameterId="GPIO_PS_IO53_Present" value="1" enable="1"/>
         <parameter parameterId="GPIO_PL_Dot_Enable" value="1" enable="1"/>
         <parameter parameterId="GPIO_PL_Dot_IO" value="1" enable="1"/>
         <parameter parameterId="Timer0_Dot_Enable" value="0" enable="1"/>
@@ -1603,11 +1603,11 @@
         <parameter parameterId="I2C1_Dot_Requested_Frequency" value="0.1" enable="0"/>
         <parameter parameterId="I2C1_Dot_Actual_Inside_Frequency" value="99.99" enable="0"/>
         <parameter parameterId="I2C1_Dot_Actual_IO_Frequency" value="0.1" enable="0"/>
-        <parameter parameterId="UART0_Dot_clockSignal" value="nan" enable="0"/>
-        <parameter parameterId="UART0_Dot_Clock_Source" value="IO PLL" enable="0"/>
-        <parameter parameterId="UART0_Dot_Requested_Frequency" value="115200" enable="0"/>
-        <parameter parameterId="UART0_Dot_Actual_Inside_Frequency" value="49.995" enable="0"/>
-        <parameter parameterId="UART0_Dot_Actual_IO_Frequency" value="115200" enable="0"/>
+        <parameter parameterId="UART0_Dot_clockSignal" value="nan" enable="1"/>
+        <parameter parameterId="UART0_Dot_Clock_Source" value="IO PLL" enable="1"/>
+        <parameter parameterId="UART0_Dot_Requested_Frequency" value="115200" enable="1"/>
+        <parameter parameterId="UART0_Dot_Actual_Inside_Frequency" value="49.995" enable="1"/>
+        <parameter parameterId="UART0_Dot_Actual_IO_Frequency" value="115200" enable="1"/>
         <parameter parameterId="UART_1st_Divisor" value="8" enable="1"/>
         <parameter parameterId="UART1_Dot_clockSignal" value="nan" enable="1"/>
         <parameter parameterId="UART1_Dot_Clock_Source" value="IO PLL" enable="1"/>
@@ -1654,14 +1654,14 @@
         <parameter parameterId="CAN1_F_Seg1" value="32" enable="0"/>
         <parameter parameterId="CAN1_F_Seg2" value="8" enable="0"/>
         <parameter parameterId="CAN1_F_SJW" value="8" enable="0"/>
-        <parameter parameterId="ETH0_Dot_clockSignal" value="nan" enable="1"/>
-        <parameter parameterId="ETH0_Dot_Clock_Source" value="IO PLL" enable="1"/>
-        <parameter parameterId="ETH0_Dot_Requested_Frequency" value="1000" enable="1"/>
-        <parameter parameterId="ETH0_Dot_Actual_Inside_Frequency" value="499.95" enable="1"/>
-        <parameter parameterId="ETH0_Dot_Actual_IO_Frequency" value="124.9875" enable="1"/>
-        <parameter parameterId="ETH0_PTP_Dot_clockSignal" value="nan" enable="1"/>
-        <parameter parameterId="ETH0_PTP_Dot_Clock_Source" value="IO PLL" enable="1"/>
-        <parameter parameterId="ETH0_PTP_Dot_Actual_Inside_Frequency" value="100" enable="1"/>
+        <parameter parameterId="ETH0_Dot_clockSignal" value="nan" enable="0"/>
+        <parameter parameterId="ETH0_Dot_Clock_Source" value="IO PLL" enable="0"/>
+        <parameter parameterId="ETH0_Dot_Requested_Frequency" value="1000" enable="0"/>
+        <parameter parameterId="ETH0_Dot_Actual_Inside_Frequency" value="499.95" enable="0"/>
+        <parameter parameterId="ETH0_Dot_Actual_IO_Frequency" value="124.9875" enable="0"/>
+        <parameter parameterId="ETH0_PTP_Dot_clockSignal" value="nan" enable="0"/>
+        <parameter parameterId="ETH0_PTP_Dot_Clock_Source" value="IO PLL" enable="0"/>
+        <parameter parameterId="ETH0_PTP_Dot_Actual_Inside_Frequency" value="100" enable="0"/>
         <parameter parameterId="ETH0_PTP_Dot_Range" value="50" enable="0"/>
         <parameter parameterId="Internal_ETH0_PTP_Clk" value="0" enable="1"/>
         <parameter parameterId="GBE0_PTP_CLK_SRC" value="0" enable="0"/>
@@ -1713,7 +1713,7 @@
         <parameter parameterId="DDRC_DDR_TYPE" value="DDR3" enable="1"/>
         <parameter parameterId="DDRC_DDR_SPEED" value="1333" enable="1"/>
         <parameter parameterId="DDRC_DQ_WIDTH" value="32" enable="1"/>
-        <parameter parameterId="DDRC_IO_VOL" value="1.35" enable="1"/>
+        <parameter parameterId="DDRC_IO_VOL" value="1.5" enable="1"/>
         <parameter parameterId="DDRC_VREF" value="Internal" enable="1"/>
         <parameter parameterId="DDRC_PZQ_CONF" value="0" enable="1"/>
         <parameter parameterId="DDRC_COMP_TYPE" value="x16" enable="1"/>
@@ -1727,8 +1727,8 @@
         <parameter parameterId="DDRC_ADDR_MAP" value="ROW_COL_BANK" enable="1"/>
         <parameter parameterId="DDRC_TRAINING_EN" value="1" enable="1"/>
         <parameter parameterId="DDRC_DELAY_B0" value="1" enable="1"/>
-        <parameter parameterId="DDRC_DELAY_B0_AC" value="0" enable="1"/>
-        <parameter parameterId="DDRC_DELAY_B0_DQ" value="0" enable="1"/>
+        <parameter parameterId="DDRC_DELAY_B0_AC" value="0" enable="0"/>
+        <parameter parameterId="DDRC_DELAY_B0_DQ" value="0" enable="0"/>
         <parameter parameterId="GEN_DELAY_B1" value="1" enable="1"/>
         <parameter parameterId="DDRC_DELAY_B1" value="0" enable="1"/>
         <parameter parameterId="DDRC_DELAY_B1_AC" value="0" enable="0"/>
@@ -1741,10 +1741,10 @@
         <parameter parameterId="DDRC_DELAY_B3" value="0" enable="1"/>
         <parameter parameterId="DDRC_DELAY_B3_AC" value="0" enable="0"/>
         <parameter parameterId="DDRC_DELAY_B3_DQ" value="0" enable="0"/>
-        <parameter parameterId="DDRC_DRAM_DRV" value="40" enable="1"/>
-        <parameter parameterId="DDRC_DRAM_ODT" value="40" enable="1"/>
-        <parameter parameterId="DDRC_Host_DRV_for_AC" value="40" enable="1"/>
-        <parameter parameterId="DDRC_Host_DRV_for_DX" value="40" enable="1"/>
-        <parameter parameterId="DDRC_Host_ODT_for_DX" value="40" enable="1"/>
+        <parameter parameterId="DDRC_DRAM_DRV" value="40" enable="0"/>
+        <parameter parameterId="DDRC_DRAM_ODT" value="40" enable="0"/>
+        <parameter parameterId="DDRC_Host_DRV_for_AC" value="40" enable="0"/>
+        <parameter parameterId="DDRC_Host_DRV_for_DX" value="40" enable="0"/>
+        <parameter parameterId="DDRC_Host_ODT_for_DX" value="40" enable="0"/>
     </parameters>
 </final>

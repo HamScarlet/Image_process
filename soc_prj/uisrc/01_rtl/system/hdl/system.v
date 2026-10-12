@@ -15,15 +15,21 @@ module system (
     output    wire              O_fdma_rbusy ,
     output    wire              O_fdma_rvalid ,
     output    wire       [63:0] O_fdma_rdata ,
-    output    wire              pl_gpio_out
+    output    wire              pl_gpio_out ,
+    output    wire        [3:0] code_driver
 ); 
     wire              w_port__ARM_Processor_System_0__p2f_clk0 ;
     wire              w_port__ARM_Processor_System_0__slave_hp0_axi_aclk ;
     wire              w_port__uiFDMA_0__M_AXI_ACLK ;
+    wire              w_port__AXI_GPIO_0__s_axi_aclk ;
+    wire              w_port__ARM_Processor_System_0__master_gp0_axi_aclk ;
+    wire              w_port__AXI_Protocol_Converter_0__aclk ;
     wire              w_net__ARM_Processor_System_0__p2f_clk0 ; 
 
     wire              w_port__ARM_Processor_System_0__p2f_rst0_n ;
     wire              w_port__uiFDMA_0__M_AXI_ARESETN ;
+    wire              w_port__AXI_GPIO_0__s_axi_aresetn ;
+    wire              w_port__AXI_Protocol_Converter_0__aresetn ;
     wire              w_net__ARM_Processor_System_0__p2f_rst0_n ; 
 
     wire [0:0]        w_port__ARM_Processor_System_0__pl_gpio_out ;
@@ -72,6 +78,9 @@ module system (
     wire              w_port__ARM_Processor_System_0__slave_hp0_axi_wready ;
     wire              w_port__uiFDMA_0__M_AXI_WREADY ;
     wire              w_net__ARM_Processor_System_0__slave_hp0_axi_wready ; 
+
+    wire [3:0]        w_port__AXI_GPIO_0__gpio_io_o ;
+    wire [3:0]        w_net__AXI_GPIO_0__gpio_io_o ; 
 
     wire [31:0]       w_port__uiFDMA_0__I_fdma_raddr ;
     wire [31:0]       w_net__I_fdma_raddr ; 
@@ -219,14 +228,229 @@ module system (
     wire              w_port__uiFDMA_0__O_fdma_wvalid ;
     wire              w_net__uiFDMA_0__O_fdma_wvalid ; 
 
+
+    wire [31:0]       w_port__AXI_Protocol_Converter_0__ds_axi_awaddr ;
+    wire [8:0]        w_port__AXI_GPIO_0__s_axi_awaddr ;
+    wire [31:0]       w_net__AXI_Protocol_Converter_0__ds_axi_awaddr ; 
+
+    wire              w_port__AXI_Protocol_Converter_0__ds_axi_awvalid ;
+    wire              w_port__AXI_GPIO_0__s_axi_awvalid ;
+    wire              w_net__AXI_Protocol_Converter_0__ds_axi_awvalid ; 
+
+    wire              w_port__AXI_GPIO_0__s_axi_awready ;
+    wire              w_port__AXI_Protocol_Converter_0__ds_axi_awready ;
+    wire              w_net__AXI_GPIO_0__s_axi_awready ; 
+
+    wire [31:0]       w_port__AXI_Protocol_Converter_0__ds_axi_wdata ;
+    wire [31:0]       w_port__AXI_GPIO_0__s_axi_wdata ;
+    wire [31:0]       w_net__AXI_Protocol_Converter_0__ds_axi_wdata ; 
+
+    wire [3:0]        w_port__AXI_Protocol_Converter_0__ds_axi_wstrb ;
+    wire [3:0]        w_port__AXI_GPIO_0__s_axi_wstrb ;
+    wire [3:0]        w_net__AXI_Protocol_Converter_0__ds_axi_wstrb ; 
+
+    wire              w_port__AXI_Protocol_Converter_0__ds_axi_wvalid ;
+    wire              w_port__AXI_GPIO_0__s_axi_wvalid ;
+    wire              w_net__AXI_Protocol_Converter_0__ds_axi_wvalid ; 
+
+    wire              w_port__AXI_GPIO_0__s_axi_wready ;
+    wire              w_port__AXI_Protocol_Converter_0__ds_axi_wready ;
+    wire              w_net__AXI_GPIO_0__s_axi_wready ; 
+
+    wire [1:0]        w_port__AXI_GPIO_0__s_axi_bresp ;
+    wire [1:0]        w_port__AXI_Protocol_Converter_0__ds_axi_bresp ;
+    wire [1:0]        w_net__AXI_GPIO_0__s_axi_bresp ; 
+
+    wire              w_port__AXI_GPIO_0__s_axi_bvalid ;
+    wire              w_port__AXI_Protocol_Converter_0__ds_axi_bvalid ;
+    wire              w_net__AXI_GPIO_0__s_axi_bvalid ; 
+
+    wire              w_port__AXI_Protocol_Converter_0__ds_axi_bready ;
+    wire              w_port__AXI_GPIO_0__s_axi_bready ;
+    wire              w_net__AXI_Protocol_Converter_0__ds_axi_bready ; 
+
+    wire [31:0]       w_port__AXI_Protocol_Converter_0__ds_axi_araddr ;
+    wire [8:0]        w_port__AXI_GPIO_0__s_axi_araddr ;
+    wire [31:0]       w_net__AXI_Protocol_Converter_0__ds_axi_araddr ; 
+
+    wire              w_port__AXI_Protocol_Converter_0__ds_axi_arvalid ;
+    wire              w_port__AXI_GPIO_0__s_axi_arvalid ;
+    wire              w_net__AXI_Protocol_Converter_0__ds_axi_arvalid ; 
+
+    wire              w_port__AXI_GPIO_0__s_axi_arready ;
+    wire              w_port__AXI_Protocol_Converter_0__ds_axi_arready ;
+    wire              w_net__AXI_GPIO_0__s_axi_arready ; 
+
+    wire [31:0]       w_port__AXI_GPIO_0__s_axi_rdata ;
+    wire [31:0]       w_port__AXI_Protocol_Converter_0__ds_axi_rdata ;
+    wire [31:0]       w_net__AXI_GPIO_0__s_axi_rdata ; 
+
+    wire [1:0]        w_port__AXI_GPIO_0__s_axi_rresp ;
+    wire [1:0]        w_port__AXI_Protocol_Converter_0__ds_axi_rresp ;
+    wire [1:0]        w_net__AXI_GPIO_0__s_axi_rresp ; 
+
+    wire              w_port__AXI_GPIO_0__s_axi_rvalid ;
+    wire              w_port__AXI_Protocol_Converter_0__ds_axi_rvalid ;
+    wire              w_net__AXI_GPIO_0__s_axi_rvalid ; 
+
+    wire              w_port__AXI_Protocol_Converter_0__ds_axi_rready ;
+    wire              w_port__AXI_GPIO_0__s_axi_rready ;
+    wire              w_net__AXI_Protocol_Converter_0__ds_axi_rready ; 
+
+
+    wire [32:0]       w_port__ARM_Processor_System_0__master_gp0_axi_araddr ;
+    wire [31:0]       w_port__AXI_Protocol_Converter_0__us_axi_araddr ;
+    wire [32:0]       w_net__ARM_Processor_System_0__master_gp0_axi_araddr ; 
+
+    wire [1:0]        w_port__ARM_Processor_System_0__master_gp0_axi_arburst ;
+    wire [1:0]        w_port__AXI_Protocol_Converter_0__us_axi_arburst ;
+    wire [1:0]        w_net__ARM_Processor_System_0__master_gp0_axi_arburst ; 
+
+    wire [3:0]        w_port__ARM_Processor_System_0__master_gp0_axi_arcache ;
+    wire [3:0]        w_port__AXI_Protocol_Converter_0__us_axi_arcache ;
+    wire [3:0]        w_net__ARM_Processor_System_0__master_gp0_axi_arcache ; 
+
+    wire [11:0]       w_port__ARM_Processor_System_0__master_gp0_axi_arid ;
+    wire [3:0]        w_port__AXI_Protocol_Converter_0__us_axi_arid ;
+    wire [11:0]       w_net__ARM_Processor_System_0__master_gp0_axi_arid ; 
+
+    wire [3:0]        w_port__ARM_Processor_System_0__master_gp0_axi_arlen ;
+    wire [7:0]        w_port__AXI_Protocol_Converter_0__us_axi_arlen ;
+    wire [3:0]        w_net__ARM_Processor_System_0__master_gp0_axi_arlen ; 
+
+    wire              w_port__ARM_Processor_System_0__master_gp0_axi_arlock ;
+    wire [0:0]        w_port__AXI_Protocol_Converter_0__us_axi_arlock ;
+    wire              w_net__ARM_Processor_System_0__master_gp0_axi_arlock ; 
+
+    wire [2:0]        w_port__ARM_Processor_System_0__master_gp0_axi_arprot ;
+    wire [2:0]        w_port__AXI_Protocol_Converter_0__us_axi_arprot ;
+    wire [2:0]        w_net__ARM_Processor_System_0__master_gp0_axi_arprot ; 
+
+    wire              w_port__AXI_Protocol_Converter_0__us_axi_arready ;
+    wire              w_port__ARM_Processor_System_0__master_gp0_axi_arready ;
+    wire              w_net__AXI_Protocol_Converter_0__us_axi_arready ; 
+
+    wire [1:0]        w_port__ARM_Processor_System_0__master_gp0_axi_arsize ;
+    wire [2:0]        w_port__AXI_Protocol_Converter_0__us_axi_arsize ;
+    wire [1:0]        w_net__ARM_Processor_System_0__master_gp0_axi_arsize ; 
+
+    wire              w_port__ARM_Processor_System_0__master_gp0_axi_arvalid ;
+    wire              w_port__AXI_Protocol_Converter_0__us_axi_arvalid ;
+    wire              w_net__ARM_Processor_System_0__master_gp0_axi_arvalid ; 
+
+    wire [32:0]       w_port__ARM_Processor_System_0__master_gp0_axi_awaddr ;
+    wire [31:0]       w_port__AXI_Protocol_Converter_0__us_axi_awaddr ;
+    wire [32:0]       w_net__ARM_Processor_System_0__master_gp0_axi_awaddr ; 
+
+    wire [1:0]        w_port__ARM_Processor_System_0__master_gp0_axi_awburst ;
+    wire [1:0]        w_port__AXI_Protocol_Converter_0__us_axi_awburst ;
+    wire [1:0]        w_net__ARM_Processor_System_0__master_gp0_axi_awburst ; 
+
+    wire [3:0]        w_port__ARM_Processor_System_0__master_gp0_axi_awcache ;
+    wire [3:0]        w_port__AXI_Protocol_Converter_0__us_axi_awcache ;
+    wire [3:0]        w_net__ARM_Processor_System_0__master_gp0_axi_awcache ; 
+
+    wire [11:0]       w_port__ARM_Processor_System_0__master_gp0_axi_awid ;
+    wire [3:0]        w_port__AXI_Protocol_Converter_0__us_axi_awid ;
+    wire [11:0]       w_net__ARM_Processor_System_0__master_gp0_axi_awid ; 
+
+    wire [3:0]        w_port__ARM_Processor_System_0__master_gp0_axi_awlen ;
+    wire [7:0]        w_port__AXI_Protocol_Converter_0__us_axi_awlen ;
+    wire [3:0]        w_net__ARM_Processor_System_0__master_gp0_axi_awlen ; 
+
+    wire              w_port__ARM_Processor_System_0__master_gp0_axi_awlock ;
+    wire [0:0]        w_port__AXI_Protocol_Converter_0__us_axi_awlock ;
+    wire              w_net__ARM_Processor_System_0__master_gp0_axi_awlock ; 
+
+    wire [2:0]        w_port__ARM_Processor_System_0__master_gp0_axi_awprot ;
+    wire [2:0]        w_port__AXI_Protocol_Converter_0__us_axi_awprot ;
+    wire [2:0]        w_net__ARM_Processor_System_0__master_gp0_axi_awprot ; 
+
+    wire              w_port__AXI_Protocol_Converter_0__us_axi_awready ;
+    wire              w_port__ARM_Processor_System_0__master_gp0_axi_awready ;
+    wire              w_net__AXI_Protocol_Converter_0__us_axi_awready ; 
+
+    wire [1:0]        w_port__ARM_Processor_System_0__master_gp0_axi_awsize ;
+    wire [2:0]        w_port__AXI_Protocol_Converter_0__us_axi_awsize ;
+    wire [1:0]        w_net__ARM_Processor_System_0__master_gp0_axi_awsize ; 
+
+    wire              w_port__ARM_Processor_System_0__master_gp0_axi_awvalid ;
+    wire              w_port__AXI_Protocol_Converter_0__us_axi_awvalid ;
+    wire              w_net__ARM_Processor_System_0__master_gp0_axi_awvalid ; 
+
+    wire [3:0]        w_port__AXI_Protocol_Converter_0__us_axi_bid ;
+    wire [11:0]       w_port__ARM_Processor_System_0__master_gp0_axi_bid ;
+    wire [3:0]        w_net__AXI_Protocol_Converter_0__us_axi_bid ; 
+
+    wire              w_port__ARM_Processor_System_0__master_gp0_axi_bready ;
+    wire              w_port__AXI_Protocol_Converter_0__us_axi_bready ;
+    wire              w_net__ARM_Processor_System_0__master_gp0_axi_bready ; 
+
+    wire [1:0]        w_port__AXI_Protocol_Converter_0__us_axi_bresp ;
+    wire [1:0]        w_port__ARM_Processor_System_0__master_gp0_axi_bresp ;
+    wire [1:0]        w_net__AXI_Protocol_Converter_0__us_axi_bresp ; 
+
+    wire              w_port__AXI_Protocol_Converter_0__us_axi_bvalid ;
+    wire              w_port__ARM_Processor_System_0__master_gp0_axi_bvalid ;
+    wire              w_net__AXI_Protocol_Converter_0__us_axi_bvalid ; 
+
+    wire [31:0]       w_port__AXI_Protocol_Converter_0__us_axi_rdata ;
+    wire [31:0]       w_port__ARM_Processor_System_0__master_gp0_axi_rdata ;
+    wire [31:0]       w_net__AXI_Protocol_Converter_0__us_axi_rdata ; 
+
+    wire [3:0]        w_port__AXI_Protocol_Converter_0__us_axi_rid ;
+    wire [11:0]       w_port__ARM_Processor_System_0__master_gp0_axi_rid ;
+    wire [3:0]        w_net__AXI_Protocol_Converter_0__us_axi_rid ; 
+
+    wire              w_port__AXI_Protocol_Converter_0__us_axi_rlast ;
+    wire              w_port__ARM_Processor_System_0__master_gp0_axi_rlast ;
+    wire              w_net__AXI_Protocol_Converter_0__us_axi_rlast ; 
+
+    wire              w_port__ARM_Processor_System_0__master_gp0_axi_rready ;
+    wire              w_port__AXI_Protocol_Converter_0__us_axi_rready ;
+    wire              w_net__ARM_Processor_System_0__master_gp0_axi_rready ; 
+
+    wire [1:0]        w_port__AXI_Protocol_Converter_0__us_axi_rresp ;
+    wire [1:0]        w_port__ARM_Processor_System_0__master_gp0_axi_rresp ;
+    wire [1:0]        w_net__AXI_Protocol_Converter_0__us_axi_rresp ; 
+
+    wire              w_port__AXI_Protocol_Converter_0__us_axi_rvalid ;
+    wire              w_port__ARM_Processor_System_0__master_gp0_axi_rvalid ;
+    wire              w_net__AXI_Protocol_Converter_0__us_axi_rvalid ; 
+
+    wire [31:0]       w_port__ARM_Processor_System_0__master_gp0_axi_wdata ;
+    wire [31:0]       w_port__AXI_Protocol_Converter_0__us_axi_wdata ;
+    wire [31:0]       w_net__ARM_Processor_System_0__master_gp0_axi_wdata ; 
+
+    wire              w_port__ARM_Processor_System_0__master_gp0_axi_wlast ;
+    wire              w_port__AXI_Protocol_Converter_0__us_axi_wlast ;
+    wire              w_net__ARM_Processor_System_0__master_gp0_axi_wlast ; 
+
+    wire              w_port__AXI_Protocol_Converter_0__us_axi_wready ;
+    wire              w_port__ARM_Processor_System_0__master_gp0_axi_wready ;
+    wire              w_net__AXI_Protocol_Converter_0__us_axi_wready ; 
+
+    wire [3:0]        w_port__ARM_Processor_System_0__master_gp0_axi_wstrb ;
+    wire [3:0]        w_port__AXI_Protocol_Converter_0__us_axi_wstrb ;
+    wire [3:0]        w_net__ARM_Processor_System_0__master_gp0_axi_wstrb ; 
+
+    wire              w_port__ARM_Processor_System_0__master_gp0_axi_wvalid ;
+    wire              w_port__AXI_Protocol_Converter_0__us_axi_wvalid ;
+    wire              w_net__ARM_Processor_System_0__master_gp0_axi_wvalid ; 
+
     assign w_net__ARM_Processor_System_0__p2f_clk0 = w_port__ARM_Processor_System_0__p2f_clk0 ;
     assign p2f_clk0 = w_net__ARM_Processor_System_0__p2f_clk0 ;
     assign w_port__ARM_Processor_System_0__slave_hp0_axi_aclk = w_net__ARM_Processor_System_0__p2f_clk0 ;
     assign w_port__uiFDMA_0__M_AXI_ACLK = w_net__ARM_Processor_System_0__p2f_clk0 ;
+    assign w_port__AXI_GPIO_0__s_axi_aclk = w_net__ARM_Processor_System_0__p2f_clk0 ;
+    assign w_port__ARM_Processor_System_0__master_gp0_axi_aclk = w_net__ARM_Processor_System_0__p2f_clk0 ;
+    assign w_port__AXI_Protocol_Converter_0__aclk = w_net__ARM_Processor_System_0__p2f_clk0 ;
 
     assign w_net__ARM_Processor_System_0__p2f_rst0_n = w_port__ARM_Processor_System_0__p2f_rst0_n ;
     assign p2f_rst0_n = w_net__ARM_Processor_System_0__p2f_rst0_n ;
     assign w_port__uiFDMA_0__M_AXI_ARESETN = w_net__ARM_Processor_System_0__p2f_rst0_n ;
+    assign w_port__AXI_GPIO_0__s_axi_aresetn = w_net__ARM_Processor_System_0__p2f_rst0_n ;
+    assign w_port__AXI_Protocol_Converter_0__aresetn = w_net__ARM_Processor_System_0__p2f_rst0_n ;
 
     assign w_net__ARM_Processor_System_0__pl_gpio_out = w_port__ARM_Processor_System_0__pl_gpio_out ;
     assign pl_gpio_out = w_net__ARM_Processor_System_0__pl_gpio_out ;
@@ -263,6 +487,9 @@ module system (
 
     assign w_net__ARM_Processor_System_0__slave_hp0_axi_wready = w_port__ARM_Processor_System_0__slave_hp0_axi_wready ;
     assign w_port__uiFDMA_0__M_AXI_WREADY = w_net__ARM_Processor_System_0__slave_hp0_axi_wready ;
+
+    assign w_net__AXI_GPIO_0__gpio_io_o = w_port__AXI_GPIO_0__gpio_io_o ;
+    assign code_driver = w_net__AXI_GPIO_0__gpio_io_o ;
 
     assign w_net__I_fdma_raddr = I_fdma_raddr ;
     assign w_port__uiFDMA_0__I_fdma_raddr = w_net__I_fdma_raddr ;
@@ -384,50 +611,246 @@ module system (
     assign w_net__uiFDMA_0__O_fdma_wvalid = w_port__uiFDMA_0__O_fdma_wvalid ;
     assign O_fdma_wvalid = w_net__uiFDMA_0__O_fdma_wvalid ;
 
+
+    assign w_net__AXI_Protocol_Converter_0__ds_axi_awaddr = w_port__AXI_Protocol_Converter_0__ds_axi_awaddr ;
+    assign w_port__AXI_GPIO_0__s_axi_awaddr = w_net__AXI_Protocol_Converter_0__ds_axi_awaddr ;
+
+    assign w_net__AXI_Protocol_Converter_0__ds_axi_awvalid = w_port__AXI_Protocol_Converter_0__ds_axi_awvalid ;
+    assign w_port__AXI_GPIO_0__s_axi_awvalid = w_net__AXI_Protocol_Converter_0__ds_axi_awvalid ;
+
+    assign w_net__AXI_GPIO_0__s_axi_awready = w_port__AXI_GPIO_0__s_axi_awready ;
+    assign w_port__AXI_Protocol_Converter_0__ds_axi_awready = w_net__AXI_GPIO_0__s_axi_awready ;
+
+    assign w_net__AXI_Protocol_Converter_0__ds_axi_wdata = w_port__AXI_Protocol_Converter_0__ds_axi_wdata ;
+    assign w_port__AXI_GPIO_0__s_axi_wdata = w_net__AXI_Protocol_Converter_0__ds_axi_wdata ;
+
+    assign w_net__AXI_Protocol_Converter_0__ds_axi_wstrb = w_port__AXI_Protocol_Converter_0__ds_axi_wstrb ;
+    assign w_port__AXI_GPIO_0__s_axi_wstrb = w_net__AXI_Protocol_Converter_0__ds_axi_wstrb ;
+
+    assign w_net__AXI_Protocol_Converter_0__ds_axi_wvalid = w_port__AXI_Protocol_Converter_0__ds_axi_wvalid ;
+    assign w_port__AXI_GPIO_0__s_axi_wvalid = w_net__AXI_Protocol_Converter_0__ds_axi_wvalid ;
+
+    assign w_net__AXI_GPIO_0__s_axi_wready = w_port__AXI_GPIO_0__s_axi_wready ;
+    assign w_port__AXI_Protocol_Converter_0__ds_axi_wready = w_net__AXI_GPIO_0__s_axi_wready ;
+
+    assign w_net__AXI_GPIO_0__s_axi_bresp = w_port__AXI_GPIO_0__s_axi_bresp ;
+    assign w_port__AXI_Protocol_Converter_0__ds_axi_bresp = w_net__AXI_GPIO_0__s_axi_bresp ;
+
+    assign w_net__AXI_GPIO_0__s_axi_bvalid = w_port__AXI_GPIO_0__s_axi_bvalid ;
+    assign w_port__AXI_Protocol_Converter_0__ds_axi_bvalid = w_net__AXI_GPIO_0__s_axi_bvalid ;
+
+    assign w_net__AXI_Protocol_Converter_0__ds_axi_bready = w_port__AXI_Protocol_Converter_0__ds_axi_bready ;
+    assign w_port__AXI_GPIO_0__s_axi_bready = w_net__AXI_Protocol_Converter_0__ds_axi_bready ;
+
+    assign w_net__AXI_Protocol_Converter_0__ds_axi_araddr = w_port__AXI_Protocol_Converter_0__ds_axi_araddr ;
+    assign w_port__AXI_GPIO_0__s_axi_araddr = w_net__AXI_Protocol_Converter_0__ds_axi_araddr ;
+
+    assign w_net__AXI_Protocol_Converter_0__ds_axi_arvalid = w_port__AXI_Protocol_Converter_0__ds_axi_arvalid ;
+    assign w_port__AXI_GPIO_0__s_axi_arvalid = w_net__AXI_Protocol_Converter_0__ds_axi_arvalid ;
+
+    assign w_net__AXI_GPIO_0__s_axi_arready = w_port__AXI_GPIO_0__s_axi_arready ;
+    assign w_port__AXI_Protocol_Converter_0__ds_axi_arready = w_net__AXI_GPIO_0__s_axi_arready ;
+
+    assign w_net__AXI_GPIO_0__s_axi_rdata = w_port__AXI_GPIO_0__s_axi_rdata ;
+    assign w_port__AXI_Protocol_Converter_0__ds_axi_rdata = w_net__AXI_GPIO_0__s_axi_rdata ;
+
+    assign w_net__AXI_GPIO_0__s_axi_rresp = w_port__AXI_GPIO_0__s_axi_rresp ;
+    assign w_port__AXI_Protocol_Converter_0__ds_axi_rresp = w_net__AXI_GPIO_0__s_axi_rresp ;
+
+    assign w_net__AXI_GPIO_0__s_axi_rvalid = w_port__AXI_GPIO_0__s_axi_rvalid ;
+    assign w_port__AXI_Protocol_Converter_0__ds_axi_rvalid = w_net__AXI_GPIO_0__s_axi_rvalid ;
+
+    assign w_net__AXI_Protocol_Converter_0__ds_axi_rready = w_port__AXI_Protocol_Converter_0__ds_axi_rready ;
+    assign w_port__AXI_GPIO_0__s_axi_rready = w_net__AXI_Protocol_Converter_0__ds_axi_rready ;
+
+
+    assign w_net__ARM_Processor_System_0__master_gp0_axi_araddr = w_port__ARM_Processor_System_0__master_gp0_axi_araddr ;
+    assign w_port__AXI_Protocol_Converter_0__us_axi_araddr = w_net__ARM_Processor_System_0__master_gp0_axi_araddr ;
+
+    assign w_net__ARM_Processor_System_0__master_gp0_axi_arburst = w_port__ARM_Processor_System_0__master_gp0_axi_arburst ;
+    assign w_port__AXI_Protocol_Converter_0__us_axi_arburst = w_net__ARM_Processor_System_0__master_gp0_axi_arburst ;
+
+    assign w_net__ARM_Processor_System_0__master_gp0_axi_arcache = w_port__ARM_Processor_System_0__master_gp0_axi_arcache ;
+    assign w_port__AXI_Protocol_Converter_0__us_axi_arcache = w_net__ARM_Processor_System_0__master_gp0_axi_arcache ;
+
+    assign w_net__ARM_Processor_System_0__master_gp0_axi_arid = w_port__ARM_Processor_System_0__master_gp0_axi_arid ;
+    assign w_port__AXI_Protocol_Converter_0__us_axi_arid = w_net__ARM_Processor_System_0__master_gp0_axi_arid ;
+
+    assign w_net__ARM_Processor_System_0__master_gp0_axi_arlen = w_port__ARM_Processor_System_0__master_gp0_axi_arlen ;
+    assign w_port__AXI_Protocol_Converter_0__us_axi_arlen = {4'b0,w_net__ARM_Processor_System_0__master_gp0_axi_arlen} ;
+
+    assign w_net__ARM_Processor_System_0__master_gp0_axi_arlock = w_port__ARM_Processor_System_0__master_gp0_axi_arlock ;
+    assign w_port__AXI_Protocol_Converter_0__us_axi_arlock = w_net__ARM_Processor_System_0__master_gp0_axi_arlock ;
+
+    assign w_net__ARM_Processor_System_0__master_gp0_axi_arprot = w_port__ARM_Processor_System_0__master_gp0_axi_arprot ;
+    assign w_port__AXI_Protocol_Converter_0__us_axi_arprot = w_net__ARM_Processor_System_0__master_gp0_axi_arprot ;
+
+    assign w_net__AXI_Protocol_Converter_0__us_axi_arready = w_port__AXI_Protocol_Converter_0__us_axi_arready ;
+    assign w_port__ARM_Processor_System_0__master_gp0_axi_arready = w_net__AXI_Protocol_Converter_0__us_axi_arready ;
+
+    assign w_net__ARM_Processor_System_0__master_gp0_axi_arsize = w_port__ARM_Processor_System_0__master_gp0_axi_arsize ;
+    assign w_port__AXI_Protocol_Converter_0__us_axi_arsize = {1'b0,w_net__ARM_Processor_System_0__master_gp0_axi_arsize} ;
+
+    assign w_net__ARM_Processor_System_0__master_gp0_axi_arvalid = w_port__ARM_Processor_System_0__master_gp0_axi_arvalid ;
+    assign w_port__AXI_Protocol_Converter_0__us_axi_arvalid = w_net__ARM_Processor_System_0__master_gp0_axi_arvalid ;
+
+    assign w_net__ARM_Processor_System_0__master_gp0_axi_awaddr = w_port__ARM_Processor_System_0__master_gp0_axi_awaddr ;
+    assign w_port__AXI_Protocol_Converter_0__us_axi_awaddr = w_net__ARM_Processor_System_0__master_gp0_axi_awaddr ;
+
+    assign w_net__ARM_Processor_System_0__master_gp0_axi_awburst = w_port__ARM_Processor_System_0__master_gp0_axi_awburst ;
+    assign w_port__AXI_Protocol_Converter_0__us_axi_awburst = w_net__ARM_Processor_System_0__master_gp0_axi_awburst ;
+
+    assign w_net__ARM_Processor_System_0__master_gp0_axi_awcache = w_port__ARM_Processor_System_0__master_gp0_axi_awcache ;
+    assign w_port__AXI_Protocol_Converter_0__us_axi_awcache = w_net__ARM_Processor_System_0__master_gp0_axi_awcache ;
+
+    assign w_net__ARM_Processor_System_0__master_gp0_axi_awid = w_port__ARM_Processor_System_0__master_gp0_axi_awid ;
+    assign w_port__AXI_Protocol_Converter_0__us_axi_awid = w_net__ARM_Processor_System_0__master_gp0_axi_awid ;
+
+    assign w_net__ARM_Processor_System_0__master_gp0_axi_awlen = w_port__ARM_Processor_System_0__master_gp0_axi_awlen ;
+    assign w_port__AXI_Protocol_Converter_0__us_axi_awlen = {4'b0,w_net__ARM_Processor_System_0__master_gp0_axi_awlen} ;
+
+    assign w_net__ARM_Processor_System_0__master_gp0_axi_awlock = w_port__ARM_Processor_System_0__master_gp0_axi_awlock ;
+    assign w_port__AXI_Protocol_Converter_0__us_axi_awlock = w_net__ARM_Processor_System_0__master_gp0_axi_awlock ;
+
+    assign w_net__ARM_Processor_System_0__master_gp0_axi_awprot = w_port__ARM_Processor_System_0__master_gp0_axi_awprot ;
+    assign w_port__AXI_Protocol_Converter_0__us_axi_awprot = w_net__ARM_Processor_System_0__master_gp0_axi_awprot ;
+
+    assign w_net__AXI_Protocol_Converter_0__us_axi_awready = w_port__AXI_Protocol_Converter_0__us_axi_awready ;
+    assign w_port__ARM_Processor_System_0__master_gp0_axi_awready = w_net__AXI_Protocol_Converter_0__us_axi_awready ;
+
+    assign w_net__ARM_Processor_System_0__master_gp0_axi_awsize = w_port__ARM_Processor_System_0__master_gp0_axi_awsize ;
+    assign w_port__AXI_Protocol_Converter_0__us_axi_awsize = {1'b0,w_net__ARM_Processor_System_0__master_gp0_axi_awsize} ;
+
+    assign w_net__ARM_Processor_System_0__master_gp0_axi_awvalid = w_port__ARM_Processor_System_0__master_gp0_axi_awvalid ;
+    assign w_port__AXI_Protocol_Converter_0__us_axi_awvalid = w_net__ARM_Processor_System_0__master_gp0_axi_awvalid ;
+
+    assign w_net__AXI_Protocol_Converter_0__us_axi_bid = w_port__AXI_Protocol_Converter_0__us_axi_bid ;
+    assign w_port__ARM_Processor_System_0__master_gp0_axi_bid = {8'b0,w_net__AXI_Protocol_Converter_0__us_axi_bid} ;
+
+    assign w_net__ARM_Processor_System_0__master_gp0_axi_bready = w_port__ARM_Processor_System_0__master_gp0_axi_bready ;
+    assign w_port__AXI_Protocol_Converter_0__us_axi_bready = w_net__ARM_Processor_System_0__master_gp0_axi_bready ;
+
+    assign w_net__AXI_Protocol_Converter_0__us_axi_bresp = w_port__AXI_Protocol_Converter_0__us_axi_bresp ;
+    assign w_port__ARM_Processor_System_0__master_gp0_axi_bresp = w_net__AXI_Protocol_Converter_0__us_axi_bresp ;
+
+    assign w_net__AXI_Protocol_Converter_0__us_axi_bvalid = w_port__AXI_Protocol_Converter_0__us_axi_bvalid ;
+    assign w_port__ARM_Processor_System_0__master_gp0_axi_bvalid = w_net__AXI_Protocol_Converter_0__us_axi_bvalid ;
+
+    assign w_net__AXI_Protocol_Converter_0__us_axi_rdata = w_port__AXI_Protocol_Converter_0__us_axi_rdata ;
+    assign w_port__ARM_Processor_System_0__master_gp0_axi_rdata = w_net__AXI_Protocol_Converter_0__us_axi_rdata ;
+
+    assign w_net__AXI_Protocol_Converter_0__us_axi_rid = w_port__AXI_Protocol_Converter_0__us_axi_rid ;
+    assign w_port__ARM_Processor_System_0__master_gp0_axi_rid = {8'b0,w_net__AXI_Protocol_Converter_0__us_axi_rid} ;
+
+    assign w_net__AXI_Protocol_Converter_0__us_axi_rlast = w_port__AXI_Protocol_Converter_0__us_axi_rlast ;
+    assign w_port__ARM_Processor_System_0__master_gp0_axi_rlast = w_net__AXI_Protocol_Converter_0__us_axi_rlast ;
+
+    assign w_net__ARM_Processor_System_0__master_gp0_axi_rready = w_port__ARM_Processor_System_0__master_gp0_axi_rready ;
+    assign w_port__AXI_Protocol_Converter_0__us_axi_rready = w_net__ARM_Processor_System_0__master_gp0_axi_rready ;
+
+    assign w_net__AXI_Protocol_Converter_0__us_axi_rresp = w_port__AXI_Protocol_Converter_0__us_axi_rresp ;
+    assign w_port__ARM_Processor_System_0__master_gp0_axi_rresp = w_net__AXI_Protocol_Converter_0__us_axi_rresp ;
+
+    assign w_net__AXI_Protocol_Converter_0__us_axi_rvalid = w_port__AXI_Protocol_Converter_0__us_axi_rvalid ;
+    assign w_port__ARM_Processor_System_0__master_gp0_axi_rvalid = w_net__AXI_Protocol_Converter_0__us_axi_rvalid ;
+
+    assign w_net__ARM_Processor_System_0__master_gp0_axi_wdata = w_port__ARM_Processor_System_0__master_gp0_axi_wdata ;
+    assign w_port__AXI_Protocol_Converter_0__us_axi_wdata = w_net__ARM_Processor_System_0__master_gp0_axi_wdata ;
+
+    assign w_net__ARM_Processor_System_0__master_gp0_axi_wlast = w_port__ARM_Processor_System_0__master_gp0_axi_wlast ;
+    assign w_port__AXI_Protocol_Converter_0__us_axi_wlast = w_net__ARM_Processor_System_0__master_gp0_axi_wlast ;
+
+    assign w_net__AXI_Protocol_Converter_0__us_axi_wready = w_port__AXI_Protocol_Converter_0__us_axi_wready ;
+    assign w_port__ARM_Processor_System_0__master_gp0_axi_wready = w_net__AXI_Protocol_Converter_0__us_axi_wready ;
+
+    assign w_net__ARM_Processor_System_0__master_gp0_axi_wstrb = w_port__ARM_Processor_System_0__master_gp0_axi_wstrb ;
+    assign w_port__AXI_Protocol_Converter_0__us_axi_wstrb = w_net__ARM_Processor_System_0__master_gp0_axi_wstrb ;
+
+    assign w_net__ARM_Processor_System_0__master_gp0_axi_wvalid = w_port__ARM_Processor_System_0__master_gp0_axi_wvalid ;
+    assign w_port__AXI_Protocol_Converter_0__us_axi_wvalid = w_net__ARM_Processor_System_0__master_gp0_axi_wvalid ;
+
     system_ARM_Processor_System_0 ARM_Processor_System_0 ( 
-                                                            .slave_hp0_axi_awid(w_port__ARM_Processor_System_0__slave_hp0_axi_awid)
+                                                            .slave_hp0_axi_araddr(w_port__ARM_Processor_System_0__slave_hp0_axi_araddr)
+                                                          , .slave_hp0_axi_arburst(w_port__ARM_Processor_System_0__slave_hp0_axi_arburst)
+                                                          , .slave_hp0_axi_arcache(w_port__ARM_Processor_System_0__slave_hp0_axi_arcache)
+                                                          , .slave_hp0_axi_arid(w_port__ARM_Processor_System_0__slave_hp0_axi_arid)
+                                                          , .slave_hp0_axi_arlen(w_port__ARM_Processor_System_0__slave_hp0_axi_arlen)
+                                                          , .slave_hp0_axi_arlock(w_port__ARM_Processor_System_0__slave_hp0_axi_arlock)
+                                                          , .slave_hp0_axi_arprot(w_port__ARM_Processor_System_0__slave_hp0_axi_arprot)
+                                                          , .slave_hp0_axi_arqos(w_port__ARM_Processor_System_0__slave_hp0_axi_arqos)
+                                                          , .slave_hp0_axi_arready(w_port__ARM_Processor_System_0__slave_hp0_axi_arready)
+                                                          , .slave_hp0_axi_arsize(w_port__ARM_Processor_System_0__slave_hp0_axi_arsize)
+                                                          , .slave_hp0_axi_arvalid(w_port__ARM_Processor_System_0__slave_hp0_axi_arvalid)
                                                           , .slave_hp0_axi_awaddr(w_port__ARM_Processor_System_0__slave_hp0_axi_awaddr)
-                                                          , .slave_hp0_axi_awlen(w_port__ARM_Processor_System_0__slave_hp0_axi_awlen)
-                                                          , .slave_hp0_axi_awsize(w_port__ARM_Processor_System_0__slave_hp0_axi_awsize)
                                                           , .slave_hp0_axi_awburst(w_port__ARM_Processor_System_0__slave_hp0_axi_awburst)
-                                                          , .slave_hp0_axi_awlock(w_port__ARM_Processor_System_0__slave_hp0_axi_awlock)
                                                           , .slave_hp0_axi_awcache(w_port__ARM_Processor_System_0__slave_hp0_axi_awcache)
+                                                          , .slave_hp0_axi_awid(w_port__ARM_Processor_System_0__slave_hp0_axi_awid)
+                                                          , .slave_hp0_axi_awlen(w_port__ARM_Processor_System_0__slave_hp0_axi_awlen)
+                                                          , .slave_hp0_axi_awlock(w_port__ARM_Processor_System_0__slave_hp0_axi_awlock)
                                                           , .slave_hp0_axi_awprot(w_port__ARM_Processor_System_0__slave_hp0_axi_awprot)
-                                                          , .slave_hp0_axi_awvalid(w_port__ARM_Processor_System_0__slave_hp0_axi_awvalid)
+                                                          , .slave_hp0_axi_awqos(w_port__ARM_Processor_System_0__slave_hp0_axi_awqos)
                                                           , .slave_hp0_axi_awready(w_port__ARM_Processor_System_0__slave_hp0_axi_awready)
-                                                          , .slave_hp0_axi_wdata(w_port__ARM_Processor_System_0__slave_hp0_axi_wdata)
-                                                          , .slave_hp0_axi_wstrb(w_port__ARM_Processor_System_0__slave_hp0_axi_wstrb)
-                                                          , .slave_hp0_axi_wlast(w_port__ARM_Processor_System_0__slave_hp0_axi_wlast)
-                                                          , .slave_hp0_axi_wvalid(w_port__ARM_Processor_System_0__slave_hp0_axi_wvalid)
-                                                          , .slave_hp0_axi_wready(w_port__ARM_Processor_System_0__slave_hp0_axi_wready)
+                                                          , .slave_hp0_axi_awsize(w_port__ARM_Processor_System_0__slave_hp0_axi_awsize)
+                                                          , .slave_hp0_axi_awvalid(w_port__ARM_Processor_System_0__slave_hp0_axi_awvalid)
                                                           , .slave_hp0_axi_bid(w_port__ARM_Processor_System_0__slave_hp0_axi_bid)
+                                                          , .slave_hp0_axi_bready(w_port__ARM_Processor_System_0__slave_hp0_axi_bready)
                                                           , .slave_hp0_axi_bresp(w_port__ARM_Processor_System_0__slave_hp0_axi_bresp)
                                                           , .slave_hp0_axi_bvalid(w_port__ARM_Processor_System_0__slave_hp0_axi_bvalid)
-                                                          , .slave_hp0_axi_bready(w_port__ARM_Processor_System_0__slave_hp0_axi_bready)
-                                                          , .slave_hp0_axi_arid(w_port__ARM_Processor_System_0__slave_hp0_axi_arid)
-                                                          , .slave_hp0_axi_araddr(w_port__ARM_Processor_System_0__slave_hp0_axi_araddr)
-                                                          , .slave_hp0_axi_arlen(w_port__ARM_Processor_System_0__slave_hp0_axi_arlen)
-                                                          , .slave_hp0_axi_arsize(w_port__ARM_Processor_System_0__slave_hp0_axi_arsize)
-                                                          , .slave_hp0_axi_arburst(w_port__ARM_Processor_System_0__slave_hp0_axi_arburst)
-                                                          , .slave_hp0_axi_arlock(w_port__ARM_Processor_System_0__slave_hp0_axi_arlock)
-                                                          , .slave_hp0_axi_arcache(w_port__ARM_Processor_System_0__slave_hp0_axi_arcache)
-                                                          , .slave_hp0_axi_arprot(w_port__ARM_Processor_System_0__slave_hp0_axi_arprot)
-                                                          , .slave_hp0_axi_arvalid(w_port__ARM_Processor_System_0__slave_hp0_axi_arvalid)
-                                                          , .slave_hp0_axi_arready(w_port__ARM_Processor_System_0__slave_hp0_axi_arready)
-                                                          , .slave_hp0_axi_rid(w_port__ARM_Processor_System_0__slave_hp0_axi_rid)
                                                           , .slave_hp0_axi_rdata(w_port__ARM_Processor_System_0__slave_hp0_axi_rdata)
-                                                          , .slave_hp0_axi_rresp(w_port__ARM_Processor_System_0__slave_hp0_axi_rresp)
+                                                          , .slave_hp0_axi_rid(w_port__ARM_Processor_System_0__slave_hp0_axi_rid)
                                                           , .slave_hp0_axi_rlast(w_port__ARM_Processor_System_0__slave_hp0_axi_rlast)
-                                                          , .slave_hp0_axi_rvalid(w_port__ARM_Processor_System_0__slave_hp0_axi_rvalid)
                                                           , .slave_hp0_axi_rready(w_port__ARM_Processor_System_0__slave_hp0_axi_rready)
-                                                          , .slave_hp0_axi_awqos(w_port__ARM_Processor_System_0__slave_hp0_axi_awqos)
-                                                          , .slave_hp0_axi_arqos(w_port__ARM_Processor_System_0__slave_hp0_axi_arqos)
+                                                          , .slave_hp0_axi_rresp(w_port__ARM_Processor_System_0__slave_hp0_axi_rresp)
+                                                          , .slave_hp0_axi_rvalid(w_port__ARM_Processor_System_0__slave_hp0_axi_rvalid)
+                                                          , .slave_hp0_axi_wdata(w_port__ARM_Processor_System_0__slave_hp0_axi_wdata)
+                                                          , .slave_hp0_axi_wlast(w_port__ARM_Processor_System_0__slave_hp0_axi_wlast)
+                                                          , .slave_hp0_axi_wready(w_port__ARM_Processor_System_0__slave_hp0_axi_wready)
+                                                          , .slave_hp0_axi_wstrb(w_port__ARM_Processor_System_0__slave_hp0_axi_wstrb)
+                                                          , .slave_hp0_axi_wvalid(w_port__ARM_Processor_System_0__slave_hp0_axi_wvalid)
                                                           , .slave_hp0_axi_aclk(w_port__ARM_Processor_System_0__slave_hp0_axi_aclk)
+                                                          , .master_gp0_axi_aclk(w_port__ARM_Processor_System_0__master_gp0_axi_aclk)
+                                                          , .master_gp0_axi_araddr(w_port__ARM_Processor_System_0__master_gp0_axi_araddr)
+                                                          , .master_gp0_axi_arburst(w_port__ARM_Processor_System_0__master_gp0_axi_arburst)
+                                                          , .master_gp0_axi_arcache(w_port__ARM_Processor_System_0__master_gp0_axi_arcache)
+                                                          , .master_gp0_axi_arid(w_port__ARM_Processor_System_0__master_gp0_axi_arid)
+                                                          , .master_gp0_axi_arlen(w_port__ARM_Processor_System_0__master_gp0_axi_arlen)
+                                                          , .master_gp0_axi_arlock(w_port__ARM_Processor_System_0__master_gp0_axi_arlock)
+                                                          , .master_gp0_axi_arprot(w_port__ARM_Processor_System_0__master_gp0_axi_arprot)
+                                                          , .master_gp0_axi_arready(w_port__ARM_Processor_System_0__master_gp0_axi_arready)
+                                                          , .master_gp0_axi_arsize(w_port__ARM_Processor_System_0__master_gp0_axi_arsize)
+                                                          , .master_gp0_axi_arvalid(w_port__ARM_Processor_System_0__master_gp0_axi_arvalid)
+                                                          , .master_gp0_axi_awaddr(w_port__ARM_Processor_System_0__master_gp0_axi_awaddr)
+                                                          , .master_gp0_axi_awburst(w_port__ARM_Processor_System_0__master_gp0_axi_awburst)
+                                                          , .master_gp0_axi_awcache(w_port__ARM_Processor_System_0__master_gp0_axi_awcache)
+                                                          , .master_gp0_axi_awid(w_port__ARM_Processor_System_0__master_gp0_axi_awid)
+                                                          , .master_gp0_axi_awlen(w_port__ARM_Processor_System_0__master_gp0_axi_awlen)
+                                                          , .master_gp0_axi_awlock(w_port__ARM_Processor_System_0__master_gp0_axi_awlock)
+                                                          , .master_gp0_axi_awprot(w_port__ARM_Processor_System_0__master_gp0_axi_awprot)
+                                                          , .master_gp0_axi_awready(w_port__ARM_Processor_System_0__master_gp0_axi_awready)
+                                                          , .master_gp0_axi_awsize(w_port__ARM_Processor_System_0__master_gp0_axi_awsize)
+                                                          , .master_gp0_axi_awvalid(w_port__ARM_Processor_System_0__master_gp0_axi_awvalid)
+                                                          , .master_gp0_axi_bid(w_port__ARM_Processor_System_0__master_gp0_axi_bid)
+                                                          , .master_gp0_axi_bready(w_port__ARM_Processor_System_0__master_gp0_axi_bready)
+                                                          , .master_gp0_axi_bresp(w_port__ARM_Processor_System_0__master_gp0_axi_bresp)
+                                                          , .master_gp0_axi_bvalid(w_port__ARM_Processor_System_0__master_gp0_axi_bvalid)
+                                                          , .master_gp0_axi_rdata(w_port__ARM_Processor_System_0__master_gp0_axi_rdata)
+                                                          , .master_gp0_axi_rid(w_port__ARM_Processor_System_0__master_gp0_axi_rid)
+                                                          , .master_gp0_axi_rlast(w_port__ARM_Processor_System_0__master_gp0_axi_rlast)
+                                                          , .master_gp0_axi_rready(w_port__ARM_Processor_System_0__master_gp0_axi_rready)
+                                                          , .master_gp0_axi_rresp(w_port__ARM_Processor_System_0__master_gp0_axi_rresp)
+                                                          , .master_gp0_axi_rvalid(w_port__ARM_Processor_System_0__master_gp0_axi_rvalid)
+                                                          , .master_gp0_axi_wdata(w_port__ARM_Processor_System_0__master_gp0_axi_wdata)
+                                                          , .master_gp0_axi_wlast(w_port__ARM_Processor_System_0__master_gp0_axi_wlast)
+                                                          , .master_gp0_axi_wready(w_port__ARM_Processor_System_0__master_gp0_axi_wready)
+                                                          , .master_gp0_axi_wstrb(w_port__ARM_Processor_System_0__master_gp0_axi_wstrb)
+                                                          , .master_gp0_axi_wvalid(w_port__ARM_Processor_System_0__master_gp0_axi_wvalid)
+                                                          , .pl_gpio_in(1'b0)
                                                           , .pl_gpio_oe()
                                                           , .pl_gpio_out(w_port__ARM_Processor_System_0__pl_gpio_out)
-                                                          , .pl_gpio_in(1'b0)
-                                                          , .p2f_clk0(w_port__ARM_Processor_System_0__p2f_clk0)
-                                                          , .p2f_rst0_n(w_port__ARM_Processor_System_0__p2f_rst0_n) );
+                                                          , .uart0_rx_in(1'b0)
+                                                          , .uart0_tx_out()
+                                                          , .p2f_rst0_n(w_port__ARM_Processor_System_0__p2f_rst0_n)
+                                                          , .p2f_clk0(w_port__ARM_Processor_System_0__p2f_clk0) );
 
     system_uiFDMA_0 uiFDMA_0 ( 
                                 .I_fdma_waddr(w_port__uiFDMA_0__I_fdma_waddr)
@@ -484,5 +907,87 @@ module system (
                               , .M_AXI_ARQOS(w_port__uiFDMA_0__M_AXI_ARQOS)
                               , .M_AXI_ARVALID(w_port__uiFDMA_0__M_AXI_ARVALID)
                               , .M_AXI_RREADY(w_port__uiFDMA_0__M_AXI_RREADY) );
+
+    system_AXI_GPIO_0 AXI_GPIO_0 ( 
+                                    .s_axi_awaddr(w_port__AXI_GPIO_0__s_axi_awaddr)
+                                  , .s_axi_awvalid(w_port__AXI_GPIO_0__s_axi_awvalid)
+                                  , .s_axi_awready(w_port__AXI_GPIO_0__s_axi_awready)
+                                  , .s_axi_wdata(w_port__AXI_GPIO_0__s_axi_wdata)
+                                  , .s_axi_wstrb(w_port__AXI_GPIO_0__s_axi_wstrb)
+                                  , .s_axi_wvalid(w_port__AXI_GPIO_0__s_axi_wvalid)
+                                  , .s_axi_wready(w_port__AXI_GPIO_0__s_axi_wready)
+                                  , .s_axi_bresp(w_port__AXI_GPIO_0__s_axi_bresp)
+                                  , .s_axi_bvalid(w_port__AXI_GPIO_0__s_axi_bvalid)
+                                  , .s_axi_bready(w_port__AXI_GPIO_0__s_axi_bready)
+                                  , .s_axi_araddr(w_port__AXI_GPIO_0__s_axi_araddr)
+                                  , .s_axi_arvalid(w_port__AXI_GPIO_0__s_axi_arvalid)
+                                  , .s_axi_arready(w_port__AXI_GPIO_0__s_axi_arready)
+                                  , .s_axi_rdata(w_port__AXI_GPIO_0__s_axi_rdata)
+                                  , .s_axi_rresp(w_port__AXI_GPIO_0__s_axi_rresp)
+                                  , .s_axi_rvalid(w_port__AXI_GPIO_0__s_axi_rvalid)
+                                  , .s_axi_rready(w_port__AXI_GPIO_0__s_axi_rready)
+                                  , .s_axi_aclk(w_port__AXI_GPIO_0__s_axi_aclk)
+                                  , .s_axi_aresetn(w_port__AXI_GPIO_0__s_axi_aresetn)
+                                  , .gpio_io_o(w_port__AXI_GPIO_0__gpio_io_o) );
+
+    system_AXI_Protocol_Converter_0 AXI_Protocol_Converter_0 ( 
+                                                                .us_axi_awid(w_port__AXI_Protocol_Converter_0__us_axi_awid)
+                                                              , .us_axi_awaddr(w_port__AXI_Protocol_Converter_0__us_axi_awaddr)
+                                                              , .us_axi_awlen(w_port__AXI_Protocol_Converter_0__us_axi_awlen)
+                                                              , .us_axi_awsize(w_port__AXI_Protocol_Converter_0__us_axi_awsize)
+                                                              , .us_axi_awburst(w_port__AXI_Protocol_Converter_0__us_axi_awburst)
+                                                              , .us_axi_awlock(w_port__AXI_Protocol_Converter_0__us_axi_awlock)
+                                                              , .us_axi_awcache(w_port__AXI_Protocol_Converter_0__us_axi_awcache)
+                                                              , .us_axi_awprot(w_port__AXI_Protocol_Converter_0__us_axi_awprot)
+                                                              , .us_axi_awqos(4'b0)
+                                                              , .us_axi_awvalid(w_port__AXI_Protocol_Converter_0__us_axi_awvalid)
+                                                              , .us_axi_awready(w_port__AXI_Protocol_Converter_0__us_axi_awready)
+                                                              , .us_axi_wdata(w_port__AXI_Protocol_Converter_0__us_axi_wdata)
+                                                              , .us_axi_wstrb(w_port__AXI_Protocol_Converter_0__us_axi_wstrb)
+                                                              , .us_axi_wlast(w_port__AXI_Protocol_Converter_0__us_axi_wlast)
+                                                              , .us_axi_wvalid(w_port__AXI_Protocol_Converter_0__us_axi_wvalid)
+                                                              , .us_axi_wready(w_port__AXI_Protocol_Converter_0__us_axi_wready)
+                                                              , .us_axi_bid(w_port__AXI_Protocol_Converter_0__us_axi_bid)
+                                                              , .us_axi_bresp(w_port__AXI_Protocol_Converter_0__us_axi_bresp)
+                                                              , .us_axi_bvalid(w_port__AXI_Protocol_Converter_0__us_axi_bvalid)
+                                                              , .us_axi_bready(w_port__AXI_Protocol_Converter_0__us_axi_bready)
+                                                              , .us_axi_arid(w_port__AXI_Protocol_Converter_0__us_axi_arid)
+                                                              , .us_axi_araddr(w_port__AXI_Protocol_Converter_0__us_axi_araddr)
+                                                              , .us_axi_arlen(w_port__AXI_Protocol_Converter_0__us_axi_arlen)
+                                                              , .us_axi_arsize(w_port__AXI_Protocol_Converter_0__us_axi_arsize)
+                                                              , .us_axi_arburst(w_port__AXI_Protocol_Converter_0__us_axi_arburst)
+                                                              , .us_axi_arlock(w_port__AXI_Protocol_Converter_0__us_axi_arlock)
+                                                              , .us_axi_arcache(w_port__AXI_Protocol_Converter_0__us_axi_arcache)
+                                                              , .us_axi_arprot(w_port__AXI_Protocol_Converter_0__us_axi_arprot)
+                                                              , .us_axi_arqos(4'b0)
+                                                              , .us_axi_arvalid(w_port__AXI_Protocol_Converter_0__us_axi_arvalid)
+                                                              , .us_axi_arready(w_port__AXI_Protocol_Converter_0__us_axi_arready)
+                                                              , .us_axi_rid(w_port__AXI_Protocol_Converter_0__us_axi_rid)
+                                                              , .us_axi_rdata(w_port__AXI_Protocol_Converter_0__us_axi_rdata)
+                                                              , .us_axi_rresp(w_port__AXI_Protocol_Converter_0__us_axi_rresp)
+                                                              , .us_axi_rlast(w_port__AXI_Protocol_Converter_0__us_axi_rlast)
+                                                              , .us_axi_rvalid(w_port__AXI_Protocol_Converter_0__us_axi_rvalid)
+                                                              , .us_axi_rready(w_port__AXI_Protocol_Converter_0__us_axi_rready)
+                                                              , .aclk(w_port__AXI_Protocol_Converter_0__aclk)
+                                                              , .aresetn(w_port__AXI_Protocol_Converter_0__aresetn)
+                                                              , .ds_axi_awaddr(w_port__AXI_Protocol_Converter_0__ds_axi_awaddr)
+                                                              , .ds_axi_awprot()
+                                                              , .ds_axi_awvalid(w_port__AXI_Protocol_Converter_0__ds_axi_awvalid)
+                                                              , .ds_axi_awready(w_port__AXI_Protocol_Converter_0__ds_axi_awready)
+                                                              , .ds_axi_wdata(w_port__AXI_Protocol_Converter_0__ds_axi_wdata)
+                                                              , .ds_axi_wstrb(w_port__AXI_Protocol_Converter_0__ds_axi_wstrb)
+                                                              , .ds_axi_wvalid(w_port__AXI_Protocol_Converter_0__ds_axi_wvalid)
+                                                              , .ds_axi_wready(w_port__AXI_Protocol_Converter_0__ds_axi_wready)
+                                                              , .ds_axi_bresp(w_port__AXI_Protocol_Converter_0__ds_axi_bresp)
+                                                              , .ds_axi_bvalid(w_port__AXI_Protocol_Converter_0__ds_axi_bvalid)
+                                                              , .ds_axi_bready(w_port__AXI_Protocol_Converter_0__ds_axi_bready)
+                                                              , .ds_axi_araddr(w_port__AXI_Protocol_Converter_0__ds_axi_araddr)
+                                                              , .ds_axi_arprot()
+                                                              , .ds_axi_arvalid(w_port__AXI_Protocol_Converter_0__ds_axi_arvalid)
+                                                              , .ds_axi_arready(w_port__AXI_Protocol_Converter_0__ds_axi_arready)
+                                                              , .ds_axi_rdata(w_port__AXI_Protocol_Converter_0__ds_axi_rdata)
+                                                              , .ds_axi_rresp(w_port__AXI_Protocol_Converter_0__ds_axi_rresp)
+                                                              , .ds_axi_rvalid(w_port__AXI_Protocol_Converter_0__ds_axi_rvalid)
+                                                              , .ds_axi_rready(w_port__AXI_Protocol_Converter_0__ds_axi_rready) );
 
 endmodule

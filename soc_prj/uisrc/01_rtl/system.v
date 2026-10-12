@@ -43,7 +43,9 @@ module system_top (
 	input  wire[1:0]	I_data_lp_n ,
 
 	output wire       	O_hdmi_clk_p,  //HDMI时钟输出差分P
-    output wire [2:0] 	O_hdmi_tx_p	   //HDMI数据输出差分P
+    output wire [2:0] 	O_hdmi_tx_p,	   //HDMI数据输出差分P
+
+    output wire [3:0]   O_code_driver
 );
 
   localparam IMG_WIDTH = 1920;
@@ -208,7 +210,8 @@ end
       .O_fdma_rdata (fdma_rdata  ),
       .O_fdma_rvalid(fdma_rvalid ),
       .I_fdma_rready(fdma_rready ),
-      .pl_gpio_out	(pl_gpio_out )
+      .pl_gpio_out	(pl_gpio_out ),
+      .code_driver  (O_code_driver)
   );
 
   pll U_pll (
@@ -220,6 +223,8 @@ end
       .clk2_out(clk70m),
       .clk3_out(clk24m)
   );
+
+  
 
   // oDDR primitive
   DR1_LOGIC_ODDR CMOS_CLK (

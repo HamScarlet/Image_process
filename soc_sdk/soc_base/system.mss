@@ -18,6 +18,7 @@
     },
     "driver": {
         "PS_DRIVER_ADC": {
+            "Default": false,
             "depends": [
                 "fpsoc/driver/ps_driver/adc"
             ],
@@ -26,6 +27,7 @@
             "version": "1.0"
         },
         "PS_DRIVER_DMA": {
+            "Default": false,
             "depends": [
                 "fpsoc/driver/ps_driver/dma",
                 "PS_DRIVER_IPC"
@@ -35,6 +37,7 @@
             "version": "1.0"
         },
         "PS_DRIVER_DMACAHB": {
+            "Default": false,
             "depends": [
                 "fpsoc/driver/ps_driver/dmacahb"
             ],
@@ -42,15 +45,8 @@
             "name": "PS_DRIVER_DMACAHB",
             "version": "1.0"
         },
-        "PS_DRIVER_GBE": {
-            "depends": [
-                "fpsoc/driver/ps_driver/gbe"
-            ],
-            "description": "",
-            "name": "PS_DRIVER_GBE",
-            "version": "1.0"
-        },
         "PS_DRIVER_GPIO": {
+            "Default": false,
             "depends": [
                 "fpsoc/driver/ps_driver/gpio"
             ],
@@ -59,6 +55,7 @@
             "version": "1.0"
         },
         "PS_DRIVER_IIC": {
+            "Default": false,
             "depends": [
                 "fpsoc/driver/ps_driver/iic",
                 "PS_DRIVER_DMACAHB"
@@ -68,6 +65,7 @@
             "version": "1.0"
         },
         "PS_DRIVER_IPC": {
+            "Default": false,
             "depends": [
                 "fpsoc/driver/ps_driver/ipc"
             ],
@@ -76,6 +74,7 @@
             "version": "1.0"
         },
         "PS_DRIVER_MMC": {
+            "Default": false,
             "depends": [
                 "fpsoc/driver/ps_driver/mmc"
             ],
@@ -84,6 +83,7 @@
             "version": "1.0"
         },
         "PS_DRIVER_MPU": {
+            "Default": false,
             "depends": [
                 "fpsoc/driver/ps_driver/mpu"
             ],
@@ -92,6 +92,7 @@
             "version": "1.0"
         },
         "PS_DRIVER_PMU": {
+            "Default": false,
             "depends": [
                 "fpsoc/driver/ps_driver/pmu"
             ],
@@ -100,6 +101,7 @@
             "version": "1.0"
         },
         "PS_DRIVER_QSPI": {
+            "Default": false,
             "depends": [
                 "fpsoc/driver/ps_driver/qspi",
                 "PS_DRIVER_DMACAHB",
@@ -110,6 +112,7 @@
             "version": "1.0"
         },
         "PS_DRIVER_SMC": {
+            "Default": false,
             "depends": [
                 "fpsoc/driver/ps_driver/smc"
             ],
@@ -118,6 +121,7 @@
             "version": "1.0"
         },
         "PS_DRIVER_SPI": {
+            "Default": false,
             "depends": [
                 "fpsoc/driver/ps_driver/spi",
                 "PS_DRIVER_DMACAHB",
@@ -128,6 +132,7 @@
             "version": "1.0"
         },
         "PS_DRIVER_SPI_NOR": {
+            "Default": false,
             "depends": [
                 "fpsoc/driver/ps_driver/spi-nor"
             ],
@@ -136,6 +141,7 @@
             "version": "1.0"
         },
         "PS_DRIVER_TC": {
+            "Default": false,
             "depends": [
                 "fpsoc/driver/ps_driver/tc"
             ],
@@ -144,6 +150,7 @@
             "version": "1.0"
         },
         "PS_DRIVER_UART": {
+            "Default": false,
             "depends": [
                 "fpsoc/driver/ps_driver/uart",
                 "PS_DRIVER_DMACAHB"
@@ -153,6 +160,7 @@
             "version": "1.0"
         },
         "PS_DRIVER_USB": {
+            "Default": false,
             "depends": [
                 "fpsoc/driver/ps_driver/usb",
                 "LIB_FATFS"
@@ -162,6 +170,7 @@
             "version": "1.0"
         },
         "PS_DRIVER_WDT": {
+            "Default": false,
             "depends": [
                 "fpsoc/driver/ps_driver/wdt",
                 "PS_DRIVER_PMU"
@@ -171,6 +180,7 @@
             "version": "1.0"
         },
         "PS_DRIVER_XMON": {
+            "Default": false,
             "depends": [
                 "fpsoc/driver/ps_driver/xmon"
             ],
@@ -181,6 +191,7 @@
     },
     "library": {
         "LIB_FATFS": {
+            "Default": false,
             "depends": [
                 "3rdparty/lib/FATFS",
                 "PS_DRIVER_MMC"
@@ -190,6 +201,7 @@
             "version": "1.0"
         },
         "LIB_GCC": {
+            "Default": false,
             "depends": [
                 "fpsoc/lib/newlib/gcc"
             ],
@@ -198,6 +210,7 @@
             "version": "1.0"
         },
         "LIB_LOG": {
+            "Default": false,
             "depends": [
                 "fpsoc/lib/log",
                 "PS_DRIVER_UART"
@@ -207,6 +220,7 @@
             "version": "1.0"
         },
         "LIB_SEMIHOST": {
+            "Default": false,
             "depends": [
                 "3rdparty/lib/semihost/"
             ],

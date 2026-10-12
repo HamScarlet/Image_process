@@ -38,85 +38,68 @@
 #include "al_cache.h"
 #include "al_systimer.h"
 #include "al_gpio_hal.h"
-
-#define REG_P2F_RST     0XF8806330    /* bit[7:4] = p2f_rst_n[3:0]，必须被置 1 */
-#define REG_GP_FAHB     0xF8800080    /* bit1 清零 */
-#define REG_HP0HP1      0xF8801078    /* bit[5:0] = 0x33 */
+#include "Definitions.h"
+#include <stdint.h>
 
 void Fclk_Init()
 {
 	//复位PL的时钟FCLK（将p2f_rst_n全部置低）
-	uint32_t val = UI_In32(0XF8806330);
-    UI_Out32(0XF8806330, val & (~0xF0));
+	uint32_t val = UI_In32((void *)(uintptr_t)0xF8806330U);
+    UI_Out32((void *)(uintptr_t)0xF8806330U, val & (~0xF0));
 
     //使能GP和FAHB端口
-	val = UI_In32(0xF8800080);
+	val = UI_In32((void *)(uintptr_t)0xF8800080U);
     val &= ~0x2;
-    UI_Out32(0xF8800080, val);
+	UI_Out32((void *)(uintptr_t)0xF8800080U, val);
 
 	//复位了GP0M/GP1M/HP0/HP1
-	val = UI_In32(0xF8801078);
-	UI_Out32(0xF8801078, val & (~0x33));
+	val = UI_In32((void *)(uintptr_t)0xF8801078U);
+	UI_Out32((void *)(uintptr_t)0xF8801078U, val & (~0x33));
     AlSys_MDelay(1);
-    UI_Out32(0xF8801078, val | 0x33);
+    UI_Out32((void *)(uintptr_t)0xF8801078U, val | 0x33);
 
     //释放PL端FCLK的复位（将p2f_rst_n全部置高）
     val = UI_In32(0XF8806330);
-    UI_Out32(0XF8806330, val | 0xF0);
+    UI_Out32((void *)(uintptr_t)0xF8806330U, val | 0xF0);
 }
 
-/* 把 3 个寄存器一起打出来，前后各调一次 */
-static void dump_regs(const char *tag)
+/* AXI GPIO channel 1: DATA at base + 0x0, TRI at base + 0x4. */
+#define AXI_GPIO0_TRI_REG \
+    ((uintptr_t)AXI_GPIO0_DAT_REG + 0x04U)
+
+static void AXI_GPIO_WriteData(uint32_t value)
 {
-    uint32_t v6330 = UI_In32(REG_P2F_RST);
-    uint32_t v0080 = UI_In32(REG_GP_FAHB);
-    uint32_t v1078 = UI_In32(REG_HP0HP1);
-
-    printf("[%s] 0xF8806330=%08X  -> p2f_rst_n[3:0]=%X\r\n",
-           tag, (unsigned int)v6330, (unsigned int)((v6330 >> 4) & 0xF));
-    printf("[%s] 0xF8800080=%08X   0xF8801078=%08X\r\n",
-           tag, (unsigned int)v0080, (unsigned int)v1078);
+	UI_Out32((void *)(uintptr_t)AXI_GPIO0_DAT_REG, value & 0x0FU);
 }
+
+static void AXI_GPIO_Init(void)
+{
+	/* Load a safe low output value, then set all four channel-1 pins as outputs. */
+	AXI_GPIO_WriteData(0x00U);
+	UI_Out32((void *)(uintptr_t)AXI_GPIO0_TRI_REG, 0x00U);
+}
+
+static void AXI_GPIO_Test(void)
+{
+	uint32_t pin;
+
+	while (1) {
+		for (pin = 0; pin < 4U; ++pin) {
+			AXI_GPIO_WriteData(1U << pin);
+			AlSys_MDelay(250U);
+
+			AXI_GPIO_WriteData(0x00U);
+			AlSys_MDelay(250U);
+		}
+	}
+}
+
 
 AL_S32 main()
 {
-    const AL_CHAR *str = "axi fdma test!";
-    uint32_t v6330;
-
-    AlSys_MDelay(2000);     /* 留 2s，方便串口终端抓开头几行 */
-
-    printf("\r\n\r\n");
-    printf("==============================================\r\n");
-    printf(" fdma_en DIAG BUILD  2026-10-06\r\n");
-    printf(" PS IS RUNNING.  str=%s\r\n", str);
-    printf(" log uart = UART1 (0xF8401000)\r\n");
-    printf("==============================================\r\n");
-
-    dump_regs("before");
-
     Fclk_Init();
-
-    dump_regs("after ");
-
-    v6330 = UI_In32(REG_P2F_RST);
-    if (((v6330 >> 4) & 0xF) == 0xF) {
-        printf("[RESULT] p2f_rst_n[3:0] = F  已全部释放\r\n");
-        printf("         => PLL 已脱离复位。若屏上仍无 TMDS 时钟，\r\n");
-        printf("            下一步查 PLL 是否 locked（ChipWatcher / 示波器量 K17）。\r\n");
-    } else {
-        printf("[RESULT] p2f_rst_n[3:0] != F  未完全释放  <== 全黑根因在这里\r\n");
-        printf("         => PL 被锁在复位态，整条链不出 TMDS 时钟。\r\n");
-    }
-
-    printf("[keep-alive] 进入保活循环，PS 保持运行（防止 return 引起外设复位）\r\n");
-
-    /* 死循环保活 + 每秒复查一次 p2f_rst_n，观察它会不会掉 */
-    while (1) {
-        AlSys_MDelay(1000);
-        v6330 = UI_In32(REG_P2F_RST);
-        printf("[loop] 0xF8806330=%08X  p2f_rst_n[3:0]=%X\r\n",
-               (unsigned int)v6330, (unsigned int)((v6330 >> 4) & 0xF));
-    }
+    AXI_GPIO_Init();
+    AXI_GPIO_Test();
 
     return 0;
 }

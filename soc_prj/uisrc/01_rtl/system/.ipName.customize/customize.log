@@ -1,2 +1,3 @@
-system_ARM_Processor_System_0 12
+system_ARM_Processor_System_0 14
 system_uiFDMA_0 0
+system_AXI_GPIO_0 3

@@ -94,19 +94,12 @@ set DDRC_ADDR_MAP       $ROW_COL_BANK
 set DDRC_COMP_DENSITY            4096
 set DDRC_SPEED_BIN        $DDR3_1333G
 set DDRC_COMP_TYPE               $x16
-set FD_PARA_DRAM_DRV               40
-set FD_PARA_DRAM_ODT               40
 set DDRC_ECC_EN                 $NONE
-set FD_PARA_HOST_DRV_AC            40
-set FD_PARA_HOST_DRV_DX            40
-set FD_PARA_HOST_ODT_DX            40
-set DDRC_IO_VOL            0x3FACCCCD
+set DDRC_IO_VOL            0x3FC00000
 set DDRC_PZQ_CONF                   0
 set DDRC_RDBI                       0
 set DDRC_DDR_SPEED               1333
 set DDRC_TRAINING_EN                1
-set DDRC_DELAY_B0_AC       0x00000000
-set DDRC_DELAY_B0_DQ       0x00000000
 set DDRC_DDR_TYPE               $DDR3
 set DDRC_VREF               $Internal
 set DDRC_WDM_WDBI               $NONE
@@ -420,54 +413,54 @@ proc config_psio { } {
 	# register: FUNCSEL_PS_MIO_15.funcsel_ps_mio_15 = 10
 	# 0xf880303c[3:0] = 10
 	write 0xf880303c 0x0000000a
-	# Config ETH0, PS IO 16->FUNCSEL: ETH0
-	# register: FUNCSEL_PS_MIO_16.funcsel_ps_mio_16 = 14
-	# 0xf8803040[3:0] = 14
-	write 0xf8803040 0x0000000e
-	# Config ETH0, PS IO 17->FUNCSEL: ETH0
-	# register: FUNCSEL_PS_MIO_17.funcsel_ps_mio_17 = 14
-	# 0xf8803044[3:0] = 14
-	write 0xf8803044 0x0000000e
-	# Config ETH0, PS IO 18->FUNCSEL: ETH0
-	# register: FUNCSEL_PS_MIO_18.funcsel_ps_mio_18 = 14
-	# 0xf8803048[3:0] = 14
-	write 0xf8803048 0x0000000e
-	# Config ETH0, PS IO 19->FUNCSEL: ETH0
-	# register: FUNCSEL_PS_MIO_19.funcsel_ps_mio_19 = 14
-	# 0xf880304c[3:0] = 14
-	write 0xf880304c 0x0000000e
-	# Config ETH0, PS IO 20->FUNCSEL: ETH0
-	# register: FUNCSEL_PS_MIO_20.funcsel_ps_mio_20 = 14
-	# 0xf8803050[3:0] = 14
-	write 0xf8803050 0x0000000e
-	# Config ETH0, PS IO 21->FUNCSEL: ETH0
-	# register: FUNCSEL_PS_MIO_21.funcsel_ps_mio_21 = 14
-	# 0xf8803054[3:0] = 14
-	write 0xf8803054 0x0000000e
-	# Config ETH0, PS IO 22->FUNCSEL: ETH0
-	# register: FUNCSEL_PS_MIO_22.funcsel_ps_mio_22 = 14
-	# 0xf8803058[3:0] = 14
-	write 0xf8803058 0x0000000e
-	# Config ETH0, PS IO 23->FUNCSEL: ETH0
-	# register: FUNCSEL_PS_MIO_23.funcsel_ps_mio_23 = 14
-	# 0xf880305c[3:0] = 14
-	write 0xf880305c 0x0000000e
-	# Config ETH0, PS IO 24->FUNCSEL: ETH0
-	# register: FUNCSEL_PS_MIO_24.funcsel_ps_mio_24 = 14
-	# 0xf8803060[3:0] = 14
-	write 0xf8803060 0x0000000e
-	# Config ETH0, PS IO 25->FUNCSEL: ETH0
-	# register: FUNCSEL_PS_MIO_25.funcsel_ps_mio_25 = 14
-	# 0xf8803064[3:0] = 14
-	write 0xf8803064 0x0000000e
-	# Config ETH0, PS IO 26->FUNCSEL: ETH0
-	# register: FUNCSEL_PS_MIO_26.funcsel_ps_mio_26 = 14
-	# 0xf8803068[3:0] = 14
-	write 0xf8803068 0x0000000e
-	# Config ETH0, PS IO 27->FUNCSEL: ETH0
-	# register: FUNCSEL_PS_MIO_27.funcsel_ps_mio_27 = 14
-	# 0xf880306c[3:0] = 14
-	write 0xf880306c 0x0000000e
+	# Config GPIO, PS IO 16->FUNCSEL: GPIO
+	# register: FUNCSEL_PS_MIO_16.funcsel_ps_mio_16 = 4
+	# 0xf8803040[3:0] = 4
+	write 0xf8803040 0x00000004
+	# Config GPIO, PS IO 17->FUNCSEL: GPIO
+	# register: FUNCSEL_PS_MIO_17.funcsel_ps_mio_17 = 4
+	# 0xf8803044[3:0] = 4
+	write 0xf8803044 0x00000004
+	# Config GPIO, PS IO 18->FUNCSEL: GPIO
+	# register: FUNCSEL_PS_MIO_18.funcsel_ps_mio_18 = 4
+	# 0xf8803048[3:0] = 4
+	write 0xf8803048 0x00000004
+	# Config GPIO, PS IO 19->FUNCSEL: GPIO
+	# register: FUNCSEL_PS_MIO_19.funcsel_ps_mio_19 = 4
+	# 0xf880304c[3:0] = 4
+	write 0xf880304c 0x00000004
+	# Config GPIO, PS IO 20->FUNCSEL: GPIO
+	# register: FUNCSEL_PS_MIO_20.funcsel_ps_mio_20 = 4
+	# 0xf8803050[3:0] = 4
+	write 0xf8803050 0x00000004
+	# Config GPIO, PS IO 21->FUNCSEL: GPIO
+	# register: FUNCSEL_PS_MIO_21.funcsel_ps_mio_21 = 4
+	# 0xf8803054[3:0] = 4
+	write 0xf8803054 0x00000004
+	# Config GPIO, PS IO 22->FUNCSEL: GPIO
+	# register: FUNCSEL_PS_MIO_22.funcsel_ps_mio_22 = 4
+	# 0xf8803058[3:0] = 4
+	write 0xf8803058 0x00000004
+	# Config GPIO, PS IO 23->FUNCSEL: GPIO
+	# register: FUNCSEL_PS_MIO_23.funcsel_ps_mio_23 = 4
+	# 0xf880305c[3:0] = 4
+	write 0xf880305c 0x00000004
+	# Config GPIO, PS IO 24->FUNCSEL: GPIO
+	# register: FUNCSEL_PS_MIO_24.funcsel_ps_mio_24 = 4
+	# 0xf8803060[3:0] = 4
+	write 0xf8803060 0x00000004
+	# Config GPIO, PS IO 25->FUNCSEL: GPIO
+	# register: FUNCSEL_PS_MIO_25.funcsel_ps_mio_25 = 4
+	# 0xf8803064[3:0] = 4
+	write 0xf8803064 0x00000004
+	# Config GPIO, PS IO 26->FUNCSEL: GPIO
+	# register: FUNCSEL_PS_MIO_26.funcsel_ps_mio_26 = 4
+	# 0xf8803068[3:0] = 4
+	write 0xf8803068 0x00000004
+	# Config GPIO, PS IO 27->FUNCSEL: GPIO
+	# register: FUNCSEL_PS_MIO_27.funcsel_ps_mio_27 = 4
+	# 0xf880306c[3:0] = 4
+	write 0xf880306c 0x00000004
 	# Config USB0, PS IO 28->FUNCSEL: USB0
 	# register: FUNCSEL_PS_MIO_28.funcsel_ps_mio_28 = 15
 	# 0xf8803070[3:0] = 15
@@ -564,14 +557,14 @@ proc config_psio { } {
 	# register: FUNCSEL_PS_MIO_51.funcsel_ps_mio_51 = 4
 	# 0xf88030cc[3:0] = 4
 	write 0xf88030cc 0x00000004
-	# Config MDIO0, PS IO 52->FUNCSEL: MDIO0
-	# register: FUNCSEL_PS_MIO_52.funcsel_ps_mio_52 = 14
-	# 0xf88030d0[3:0] = 14
-	write 0xf88030d0 0x0000000e
-	# Config MDIO0, PS IO 53->FUNCSEL: MDIO0
-	# register: FUNCSEL_PS_MIO_53.funcsel_ps_mio_53 = 14
-	# 0xf88030d4[3:0] = 14
-	write 0xf88030d4 0x0000000e
+	# Config GPIO, PS IO 52->FUNCSEL: GPIO
+	# register: FUNCSEL_PS_MIO_52.funcsel_ps_mio_52 = 4
+	# 0xf88030d0[3:0] = 4
+	write 0xf88030d0 0x00000004
+	# Config GPIO, PS IO 53->FUNCSEL: GPIO
+	# register: FUNCSEL_PS_MIO_53.funcsel_ps_mio_53 = 4
+	# 0xf88030d4[3:0] = 4
+	write 0xf88030d4 0x00000004
 	# Config GPIO_PS_IO0, PS IO 0->speed: slow
 	# register: PARA0_PS_MIO_0.speed = 0x0
 	# 0xf8803800[2:0] = 0x0
@@ -844,264 +837,210 @@ proc config_psio { } {
 	# register: PARA1_PS_MIO_15.mc1_i_mode = 0x3
 	# 0xf880387c[1:0] = 0x3
 	write 0xf880387c 0x001e0103
-	# Config ETH0_tx_clk, PS IO 16->speed: fast
-	# register: PARA0_PS_MIO_16.speed = 0x7
-	# 0xf8803880[2:0] = 0x7
-	# Config ETH0_tx_clk, PS IO 16->PullType: high Z
-	# register: PARA0_PS_MIO_16.PullType = 0xC
-	# 0xf8803880[31:28] = 0xC
-	# Config v, PS IO 16->inhys: LVCMOS 1.8V
-	# register: PARA0_PS_MIO_16.inhys = 0x8
-	# 0xf8803880[27:24] = 0x8
-	write 0xf8803880 0xc8000007
-	# Config ETH0_tx_clk, PS IO 16->Single-ended pull up Drive Strength: 16
-	# register: PARA1_PS_MIO_16.mc1_ensrc = 0x15
-	# 0xf8803884[15:8] = 0x15
-	# Config ETH0_tx_clk, PS IO 16->Single-ended pull down Drive Strength: 16
-	# register: PARA1_PS_MIO_16.mc1_ensnk = 0x17
-	# 0xf8803884[23:16] = 0x17
+	# Config GPIO_PS_IO16, PS IO 16->speed: slow
+	# register: PARA0_PS_MIO_16.speed = 0x0
+	# 0xf8803880[2:0] = 0x0
+	# Config GPIO_PS_IO16, PS IO 16->PullType: pullup 25k
+	# register: PARA0_PS_MIO_16.PullType = 0x8
+	# 0xf8803880[31:28] = 0x8
+	write 0xf8803880 0x80000000
+	# Config GPIO_PS_IO16, PS IO 16->Single-ended pull up Drive Strength: 8
+	# register: PARA1_PS_MIO_16.mc1_ensrc = 0x06
+	# 0xf8803884[15:8] = 0x06
+	# Config GPIO_PS_IO16, PS IO 16->Single-ended pull down Drive Strength: 8
+	# register: PARA1_PS_MIO_16.mc1_ensnk = 0x1E
+	# 0xf8803884[23:16] = 0x1E
 	# Config v, PS IO 16->mc1_i_mode: LVCMOS 1.8V
 	# register: PARA1_PS_MIO_16.mc1_i_mode = 0x2
 	# 0xf8803884[1:0] = 0x2
-	write 0xf8803884 0x00171502
-	# Config ETH0_txd0, PS IO 17->speed: fast
-	# register: PARA0_PS_MIO_17.speed = 0x7
-	# 0xf8803888[2:0] = 0x7
-	# Config ETH0_txd0, PS IO 17->PullType: high Z
-	# register: PARA0_PS_MIO_17.PullType = 0xC
-	# 0xf8803888[31:28] = 0xC
-	# Config v, PS IO 17->inhys: LVCMOS 1.8V
-	# register: PARA0_PS_MIO_17.inhys = 0x8
-	# 0xf8803888[27:24] = 0x8
-	write 0xf8803888 0xc8000007
-	# Config ETH0_txd0, PS IO 17->Single-ended pull up Drive Strength: 16
-	# register: PARA1_PS_MIO_17.mc1_ensrc = 0x15
-	# 0xf880388c[15:8] = 0x15
-	# Config ETH0_txd0, PS IO 17->Single-ended pull down Drive Strength: 16
-	# register: PARA1_PS_MIO_17.mc1_ensnk = 0x17
-	# 0xf880388c[23:16] = 0x17
+	write 0xf8803884 0x001e0602
+	# Config GPIO_PS_IO17, PS IO 17->speed: slow
+	# register: PARA0_PS_MIO_17.speed = 0x0
+	# 0xf8803888[2:0] = 0x0
+	# Config GPIO_PS_IO17, PS IO 17->PullType: pullup 25k
+	# register: PARA0_PS_MIO_17.PullType = 0x8
+	# 0xf8803888[31:28] = 0x8
+	write 0xf8803888 0x80000000
+	# Config GPIO_PS_IO17, PS IO 17->Single-ended pull up Drive Strength: 8
+	# register: PARA1_PS_MIO_17.mc1_ensrc = 0x06
+	# 0xf880388c[15:8] = 0x06
+	# Config GPIO_PS_IO17, PS IO 17->Single-ended pull down Drive Strength: 8
+	# register: PARA1_PS_MIO_17.mc1_ensnk = 0x1E
+	# 0xf880388c[23:16] = 0x1E
 	# Config v, PS IO 17->mc1_i_mode: LVCMOS 1.8V
 	# register: PARA1_PS_MIO_17.mc1_i_mode = 0x2
 	# 0xf880388c[1:0] = 0x2
-	write 0xf880388c 0x00171502
-	# Config ETH0_txd1, PS IO 18->speed: fast
-	# register: PARA0_PS_MIO_18.speed = 0x7
-	# 0xf8803890[2:0] = 0x7
-	# Config ETH0_txd1, PS IO 18->PullType: high Z
-	# register: PARA0_PS_MIO_18.PullType = 0xC
-	# 0xf8803890[31:28] = 0xC
-	# Config v, PS IO 18->inhys: LVCMOS 1.8V
-	# register: PARA0_PS_MIO_18.inhys = 0x8
-	# 0xf8803890[27:24] = 0x8
-	write 0xf8803890 0xc8000007
-	# Config ETH0_txd1, PS IO 18->Single-ended pull up Drive Strength: 16
-	# register: PARA1_PS_MIO_18.mc1_ensrc = 0x15
-	# 0xf8803894[15:8] = 0x15
-	# Config ETH0_txd1, PS IO 18->Single-ended pull down Drive Strength: 16
-	# register: PARA1_PS_MIO_18.mc1_ensnk = 0x17
-	# 0xf8803894[23:16] = 0x17
+	write 0xf880388c 0x001e0602
+	# Config GPIO_PS_IO18, PS IO 18->speed: slow
+	# register: PARA0_PS_MIO_18.speed = 0x0
+	# 0xf8803890[2:0] = 0x0
+	# Config GPIO_PS_IO18, PS IO 18->PullType: pullup 25k
+	# register: PARA0_PS_MIO_18.PullType = 0x8
+	# 0xf8803890[31:28] = 0x8
+	write 0xf8803890 0x80000000
+	# Config GPIO_PS_IO18, PS IO 18->Single-ended pull up Drive Strength: 8
+	# register: PARA1_PS_MIO_18.mc1_ensrc = 0x06
+	# 0xf8803894[15:8] = 0x06
+	# Config GPIO_PS_IO18, PS IO 18->Single-ended pull down Drive Strength: 8
+	# register: PARA1_PS_MIO_18.mc1_ensnk = 0x1E
+	# 0xf8803894[23:16] = 0x1E
 	# Config v, PS IO 18->mc1_i_mode: LVCMOS 1.8V
 	# register: PARA1_PS_MIO_18.mc1_i_mode = 0x2
 	# 0xf8803894[1:0] = 0x2
-	write 0xf8803894 0x00171502
-	# Config ETH0_txd2, PS IO 19->speed: fast
-	# register: PARA0_PS_MIO_19.speed = 0x7
-	# 0xf8803898[2:0] = 0x7
-	# Config ETH0_txd2, PS IO 19->PullType: high Z
-	# register: PARA0_PS_MIO_19.PullType = 0xC
-	# 0xf8803898[31:28] = 0xC
-	# Config v, PS IO 19->inhys: LVCMOS 1.8V
-	# register: PARA0_PS_MIO_19.inhys = 0x8
-	# 0xf8803898[27:24] = 0x8
-	write 0xf8803898 0xc8000007
-	# Config ETH0_txd2, PS IO 19->Single-ended pull up Drive Strength: 16
-	# register: PARA1_PS_MIO_19.mc1_ensrc = 0x15
-	# 0xf880389c[15:8] = 0x15
-	# Config ETH0_txd2, PS IO 19->Single-ended pull down Drive Strength: 16
-	# register: PARA1_PS_MIO_19.mc1_ensnk = 0x17
-	# 0xf880389c[23:16] = 0x17
+	write 0xf8803894 0x001e0602
+	# Config GPIO_PS_IO19, PS IO 19->speed: slow
+	# register: PARA0_PS_MIO_19.speed = 0x0
+	# 0xf8803898[2:0] = 0x0
+	# Config GPIO_PS_IO19, PS IO 19->PullType: pullup 25k
+	# register: PARA0_PS_MIO_19.PullType = 0x8
+	# 0xf8803898[31:28] = 0x8
+	write 0xf8803898 0x80000000
+	# Config GPIO_PS_IO19, PS IO 19->Single-ended pull up Drive Strength: 8
+	# register: PARA1_PS_MIO_19.mc1_ensrc = 0x06
+	# 0xf880389c[15:8] = 0x06
+	# Config GPIO_PS_IO19, PS IO 19->Single-ended pull down Drive Strength: 8
+	# register: PARA1_PS_MIO_19.mc1_ensnk = 0x1E
+	# 0xf880389c[23:16] = 0x1E
 	# Config v, PS IO 19->mc1_i_mode: LVCMOS 1.8V
 	# register: PARA1_PS_MIO_19.mc1_i_mode = 0x2
 	# 0xf880389c[1:0] = 0x2
-	write 0xf880389c 0x00171502
-	# Config ETH0_txd3, PS IO 20->speed: fast
-	# register: PARA0_PS_MIO_20.speed = 0x7
-	# 0xf88038a0[2:0] = 0x7
-	# Config ETH0_txd3, PS IO 20->PullType: high Z
-	# register: PARA0_PS_MIO_20.PullType = 0xC
-	# 0xf88038a0[31:28] = 0xC
-	# Config v, PS IO 20->inhys: LVCMOS 1.8V
-	# register: PARA0_PS_MIO_20.inhys = 0x8
-	# 0xf88038a0[27:24] = 0x8
-	write 0xf88038a0 0xc8000007
-	# Config ETH0_txd3, PS IO 20->Single-ended pull up Drive Strength: 16
-	# register: PARA1_PS_MIO_20.mc1_ensrc = 0x15
-	# 0xf88038a4[15:8] = 0x15
-	# Config ETH0_txd3, PS IO 20->Single-ended pull down Drive Strength: 16
-	# register: PARA1_PS_MIO_20.mc1_ensnk = 0x17
-	# 0xf88038a4[23:16] = 0x17
+	write 0xf880389c 0x001e0602
+	# Config GPIO_PS_IO20, PS IO 20->speed: slow
+	# register: PARA0_PS_MIO_20.speed = 0x0
+	# 0xf88038a0[2:0] = 0x0
+	# Config GPIO_PS_IO20, PS IO 20->PullType: pullup 25k
+	# register: PARA0_PS_MIO_20.PullType = 0x8
+	# 0xf88038a0[31:28] = 0x8
+	write 0xf88038a0 0x80000000
+	# Config GPIO_PS_IO20, PS IO 20->Single-ended pull up Drive Strength: 8
+	# register: PARA1_PS_MIO_20.mc1_ensrc = 0x06
+	# 0xf88038a4[15:8] = 0x06
+	# Config GPIO_PS_IO20, PS IO 20->Single-ended pull down Drive Strength: 8
+	# register: PARA1_PS_MIO_20.mc1_ensnk = 0x1E
+	# 0xf88038a4[23:16] = 0x1E
 	# Config v, PS IO 20->mc1_i_mode: LVCMOS 1.8V
 	# register: PARA1_PS_MIO_20.mc1_i_mode = 0x2
 	# 0xf88038a4[1:0] = 0x2
-	write 0xf88038a4 0x00171502
-	# Config ETH0_tx_ctl, PS IO 21->speed: fast
-	# register: PARA0_PS_MIO_21.speed = 0x7
-	# 0xf88038a8[2:0] = 0x7
-	# Config ETH0_tx_ctl, PS IO 21->PullType: high Z
-	# register: PARA0_PS_MIO_21.PullType = 0xC
-	# 0xf88038a8[31:28] = 0xC
-	# Config v, PS IO 21->inhys: LVCMOS 1.8V
-	# register: PARA0_PS_MIO_21.inhys = 0x8
-	# 0xf88038a8[27:24] = 0x8
-	write 0xf88038a8 0xc8000007
-	# Config ETH0_tx_ctl, PS IO 21->Single-ended pull up Drive Strength: 16
-	# register: PARA1_PS_MIO_21.mc1_ensrc = 0x15
-	# 0xf88038ac[15:8] = 0x15
-	# Config ETH0_tx_ctl, PS IO 21->Single-ended pull down Drive Strength: 16
-	# register: PARA1_PS_MIO_21.mc1_ensnk = 0x17
-	# 0xf88038ac[23:16] = 0x17
+	write 0xf88038a4 0x001e0602
+	# Config GPIO_PS_IO21, PS IO 21->speed: slow
+	# register: PARA0_PS_MIO_21.speed = 0x0
+	# 0xf88038a8[2:0] = 0x0
+	# Config GPIO_PS_IO21, PS IO 21->PullType: pullup 25k
+	# register: PARA0_PS_MIO_21.PullType = 0x8
+	# 0xf88038a8[31:28] = 0x8
+	write 0xf88038a8 0x80000000
+	# Config GPIO_PS_IO21, PS IO 21->Single-ended pull up Drive Strength: 8
+	# register: PARA1_PS_MIO_21.mc1_ensrc = 0x06
+	# 0xf88038ac[15:8] = 0x06
+	# Config GPIO_PS_IO21, PS IO 21->Single-ended pull down Drive Strength: 8
+	# register: PARA1_PS_MIO_21.mc1_ensnk = 0x1E
+	# 0xf88038ac[23:16] = 0x1E
 	# Config v, PS IO 21->mc1_i_mode: LVCMOS 1.8V
 	# register: PARA1_PS_MIO_21.mc1_i_mode = 0x2
 	# 0xf88038ac[1:0] = 0x2
-	write 0xf88038ac 0x00171502
-	# Config ETH0_rx_clk, PS IO 22->speed: fast
-	# register: PARA0_PS_MIO_22.speed = 0x7
-	# 0xf88038b0[2:0] = 0x7
-	# Config ETH0_rx_clk, PS IO 22->PullType: pullup 25k
+	write 0xf88038ac 0x001e0602
+	# Config GPIO_PS_IO22, PS IO 22->speed: slow
+	# register: PARA0_PS_MIO_22.speed = 0x0
+	# 0xf88038b0[2:0] = 0x0
+	# Config GPIO_PS_IO22, PS IO 22->PullType: pullup 25k
 	# register: PARA0_PS_MIO_22.PullType = 0x8
 	# 0xf88038b0[31:28] = 0x8
-	# Config v, PS IO 22->inhys: LVCMOS 1.8V
-	# register: PARA0_PS_MIO_22.inhys = 0x8
-	# 0xf88038b0[27:24] = 0x8
-	# Config v, PS IO 22->slewrate: LVCMOS 1.8V
-	# register: PARA0_PS_MIO_22.slewrate = 0x0
-	# 0xf88038b0[23:4] = 0x0
-	write 0xf88038b0 0x88000007
-	# Config ETH0_rx_clk, PS IO 22->Single-ended pull up Drive Strength: 16
-	# register: PARA1_PS_MIO_22.mc1_ensrc = 0x15
-	# 0xf88038b4[15:8] = 0x15
-	# Config ETH0_rx_clk, PS IO 22->Single-ended pull down Drive Strength: 16
-	# register: PARA1_PS_MIO_22.mc1_ensnk = 0x17
-	# 0xf88038b4[23:16] = 0x17
+	write 0xf88038b0 0x80000000
+	# Config GPIO_PS_IO22, PS IO 22->Single-ended pull up Drive Strength: 8
+	# register: PARA1_PS_MIO_22.mc1_ensrc = 0x06
+	# 0xf88038b4[15:8] = 0x06
+	# Config GPIO_PS_IO22, PS IO 22->Single-ended pull down Drive Strength: 8
+	# register: PARA1_PS_MIO_22.mc1_ensnk = 0x1E
+	# 0xf88038b4[23:16] = 0x1E
 	# Config v, PS IO 22->mc1_i_mode: LVCMOS 1.8V
 	# register: PARA1_PS_MIO_22.mc1_i_mode = 0x2
 	# 0xf88038b4[1:0] = 0x2
-	write 0xf88038b4 0x00171502
-	# Config ETH0_rxd0, PS IO 23->speed: fast
-	# register: PARA0_PS_MIO_23.speed = 0x7
-	# 0xf88038b8[2:0] = 0x7
-	# Config ETH0_rxd0, PS IO 23->PullType: pullup 25k
+	write 0xf88038b4 0x001e0602
+	# Config GPIO_PS_IO23, PS IO 23->speed: slow
+	# register: PARA0_PS_MIO_23.speed = 0x0
+	# 0xf88038b8[2:0] = 0x0
+	# Config GPIO_PS_IO23, PS IO 23->PullType: pullup 25k
 	# register: PARA0_PS_MIO_23.PullType = 0x8
 	# 0xf88038b8[31:28] = 0x8
-	# Config v, PS IO 23->inhys: LVCMOS 1.8V
-	# register: PARA0_PS_MIO_23.inhys = 0x8
-	# 0xf88038b8[27:24] = 0x8
-	# Config v, PS IO 23->slewrate: LVCMOS 1.8V
-	# register: PARA0_PS_MIO_23.slewrate = 0x0
-	# 0xf88038b8[23:4] = 0x0
-	write 0xf88038b8 0x88000007
-	# Config ETH0_rxd0, PS IO 23->Single-ended pull up Drive Strength: 16
-	# register: PARA1_PS_MIO_23.mc1_ensrc = 0x15
-	# 0xf88038bc[15:8] = 0x15
-	# Config ETH0_rxd0, PS IO 23->Single-ended pull down Drive Strength: 16
-	# register: PARA1_PS_MIO_23.mc1_ensnk = 0x17
-	# 0xf88038bc[23:16] = 0x17
+	write 0xf88038b8 0x80000000
+	# Config GPIO_PS_IO23, PS IO 23->Single-ended pull up Drive Strength: 8
+	# register: PARA1_PS_MIO_23.mc1_ensrc = 0x06
+	# 0xf88038bc[15:8] = 0x06
+	# Config GPIO_PS_IO23, PS IO 23->Single-ended pull down Drive Strength: 8
+	# register: PARA1_PS_MIO_23.mc1_ensnk = 0x1E
+	# 0xf88038bc[23:16] = 0x1E
 	# Config v, PS IO 23->mc1_i_mode: LVCMOS 1.8V
 	# register: PARA1_PS_MIO_23.mc1_i_mode = 0x2
 	# 0xf88038bc[1:0] = 0x2
-	write 0xf88038bc 0x00171502
-	# Config ETH0_rxd1, PS IO 24->speed: fast
-	# register: PARA0_PS_MIO_24.speed = 0x7
-	# 0xf88038c0[2:0] = 0x7
-	# Config ETH0_rxd1, PS IO 24->PullType: pullup 25k
+	write 0xf88038bc 0x001e0602
+	# Config GPIO_PS_IO24, PS IO 24->speed: slow
+	# register: PARA0_PS_MIO_24.speed = 0x0
+	# 0xf88038c0[2:0] = 0x0
+	# Config GPIO_PS_IO24, PS IO 24->PullType: pullup 25k
 	# register: PARA0_PS_MIO_24.PullType = 0x8
 	# 0xf88038c0[31:28] = 0x8
-	# Config v, PS IO 24->inhys: LVCMOS 1.8V
-	# register: PARA0_PS_MIO_24.inhys = 0x8
-	# 0xf88038c0[27:24] = 0x8
-	# Config v, PS IO 24->slewrate: LVCMOS 1.8V
-	# register: PARA0_PS_MIO_24.slewrate = 0x0
-	# 0xf88038c0[23:4] = 0x0
-	write 0xf88038c0 0x88000007
-	# Config ETH0_rxd1, PS IO 24->Single-ended pull up Drive Strength: 16
-	# register: PARA1_PS_MIO_24.mc1_ensrc = 0x15
-	# 0xf88038c4[15:8] = 0x15
-	# Config ETH0_rxd1, PS IO 24->Single-ended pull down Drive Strength: 16
-	# register: PARA1_PS_MIO_24.mc1_ensnk = 0x17
-	# 0xf88038c4[23:16] = 0x17
+	write 0xf88038c0 0x80000000
+	# Config GPIO_PS_IO24, PS IO 24->Single-ended pull up Drive Strength: 8
+	# register: PARA1_PS_MIO_24.mc1_ensrc = 0x06
+	# 0xf88038c4[15:8] = 0x06
+	# Config GPIO_PS_IO24, PS IO 24->Single-ended pull down Drive Strength: 8
+	# register: PARA1_PS_MIO_24.mc1_ensnk = 0x1E
+	# 0xf88038c4[23:16] = 0x1E
 	# Config v, PS IO 24->mc1_i_mode: LVCMOS 1.8V
 	# register: PARA1_PS_MIO_24.mc1_i_mode = 0x2
 	# 0xf88038c4[1:0] = 0x2
-	write 0xf88038c4 0x00171502
-	# Config ETH0_rxd2, PS IO 25->speed: fast
-	# register: PARA0_PS_MIO_25.speed = 0x7
-	# 0xf88038c8[2:0] = 0x7
-	# Config ETH0_rxd2, PS IO 25->PullType: pullup 25k
+	write 0xf88038c4 0x001e0602
+	# Config GPIO_PS_IO25, PS IO 25->speed: slow
+	# register: PARA0_PS_MIO_25.speed = 0x0
+	# 0xf88038c8[2:0] = 0x0
+	# Config GPIO_PS_IO25, PS IO 25->PullType: pullup 25k
 	# register: PARA0_PS_MIO_25.PullType = 0x8
 	# 0xf88038c8[31:28] = 0x8
-	# Config v, PS IO 25->inhys: LVCMOS 1.8V
-	# register: PARA0_PS_MIO_25.inhys = 0x8
-	# 0xf88038c8[27:24] = 0x8
-	# Config v, PS IO 25->slewrate: LVCMOS 1.8V
-	# register: PARA0_PS_MIO_25.slewrate = 0x0
-	# 0xf88038c8[23:4] = 0x0
-	write 0xf88038c8 0x88000007
-	# Config ETH0_rxd2, PS IO 25->Single-ended pull up Drive Strength: 16
-	# register: PARA1_PS_MIO_25.mc1_ensrc = 0x15
-	# 0xf88038cc[15:8] = 0x15
-	# Config ETH0_rxd2, PS IO 25->Single-ended pull down Drive Strength: 16
-	# register: PARA1_PS_MIO_25.mc1_ensnk = 0x17
-	# 0xf88038cc[23:16] = 0x17
+	write 0xf88038c8 0x80000000
+	# Config GPIO_PS_IO25, PS IO 25->Single-ended pull up Drive Strength: 8
+	# register: PARA1_PS_MIO_25.mc1_ensrc = 0x06
+	# 0xf88038cc[15:8] = 0x06
+	# Config GPIO_PS_IO25, PS IO 25->Single-ended pull down Drive Strength: 8
+	# register: PARA1_PS_MIO_25.mc1_ensnk = 0x1E
+	# 0xf88038cc[23:16] = 0x1E
 	# Config v, PS IO 25->mc1_i_mode: LVCMOS 1.8V
 	# register: PARA1_PS_MIO_25.mc1_i_mode = 0x2
 	# 0xf88038cc[1:0] = 0x2
-	write 0xf88038cc 0x00171502
-	# Config ETH0_rxd3, PS IO 26->speed: fast
-	# register: PARA0_PS_MIO_26.speed = 0x7
-	# 0xf88038d0[2:0] = 0x7
-	# Config ETH0_rxd3, PS IO 26->PullType: pullup 25k
+	write 0xf88038cc 0x001e0602
+	# Config GPIO_PS_IO26, PS IO 26->speed: slow
+	# register: PARA0_PS_MIO_26.speed = 0x0
+	# 0xf88038d0[2:0] = 0x0
+	# Config GPIO_PS_IO26, PS IO 26->PullType: pullup 25k
 	# register: PARA0_PS_MIO_26.PullType = 0x8
 	# 0xf88038d0[31:28] = 0x8
-	# Config v, PS IO 26->inhys: LVCMOS 1.8V
-	# register: PARA0_PS_MIO_26.inhys = 0x8
-	# 0xf88038d0[27:24] = 0x8
-	# Config v, PS IO 26->slewrate: LVCMOS 1.8V
-	# register: PARA0_PS_MIO_26.slewrate = 0x0
-	# 0xf88038d0[23:4] = 0x0
-	write 0xf88038d0 0x88000007
-	# Config ETH0_rxd3, PS IO 26->Single-ended pull up Drive Strength: 16
-	# register: PARA1_PS_MIO_26.mc1_ensrc = 0x15
-	# 0xf88038d4[15:8] = 0x15
-	# Config ETH0_rxd3, PS IO 26->Single-ended pull down Drive Strength: 16
-	# register: PARA1_PS_MIO_26.mc1_ensnk = 0x17
-	# 0xf88038d4[23:16] = 0x17
+	write 0xf88038d0 0x80000000
+	# Config GPIO_PS_IO26, PS IO 26->Single-ended pull up Drive Strength: 8
+	# register: PARA1_PS_MIO_26.mc1_ensrc = 0x06
+	# 0xf88038d4[15:8] = 0x06
+	# Config GPIO_PS_IO26, PS IO 26->Single-ended pull down Drive Strength: 8
+	# register: PARA1_PS_MIO_26.mc1_ensnk = 0x1E
+	# 0xf88038d4[23:16] = 0x1E
 	# Config v, PS IO 26->mc1_i_mode: LVCMOS 1.8V
 	# register: PARA1_PS_MIO_26.mc1_i_mode = 0x2
 	# 0xf88038d4[1:0] = 0x2
-	write 0xf88038d4 0x00171502
-	# Config ETH0_rx_ctl, PS IO 27->speed: fast
-	# register: PARA0_PS_MIO_27.speed = 0x7
-	# 0xf88038d8[2:0] = 0x7
-	# Config ETH0_rx_ctl, PS IO 27->PullType: pullup 25k
+	write 0xf88038d4 0x001e0602
+	# Config GPIO_PS_IO27, PS IO 27->speed: slow
+	# register: PARA0_PS_MIO_27.speed = 0x0
+	# 0xf88038d8[2:0] = 0x0
+	# Config GPIO_PS_IO27, PS IO 27->PullType: pullup 25k
 	# register: PARA0_PS_MIO_27.PullType = 0x8
 	# 0xf88038d8[31:28] = 0x8
-	# Config v, PS IO 27->inhys: LVCMOS 1.8V
-	# register: PARA0_PS_MIO_27.inhys = 0x8
-	# 0xf88038d8[27:24] = 0x8
-	# Config v, PS IO 27->slewrate: LVCMOS 1.8V
-	# register: PARA0_PS_MIO_27.slewrate = 0x0
-	# 0xf88038d8[23:4] = 0x0
-	write 0xf88038d8 0x88000007
-	# Config ETH0_rx_ctl, PS IO 27->Single-ended pull up Drive Strength: 16
-	# register: PARA1_PS_MIO_27.mc1_ensrc = 0x15
-	# 0xf88038dc[15:8] = 0x15
-	# Config ETH0_rx_ctl, PS IO 27->Single-ended pull down Drive Strength: 16
-	# register: PARA1_PS_MIO_27.mc1_ensnk = 0x17
-	# 0xf88038dc[23:16] = 0x17
+	write 0xf88038d8 0x80000000
+	# Config GPIO_PS_IO27, PS IO 27->Single-ended pull up Drive Strength: 8
+	# register: PARA1_PS_MIO_27.mc1_ensrc = 0x06
+	# 0xf88038dc[15:8] = 0x06
+	# Config GPIO_PS_IO27, PS IO 27->Single-ended pull down Drive Strength: 8
+	# register: PARA1_PS_MIO_27.mc1_ensnk = 0x1E
+	# 0xf88038dc[23:16] = 0x1E
 	# Config v, PS IO 27->mc1_i_mode: LVCMOS 1.8V
 	# register: PARA1_PS_MIO_27.mc1_i_mode = 0x2
 	# 0xf88038dc[1:0] = 0x2
-	write 0xf88038dc 0x00171502
+	write 0xf88038dc 0x001e0602
 	# Config USB0_d4, PS IO 28->speed: fast
 	# register: PARA0_PS_MIO_28.speed = 0x7
 	# 0xf88038e0[2:0] = 0x7
@@ -1510,51 +1449,40 @@ proc config_psio { } {
 	# register: PARA1_PS_MIO_51.mc1_i_mode = 0x2
 	# 0xf880399c[1:0] = 0x2
 	write 0xf880399c 0x001e0602
-	# Config ETH0_mdc, PS IO 52->speed: medium
-	# register: PARA0_PS_MIO_52.speed = 0x2
-	# 0xf88039a0[2:0] = 0x2
-	# Config ETH0_mdc, PS IO 52->PullType: pullup 25k
+	# Config GPIO_PS_IO52, PS IO 52->speed: slow
+	# register: PARA0_PS_MIO_52.speed = 0x0
+	# 0xf88039a0[2:0] = 0x0
+	# Config GPIO_PS_IO52, PS IO 52->PullType: pullup 25k
 	# register: PARA0_PS_MIO_52.PullType = 0x8
 	# 0xf88039a0[31:28] = 0x8
-	# Config v, PS IO 52->inhys: LVCMOS 1.8V
-	# register: PARA0_PS_MIO_52.inhys = 0x8
-	# 0xf88039a0[27:24] = 0x8
-	write 0xf88039a0 0x88000002
-	# Config ETH0_mdc, PS IO 52->Single-ended pull up Drive Strength: 8
+	write 0xf88039a0 0x80000000
+	# Config GPIO_PS_IO52, PS IO 52->Single-ended pull up Drive Strength: 8
 	# register: PARA1_PS_MIO_52.mc1_ensrc = 0x06
 	# 0xf88039a4[15:8] = 0x06
-	# Config ETH0_mdc, PS IO 52->Single-ended pull down Drive Strength: 8
+	# Config GPIO_PS_IO52, PS IO 52->Single-ended pull down Drive Strength: 8
 	# register: PARA1_PS_MIO_52.mc1_ensnk = 0x1E
 	# 0xf88039a4[23:16] = 0x1E
 	# Config v, PS IO 52->mc1_i_mode: LVCMOS 1.8V
 	# register: PARA1_PS_MIO_52.mc1_i_mode = 0x2
 	# 0xf88039a4[1:0] = 0x2
 	write 0xf88039a4 0x001e0602
-	# Config ETH0_mdio, PS IO 53->speed: medium
-	# register: PARA0_PS_MIO_53.speed = 0x2
-	# 0xf88039a8[2:0] = 0x2
-	# Config ETH0_mdio, PS IO 53->PullType: pullup 25k
+	# Config GPIO_PS_IO53, PS IO 53->speed: slow
+	# register: PARA0_PS_MIO_53.speed = 0x0
+	# 0xf88039a8[2:0] = 0x0
+	# Config GPIO_PS_IO53, PS IO 53->PullType: pullup 25k
 	# register: PARA0_PS_MIO_53.PullType = 0x8
 	# 0xf88039a8[31:28] = 0x8
-	# Config v, PS IO 53->inhys: LVCMOS 1.8V
-	# register: PARA0_PS_MIO_53.inhys = 0x8
-	# 0xf88039a8[27:24] = 0x8
-	write 0xf88039a8 0x88000002
-	# Config ETH0_mdio, PS IO 53->Single-ended pull up Drive Strength: 8
+	write 0xf88039a8 0x80000000
+	# Config GPIO_PS_IO53, PS IO 53->Single-ended pull up Drive Strength: 8
 	# register: PARA1_PS_MIO_53.mc1_ensrc = 0x06
 	# 0xf88039ac[15:8] = 0x06
-	# Config ETH0_mdio, PS IO 53->Single-ended pull down Drive Strength: 8
+	# Config GPIO_PS_IO53, PS IO 53->Single-ended pull down Drive Strength: 8
 	# register: PARA1_PS_MIO_53.mc1_ensnk = 0x1E
 	# 0xf88039ac[23:16] = 0x1E
 	# Config v, PS IO 53->mc1_i_mode: LVCMOS 1.8V
 	# register: PARA1_PS_MIO_53.mc1_i_mode = 0x2
 	# 0xf88039ac[1:0] = 0x2
 	write 0xf88039ac 0x001e0602
-	# Config MDIO0, Select IO: "PS IO 52...53", IO selection: PS IO, as a default value
-	# register: EMIOSEL_13.emiosel_13 = 1
-	# 0xF8803434[0:0] = 1
-	mask_write 0xF8803434 0x00000001 0x00000001
-
 	# Config SD0, Select IO: "PS IO 40...45", IO selection: PS IO, as a default value
 	# register: EMIOSEL_11.emiosel_11 = 1
 	# 0xF880342C[0:0] = 1
@@ -1564,6 +1492,16 @@ proc config_psio { } {
 	# register: EMIOSEL_12.emiosel_12 = 1
 	# 0xF8803430[0:0] = 1
 	mask_write 0xF8803430 0x00000001 0x00000001
+
+	# Config UART0, Select IO: "PL IO", IO selection: PS IO, as a default value
+	# register: EMIOSEL_4.emiosel_4 = 1
+	# 0xF8803410[0:0] = 1
+	mask_write 0xF8803410 0x00000001 0x00000001
+
+	# Config UART0_Dot_IO, Select IO: "PL IO", IO selection: PL IO
+	# register: EMIOSEL_4.emiosel_4 = 0x0
+	# 0xF8803410[0:0] = 0x0
+	mask_write 0xF8803410 0x00000001 0x00000000
 
 	# Config UART1, Select IO: "PS IO 48...49", IO selection: PS IO, as a default value
 	# register: EMIOSEL_5.emiosel_5 = 1
@@ -1793,6 +1731,11 @@ proc config_clock { } {
 
 # (3) config ps_pl
 proc config_ps_pl { } {
+	# Config PLS_PROT, gp normal acess to pl
+	# register: PLS_PROT.gp_proten = 0x0
+	# 0xF8800080[1:1] = 0x0
+	mask_write 0xF8800080 0x00000002 0x00000000
+
 	# Config CRG_SRST, Slave_AXI_HP0_Interface: reset release
 	# register: SRST_CTRL2.nic_hp0_srst_n = 0x1
 	# 0xF8801078[0:0] = 0x1
@@ -2020,11 +1963,6 @@ proc config_ddr { } {
 
 # (5) config peripheral
 proc config_peripheral { } {
-	# Config ETH0, set gbe0：[5:4]: 01,plio;10,psio. [3:3]: 0:little endian; 1:big endian; default: 0. [2:0]: 000:GMII/MII; 001:RGMII; 100: RMII
-	# register: CFG_CTRL_GBE0.ctrl_gbe0 = 0x21
-	# 0xf8800140[5:0] = 0x21
-	mask_write 0xf8800140 0x0000003f 0x00000021
-
 }
 
 # (6) config debug

@@ -1,6 +1,6 @@
 /* IDE_PATH       : E:/FPGA/Anlu/bin/td.exe */
 /* IDE_VERSION    : Release: 6.2.1 Build: 168116  */
-/* HPF_EXPORT_TIME: 2026/10/07 17:13:11 */
+/* HPF_EXPORT_TIME: 2026/10/12 14:26:41 */
 /* HPFTool_Version: 2025/07/09 15:19:18 */
 
 #ifndef __SOC_PLAT_H
@@ -11,8 +11,8 @@ extern "C" {
 #endif
 
 #define             IDE_VERSION ("Release: 6.2.1 Build: 168116 ")
-#define         HPF_EXPORT_TIME ("2026/10/07 17:13:11")
-#define BITSTREAM_GENERATE_TIME ("2026/10/ 7 17: 6:00")
+#define         HPF_EXPORT_TIME ("2026/10/12 14:26:41")
+#define BITSTREAM_GENERATE_TIME ("2026/10/12 14:25:00")
 #define         HPFTool_Version ("2025/07/09 15:19:18")
 #define    Bank200_IO_Voltage  ("LVCMOS 3.3V")
 #define    Bank201_IO_Voltage  ("LVCMOS 1.8V")
@@ -80,7 +80,6 @@ extern "C" {
 #define ADC_CLOCK                          50000000
 #define GPIO_CLOCK                         12500000
 #define CPU_CLOCK                         999900000
-#define GBE0_PTP_CLOCK                    100000000
 #define IO_1000_FREQ                      999900000
 #define IO_25_FREQ                         24997500
 #define IO_400_FREQ                       399960000
@@ -100,6 +99,7 @@ extern "C" {
 #define SPI_IP_CLOCK                        SPI_CLOCK
 #define TC_CLOCK                            200000000
 #define WDT_CLOCK                            16665000
+#define GBE0_PTP_CLOCK                      100000000
 #define GBE1_PTP_CLOCK                      100000000
 #define GBE_PTP_CLOCK                       100000000
 #define QSPI_IO_FREQ             (QSPI_CLOCK/QSPI_2ND_DIVISOR)
@@ -148,26 +148,18 @@ extern "C" {
 #define DDRC_COMP_DENSITY                      4096
 #define DDRC_SPEED_BIN        _SPEED_BIN_DDR3_1333G
 #define DDRC_COMP_TYPE           DDR_COMP_WIDTH_x16
-#define FD_PARA_DRAM_DRV                         40
-#define FD_PARA_DRAM_ODT                         40
 #define DDRC_ECC_EN                        ECC_NONE
-#define FD_PARA_HOST_DRV_AC                      40
-#define FD_PARA_HOST_DRV_DX                      40
-#define FD_PARA_HOST_ODT_DX                      40
-#define DDRC_IO_VOL                            1.35
+#define DDRC_IO_VOL                             1.5
 #define DDRC_PZQ_CONF                             0
 #define DDRC_RDBI                                 0
 #define DDRC_DDR_SPEED                         1333
 #define DDRC_TRAINING_EN                          1
-#define DDRC_DELAY_B0_AC                          0
-#define DDRC_DELAY_B0_DQ                          0
 #define DDRC_DDR_TYPE                          DDR3
 #define DDRC_VREF                          Internal
 #define DDRC_WDM_WDBI                          NONE
 #define DDRC_DQ_WIDTH                            32
 #define DDRPS_ENABLE                              1
-#define GBE0PS_ENABLE
-#define PSGBE0_INTERFACE_TYPE             GBE_RGMII
+// #define GBE0PS_ENABLE
 // #define GBE1PS_ENABLE
 #define GPIOPL_ENABLE
 #define GPIOPS_ENABLE
@@ -183,7 +175,8 @@ extern "C" {
 // #define SPI1PS_ENABLE
 // #define TC0PS_ENABLE
 // #define TC1PS_ENABLE
-// #define UART0PS_ENABLE
+#define UART0_BAUDRATE                       115200
+#define UART0PS_ENABLE
 #define UART1_BAUDRATE                       115200
 #define UART1PS_ENABLE
 #define USB0PS_ENABLE
@@ -192,6 +185,7 @@ extern "C" {
 
 
 /* default value to subip start */
+#define PSGBE0_INTERFACE_TYPE               GBE_RGMII
 #define PSGBE1_INTERFACE_TYPE               GBE_RGMII
 #define MMC0PS_BUS_WIDTH                            4
 /* default value to subip end*/
@@ -214,6 +208,11 @@ extern "C" {
 #define FD_PARA_VREF                        DDRC_VREF
 // (6) ddr pzq config, default: 0
 #define FD_PARA_PZQ_ENABLE              DDRC_PZQ_CONF
+#define FD_PARA_DRAM_DRV                           40
+#define FD_PARA_DRAM_ODT                           40
+#define FD_PARA_HOST_DRV_AC                        40
+#define FD_PARA_HOST_DRV_DX                        40
+#define FD_PARA_HOST_ODT_DX                        40
 // (7) ddr dram width: 8:x8, 16:x16,default: 8
 #define DDR_COMP_WIDTH_x16                         16
 #define DDR_COMP_WIDTH_x8                           8
@@ -255,9 +254,9 @@ extern "C" {
 // (14) ddr training, default:0
 #define FD_PARA_TRAINING             DDRC_TRAINING_EN
 // (15.1) ddr train, byte0
-#define FD_PARA_BYTE0_AC_DLY         DDRC_DELAY_B0_AC
+#define FD_PARA_BYTE0_AC_DLY                      0.0
 // (15.1) ddr train, byte0
-#define FD_PARA_BYTE0_DQS_DLY        DDRC_DELAY_B0_DQ
+#define FD_PARA_BYTE0_DQS_DLY                     0.0
 // (15.2) ddr train, byte1
 #define FD_PARA_BYTE1_AC_DLY                      0.0
 // (15.2) ddr train, byte1
@@ -300,7 +299,7 @@ extern "C" {
 #define HAVE_ADCPS_DRIVER
 // #define HAVE_CANPS_DRIVER
 #define HAVE_DMAPS_DRIVER
-#define HAVE_GBEPS_DRIVER
+// #define HAVE_GBEPS_DRIVER
 #define HAVE_GPIOPS_DRIVER
 #define HAVE_IICPS_DRIVER
 #define HAVE_IPCPS_DRIVER

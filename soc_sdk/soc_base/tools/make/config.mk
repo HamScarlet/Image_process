@@ -1,10 +1,4 @@
 #########################################################################
-# Copyright (c) 2023, Anlogic Inc. and Contributors. All rights reserved.
-
-# SPDX-License-Identifier: BSD-3-Clause
-#########################################################################
-
-#########################################################################
 AL_CHIP         ?= $(CHIP)
 
 ## Available choices:
@@ -62,8 +56,12 @@ CODE_READONLY ?= 0
 #########################################################################
 COMPILE_PREFIX  ?=
 
-
-
+ENABLE_COLOR ?= 1
+ifeq ($(ENABLE_COLOR),1)
+CFLAGS += -DENABLE_COLOR=1
+else
+CFLAGS += -DENABLE_COLOR=0
+endif
 
 ## If V=1, it will display compiling message in verbose including compiling options
 #Handling of V=1/VERBOSE=1 flag
@@ -78,7 +76,6 @@ Q = @
 endif
 
 MAKEFLAGS += -j32
-
 ## If SILENT=1, it will not display any compiling messsage
 SILENT ?= 0
 
@@ -90,8 +87,8 @@ endif
 ## If OUTPUT_DEV=UART1, it will output messsage by uart1
 ## If plat = emulation ,choose UART0
 ## If plat = board ,choose UART1
-PH1P35_OUTPUT_DEV ?= USART0
-SOFTCORE_OUTPUT_DEV ?= UARTLITE0
+PH1P35_OUTPUT_DEV ?= #{{PH1P35_OUTPUT_DEV}}
+SOFTCORE_OUTPUT_DEV ?= #{{SOFTCORE_OUTPUT_DEV}}
 DR1X90_OUTPUT_DEV ?= UART1
 
 ifeq ($(AL_CHIP),ph1p35)
@@ -103,12 +100,6 @@ OUTPUT_DEV ?= $(DR1X90_OUTPUT_DEV)
 endif
 
 CFLAGS += -DLOG_DEV=AL_LOG_$(OUTPUT_DEV)
-
-ifeq ($(ENABLE_COLOR),1)
-CFLAGS += -DENABLE_COLOR=1
-else
-CFLAGS += -DENABLE_COLOR=0
-endif
 
 
 ## mpu protect mode
@@ -136,6 +127,8 @@ NEWLIB ?= nano
 NOGC ?= 0
 
 USBLIB ?=
+
+
 
 AL_SDK_ROOT := $(abspath $(AL_SDK_ROOT))
 
@@ -189,11 +182,11 @@ export APP_TAR_DIR
 export APP_CUR_DIR
 export APP_INC_DIR
 export USBLIB
-export ARCH_ABI
 export WITH_PROXY
 export NOGC
 export CFLAG
 export APP_INC
+export ARCH_ABI
 export ENABLE_COLOR
 export MPU_PROTECT_MODE
 # vim: syntax=make
