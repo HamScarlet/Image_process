@@ -1,0 +1,4 @@
+HDL-5007 WARNING: could not find top-level module/unit; aborting hierarchy tree creation
+PRJ-5303 WARNING: Run syn_1 failed.
+PRJ-8424 ERROR: Failed to remove source files, invalid type.
+GUI-6002 WARNING: Unable to open file:PScontrol.sdc

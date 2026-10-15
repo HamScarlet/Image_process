@@ -1,0 +1,23 @@
+Location         : D:\FPGAproject\AnLuRun\PScontrol\soc_prj\PScontrol_Runs\syn_1
+Running with     : Tang Dynasty Release_2026.1_SP2
+                   Copyright (c) 2012-2026 Anlogic Inc.
+Top Model        : system
+Device           : DR1M90GEG400
+Speed            : 2
+
+Timing Mode      : basic
+Setup            : WNS 2147483647ps  TNS        0ps  NUM_FEPS     0
+Hold             : WNS 2147483647ps  TNS        0ps  NUM_FEPS     0
+
+Flow Statistics  :
+--------------------------------------------------------------------------------------------------
+     command     |  #calls  |  wall time  |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
+--------------------------------------------------------------------------------------------------
+  optimize_gate  |    1     |  14s(46%)   |    14(48%)    |        662        |        662        
+  optimize_rtl   |    1     |  13s(43%)   |    12(41%)    |        649        |        649        
+  import_device  |    1     |   3s(10%)   |    3(10%)     |        396        |        396        
+    read_adc     |    1     |   0s(0%)    |     0(0%)     |        402        |        402        
+    read_sdc     |    2     |   0s(0%)    |     0(0%)     |        402        |        402        
+--------------------------------------------------------------------------------------------------
+      total      |    6     |     30s     |      29       |        662        |        662        
+--------------------------------------------------------------------------------------------------

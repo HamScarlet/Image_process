@@ -1,0 +1,507 @@
+ARC-1001 : Device Initialization.
+ARC-1001 : --------------------------------------------------------
+ARC-1001 :           OPTION          |      IO       |   SETTING   
+ARC-1001 : --------------------------------------------------------
+ARC-1001 :   non_jtag_persist(none)  |    35 IOs     |    gpio    
+ARC-1001 :            jtag           |  F9/J6/G6/F6  |  dedicate  
+ARC-1001 : --------------------------------------------------------
+RUN-1003 : finish command "import_device dr1_90.db -package DR1M90GEG400 -speed 2" in  4.449972s wall, 4.218750s user + 0.265625s system = 4.484375s CPU (100.8%)
+
+RUN-1004 : used memory is 659 MB, reserved memory is 604 MB, peak memory is 2600 MB
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   Parameters   |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   enable_seed  |    off     |       off        |        
+RUN-1001 :     message    |  standard  |     standard     |        
+RUN-1001 :   qor_monitor  |     on     |        on        |        
+RUN-1001 :   syn_ip_flow  |    off     |       off        |        
+RUN-1001 :     thread     |    auto    |       auto       |        
+RUN-1001 : --------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 : ----------------------------------------------------------------
+HDL-5007 WARNING: could not find top-level module/unit; aborting hierarchy tree creation
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   Parameters   |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   enable_seed  |    off     |       off        |        
+RUN-1001 :     message    |  standard  |     standard     |        
+RUN-1001 :   qor_monitor  |     on     |        on        |        
+RUN-1001 :   syn_ip_flow  |    off     |       off        |        
+RUN-1001 :     thread     |    auto    |       auto       |        
+RUN-1001 : --------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 : ----------------------------------------------------------------
+HDL-1007 : analyze verilog file uisrc/01_rtl/system.v
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   Parameters   |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   enable_seed  |    off     |       off        |        
+RUN-1001 :     message    |  standard  |     standard     |        
+RUN-1001 :   qor_monitor  |     on     |        on        |        
+RUN-1001 :   syn_ip_flow  |    off     |       off        |        
+RUN-1001 :     thread     |    auto    |       auto       |        
+RUN-1001 : --------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 : ----------------------------------------------------------------
+HDL-1007 : analyze verilog file uisrc/01_rtl/system.v
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   Parameters   |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   enable_seed  |    off     |       off        |        
+RUN-1001 :     message    |  standard  |     standard     |        
+RUN-1001 :   qor_monitor  |     on     |        on        |        
+RUN-1001 :   syn_ip_flow  |    off     |       off        |        
+RUN-1001 :     thread     |    auto    |       auto       |        
+RUN-1001 : --------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 : ----------------------------------------------------------------
+HDL-1007 : analyze verilog file ../../../library_common/AnLu_Project_Model/Design_Model_system1/hdl/Design_Model_system1.v
+HDL-1007 : analyze verilog file ../../../library_common/AnLu_Project_Model/Design_Model_system1/ip/system_ARM_Processor_System_0/RTL/ARM_Processor_System_system_ARM_Processor_System_0.v
+HDL-1007 : analyze verilog file ../../../library_common/AnLu_Project_Model/Design_Model_system1/ip/system_ARM_Processor_System_0/system_ARM_Processor_System_0.v
+HDL-1007 : analyze verilog file uisrc/01_rtl/system.v
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   Parameters   |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   enable_seed  |    off     |       off        |        
+RUN-1001 :     message    |  standard  |     standard     |        
+RUN-1001 :   qor_monitor  |     on     |        on        |        
+RUN-1001 :   syn_ip_flow  |    off     |       off        |        
+RUN-1001 :     thread     |    auto    |       auto       |        
+RUN-1001 : --------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 : ----------------------------------------------------------------
+HDL-1007 : analyze verilog file uisrc/01_rtl/system.v
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   Parameters   |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   enable_seed  |    off     |       off        |        
+RUN-1001 :     message    |  standard  |     standard     |        
+RUN-1001 :   qor_monitor  |     on     |        on        |        
+RUN-1001 :   syn_ip_flow  |    off     |       off        |        
+RUN-1001 :     thread     |    auto    |       auto       |        
+RUN-1001 : --------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 : ----------------------------------------------------------------
+HDL-1007 : analyze verilog file uisrc/01_rtl/system.v
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   Parameters   |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   enable_seed  |    off     |       off        |        
+RUN-1001 :     message    |  standard  |     standard     |        
+RUN-1001 :   qor_monitor  |     on     |        on        |        
+RUN-1001 :   syn_ip_flow  |    off     |       off        |        
+RUN-1001 :     thread     |    auto    |       auto       |        
+RUN-1001 : --------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 : ----------------------------------------------------------------
+HDL-1007 : analyze verilog file uisrc/01_rtl/system.v
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   Parameters   |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   enable_seed  |    off     |       off        |        
+RUN-1001 :     message    |  standard  |     standard     |        
+RUN-1001 :   qor_monitor  |     on     |        on        |        
+RUN-1001 :   syn_ip_flow  |    off     |       off        |        
+RUN-1001 :     thread     |    auto    |       auto       |        
+RUN-1001 : --------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 : ----------------------------------------------------------------
+HDL-1007 : analyze verilog file ARMandgpioDesign/hdl/ARMandgpioDesign.v
+HDL-1007 : analyze verilog file ARMandgpioDesign/ip/system_ARM_Processor_System_0/RTL/ARM_Processor_System_system_ARM_Processor_System_0.v
+HDL-1007 : analyze verilog file ARMandgpioDesign/ip/system_ARM_Processor_System_0/system_ARM_Processor_System_0.v
+HDL-1007 : analyze verilog file uisrc/01_rtl/system.v
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   Parameters   |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   enable_seed  |    off     |       off        |        
+RUN-1001 :     message    |  standard  |     standard     |        
+RUN-1001 :   qor_monitor  |     on     |        on        |        
+RUN-1001 :   syn_ip_flow  |    off     |       off        |        
+RUN-1001 :     thread     |    auto    |       auto       |        
+RUN-1001 : --------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 : ----------------------------------------------------------------
+HDL-1007 : analyze verilog file ARMandgpioDesign/hdl/ARMandgpioDesign.v
+HDL-1007 : analyze verilog file ARMandgpioDesign/ip/system_ARM_Processor_System_0/RTL/ARM_Processor_System_system_ARM_Processor_System_0.v
+HDL-1007 : analyze verilog file ARMandgpioDesign/ip/system_ARM_Processor_System_0/system_ARM_Processor_System_0.v
+HDL-1007 : analyze verilog file uisrc/01_rtl/system.v
+PRJ-1412 : reset_run phy_1.
+PRJ-1411 : launch_runs syn_1 -step read_design.
+PRJ-1412 : reset_run phy_1.
+RUN-1002 : start command "save_best_bits"
+RUN-1002 : start command "import_db D:/FPGAproject/AnLuRun/PScontrol/soc_prj/PScontrol_Runs/syn_1/PScontrol_elaborate.db"
+RUN-1001 : Database version number 46207
+RUN-1001 : Importing database generated by Tang Dynasty, V6.2.2.200067.
+RUN-1001 : Import flow parameters
+RUN-1001 : Import netlist
+RUN-1001 : Import timing constraints
+RUN-1001 : Import IO constraints
+RUN-1001 : Import Inst constraints
+RUN-1001 : Import ChipWatcher
+RUN-1001 : Import design success TD_VERSION=Release_2026.1_SP2 , DB_VERSION=46207
+RUN-1001 : Starting of IO setups legality check.
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   Parameters   |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   enable_seed  |    off     |       off        |        
+RUN-1001 :     message    |  standard  |     standard     |        
+RUN-1001 :   qor_monitor  |     on     |        on        |        
+RUN-1001 :   syn_ip_flow  |    off     |       off        |        
+RUN-1001 :     thread     |    auto    |       auto       |        
+RUN-1001 : --------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 : ----------------------------------------------------------------
+HDL-1007 : analyze verilog file ARMandgpioDesign/hdl/ARMandgpioDesign.v
+HDL-1007 : analyze verilog file ARMandgpioDesign/ip/system_ARM_Processor_System_0/RTL/ARM_Processor_System_system_ARM_Processor_System_0.v
+HDL-1007 : analyze verilog file ARMandgpioDesign/ip/system_ARM_Processor_System_0/system_ARM_Processor_System_0.v
+HDL-1007 : analyze verilog file uisrc/01_rtl/system.v
+PRJ-1412 : reset_run syn_1.
+PRJ-1411 : launch_runs syn_1 -step read_design.
+PRJ-1412 : reset_run phy_1.
+RUN-1002 : start command "save_best_bits"
+RUN-1002 : start command "import_db D:/FPGAproject/AnLuRun/PScontrol/soc_prj/PScontrol_Runs/syn_1/PScontrol_elaborate.db"
+RUN-1001 : Database version number 46207
+RUN-1001 : Importing database generated by Tang Dynasty, V6.2.2.200067.
+RUN-1001 : Import flow parameters
+RUN-1001 : Import netlist
+RUN-1001 : Import timing constraints
+RUN-1001 : Import IO constraints
+RUN-1001 : Import Inst constraints
+RUN-1001 : Import ChipWatcher
+RUN-1001 : Import design success TD_VERSION=Release_2026.1_SP2 , DB_VERSION=46207
+RUN-1002 : start command "read_adc uisrc/04_pin/pin.adc"
+RUN-1002 : start command "set_pin_assignment  I_sysclk   LOCATION = H16; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1001 : Starting of IO setups legality check.
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   Parameters   |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   enable_seed  |    off     |       off        |        
+RUN-1001 :     message    |  standard  |     standard     |        
+RUN-1001 :   qor_monitor  |     on     |        on        |        
+RUN-1001 :   syn_ip_flow  |    off     |       off        |        
+RUN-1001 :     thread     |    auto    |       auto       |        
+RUN-1001 : --------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 : ----------------------------------------------------------------
+HDL-1007 : analyze verilog file ARMandgpioDesign/hdl/ARMandgpioDesign.v
+HDL-1007 : analyze verilog file ARMandgpioDesign/ip/system_ARM_Processor_System_0/RTL/ARM_Processor_System_system_ARM_Processor_System_0.v
+HDL-1007 : analyze verilog file ARMandgpioDesign/ip/system_ARM_Processor_System_0/system_ARM_Processor_System_0.v
+HDL-1007 : analyze verilog file uisrc/01_rtl/system.v
+PRJ-1412 : reset_run syn_1.
+PRJ-1411 : launch_runs syn_1 -step read_design.
+PRJ-1412 : reset_run phy_1.
+RUN-1002 : start command "save_best_bits"
+RUN-1002 : start command "import_db D:/FPGAproject/AnLuRun/PScontrol/soc_prj/PScontrol_Runs/syn_1/PScontrol_elaborate.db"
+RUN-1001 : Database version number 46207
+RUN-1001 : Importing database generated by Tang Dynasty, V6.2.2.200067.
+RUN-1001 : Import flow parameters
+RUN-1001 : Import netlist
+RUN-1001 : Import timing constraints
+RUN-1001 : Import IO constraints
+RUN-1001 : Import Inst constraints
+RUN-1001 : Import ChipWatcher
+RUN-1001 : Import design success TD_VERSION=Release_2026.1_SP2 , DB_VERSION=46207
+RUN-1002 : start command "read_adc uisrc/04_pin/pin.adc"
+RUN-1002 : start command "set_pin_assignment  I_sysclk   LOCATION = H16; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1001 : Starting of IO setups legality check.
+RUN-1001 : Starting of IO setups legality check.
+PRJ-1412 : reset_run syn_1 phy_1.
+PRJ-1409 : launch_runs syn_1 phy_1  -jobs 6.
+PRJ-5303 WARNING: Run syn_1 failed.
+RUN-1002 : start command "save_best_bits"
+RUN-1002 : start command "import_db D:/FPGAproject/AnLuRun/PScontrol/soc_prj/PScontrol_Runs/syn_1/PScontrol_rtl.db"
+RUN-1001 : Database version number 46207
+RUN-1001 : Importing database generated by Tang Dynasty, V6.2.2.200067.
+RUN-1001 : Import flow parameters
+RUN-1001 : Import netlist
+RUN-1001 : Import timing constraints
+RUN-1001 : Import IO constraints
+RUN-1001 : Import Inst constraints
+RUN-1001 : Import ChipWatcher
+RUN-1001 : Import design success TD_VERSION=Release_2026.1_SP2 , DB_VERSION=46207
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   Parameters   |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   enable_seed  |    off     |       off        |        
+RUN-1001 :     message    |  standard  |     standard     |        
+RUN-1001 :   qor_monitor  |     on     |        on        |        
+RUN-1001 :   syn_ip_flow  |    off     |       off        |        
+RUN-1001 :     thread     |    auto    |       auto       |        
+RUN-1001 : --------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 : ----------------------------------------------------------------
+HDL-1007 : analyze verilog file ARMandgpioDesign/hdl/ARMandgpioDesign.v
+HDL-1007 : analyze verilog file ARMandgpioDesign/ip/system_ARM_Processor_System_0/RTL/ARM_Processor_System_system_ARM_Processor_System_0.v
+HDL-1007 : analyze verilog file ARMandgpioDesign/ip/system_ARM_Processor_System_0/system_ARM_Processor_System_0.v
+HDL-1007 : analyze verilog file uisrc/01_rtl/system.v
+PRJ-1412 : reset_run syn_1 phy_1.
+PRJ-1409 : launch_runs syn_1 phy_1  -jobs 6.
+RUN-1002 : start command "save_best_bits"
+PRJ-1424 : The implemented result of phy_1 is saved as best result.
+RUN-1002 : start command "import_db D:/FPGAproject/AnLuRun/PScontrol/soc_prj/PScontrol_Runs/phy_1/PScontrol_pr.db"
+RUN-1001 : Database version number 46207
+RUN-1001 : Importing database generated by Tang Dynasty, V6.2.2.200067.
+RUN-1001 : Import flow parameters
+RUN-1001 : Import netlist
+RUN-1001 : Constructing routing connections ...
+PHY-1001 : End build routing graph; 7.656705s wall, 17.890625s user + 0.203125s system = 18.093750s CPU (236.3%)
+
+RUN-1001 : Import phy database
+RUN-1001 : Import timing constraints
+RUN-1001 : Import IO constraints
+RUN-1001 : Import Inst constraints
+RUN-1001 : Import ChipWatcher
+RUN-1001 : Import design success TD_VERSION=Release_2026.1_SP2 , DB_VERSION=46207
+RUN-1003 : finish command "import_db D:/FPGAproject/AnLuRun/PScontrol/soc_prj/PScontrol_Runs/phy_1/PScontrol_pr.db" in  7.869208s wall, 18.109375s user + 0.250000s system = 18.359375s CPU (233.3%)
+
+RUN-1004 : used memory is 1369 MB, reserved memory is 1315 MB, peak memory is 2600 MB
+RUN-1002 : start command "update_timing -mode final -ctr"
+RUN-1002 : start command "start_timer"
+RUN-1003 : finish command "start_timer" in  4.244763s wall, 4.140625s user + 0.218750s system = 4.359375s CPU (102.7%)
+
+RUN-1004 : used memory is 1676 MB, reserved memory is 1635 MB, peak memory is 2600 MB
+TMR-2502 : Net delay update with mode: Routed
+RUN-1003 : finish command "update_timing -mode final -ctr" in  4.358833s wall, 4.250000s user + 0.218750s system = 4.468750s CPU (102.5%)
+
+RUN-1004 : used memory is 1677 MB, reserved memory is 1635 MB, peak memory is 2600 MB
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   Parameters   |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   enable_seed  |    off     |       off        |        
+RUN-1001 :     message    |  standard  |     standard     |        
+RUN-1001 :   qor_monitor  |     on     |        on        |        
+RUN-1001 :   syn_ip_flow  |    off     |       off        |        
+RUN-1001 :     thread     |    auto    |       auto       |        
+RUN-1001 : --------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 : ----------------------------------------------------------------
+HDL-1007 : analyze verilog file ARMandgpioDesign/hdl/ARMandgpioDesign.v
+HDL-1007 : analyze verilog file ARMandgpioDesign/ip/system_ARM_Processor_System_0/RTL/ARM_Processor_System_system_ARM_Processor_System_0.v
+HDL-1007 : analyze verilog file ARMandgpioDesign/ip/system_ARM_Processor_System_0/system_ARM_Processor_System_0.v
+HDL-1007 : analyze verilog file uisrc/01_rtl/system.v
+PRJ-1412 : reset_run syn_1.
+PRJ-1411 : launch_runs syn_1 -step read_design.
+PRJ-1412 : reset_run phy_1.
+RUN-1002 : start command "save_best_bits"
+RUN-1002 : start command "import_db D:/FPGAproject/AnLuRun/PScontrol/soc_prj/PScontrol_Runs/syn_1/PScontrol_elaborate.db"
+RUN-1001 : Database version number 46207
+RUN-1001 : Importing database generated by Tang Dynasty, V6.2.2.200067.
+RUN-1001 : Import flow parameters
+RUN-1001 : Import netlist
+RUN-1001 : Import timing constraints
+RUN-1001 : Import IO constraints
+RUN-1001 : Import Inst constraints
+RUN-1001 : Import ChipWatcher
+RUN-1001 : Import design success TD_VERSION=Release_2026.1_SP2 , DB_VERSION=46207
+PRJ-1412 : reset_run syn_1 phy_1.
+PRJ-1409 : launch_runs syn_1 phy_1  -jobs 6.
+RUN-1002 : start command "save_best_bits"
+PRJ-1424 : The implemented result of phy_1 is saved as best result.
+RUN-1002 : start command "import_db D:/FPGAproject/AnLuRun/PScontrol/soc_prj/PScontrol_Runs/phy_1/PScontrol_pr.db"
+RUN-1001 : Database version number 46207
+RUN-1001 : Importing database generated by Tang Dynasty, V6.2.2.200067.
+RUN-1001 : Import flow parameters
+RUN-1001 : Import netlist
+RUN-1001 : Constructing routing connections ...
+PHY-1001 : End build routing graph; 3.815099s wall, 14.015625s user + 0.218750s system = 14.234375s CPU (373.1%)
+
+RUN-1001 : Import phy database
+RUN-1001 : Import timing constraints
+RUN-1001 : Import IO constraints
+RUN-1001 : Import Inst constraints
+RUN-1001 : Import ChipWatcher
+RUN-1001 : Import design success TD_VERSION=Release_2026.1_SP2 , DB_VERSION=46207
+RUN-1003 : finish command "import_db D:/FPGAproject/AnLuRun/PScontrol/soc_prj/PScontrol_Runs/phy_1/PScontrol_pr.db" in  4.040179s wall, 14.218750s user + 0.281250s system = 14.500000s CPU (358.9%)
+
+RUN-1004 : used memory is 1397 MB, reserved memory is 1346 MB, peak memory is 2600 MB
+RUN-1002 : start command "update_timing -mode final -ctr"
+RUN-1002 : start command "start_timer"
+RUN-1003 : finish command "start_timer" in  4.534669s wall, 4.546875s user + 0.187500s system = 4.734375s CPU (104.4%)
+
+RUN-1004 : used memory is 1649 MB, reserved memory is 1592 MB, peak memory is 2600 MB
+TMR-2502 : Net delay update with mode: Routed
+RUN-1003 : finish command "update_timing -mode final -ctr" in  4.616996s wall, 4.625000s user + 0.187500s system = 4.812500s CPU (104.2%)
+
+RUN-1004 : used memory is 1649 MB, reserved memory is 1592 MB, peak memory is 2600 MB
+RUN-1002 : start command "create_clock -name sysclk -period 10.000 -waveform 0.000 5.000"
+RUN-1101 : create_clock: defined a virtual clock: sysclk.
+RUN-1002 : start command "create_clock -name sysclk -period 10.000 -waveform 0.000 5.000"
+RUN-1101 : create_clock: defined a virtual clock: sysclk.
+RUN-1002 : start command "get_cells ARM_Processor_System_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst"
+RUN-1002 : start command "set_ip_property GBE0_TXCLK_FREQ 125 "
+RUN-1002 : start command "get_cells ARM_Processor_System_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst"
+RUN-1002 : start command "set_ip_property GBE0_TXCLK_PHA 0 "
+RUN-1002 : start command "get_cells ARM_Processor_System_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst"
+RUN-1002 : start command "set_ip_property IOPLL_400M_FREQ 400 "
+RUN-1002 : start command "get_cells ARM_Processor_System_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst"
+RUN-1002 : start command "set_ip_property P2F_CLK0_DIV 8 "
+RUN-1002 : start command "derive_clocks"
+RUN-1002 : start command "update_timing -mode final -ctr"
+RUN-1002 : start command "start_timer"
+RUN-1003 : finish command "start_timer" in  4.847185s wall, 4.843750s user + 0.109375s system = 4.953125s CPU (102.2%)
+
+RUN-1004 : used memory is 1680 MB, reserved memory is 1623 MB, peak memory is 2600 MB
+RUN-1003 : finish command "update_timing -mode final -ctr" in  4.935685s wall, 4.937500s user + 0.109375s system = 5.046875s CPU (102.3%)
+
+RUN-1004 : used memory is 1680 MB, reserved memory is 1623 MB, peak memory is 2600 MB
+RUN-1002 : start command "clear_sdc -user"
+RUN-1002 : start command "read_sdc PScontrol.sdc"
+RUN-1002 : start command "create_clock -name sysclk -period 10.000 -waveform 0.000 5.000"
+RUN-1101 : create_clock: defined a virtual clock: sysclk.
+RUN-1002 : start command "get_cells ARM_Processor_System_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst"
+RUN-1002 : start command "set_ip_property GBE0_TXCLK_FREQ 125 "
+RUN-1002 : start command "get_cells ARM_Processor_System_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst"
+RUN-1002 : start command "set_ip_property GBE0_TXCLK_PHA 0 "
+RUN-1002 : start command "get_cells ARM_Processor_System_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst"
+RUN-1002 : start command "set_ip_property IOPLL_400M_FREQ 400 "
+RUN-1002 : start command "get_cells ARM_Processor_System_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst"
+RUN-1002 : start command "set_ip_property P2F_CLK0_DIV 8 "
+RUN-1002 : start command "derive_clocks"
+RUN-1002 : start command "get_ports *"
+RUN-1002 : start command "get_ports I_sysclk"
+RUN-1002 : start command "create_clock -name sysclk -period 10.000 -waveform 0.000 5.000 "
+RUN-1002 : start command "get_cells ARM_Processor_System_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst"
+RUN-1002 : start command "set_ip_property GBE0_TXCLK_FREQ 125 "
+RUN-1002 : start command "get_cells ARM_Processor_System_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst"
+RUN-1002 : start command "set_ip_property GBE0_TXCLK_PHA 0 "
+RUN-1002 : start command "get_cells ARM_Processor_System_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst"
+RUN-1002 : start command "set_ip_property IOPLL_400M_FREQ 400 "
+RUN-1002 : start command "get_cells ARM_Processor_System_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst"
+RUN-1002 : start command "set_ip_property P2F_CLK0_DIV 8 "
+RUN-1002 : start command "derive_clocks"
+PRJ-8424 ERROR: Failed to remove source files, invalid type.
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   Parameters   |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   enable_seed  |    off     |       off        |        
+RUN-1001 :     message    |  standard  |     standard     |        
+RUN-1001 :   qor_monitor  |     on     |        on        |        
+RUN-1001 :   syn_ip_flow  |    off     |       off        |        
+RUN-1001 :     thread     |    auto    |       auto       |        
+RUN-1001 : --------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 : ----------------------------------------------------------------
+HDL-1007 : analyze verilog file ARMandgpioDesign/hdl/ARMandgpioDesign.v
+HDL-1007 : analyze verilog file ARMandgpioDesign/ip/system_ARM_Processor_System_0/RTL/ARM_Processor_System_system_ARM_Processor_System_0.v
+HDL-1007 : analyze verilog file ARMandgpioDesign/ip/system_ARM_Processor_System_0/system_ARM_Processor_System_0.v
+HDL-1007 : analyze verilog file uisrc/01_rtl/system.v
+GUI-6002 WARNING: Unable to open file:PScontrol.sdc
+PRJ-1412 : reset_run syn_1 phy_1.
+PRJ-1409 : launch_runs syn_1 phy_1  -jobs 6.
+RUN-1002 : start command "save_best_bits"
+PRJ-1424 : The implemented result of phy_1 is saved as best result.
+RUN-1002 : start command "import_db D:/FPGAproject/AnLuRun/PScontrol/soc_prj/PScontrol_Runs/phy_1/PScontrol_pr.db"
+RUN-1001 : Database version number 46207
+RUN-1001 : Importing database generated by Tang Dynasty, V6.2.2.200067.
+RUN-1001 : Import flow parameters
+RUN-1001 : Import netlist
+RUN-1001 : Constructing routing connections ...
+PHY-1001 : End build routing graph; 3.570237s wall, 13.937500s user + 0.062500s system = 14.000000s CPU (392.1%)
+
+RUN-1001 : Import phy database
+RUN-1001 : Import timing constraints
+RUN-1001 : Import IO constraints
+RUN-1001 : Import Inst constraints
+RUN-1001 : Import ChipWatcher
+RUN-1001 : Import design success TD_VERSION=Release_2026.1_SP2 , DB_VERSION=46207
+RUN-1003 : finish command "import_db D:/FPGAproject/AnLuRun/PScontrol/soc_prj/PScontrol_Runs/phy_1/PScontrol_pr.db" in  3.953866s wall, 14.265625s user + 0.171875s system = 14.437500s CPU (365.1%)
+
+RUN-1004 : used memory is 1395 MB, reserved memory is 1338 MB, peak memory is 2600 MB
