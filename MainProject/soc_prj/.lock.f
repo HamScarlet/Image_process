@@ -1,4 +1,4 @@
 zhujin
 zhuji
-37452
-E:\FPGA\anlu_prj\Image_process\soc_prj\.lock.f
+3412
+E:\FPGA\anlu_prj\Image_process\MainProject\soc_prj\.lock.f

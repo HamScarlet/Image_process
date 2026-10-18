@@ -623,6 +623,252 @@
                 <ipxact:configurableElementValue referenceId="us_axi_awlock_de">0</ipxact:configurableElementValue>
             </ipxact:configurableElementValues>
         </ipxact:componentInstance>
+        <ipxact:componentInstance>
+            <ipxact:instanceName>AXI_GPIO_1</ipxact:instanceName>
+            <ipxact:componentRef vendor="anlogic.com" library="ip" name="AXI_GPIO" version="1.0"/>
+            <ipxact:instancePath>ip/system_AXI_GPIO_1</ipxact:instancePath>
+            <ipxact:configurableElementValues>
+                <ipxact:configurableElementValue referenceId="AL_ALL_IN_PORTS">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_ALL_IN_PORTS_2">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_ALL_OUT_PORTS">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_ALL_OUT_PORTS_2">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_AXIS_ADDR_WD">9</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_AXIS_DATA_WD">32</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_DUAL_CHANNEL">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_GPIO2_WD">32</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_GPIO_WD">32</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_INTR_ENABLE">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_RESET_DOUT">32'h00000000</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_RESET_DOUT_2">32'h00000000</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_RESET_TRI">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_RESET_TRI_2">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="DOUT_DEFAULT">'h00000000</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="DOUT_DEFAULT_2">'h00000000</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="GPIO2_WIDTH">32</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="IN_OUT_USE">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="IN_OUT_USE_2">0</ipxact:configurableElementValue>
+            </ipxact:configurableElementValues>
+        </ipxact:componentInstance>
+        <ipxact:componentInstance>
+            <ipxact:instanceName>AXI_Protocol_Converter_1</ipxact:instanceName>
+            <ipxact:componentRef vendor="anlogic.com" library="ip" name="AXI_Protocol_Converter" version="1.0"/>
+            <ipxact:instancePath>ip/system_AXI_Protocol_Converter_1</ipxact:instancePath>
+            <ipxact:configurableElementValues>
+                <ipxact:configurableElementValue referenceId="AL_AXI_ADDR_WIDTH">32</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_AXI_DATA_WIDTH">32</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_AXI_ID_WIDTH">4</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_AXI_SUPPORTS_READ">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_AXI_SUPPORTS_WRITE">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_DS_AXI_PROTOCOL">2</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_US_AXI_PROTOCOL">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="READ_WRITE_Mode">&quot;READ_WRITE&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="USER_SIGNALS__reponse_enable">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="USER_SIGNALS_enable">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="axi3_de_ds">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="axi3_de_us">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="axilite_de">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="aximm_ds">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="aximm_us">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds_axi_awlen_de">7</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds_axi_awlock_de">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="protocol_ds_num">&quot;AXI4LITE&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="protocol_us_num">&quot;AXI4&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="rw_mode_num">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="us_axi_awlen_de">7</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="us_axi_awlock_de">0</ipxact:configurableElementValue>
+            </ipxact:configurableElementValues>
+        </ipxact:componentInstance>
+        <ipxact:componentInstance>
+            <ipxact:instanceName>AXI_Matrix_0</ipxact:instanceName>
+            <ipxact:componentRef vendor="anlogic.com" library="ip" name="AXI_Matrix" version="1.1"/>
+            <ipxact:instancePath>ip/system_AXI_Matrix_0</ipxact:instancePath>
+            <ipxact:configurableElementValues>
+                <ipxact:configurableElementValue referenceId="AL_AXI_ADDR_WIDTH">32</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_AXI_DATA_WIDTH">32</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_AXI_ID_WIDTH">2</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_AXI_ID_WIDTH_USER">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_AXI_READ_CONNECTIVITY">64'h0000000100000001</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_AXI_SUPPORTS_USER_SIGNALS">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_AXI_WRITE_CONNECTIVITY">64'h0000000100000001</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_CONNECTIVITY_MODE">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_DS_AXI_ADDR_WIDTH">64'h0000000C0000000C</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_DS_AXI_BASE_ADDR">128'h00000000001000000000000000000000</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_DS_AXI_READ_ISSUING">64'h0000000400000004</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_DS_AXI_SECURE">64'h0000000000000000</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_DS_AXI_WRITE_ISSUING">64'h0000000400000004</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_DS_NUM">2</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_NUM_ADDR_RANGES">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_PROTOCOL_SEL">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_READ_REGISTER_TYPE">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_US_AXI_ARB_PRIORITY">32'h00000000</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_US_AXI_BASE_ID">32'h00000000</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_US_AXI_READ_ACCEPTANCE">32'h00000001</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_US_AXI_SINGLE_THREAD">32'h00000000</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_US_AXI_THREAD_ID_WIDTH">32'h00000001</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_US_AXI_WRITE_ACCEPTANCE">32'h00000001</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_US_NUM">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="DS0_BASEADDR0">&quot;0000000000000000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="DS0_BASEADDR_WIDTH0">12</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="DS1_BASEADDR0">&quot;0000000000100000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="DS1_BASEADDR_WIDTH0">12</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="arb_priority_us0">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="conectivity_type">&quot;Multi-Data(SAMD)&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds0_base_addr_align_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds0_base_addr_lower_bound">&quot;0x0000000000000000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds0_base_addr_overflow_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds0_base_addr_upper_bound">&quot;0xfff&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds0range_baseaddr">&quot;0000000000000000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds0range_baseaddr_width">&quot;0000000C&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds10_base_addr_align_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds10_base_addr_lower_bound">&quot;0x0000000000A00000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds10_base_addr_overflow_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds10_base_addr_upper_bound">&quot;0xa00fff&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds10range_baseaddr">&quot;0000000000A00000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds10range_baseaddr_width">&quot;0000000C&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds11_base_addr_align_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds11_base_addr_lower_bound">&quot;0x0000000000B00000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds11_base_addr_overflow_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds11_base_addr_upper_bound">&quot;0xb00fff&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds11range_baseaddr">&quot;0000000000B00000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds11range_baseaddr_width">&quot;0000000C&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds12_base_addr_align_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds12_base_addr_lower_bound">&quot;0x0000000000C00000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds12_base_addr_overflow_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds12_base_addr_upper_bound">&quot;0xc00fff&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds12range_baseaddr">&quot;0000000000C00000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds12range_baseaddr_width">&quot;0000000C&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds13_base_addr_align_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds13_base_addr_lower_bound">&quot;0x0000000000D00000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds13_base_addr_overflow_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds13_base_addr_upper_bound">&quot;0xd00fff&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds13range_baseaddr">&quot;0000000000D00000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds13range_baseaddr_width">&quot;0000000C&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds14_base_addr_align_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds14_base_addr_lower_bound">&quot;0x0000000000E00000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds14_base_addr_overflow_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds14_base_addr_upper_bound">&quot;0xe00fff&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds14range_baseaddr">&quot;0000000000E00000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds14range_baseaddr_width">&quot;0000000C&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds15_base_addr_align_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds15_base_addr_lower_bound">&quot;0x0000000000F00000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds15_base_addr_overflow_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds15_base_addr_upper_bound">&quot;0xf00fff&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds15range_baseaddr">&quot;0000000000F00000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds15range_baseaddr_width">&quot;0000000C&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds1_base_addr_align_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds1_base_addr_lower_bound">&quot;0x0000000000100000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds1_base_addr_overflow_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds1_base_addr_upper_bound">&quot;0x100fff&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds1range_baseaddr">&quot;0000000000100000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds1range_baseaddr_width">&quot;0000000C&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds2_base_addr_align_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds2_base_addr_lower_bound">&quot;0x0000000000200000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds2_base_addr_overflow_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds2_base_addr_upper_bound">&quot;0x200fff&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds2range_baseaddr">&quot;0000000000200000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds2range_baseaddr_width">&quot;0000000C&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds3_base_addr_align_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds3_base_addr_lower_bound">&quot;0x0000000000300000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds3_base_addr_overflow_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds3_base_addr_upper_bound">&quot;0x300fff&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds3range_baseaddr">&quot;0000000000300000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds3range_baseaddr_width">&quot;0000000C&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds4_base_addr_align_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds4_base_addr_lower_bound">&quot;0x0000000000400000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds4_base_addr_overflow_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds4_base_addr_upper_bound">&quot;0x400fff&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds4range_baseaddr">&quot;0000000000400000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds4range_baseaddr_width">&quot;0000000C&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds5_base_addr_align_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds5_base_addr_lower_bound">&quot;0x0000000000500000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds5_base_addr_overflow_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds5_base_addr_upper_bound">&quot;0x500fff&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds5range_baseaddr">&quot;0000000000500000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds5range_baseaddr_width">&quot;0000000C&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds6_base_addr_align_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds6_base_addr_lower_bound">&quot;0x0000000000600000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds6_base_addr_overflow_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds6_base_addr_upper_bound">&quot;0x600fff&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds6range_baseaddr">&quot;0000000000600000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds6range_baseaddr_width">&quot;0000000C&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds7_base_addr_align_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds7_base_addr_lower_bound">&quot;0x0000000000700000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds7_base_addr_overflow_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds7_base_addr_upper_bound">&quot;0x700fff&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds7range_baseaddr">&quot;0000000000700000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds7range_baseaddr_width">&quot;0000000C&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds8_base_addr_align_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds8_base_addr_lower_bound">&quot;0x0000000000800000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds8_base_addr_overflow_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds8_base_addr_upper_bound">&quot;0x800fff&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds8range_baseaddr">&quot;0000000000800000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds8range_baseaddr_width">&quot;0000000C&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds9_base_addr_align_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds9_base_addr_lower_bound">&quot;0x0000000000900000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds9_base_addr_overflow_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds9_base_addr_upper_bound">&quot;0x900fff&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds9range_baseaddr">&quot;0000000000900000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds9range_baseaddr_width">&quot;0000000C&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds_num_min">2</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="global_check">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ot_read_acceptance_us0">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ot_read_issuing_ds0">4</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ot_read_issuing_ds1">4</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ot_write_acceptance_us0">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ot_write_issuing_ds0">4</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ot_write_issuing_ds1">4</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="protocol_axi3">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="protocol_axi4">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="protocol_axi4lite">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="read_connectivity_ds0">&quot;00000001&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="read_connectivity_ds1">&quot;00000001&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="read_connectivity_ds10">&quot;00000001&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="read_connectivity_ds11">&quot;00000001&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="read_connectivity_ds12">&quot;00000001&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="read_connectivity_ds13">&quot;00000001&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="read_connectivity_ds14">&quot;00000001&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="read_connectivity_ds15">&quot;00000001&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="read_connectivity_ds2">&quot;00000001&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="read_connectivity_ds3">&quot;00000001&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="read_connectivity_ds4">&quot;00000001&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="read_connectivity_ds5">&quot;00000001&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="read_connectivity_ds6">&quot;00000001&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="read_connectivity_ds7">&quot;00000001&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="read_connectivity_ds8">&quot;00000001&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="read_connectivity_ds9">&quot;00000001&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="read_m0s0">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="read_m1s0">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="single_thread_us0">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="support_secure_ds0">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="support_secure_ds1">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="us0_thread_id_width">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="write_connectivity_ds0">&quot;00000001&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="write_connectivity_ds1">&quot;00000001&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="write_connectivity_ds10">&quot;00000001&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="write_connectivity_ds11">&quot;00000001&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="write_connectivity_ds12">&quot;00000001&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="write_connectivity_ds13">&quot;00000001&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="write_connectivity_ds14">&quot;00000001&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="write_connectivity_ds15">&quot;00000001&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="write_connectivity_ds2">&quot;00000001&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="write_connectivity_ds3">&quot;00000001&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="write_connectivity_ds4">&quot;00000001&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="write_connectivity_ds5">&quot;00000001&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="write_connectivity_ds6">&quot;00000001&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="write_connectivity_ds7">&quot;00000001&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="write_connectivity_ds8">&quot;00000001&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="write_connectivity_ds9">&quot;00000001&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="write_m0s0">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="write_m1s0">1</ipxact:configurableElementValue>
+            </ipxact:configurableElementValues>
+        </ipxact:componentInstance>
+        <ipxact:componentInstance>
+            <ipxact:instanceName>PWM_0</ipxact:instanceName>
+            <ipxact:componentRef vendor="anlogic.com" library="customized" name="PWM" version="1.0"/>
+            <ipxact:instancePath>ip/system_PWM_0</ipxact:instancePath>
+            <ipxact:ipPath>../PWM.v</ipxact:ipPath>
+            <ipxact:customTool>use_rtl</ipxact:customTool>
+        </ipxact:componentInstance>
     </ipxact:componentInstances>
     <ipxact:designPorts>
         <ipxact:designPort>
@@ -711,176 +957,20 @@
             <ipxact:vectorR>0</ipxact:vectorR>
             <ipxact:direction>output</ipxact:direction>
         </ipxact:designPort>
+        <ipxact:designPort>
+            <ipxact:name>pwm_out1</ipxact:name>
+            <ipxact:direction>output</ipxact:direction>
+        </ipxact:designPort>
+        <ipxact:designPort>
+            <ipxact:name>pwm_clk</ipxact:name>
+            <ipxact:direction>input</ipxact:direction>
+        </ipxact:designPort>
+        <ipxact:designPort>
+            <ipxact:name>rst_n</ipxact:name>
+            <ipxact:direction>input</ipxact:direction>
+        </ipxact:designPort>
     </ipxact:designPorts>
     <ipxact:adHocConnections>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_araddr</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_araddr"/>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_araddr"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_arburst</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_arburst"/>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_arburst"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_arcache</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_arcache"/>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_arcache"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_arid</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_arid"/>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_arid"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_arlen</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_arlen"/>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_arlen"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_arlock</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_arlock"/>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_arlock"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_arprot</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_arprot"/>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_arprot"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_arsize</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_arsize"/>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_arsize"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_arvalid</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_arvalid"/>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_arvalid"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_awaddr</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_awaddr"/>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_awaddr"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_awburst</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_awburst"/>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_awburst"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_awcache</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_awcache"/>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_awcache"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_awid</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_awid"/>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_awid"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_awlen</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_awlen"/>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_awlen"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_awlock</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_awlock"/>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_awlock"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_awprot</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_awprot"/>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_awprot"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_awsize</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_awsize"/>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_awsize"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_awvalid</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_awvalid"/>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_awvalid"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_bready</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_bready"/>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_bready"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_rready</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_rready"/>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_rready"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_wdata</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_wdata"/>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_wdata"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_wlast</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_wlast"/>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_wlast"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_wstrb</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_wstrb"/>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_wstrb"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_wvalid</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_wvalid"/>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_wvalid"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
         <ipxact:adHocConnection>
             <ipxact:name>w_net__ARM_Processor_System_0__p2f_clk0</ipxact:name>
             <ipxact:portReferences>
@@ -891,6 +981,9 @@
                 <ipxact:internalPortReference componentRef="AXI_GPIO_0" portRef="s_axi_aclk"/>
                 <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_aclk"/>
                 <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="aclk"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="aclk"/>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_1" portRef="s_axi_aclk"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="aclk"/>
                 <anlogic:freqMhz>199.98</anlogic:freqMhz>
             </ipxact:portReferences>
         </ipxact:adHocConnection>
@@ -902,6 +995,9 @@
                 <ipxact:internalPortReference componentRef="uiFDMA_0" portRef="M_AXI_ARESETN"/>
                 <ipxact:internalPortReference componentRef="AXI_GPIO_0" portRef="s_axi_aresetn"/>
                 <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="aresetn"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="aresetn"/>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_1" portRef="s_axi_aresetn"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="aresetn"/>
             </ipxact:portReferences>
         </ipxact:adHocConnection>
         <ipxact:adHocConnection>
@@ -1112,83 +1208,6 @@
             <ipxact:portReferences>
                 <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="ds_axi_wvalid"/>
                 <ipxact:internalPortReference componentRef="AXI_GPIO_0" portRef="s_axi_wvalid"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_arready</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_arready"/>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_arready"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_awready</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_awready"/>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_awready"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_bid</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_bid"/>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_bid"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_bresp</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_bresp"/>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_bresp"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_bvalid</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_bvalid"/>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_bvalid"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_rdata</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_rdata"/>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_rdata"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_rid</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_rid"/>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_rid"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_rlast</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_rlast"/>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_rlast"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_rresp</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_rresp"/>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_rresp"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_rvalid</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_rvalid"/>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_rvalid"/>
-            </ipxact:portReferences>
-        </ipxact:adHocConnection>
-        <ipxact:adHocConnection>
-            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_wready</ipxact:name>
-            <ipxact:portReferences>
-                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_wready"/>
-                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_wready"/>
             </ipxact:portReferences>
         </ipxact:adHocConnection>
         <ipxact:adHocConnection>
@@ -1471,17 +1490,949 @@
                 <ipxact:externalPortReference portRef="O_fdma_wvalid"/>
             </ipxact:portReferences>
         </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_araddr</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_araddr"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_araddr"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_arburst</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_arburst"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_arburst"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_arcache</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_arcache"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_arcache"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_arid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_arid"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_arid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_arlen</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_arlen"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_arlen"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_arlock</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_arlock"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_arlock"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_arprot</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_arprot"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_arprot"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__us0_arready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_arready"/>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_arready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_arsize</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_arsize"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_arsize"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_arvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_arvalid"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_arvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_awaddr</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_awaddr"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_awaddr"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_awburst</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_awburst"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_awburst"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_awcache</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_awcache"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_awcache"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_awid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_awid"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_awid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_awlen</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_awlen"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_awlen"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_awlock</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_awlock"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_awlock"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_awprot</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_awprot"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_awprot"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__us0_awready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_awready"/>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_awready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_awsize</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_awsize"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_awsize"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_awvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_awvalid"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_awvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__us0_bid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_bid"/>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_bid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_bready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_bready"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_bready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__us0_bresp</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_bresp"/>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_bresp"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__us0_bvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_bvalid"/>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_bvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__us0_rdata</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_rdata"/>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_rdata"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__us0_rid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_rid"/>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_rid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__us0_rlast</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_rlast"/>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_rlast"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_rready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_rready"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_rready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__us0_rresp</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_rresp"/>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_rresp"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__us0_rvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_rvalid"/>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_rvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_wdata</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_wdata"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_wdata"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_wlast</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_wlast"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_wlast"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__us0_wready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_wready"/>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_wready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_wstrb</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_wstrb"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_wstrb"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__master_gp0_axi_wvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="master_gp0_axi_wvalid"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="us0_wvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds0_araddr</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_araddr"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_araddr"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds0_arburst</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_arburst"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_arburst"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds0_arcache</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_arcache"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_arcache"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds0_arid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_arid"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_arid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds0_arlen</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_arlen"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_arlen"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds0_arlock</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_arlock"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_arlock"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds0_arprot</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_arprot"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_arprot"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds0_arqos</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_arqos"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_arqos"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_arready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_arready"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_arready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds0_arsize</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_arsize"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_arsize"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds0_arvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_arvalid"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_arvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds0_awaddr</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_awaddr"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_awaddr"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds0_awburst</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_awburst"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_awburst"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds0_awcache</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_awcache"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_awcache"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds0_awid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_awid"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_awid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds0_awlen</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_awlen"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_awlen"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds0_awlock</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_awlock"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_awlock"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds0_awprot</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_awprot"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_awprot"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds0_awqos</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_awqos"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_awqos"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_awready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_awready"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_awready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds0_awsize</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_awsize"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_awsize"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds0_awvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_awvalid"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_awvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_bid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_bid"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_bid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds0_bready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_bready"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_bready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_bresp</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_bresp"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_bresp"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_bvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_bvalid"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_bvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_rdata</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_rdata"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_rdata"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_rid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_rid"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_rid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_rlast</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_rlast"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_rlast"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds0_rready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_rready"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_rready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_rresp</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_rresp"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_rresp"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_rvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_rvalid"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_rvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds0_wdata</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_wdata"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_wdata"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds0_wlast</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_wlast"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_wlast"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_0__us_axi_wready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_wready"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_wready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds0_wstrb</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_wstrb"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_wstrb"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds0_wvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds0_wvalid"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="us_axi_wvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds1_araddr</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_araddr"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_araddr"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds1_arburst</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_arburst"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_arburst"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds1_arcache</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_arcache"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_arcache"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds1_arid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_arid"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_arid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds1_arlen</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_arlen"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_arlen"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds1_arlock</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_arlock"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_arlock"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds1_arprot</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_arprot"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_arprot"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds1_arqos</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_arqos"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_arqos"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_1__us_axi_arready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_arready"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_arready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds1_arsize</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_arsize"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_arsize"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds1_arvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_arvalid"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_arvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds1_awaddr</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_awaddr"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_awaddr"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds1_awburst</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_awburst"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_awburst"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds1_awcache</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_awcache"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_awcache"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds1_awid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_awid"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_awid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds1_awlen</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_awlen"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_awlen"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds1_awlock</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_awlock"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_awlock"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds1_awprot</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_awprot"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_awprot"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds1_awqos</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_awqos"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_awqos"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_1__us_axi_awready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_awready"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_awready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds1_awsize</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_awsize"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_awsize"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds1_awvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_awvalid"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_awvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_1__us_axi_bid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_bid"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_bid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds1_bready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_bready"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_bready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_1__us_axi_bresp</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_bresp"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_bresp"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_1__us_axi_bvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_bvalid"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_bvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_1__us_axi_rdata</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_rdata"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_rdata"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_1__us_axi_rid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_rid"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_rid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_1__us_axi_rlast</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_rlast"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_rlast"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds1_rready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_rready"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_rready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_1__us_axi_rresp</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_rresp"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_rresp"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_1__us_axi_rvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_rvalid"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_rvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds1_wdata</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_wdata"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_wdata"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds1_wlast</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_wlast"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_wlast"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_1__us_axi_wready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_wready"/>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_wready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds1_wstrb</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_wstrb"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_wstrb"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Matrix_0__ds1_wvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="ds1_wvalid"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="us_axi_wvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_1__ds_axi_awaddr</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="ds_axi_awaddr"/>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_1" portRef="s_axi_awaddr"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_1__ds_axi_awvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="ds_axi_awvalid"/>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_1" portRef="s_axi_awvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_GPIO_1__s_axi_awready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_1" portRef="s_axi_awready"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="ds_axi_awready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_1__ds_axi_wdata</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="ds_axi_wdata"/>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_1" portRef="s_axi_wdata"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_1__ds_axi_wstrb</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="ds_axi_wstrb"/>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_1" portRef="s_axi_wstrb"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_1__ds_axi_wvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="ds_axi_wvalid"/>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_1" portRef="s_axi_wvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_GPIO_1__s_axi_wready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_1" portRef="s_axi_wready"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="ds_axi_wready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_GPIO_1__s_axi_bresp</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_1" portRef="s_axi_bresp"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="ds_axi_bresp"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_GPIO_1__s_axi_bvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_1" portRef="s_axi_bvalid"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="ds_axi_bvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_1__ds_axi_bready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="ds_axi_bready"/>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_1" portRef="s_axi_bready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_1__ds_axi_araddr</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="ds_axi_araddr"/>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_1" portRef="s_axi_araddr"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_1__ds_axi_arvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="ds_axi_arvalid"/>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_1" portRef="s_axi_arvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_GPIO_1__s_axi_arready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_1" portRef="s_axi_arready"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="ds_axi_arready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_GPIO_1__s_axi_rdata</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_1" portRef="s_axi_rdata"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="ds_axi_rdata"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_GPIO_1__s_axi_rresp</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_1" portRef="s_axi_rresp"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="ds_axi_rresp"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_GPIO_1__s_axi_rvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_1" portRef="s_axi_rvalid"/>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="ds_axi_rvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_1__ds_axi_rready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="ds_axi_rready"/>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_1" portRef="s_axi_rready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_GPIO_1__gpio_io_o</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_1" portRef="gpio_io_o"/>
+                <ipxact:internalPortReference componentRef="PWM_0" portRef="DUTY_VALUE"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__AXI_GPIO_1__gpio2_io_o</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="AXI_GPIO_1" portRef="gpio2_io_o"/>
+                <ipxact:internalPortReference componentRef="PWM_0" portRef="RELOAD_VALUE"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__PWM_0__pwm_out</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="PWM_0" portRef="pwm_out"/>
+                <ipxact:externalPortReference portRef="pwm_out1"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__pwm_clk</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="PWM_0" portRef="clk"/>
+                <ipxact:externalPortReference portRef="pwm_clk"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__rst_n</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="PWM_0" portRef="rst_n"/>
+                <ipxact:externalPortReference portRef="rst_n"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
     </ipxact:adHocConnections>
     <ipxact:interconnections>
-        <ipxact:interconnection>
-            <ipxact:name>w_net__ARM_Processor_System_0__M_AXI_GP0</ipxact:name>
-            <ipxact:activeInterface componentRef="ARM_Processor_System_0" busRef="M_AXI_GP0"/>
-            <ipxact:activeInterface componentRef="AXI_Protocol_Converter_0" busRef="US_AXI"/>
-        </ipxact:interconnection>
         <ipxact:interconnection>
             <ipxact:name>w_net__AXI_Protocol_Converter_0__DS_AXI</ipxact:name>
             <ipxact:activeInterface componentRef="AXI_Protocol_Converter_0" busRef="DS_AXI"/>
             <ipxact:activeInterface componentRef="AXI_GPIO_0" busRef="S_AXI_Lite"/>
+        </ipxact:interconnection>
+        <ipxact:interconnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__M_AXI_GP0</ipxact:name>
+            <ipxact:activeInterface componentRef="ARM_Processor_System_0" busRef="M_AXI_GP0"/>
+            <ipxact:activeInterface componentRef="AXI_Matrix_0" busRef="US_AXI0"/>
+        </ipxact:interconnection>
+        <ipxact:interconnection>
+            <ipxact:name>w_net__AXI_Matrix_0__DS_AXI0</ipxact:name>
+            <ipxact:activeInterface componentRef="AXI_Matrix_0" busRef="DS_AXI0"/>
+            <ipxact:activeInterface componentRef="AXI_Protocol_Converter_0" busRef="US_AXI"/>
+        </ipxact:interconnection>
+        <ipxact:interconnection>
+            <ipxact:name>w_net__AXI_Matrix_0__DS_AXI1</ipxact:name>
+            <ipxact:activeInterface componentRef="AXI_Matrix_0" busRef="DS_AXI1"/>
+            <ipxact:activeInterface componentRef="AXI_Protocol_Converter_1" busRef="US_AXI"/>
+        </ipxact:interconnection>
+        <ipxact:interconnection>
+            <ipxact:name>w_net__AXI_Protocol_Converter_1__DS_AXI</ipxact:name>
+            <ipxact:activeInterface componentRef="AXI_Protocol_Converter_1" busRef="DS_AXI"/>
+            <ipxact:activeInterface componentRef="AXI_GPIO_1" busRef="S_AXI_Lite"/>
         </ipxact:interconnection>
     </ipxact:interconnections>
     <ipxact:ipCatalogDir>

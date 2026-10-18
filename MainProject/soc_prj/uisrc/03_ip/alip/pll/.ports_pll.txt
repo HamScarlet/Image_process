@@ -25,7 +25,7 @@ clk3_out_ce; 0
 clk3_out_rst; 0
 clk3_out_divout; 0
 clk4_en; 0
-clk4_out; 0
+clk4_out; 1
 clkb4_out; 0
 clk4_out_ce; 0
 clk4_out_rst; 0

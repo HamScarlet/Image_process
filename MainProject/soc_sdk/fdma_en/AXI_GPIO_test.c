@@ -37,13 +37,12 @@ void AXI_GPIO_Test(void)
 {
 	uint32_t pin;
 
-	while (1) {
-		for (pin = 0; pin < 4U; ++pin) {
-			AXI_GPIO_WriteData(1U << pin);
-			AlSys_MDelay(250U);
+	for (pin = 0; pin < 4U; ++pin) {
+		AXI_GPIO_WriteData(1U << pin);
+		AlSys_MDelay(250U);
 
-			AXI_GPIO_WriteData(0x00U);
-			AlSys_MDelay(250U);
-		}
+		AXI_GPIO_WriteData(0x00U);
+		AlSys_MDelay(250U);
 	}
+
 }

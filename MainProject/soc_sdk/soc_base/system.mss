@@ -17,6 +17,14 @@
         }
     },
     "driver": {
+        "PL_DRIVER_AXI_GPIO": {
+            "depends": [
+                "fpsoc/driver/pl_driver/axi_gpio"
+            ],
+            "description": "",
+            "name": "PL_DRIVER_AXI_GPIO",
+            "version": "1.0"
+        },
         "PS_DRIVER_ADC": {
             "depends": [
                 "fpsoc/driver/ps_driver/adc"
@@ -40,14 +48,6 @@
             ],
             "description": "",
             "name": "PS_DRIVER_DMACAHB",
-            "version": "1.0"
-        },
-        "PS_DRIVER_GBE": {
-            "depends": [
-                "fpsoc/driver/ps_driver/gbe"
-            ],
-            "description": "",
-            "name": "PS_DRIVER_GBE",
             "version": "1.0"
         },
         "PS_DRIVER_GPIO": {

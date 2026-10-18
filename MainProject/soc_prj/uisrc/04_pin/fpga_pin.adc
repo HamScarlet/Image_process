@@ -21,6 +21,8 @@ set_pin_assignment	{ O_hdmi_clk_p }	{ LOCATION = K17; IOSTANDARD = LVDS33_E; DRI
 set_pin_assignment	{ O_hdmi_tx_p[0] }	{ LOCATION = M14; IOSTANDARD = LVDS33_E; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
 set_pin_assignment	{ O_hdmi_tx_p[1] }	{ LOCATION = F16; IOSTANDARD = LVDS33_E; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
 set_pin_assignment	{ O_hdmi_tx_p[2] }	{ LOCATION = D19; IOSTANDARD = LVDS33_E; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment	{ O_pwm_out1 }	{ LOCATION = Y13; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+
 
 
 

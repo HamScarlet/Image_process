@@ -1,4 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ipxact:address xmlns:xsi="http" xmlns:ipxact="http" xmlns:anlogic="http" xsi:schemaLocation="http">
-    <ipxact:addressSources/>
+    <ipxact:addressSources>
+        <ipxact:addressSource type="inst">
+            <ipxact:name>ARM Processor System</ipxact:name>
+            <ipxact:displayName>ARM_Processor_System_0</ipxact:displayName>
+            <ipxact:interfaceName>M_AXI_GP0</ipxact:interfaceName>
+            <ipxact:baseAddress>0x80000000</ipxact:baseAddress>
+            <ipxact:addressDests>
+                <ipxact:addressDest type="inst">
+                    <ipxact:name>AXI GPIO</ipxact:name>
+                    <ipxact:displayName>AXI_GPIO_0</ipxact:displayName>
+                    <ipxact:interfaceName>S_AXI_Lite</ipxact:interfaceName>
+                    <ipxact:slaveSegName>seg0</ipxact:slaveSegName>
+                    <ipxact:baseAddress>0x0000000000000000</ipxact:baseAddress>
+                    <ipxact:highAddress>0x0000000000000FFF</ipxact:highAddress>
+                </ipxact:addressDest>
+                <ipxact:addressDest type="inst">
+                    <ipxact:name>AXI GPIO</ipxact:name>
+                    <ipxact:displayName>AXI_GPIO_1</ipxact:displayName>
+                    <ipxact:interfaceName>S_AXI_Lite</ipxact:interfaceName>
+                    <ipxact:slaveSegName>seg0</ipxact:slaveSegName>
+                    <ipxact:baseAddress>0x0000000000100000</ipxact:baseAddress>
+                    <ipxact:highAddress>0x0000000000100FFF</ipxact:highAddress>
+                </ipxact:addressDest>
+            </ipxact:addressDests>
+        </ipxact:addressSource>
+    </ipxact:addressSources>
 </ipxact:address>

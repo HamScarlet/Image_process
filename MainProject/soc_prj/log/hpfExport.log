@@ -1,0 +1,10 @@
+[Info] HPF_EXPORT_TIME: 2026/10/18 13:37:53
+[Info] idePath: E:/FPGA/Anlu/bin/td.exe
+[Info] write tdInfo pass
+[Info] exportCfg pass
+[Info] parsePlDtsCfg pass 
+[Info] export soc_plat_pl.dtsi pass
+[Info] export pl_drvers pass
+[Info] exportPlDts pass
+[Error] Can't open ps dts config file: E:/FPGA/Anlu/ip/depot/ARM_Processor_System_F9F0D0P0_1.0//static/config/pl_core_config.json
+[Info] exportHtml pass

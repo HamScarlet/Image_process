@@ -1,0 +1,71 @@
+standard
+***Report Model: auto_created_cwc1 Device: DR1M90GEG400***
+
+Design Statistics
+#IO                       668   out of    126  530.16%
+  #input                  644
+  #output                  24
+  #inout                    0
+#lut                      853
+  #lut1                    36
+  #lut2                   298
+  #lut3                    20
+  #lut4                   105
+  #lut5                   184
+  #lut6                   210
+#reg                     1468
+  #slice reg             1468   out of 104960    1.40%
+  #pad reg                  0
+
+Utilization Statistics
+#slice*                   865   out of  52480    1.65%
+  #used ram                56
+    #dram lut               0
+    #shifter lut           56
+  #used logic             809
+    #with luts*           598
+    #with adder             4
+    #reg only*            207
+#f7mux                      0   out of  26240    0.00%
+#f8mux                      0   out of  13120    0.00%
+#eram                       6   out of    280    2.14%
+  #eram20k                  6
+  #fifo20k                  0
+#dsp                        0   out of    240    0.00%
+#pad                        0   out of    126    0.00%
+#pll                        0   out of      8    0.00%
+#gclk                       0   out of     32    0.00%
+#lclk                       0   out of     16    0.00%
+#sclk                       0   out of     72    0.00%
+#mlclk                      0   out of      8    0.00%
+#ioclk                      0   out of      8    0.00%
+
+* Note! The LUT and Slice count after Optimize-Gate is not the final value, Run Optimize-place for a more realistic count.
+
+Report Hierarchy Area:
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|Instance                                                    |Module                 |logic lut |ripple  |seq     |eram    |dsp     |dram lut |shifter lut |f7mux   |f8mux   |pll     |adc    |soc     |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|top                                                         |auto_created_cwc1      |598       |4       |1468    |6       |0       |0        |56          |0       |0       |0       |0      |0       |
+|  wrapper_cwc_top                                           |top_cwc_hub            |598       |4       |1468    |6       |0       |0        |56          |0       |0       |0       |0      |0       |
+|    U_cwc                                                   |anlogic01_cwc          |594       |4       |1188    |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|      TRIG_ONLY_MODE$U_emb_ctrl                             |anlogic04_cwc_emb_ctrl |29        |0       |36      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|      U_cwc_bus_top                                         |anlogic02_cwc_bus_top  |449       |4       |683     |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|        CWC_BUS_DETECTOR[0]$BUS_DETECTOR$U_cwc_bus_det      |anlogic03_cwc_bus_det  |58        |0       |87      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|        CWC_BUS_DETECTOR[10]$NON_BUS_DETECTOR$U_cwc_bus_det |anlogic03_cwc_bus_det  |6         |0       |12      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|        CWC_BUS_DETECTOR[11]$NON_BUS_DETECTOR$U_cwc_bus_det |anlogic03_cwc_bus_det  |6         |0       |12      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|        CWC_BUS_DETECTOR[12]$NON_BUS_DETECTOR$U_cwc_bus_det |anlogic03_cwc_bus_det  |6         |0       |12      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|        CWC_BUS_DETECTOR[13]$NON_BUS_DETECTOR$U_cwc_bus_det |anlogic03_cwc_bus_det  |6         |0       |12      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|        CWC_BUS_DETECTOR[1]$BUS_DETECTOR$U_cwc_bus_det      |anlogic03_cwc_bus_det  |32        |0       |52      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|        CWC_BUS_DETECTOR[2]$BUS_DETECTOR$U_cwc_bus_det      |anlogic03_cwc_bus_det  |34        |0       |52      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|        CWC_BUS_DETECTOR[3]$BUS_DETECTOR$U_cwc_bus_det      |anlogic03_cwc_bus_det  |32        |0       |52      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|        CWC_BUS_DETECTOR[4]$BUS_DETECTOR$U_cwc_bus_det      |anlogic03_cwc_bus_det  |17        |0       |27      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|        CWC_BUS_DETECTOR[5]$BUS_DETECTOR$U_cwc_bus_det      |anlogic03_cwc_bus_det  |57        |0       |87      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|        CWC_BUS_DETECTOR[6]$BUS_DETECTOR$U_cwc_bus_det      |anlogic03_cwc_bus_det  |58        |0       |87      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|        CWC_BUS_DETECTOR[7]$BUS_DETECTOR$U_cwc_bus_det      |anlogic03_cwc_bus_det  |125       |4       |167     |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|        CWC_BUS_DETECTOR[8]$NON_BUS_DETECTOR$U_cwc_bus_det  |anlogic03_cwc_bus_det  |6         |0       |12      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|        CWC_BUS_DETECTOR[9]$NON_BUS_DETECTOR$U_cwc_bus_det  |anlogic03_cwc_bus_det  |6         |0       |12      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|    U_cwc_ram                                               |anlogic05_cwc_ram      |1         |0       |0       |6       |0       |0        |0           |0       |0       |0       |0      |0       |
+|    status_pipe                                             |anlogic06_pipe         |1         |0       |17      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|    watch_pipe                                              |anlogic06_pipe         |0         |0       |259     |0       |0       |0        |56          |0       |0       |0       |0      |0       |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+

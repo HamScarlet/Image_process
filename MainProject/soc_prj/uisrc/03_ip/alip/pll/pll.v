@@ -3,7 +3,7 @@
 **	All Right Reserved.
 \************************************************************/
 /************************************************************\
-**	Build time: Oct 07 2026 13:22:59
+**	Build time: Oct 18 2026 13:24:38
 **	TD version	:	6.2.168116
 ************************************************************/
 ///////////////////////////////////////////////////////////////////////////////
@@ -14,8 +14,9 @@
 //		Clock name	| Frequency 	| Phase shift 
 //		C0        	| 50.000000   MHZ	    |  0.0000 DEG 
 //		C1        	| 250.000000   MHZ	    |  0.0000 DEG 
-//		C2        	| 70.000000   MHZ		|  0.0000 DEG 
-//		C3        	| 23.972603   MHZ		|  0.0000 DEG 
+//		C2        	| 68.965517   MHZ		|  0.0000 DEG 
+//		C3        	| 24.096386   MHZ		|  0.0000 DEG 
+//		C4        	| 100.000000   MHZ		|  0.0000 DEG 
 ///////////////////////////////////////////////////////////////////////////////
 `timescale 1 ns / 100 fs 
 
@@ -26,6 +27,7 @@ module pll
   output                        clk1_out,
   output                        clk2_out,
   output                        clk3_out,
+  output                        clk4_out,
   output                        lock,
   input                         reset
 );
@@ -38,7 +40,7 @@ DR1_LOGIC_BUFG bufg_feedback (
  
  
  
-
+ 
 
 
 
@@ -51,22 +53,27 @@ DR1_LOGIC_BUFG bufg_feedback (
       .CLKC1_FPHASE(0),
       .CLKC2_FPHASE(0),
       .CLKC3_FPHASE(0),
-      .CLKC0_CPHASE(34),
-      .CLKC1_CPHASE(6),
-      .CLKC2_CPHASE(24),
-      .CLKC3_CPHASE(72),
-      .CLKC0_DIV(35),
-      .CLKC1_DIV(7),
-      .CLKC2_DIV(25),
-      .CLKC3_DIV(73),
-      .CLKC0_DUTY_INT(18),
+      .CLKC4_FPHASE(0),
+      .CLKC0_CPHASE(39),
+      .CLKC1_CPHASE(7),
+      .CLKC2_CPHASE(28),
+      .CLKC3_CPHASE(82),
+      .CLKC4_CPHASE(19),
+      .CLKC0_DIV(40),
+      .CLKC1_DIV(8),
+      .CLKC2_DIV(29),
+      .CLKC3_DIV(83),
+      .CLKC4_DIV(20),
+      .CLKC0_DUTY_INT(20),
       .CLKC1_DUTY_INT(4),
-      .CLKC2_DUTY_INT(13),
-      .CLKC3_DUTY_INT(37),
+      .CLKC2_DUTY_INT(15),
+      .CLKC3_DUTY_INT(42),
+      .CLKC4_DUTY_INT(10),
       .CLKC0_ENABLE("ENABLE"),
       .CLKC1_ENABLE("ENABLE"),
       .CLKC2_ENABLE("ENABLE"),
       .CLKC3_ENABLE("ENABLE"),
+      .CLKC4_ENABLE("ENABLE"),
       .FIN("100.0"),
       .FEEDBK_MODE("NORMAL"),
       .PLL_USR_RST("ENABLE"),
@@ -86,10 +93,12 @@ DR1_LOGIC_BUFG bufg_feedback (
       .CLKC1_FPHASE_RSTSEL(0),
       .CLKC2_FPHASE_RSTSEL(0),
       .CLKC3_FPHASE_RSTSEL(0),
+      .CLKC4_FPHASE_RSTSEL(0),
       .CLKC0_DUTY50("ENABLE"),
       .CLKC1_DUTY50("ENABLE"),
       .CLKC2_DUTY50("ENABLE"),
       .CLKC3_DUTY50("ENABLE"),
+      .CLKC4_DUTY50("ENABLE"),
       .INTPI(2),
       .SSC_ENABLE("DISABLE"),
       .SSC_MODE("DOWN"),
@@ -98,9 +107,6 @@ DR1_LOGIC_BUFG bufg_feedback (
       .HIGH_SPEED_EN("DISABLE")
   )dr1_phy_pll_8c99844ac61f_Inst
   (
-      .clk4_en(1'b0),
-      .clk4_out(),
-      .clkb4_out(),
       .clk5_en(1'b0),
       .clk5_out(),
       .clkb5_out(),
@@ -145,6 +151,9 @@ DR1_LOGIC_BUFG bufg_feedback (
       .clk3_en(1'b1),
       .clkb3_out(),
       .clk3_out(clk3_out),
+      .clk4_en(1'b1),
+      .clkb4_out(),
+      .clk4_out(clk4_out),
       .lock(lock),
       .reset(reset)
   );

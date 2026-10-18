@@ -45,7 +45,8 @@ module system_top (
 	output wire       	O_hdmi_clk_p,  //HDMI时钟输出差分P
     output wire [2:0] 	O_hdmi_tx_p,	   //HDMI数据输出差分P
 
-    output wire [3:0]   O_code_driver
+    output wire [3:0]   O_code_driver,
+    output wire         O_pwm_out1
 );
 
   localparam IMG_WIDTH = 1920;
@@ -192,6 +193,8 @@ always@(posedge S_hs_rx_clk)begin
 		 c_cnt <= c_cnt + 1'b1;
 end
 
+wire pwm_clk;
+
   //调用Design Integrator
   system system_inst (
       .p2f_clk0    (p2f_clk0  	 ),
@@ -211,7 +214,9 @@ end
       .O_fdma_rvalid(fdma_rvalid ),
       .I_fdma_rready(fdma_rready ),
       .pl_gpio_out	(pl_gpio_out ),
-      .code_driver  (O_code_driver)
+      .code_driver  (O_code_driver),
+      .pwm_clk      (pwm_clk),
+      .pwm_out1     (pwm_out1)
   );
 
   pll U_pll (
@@ -221,7 +226,8 @@ end
       .clk0_out(pclkx1),
       .clk1_out(pclkx5),
       .clk2_out(clk70m),
-      .clk3_out(clk24m)
+      .clk3_out(clk24m),
+      .clk4_out(pwm_clk)
   );
 
   

@@ -5,8 +5,8 @@
     SocInstPort input:ARM_Processor_System_0::UART0::uart0_rx_in
 
 [warn - InstPort] input port lack of connectioin
-    SocInstPort input:AXI_Protocol_Converter_0::US_AXI::us_axi_awqos[3:0]
+    SocInstPort input:AXI_Matrix_0::US_AXI0::us0_arqos[3:0]
 
 [warn - InstPort] input port lack of connectioin
-    SocInstPort input:AXI_Protocol_Converter_0::US_AXI::us_axi_arqos[3:0]
+    SocInstPort input:AXI_Matrix_0::US_AXI0::us0_awqos[3:0]
 
