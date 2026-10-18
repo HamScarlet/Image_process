@@ -1,0 +1,12 @@
+[warn - InstPort] input port lack of connectioin
+    SocInstPort input:ARM_Processor_System_0::GPIO::pl_gpio_in[0:0]
+
+[warn - InstPort] input port lack of connectioin
+    SocInstPort input:ARM_Processor_System_0::UART0::uart0_rx_in
+
+[warn - InstPort] input port lack of connectioin
+    SocInstPort input:AXI_Matrix_0::US_AXI0::us0_arqos[3:0]
+
+[warn - InstPort] input port lack of connectioin
+    SocInstPort input:AXI_Matrix_0::US_AXI0::us0_awqos[3:0]
+

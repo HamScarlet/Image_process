@@ -1,8 +1,15 @@
+<<<<<<< HEAD:tryPScontrol/Key_PS_LED/soc_sdk/soc_base/platform/inc/soc_plat.h
 /* IDE_PATH       : D:/exe/Anlu/TD/bin/td.exe */
 /* IDE_VERSION    : Release_2026.1_SP2 Build: 6.2.2.200067  */
 /* HPF_EXPORT_TIME: 2026/10/11 19:43:48 */
 /* HPFTool_Version: 2026/05/21 14:17:20 */
 /* HPF_TAG        :  */
+=======
+/* IDE_PATH       : E:/FPGA/Anlu/bin/td.exe */
+/* IDE_VERSION    : Release: 6.2.1 Build: 168116  */
+/* HPF_EXPORT_TIME: 2026/10/13 20:01:30 */
+/* HPFTool_Version: 2025/07/09 15:19:18 */
+>>>>>>> main:soc_sdk/soc_base/platform/inc/soc_plat.h
 
 #ifndef __SOC_PLAT_H
 #define __SOC_PLAT_H
@@ -11,6 +18,7 @@
 extern "C" {
 #endif
 
+<<<<<<< HEAD:tryPScontrol/Key_PS_LED/soc_sdk/soc_base/platform/inc/soc_plat.h
 #define             IDE_VERSION ("Release_2026.1_SP2 Build: 6.2.2.200067 ")
 #define         HPF_EXPORT_TIME ("2026/10/11 19:43:48")
 #define BITSTREAM_GENERATE_TIME ("2026/10/11 19:41:00")
@@ -18,6 +26,14 @@ extern "C" {
 #define     Bank200_IO_Voltage ("LVCMOS 3.3V")
 #define     Bank201_IO_Voltage ("LVCMOS 1.8V")
 #define               HPF_TAG  ("")
+=======
+#define             IDE_VERSION ("Release: 6.2.1 Build: 168116 ")
+#define         HPF_EXPORT_TIME ("2026/10/13 20:01:30")
+#define BITSTREAM_GENERATE_TIME ("2026/10/13 20: 0:00")
+#define         HPFTool_Version ("2025/07/09 15:19:18")
+#define    Bank200_IO_Voltage  ("LVCMOS 3.3V")
+#define    Bank201_IO_Voltage  ("LVCMOS 1.8V")
+>>>>>>> main:soc_sdk/soc_base/platform/inc/soc_plat.h
 
 #define LOG_SYSCTRL_NS_BOOT_MODE      ((0XF8800000UL) + (0X00000200UL))
 #define LOG_ALFSBL_BOOTMODE_JTAG      (0x0U)
