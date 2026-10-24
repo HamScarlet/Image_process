@@ -24,7 +24,9 @@
 
 void car_init(void)
 {
-
+	motor_init();
+	Servo_init();
+	USART_init();
 }
 
 void car_loop(void)

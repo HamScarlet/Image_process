@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- HMAC is: 4638d5e6d3e6e4cde02852d44508199eb25bbbcd7777c79e9a3e2a33f85a79aa -->
+<!-- HMAC is: 93ab43a8344685b69a1ab6ef84fb0bc90b4eb1f6edad71630777c7083cab42a2 -->
 <chipwatcher version="3.040000" project_name="soc_prj" chip_name="DR1M90GEG400">
 	<watcher_nodes>
-		<net name="system_inst/uiFDMA_0/uiFDMA/axi_arvalid" clock="system_inst/AXI_GPIO_0/axi_gpio_top_f2092de78ed0_Inst/s_axi_aclk" inst="auto_created_cwc1" type="MARK_DEBUG_PROBE" is_enabled="yes" const="false" trig="enable" data="enable"/>
-		<net name="system_inst/uiFDMA_0/uiFDMA/axi_rlast" clock="system_inst/AXI_GPIO_0/axi_gpio_top_f2092de78ed0_Inst/s_axi_aclk" inst="auto_created_cwc1" type="MARK_DEBUG_PROBE" is_enabled="yes" const="false" trig="enable" data="enable"/>
+		<net name="system_inst/uiFDMA_0/uiFDMA/axi_arvalid" clock="system_inst/Processor_System_Reset_0/proc_sys_reset_70e13f731ea2_Inst/clk" inst="auto_created_cwc1" type="MARK_DEBUG_PROBE" is_enabled="yes" const="false" trig="enable" data="enable"/>
+		<net name="system_inst/uiFDMA_0/uiFDMA/axi_rlast" clock="system_inst/Processor_System_Reset_0/proc_sys_reset_70e13f731ea2_Inst/clk" inst="auto_created_cwc1" type="MARK_DEBUG_PROBE" is_enabled="yes" const="false" trig="enable" data="enable"/>
 		<net name="system_inst/uiFDMA_0/uiFDMA/axi_rready" clock="" inst="" type="MARK_DEBUG_PROBE" is_enabled="yes" const="false" trig="enable" data="enable"/>
-		<net name="system_inst/uiFDMA_0/uiFDMA/fdma_rend" clock="system_inst/AXI_GPIO_0/axi_gpio_top_f2092de78ed0_Inst/s_axi_aclk" inst="auto_created_cwc1" type="MARK_DEBUG_PROBE" is_enabled="yes" const="false" trig="enable" data="enable"/>
-		<net name="system_inst/uiFDMA_0/uiFDMA/fdma_rstart" clock="system_inst/AXI_GPIO_0/axi_gpio_top_f2092de78ed0_Inst/s_axi_aclk" inst="auto_created_cwc1" type="MARK_DEBUG_PROBE" is_enabled="yes" const="false" trig="enable" data="enable"/>
-		<net name="system_inst/uiFDMA_0/uiFDMA/fdma_rstart_locked" clock="system_inst/AXI_GPIO_0/axi_gpio_top_f2092de78ed0_Inst/s_axi_aclk" inst="auto_created_cwc1" type="MARK_DEBUG_PROBE" is_enabled="yes" const="false" trig="enable" data="enable"/>
+		<net name="system_inst/uiFDMA_0/uiFDMA/fdma_rend" clock="system_inst/Processor_System_Reset_0/proc_sys_reset_70e13f731ea2_Inst/clk" inst="auto_created_cwc1" type="MARK_DEBUG_PROBE" is_enabled="yes" const="false" trig="enable" data="enable"/>
+		<net name="system_inst/uiFDMA_0/uiFDMA/fdma_rstart" clock="system_inst/Processor_System_Reset_0/proc_sys_reset_70e13f731ea2_Inst/clk" inst="auto_created_cwc1" type="MARK_DEBUG_PROBE" is_enabled="yes" const="false" trig="enable" data="enable"/>
+		<net name="system_inst/uiFDMA_0/uiFDMA/fdma_rstart_locked" clock="system_inst/Processor_System_Reset_0/proc_sys_reset_70e13f731ea2_Inst/clk" inst="auto_created_cwc1" type="MARK_DEBUG_PROBE" is_enabled="yes" const="false" trig="enable" data="enable"/>
 		<net name="system_inst/uiFDMA_0/uiFDMA/r_next" clock="" inst="" type="MARK_DEBUG_PROBE" is_enabled="yes" const="false" trig="enable" data="enable"/>
-		<net name="system_inst/uiFDMA_0/uiFDMA/rburst_len_req" clock="system_inst/AXI_GPIO_0/axi_gpio_top_f2092de78ed0_Inst/s_axi_aclk" inst="auto_created_cwc1" type="MARK_DEBUG_PROBE" is_enabled="yes" const="false" trig="enable" data="enable"/>
-		<bus name="system_inst/uiFDMA_0/uiFDMA/axi_araddr[31:0]" clock="system_inst/AXI_GPIO_0/axi_gpio_top_f2092de78ed0_Inst/s_axi_aclk" inst="auto_created_cwc1" type="MARK_DEBUG_PROBE" is_enabled="yes">
+		<net name="system_inst/uiFDMA_0/uiFDMA/rburst_len_req" clock="system_inst/Processor_System_Reset_0/proc_sys_reset_70e13f731ea2_Inst/clk" inst="auto_created_cwc1" type="MARK_DEBUG_PROBE" is_enabled="yes" const="false" trig="enable" data="enable"/>
+		<bus name="system_inst/uiFDMA_0/uiFDMA/axi_araddr[31:0]" clock="system_inst/Processor_System_Reset_0/proc_sys_reset_70e13f731ea2_Inst/clk" inst="auto_created_cwc1" type="MARK_DEBUG_PROBE" is_enabled="yes">
 			<net name="system_inst/uiFDMA_0/uiFDMA/axi_araddr[31]" const="false" data="enable" trig="enable"/>
 			<net name="system_inst/uiFDMA_0/uiFDMA/axi_araddr[30]" const="false" data="enable" trig="enable"/>
 			<net name="system_inst/uiFDMA_0/uiFDMA/axi_araddr[29]" const="false" data="enable" trig="enable"/>
@@ -44,7 +44,7 @@
 			<net name="system_inst/uiFDMA_0/uiFDMA/axi_araddr[1]" const="false" data="enable" trig="enable"/>
 			<net name="system_inst/uiFDMA_0/uiFDMA/axi_araddr[0]" const="false" data="enable" trig="enable"/>
 		</bus>
-		<bus name="system_inst/uiFDMA_0/uiFDMA/axi_rburst_size[15:0]" clock="system_inst/AXI_GPIO_0/axi_gpio_top_f2092de78ed0_Inst/s_axi_aclk" inst="auto_created_cwc1" type="MARK_DEBUG_PROBE" is_enabled="yes">
+		<bus name="system_inst/uiFDMA_0/uiFDMA/axi_rburst_size[15:0]" clock="system_inst/Processor_System_Reset_0/proc_sys_reset_70e13f731ea2_Inst/clk" inst="auto_created_cwc1" type="MARK_DEBUG_PROBE" is_enabled="yes">
 			<net name="system_inst/uiFDMA_0/uiFDMA/axi_rburst_size[15]" const="false" data="enable" trig="enable"/>
 			<net name="system_inst/uiFDMA_0/uiFDMA/axi_rburst_size[14]" const="false" data="enable" trig="enable"/>
 			<net name="system_inst/uiFDMA_0/uiFDMA/axi_rburst_size[13]" const="false" data="enable" trig="enable"/>
@@ -62,7 +62,7 @@
 			<net name="system_inst/uiFDMA_0/uiFDMA/axi_rburst_size[1]" const="false" data="enable" trig="enable"/>
 			<net name="system_inst/uiFDMA_0/uiFDMA/axi_rburst_size[0]" const="false" data="enable" trig="enable"/>
 		</bus>
-		<bus name="system_inst/uiFDMA_0/uiFDMA/fdma_rleft_cnt_d[15:0]" clock="system_inst/AXI_GPIO_0/axi_gpio_top_f2092de78ed0_Inst/s_axi_aclk" inst="auto_created_cwc1" type="MARK_DEBUG_PROBE" is_enabled="yes">
+		<bus name="system_inst/uiFDMA_0/uiFDMA/fdma_rleft_cnt_d[15:0]" clock="system_inst/Processor_System_Reset_0/proc_sys_reset_70e13f731ea2_Inst/clk" inst="auto_created_cwc1" type="MARK_DEBUG_PROBE" is_enabled="yes">
 			<net name="system_inst/uiFDMA_0/uiFDMA/fdma_rleft_cnt_d[15]" const="false" data="enable" trig="enable"/>
 			<net name="system_inst/uiFDMA_0/uiFDMA/fdma_rleft_cnt_d[14]" const="false" data="enable" trig="enable"/>
 			<net name="system_inst/uiFDMA_0/uiFDMA/fdma_rleft_cnt_d[13]" const="false" data="enable" trig="enable"/>
@@ -80,13 +80,13 @@
 			<net name="system_inst/uiFDMA_0/uiFDMA/fdma_rleft_cnt_d[1]" const="false" data="enable" trig="enable"/>
 			<net name="system_inst/uiFDMA_0/uiFDMA/fdma_rleft_cnt_d[0]" const="false" data="enable" trig="enable"/>
 		</bus>
-		<bus name="system_inst/uiFDMA_0/uiFDMA/rb2b_last_cnt[3:0]" clock="system_inst/AXI_GPIO_0/axi_gpio_top_f2092de78ed0_Inst/s_axi_aclk" inst="auto_created_cwc1" type="MARK_DEBUG_PROBE" is_enabled="yes">
+		<bus name="system_inst/uiFDMA_0/uiFDMA/rb2b_last_cnt[3:0]" clock="system_inst/Processor_System_Reset_0/proc_sys_reset_70e13f731ea2_Inst/clk" inst="auto_created_cwc1" type="MARK_DEBUG_PROBE" is_enabled="yes">
 			<net name="system_inst/uiFDMA_0/uiFDMA/rb2b_last_cnt[3]" const="false" data="enable" trig="enable"/>
 			<net name="system_inst/uiFDMA_0/uiFDMA/rb2b_last_cnt[2]" const="false" data="enable" trig="enable"/>
 			<net name="system_inst/uiFDMA_0/uiFDMA/rb2b_last_cnt[1]" const="false" data="enable" trig="enable"/>
 			<net name="system_inst/uiFDMA_0/uiFDMA/rb2b_last_cnt[0]" const="false" data="enable" trig="enable"/>
 		</bus>
-		<bus name="system_inst/uiFDMA_0/uiFDMA/rburst_cnt[8:0]" clock="system_inst/AXI_GPIO_0/axi_gpio_top_f2092de78ed0_Inst/s_axi_aclk" inst="auto_created_cwc1" type="MARK_DEBUG_PROBE" is_enabled="yes">
+		<bus name="system_inst/uiFDMA_0/uiFDMA/rburst_cnt[8:0]" clock="system_inst/Processor_System_Reset_0/proc_sys_reset_70e13f731ea2_Inst/clk" inst="auto_created_cwc1" type="MARK_DEBUG_PROBE" is_enabled="yes">
 			<net name="system_inst/uiFDMA_0/uiFDMA/rburst_cnt[8]" const="false" data="enable" trig="enable"/>
 			<net name="system_inst/uiFDMA_0/uiFDMA/rburst_cnt[7]" const="false" data="enable" trig="enable"/>
 			<net name="system_inst/uiFDMA_0/uiFDMA/rburst_cnt[6]" const="false" data="enable" trig="enable"/>
@@ -97,7 +97,7 @@
 			<net name="system_inst/uiFDMA_0/uiFDMA/rburst_cnt[1]" const="false" data="enable" trig="enable"/>
 			<net name="system_inst/uiFDMA_0/uiFDMA/rburst_cnt[0]" const="false" data="enable" trig="enable"/>
 		</bus>
-		<bus name="system_inst/uiFDMA_0/uiFDMA/rburst_len[8:0]" clock="system_inst/AXI_GPIO_0/axi_gpio_top_f2092de78ed0_Inst/s_axi_aclk" inst="auto_created_cwc1" type="MARK_DEBUG_PROBE" is_enabled="yes">
+		<bus name="system_inst/uiFDMA_0/uiFDMA/rburst_len[8:0]" clock="system_inst/Processor_System_Reset_0/proc_sys_reset_70e13f731ea2_Inst/clk" inst="auto_created_cwc1" type="MARK_DEBUG_PROBE" is_enabled="yes">
 			<net name="system_inst/uiFDMA_0/uiFDMA/rburst_len[8]" const="false" data="enable" trig="enable"/>
 			<net name="system_inst/uiFDMA_0/uiFDMA/rburst_len[7]" const="false" data="enable" trig="enable"/>
 			<net name="system_inst/uiFDMA_0/uiFDMA/rburst_len[6]" const="false" data="enable" trig="enable"/>
@@ -108,7 +108,7 @@
 			<net name="system_inst/uiFDMA_0/uiFDMA/rburst_len[1]" const="false" data="enable" trig="enable"/>
 			<net name="system_inst/uiFDMA_0/uiFDMA/rburst_len[0]" const="false" data="enable" trig="enable"/>
 		</bus>
-		<bus name="system_inst/uiFDMA_0/uiFDMA/rburst_len_d[8:0]" clock="system_inst/AXI_GPIO_0/axi_gpio_top_f2092de78ed0_Inst/s_axi_aclk" inst="auto_created_cwc1" type="MARK_DEBUG_PROBE" is_enabled="yes">
+		<bus name="system_inst/uiFDMA_0/uiFDMA/rburst_len_d[8:0]" clock="system_inst/Processor_System_Reset_0/proc_sys_reset_70e13f731ea2_Inst/clk" inst="auto_created_cwc1" type="MARK_DEBUG_PROBE" is_enabled="yes">
 			<net name="system_inst/uiFDMA_0/uiFDMA/rburst_len_d[8]" const="false" data="enable" trig="enable"/>
 			<net name="system_inst/uiFDMA_0/uiFDMA/rburst_len_d[7]" const="false" data="enable" trig="enable"/>
 			<net name="system_inst/uiFDMA_0/uiFDMA/rburst_len_d[6]" const="false" data="enable" trig="enable"/>
@@ -119,7 +119,7 @@
 			<net name="system_inst/uiFDMA_0/uiFDMA/rburst_len_d[1]" const="false" data="enable" trig="enable"/>
 			<net name="system_inst/uiFDMA_0/uiFDMA/rburst_len_d[0]" const="false" data="enable" trig="enable"/>
 		</bus>
-		<bus name="system_inst/uiFDMA_0/uiFDMA/rfdma_cnt[15:0]" clock="system_inst/AXI_GPIO_0/axi_gpio_top_f2092de78ed0_Inst/s_axi_aclk" inst="auto_created_cwc1" type="MARK_DEBUG_PROBE" is_enabled="yes">
+		<bus name="system_inst/uiFDMA_0/uiFDMA/rfdma_cnt[15:0]" clock="system_inst/Processor_System_Reset_0/proc_sys_reset_70e13f731ea2_Inst/clk" inst="auto_created_cwc1" type="MARK_DEBUG_PROBE" is_enabled="yes">
 			<net name="system_inst/uiFDMA_0/uiFDMA/rfdma_cnt[15]" const="false" data="enable" trig="enable"/>
 			<net name="system_inst/uiFDMA_0/uiFDMA/rfdma_cnt[14]" const="false" data="enable" trig="enable"/>
 			<net name="system_inst/uiFDMA_0/uiFDMA/rfdma_cnt[13]" const="false" data="enable" trig="enable"/>
@@ -139,7 +139,7 @@
 		</bus>
 	</watcher_nodes>
 	<instance name="auto_created_cwc1" id="0" ipgen="false" inst_enable="true">
-		<clock clk_name="system_inst/AXI_GPIO_0/axi_gpio_top_f2092de78ed0_Inst/s_axi_aclk"/>
+		<clock clk_name="system_inst/Processor_System_Reset_0/proc_sys_reset_70e13f731ea2_Inst/clk"/>
 		<config bram_name="auto_created_cwc1/wrapper_cwc_top/U_cwc_ram" debughub_name="" input_pipe_num="0" output_pipe_num="0" pwr_on_trigger="disable" capture_mode="disable" sample_depth="1024"/>
 		<signal_vec>
 			<watcher_nodes>
@@ -282,12 +282,12 @@
 			<condition level="1" enabled="yes" type="basic_and" capture_type="basic_and"/>
 		</trigger>
 		<logic_eram name="auto_created_cwc1/wrapper_cwc_top/U_cwc_ram" width="117" depth="1024">
-			<phy_eram name="auto_created_cwc1/wrapper_cwc_top/U_cwc_ram/ramread0_syn_9" wid="0X00000628" rid="0X00000628" model_type="AL_PHY_ERAM" width_a="20" width_b="20" debuggable="enable" initialized="enable" width="20" depth="1024" address_offset="0" data_offset="0" address_step="1" num_section="1" section_size="117" width_per_section="20" bytes_in_per_section="1" working_mode_depth="1024" working_mode_width="20" working_mode_ecc="disable" working_mode_num_byte="2" working_mode_super_wide="disable"/>
-			<phy_eram name="auto_created_cwc1/wrapper_cwc_top/U_cwc_ram/ramread0_syn_30" wid="0X00000623" rid="0X00000623" model_type="AL_PHY_ERAM" width_a="20" width_b="20" debuggable="enable" initialized="enable" width="20" depth="1024" address_offset="0" data_offset="20" address_step="1" num_section="1" section_size="117" width_per_section="20" bytes_in_per_section="1" working_mode_depth="1024" working_mode_width="20" working_mode_ecc="disable" working_mode_num_byte="2" working_mode_super_wide="disable"/>
-			<phy_eram name="auto_created_cwc1/wrapper_cwc_top/U_cwc_ram/ramread0_syn_72" wid="0X00000627" rid="0X00000627" model_type="AL_PHY_ERAM" width_a="20" width_b="20" debuggable="enable" initialized="enable" width="20" depth="1024" address_offset="0" data_offset="60" address_step="1" num_section="1" section_size="117" width_per_section="20" bytes_in_per_section="1" working_mode_depth="1024" working_mode_width="20" working_mode_ecc="disable" working_mode_num_byte="2" working_mode_super_wide="disable"/>
-			<phy_eram name="auto_created_cwc1/wrapper_cwc_top/U_cwc_ram/ramread0_syn_93" wid="0X00000629" rid="0X00000629" model_type="AL_PHY_ERAM" width_a="20" width_b="20" debuggable="enable" initialized="enable" width="20" depth="1024" address_offset="0" data_offset="80" address_step="1" num_section="1" section_size="117" width_per_section="20" bytes_in_per_section="1" working_mode_depth="1024" working_mode_width="20" working_mode_ecc="disable" working_mode_num_byte="2" working_mode_super_wide="disable"/>
-			<phy_eram name="auto_created_cwc1/wrapper_cwc_top/U_cwc_ram/ramread0_syn_114" wid="0X0000062a" rid="0X0000062a" model_type="AL_PHY_ERAM" width_a="20" width_b="20" debuggable="enable" initialized="enable" width="17" depth="1024" address_offset="0" data_offset="100" address_step="1" num_section="1" section_size="117" width_per_section="17" bytes_in_per_section="1" working_mode_depth="1024" working_mode_width="20" working_mode_ecc="disable" working_mode_num_byte="2" working_mode_super_wide="disable"/>
-			<phy_eram name="auto_created_cwc1/wrapper_cwc_top/U_cwc_ram/ramread0_syn_51" wid="0X00000624" rid="0X00000624" model_type="AL_PHY_ERAM" width_a="20" width_b="20" debuggable="enable" initialized="enable" width="20" depth="1024" address_offset="0" data_offset="40" address_step="1" num_section="1" section_size="117" width_per_section="20" bytes_in_per_section="1" working_mode_depth="1024" working_mode_width="20" working_mode_ecc="disable" working_mode_num_byte="2" working_mode_super_wide="disable"/>
+			<phy_eram name="auto_created_cwc1/wrapper_cwc_top/U_cwc_ram/ramread0_syn_51" wid="0X00000623" rid="0X00000623" model_type="AL_PHY_ERAM" width_a="20" width_b="20" debuggable="enable" initialized="enable" width="20" depth="1024" address_offset="0" data_offset="40" address_step="1" num_section="1" section_size="117" width_per_section="20" bytes_in_per_section="1" working_mode_depth="1024" working_mode_width="20" working_mode_ecc="disable" working_mode_num_byte="2" working_mode_super_wide="disable"/>
+			<phy_eram name="auto_created_cwc1/wrapper_cwc_top/U_cwc_ram/ramread0_syn_30" wid="0X00000625" rid="0X00000625" model_type="AL_PHY_ERAM" width_a="20" width_b="20" debuggable="enable" initialized="enable" width="20" depth="1024" address_offset="0" data_offset="20" address_step="1" num_section="1" section_size="117" width_per_section="20" bytes_in_per_section="1" working_mode_depth="1024" working_mode_width="20" working_mode_ecc="disable" working_mode_num_byte="2" working_mode_super_wide="disable"/>
+			<phy_eram name="auto_created_cwc1/wrapper_cwc_top/U_cwc_ram/ramread0_syn_93" wid="0X00000628" rid="0X00000628" model_type="AL_PHY_ERAM" width_a="20" width_b="20" debuggable="enable" initialized="enable" width="20" depth="1024" address_offset="0" data_offset="80" address_step="1" num_section="1" section_size="117" width_per_section="20" bytes_in_per_section="1" working_mode_depth="1024" working_mode_width="20" working_mode_ecc="disable" working_mode_num_byte="2" working_mode_super_wide="disable"/>
+			<phy_eram name="auto_created_cwc1/wrapper_cwc_top/U_cwc_ram/ramread0_syn_72" wid="0X00000624" rid="0X00000624" model_type="AL_PHY_ERAM" width_a="20" width_b="20" debuggable="enable" initialized="enable" width="20" depth="1024" address_offset="0" data_offset="60" address_step="1" num_section="1" section_size="117" width_per_section="20" bytes_in_per_section="1" working_mode_depth="1024" working_mode_width="20" working_mode_ecc="disable" working_mode_num_byte="2" working_mode_super_wide="disable"/>
+			<phy_eram name="auto_created_cwc1/wrapper_cwc_top/U_cwc_ram/ramread0_syn_9" wid="0X00000823" rid="0X00000823" model_type="AL_PHY_ERAM" width_a="20" width_b="20" debuggable="enable" initialized="enable" width="20" depth="1024" address_offset="0" data_offset="0" address_step="1" num_section="1" section_size="117" width_per_section="20" bytes_in_per_section="1" working_mode_depth="1024" working_mode_width="20" working_mode_ecc="disable" working_mode_num_byte="2" working_mode_super_wide="disable"/>
+			<phy_eram name="auto_created_cwc1/wrapper_cwc_top/U_cwc_ram/ramread0_syn_114" wid="0X00000627" rid="0X00000627" model_type="AL_PHY_ERAM" width_a="20" width_b="20" debuggable="enable" initialized="enable" width="17" depth="1024" address_offset="0" data_offset="100" address_step="1" num_section="1" section_size="117" width_per_section="17" bytes_in_per_section="1" working_mode_depth="1024" working_mode_width="20" working_mode_ecc="disable" working_mode_num_byte="2" working_mode_super_wide="disable"/>
 		</logic_eram>
 	</instance>
 </chipwatcher>

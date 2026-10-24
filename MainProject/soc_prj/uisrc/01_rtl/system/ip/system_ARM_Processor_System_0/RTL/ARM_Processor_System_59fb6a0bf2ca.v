@@ -96,6 +96,8 @@ module ARM_Processor_System_59fb6a0bf2ca
 
 	output                        p2f_rst0_n,
 
+	output                        p2f_clk1,
+
 	output                        p2f_clk0
 );
 
@@ -449,6 +451,8 @@ DR1_PHY_PROCESSOR_SYSTEM DR1_PHY_PROCESSOR_SYSTEM_Inst (
 		.event_in(1'b0),
 
 		.p2f_clk0_rst_n(p2f_rst0_n),
+
+		.p2f_clk1(p2f_clk1),
 
 		.p2f_clk0(p2f_clk0)
 	);

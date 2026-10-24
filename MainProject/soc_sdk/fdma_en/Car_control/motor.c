@@ -12,3 +12,8 @@ void motor_Init(void)
 
 }
 
+void SetSpeed(int left, int right)
+{
+
+}
+

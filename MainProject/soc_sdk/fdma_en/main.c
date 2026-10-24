@@ -18,6 +18,7 @@
 #include "Definitions.h"
 #include <stdint.h>
 #include "AXI_GPIO_test.h"
+#include "TIM_PWM.h"
 
 void Fclk_Init()
 {
@@ -44,12 +45,18 @@ void Fclk_Init()
 
 AL_S32 main()
 {
+	al_printf("system start\r\n");
     Fclk_Init();
-    printf("Fclk Init successfully");
-    AXI_GPIO_Init();
+    AlSys_MDelay(250U);
+    al_printf("Fclk Init successfully\r\n");
+    //AXI_GPIO_Init();
+    TIM_PWM_Init();
+    al_printf("TIM Init successfully\r\n");
     while(1)
     {
-    	AXI_GPIO_Test();
+    	//AXI_GPIO_Test();
+        TIM_PWM_test();
+        al_printf("TIM Testing\r\n");
     }
 
 

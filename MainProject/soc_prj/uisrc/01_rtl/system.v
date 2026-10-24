@@ -46,7 +46,10 @@ module system_top (
     output wire [2:0] 	O_hdmi_tx_p,	   //HDMI数据输出差分P
 
     output wire [3:0]   O_code_driver,
-    output wire         O_pwm_out1
+    output wire         O_pwm_out1,
+    output wire         O_motor_enable,
+    output wire [2:0]   O_motor_pwm,
+    output wire         O_motor_dir
 );
 
   localparam IMG_WIDTH = 1920;
@@ -213,10 +216,13 @@ wire pwm_clk;
       .O_fdma_rdata (fdma_rdata  ),
       .O_fdma_rvalid(fdma_rvalid ),
       .I_fdma_rready(fdma_rready ),
-      .pl_gpio_out	(pl_gpio_out ),
       .code_driver  (O_code_driver),
       .pwm_clk      (pwm_clk),
-      .pwm_out1     (pwm_out1)
+      .pwm_out1     (pwm_out1),
+      .pwm_out      (O_motor_pwm),
+      .motor_dir    (O_motor_dir),
+      .motor_enable (O_motor_enable)
+      
   );
 
   pll U_pll (

@@ -31,6 +31,20 @@
                 <ipxact:ipPath>E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/PWM.v</ipxact:ipPath>
                 <ipxact:customTool>use_rtl</ipxact:customTool>
             </ipxact:file>
+            <ipxact:file name="ip/system_Processor_System_Reset_0/system_Processor_System_Reset_0.xml">
+                <ipxact:instanceName>Processor_System_Reset_0</ipxact:instanceName>
+            </ipxact:file>
+            <ipxact:file name="ip/system_Constant_0/system_Constant_0.xml">
+                <ipxact:instanceName>Constant_0</ipxact:instanceName>
+            </ipxact:file>
+            <ipxact:file name="ip/system_axi_lite_pwm_0/system_axi_lite_pwm_0.xml">
+                <ipxact:instanceName>axi_lite_pwm_0</ipxact:instanceName>
+                <ipxact:ipPath>E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/axi_lite_pwm.v</ipxact:ipPath>
+                <ipxact:customTool>use_rtl</ipxact:customTool>
+            </ipxact:file>
+            <ipxact:file name="ip/system_AXI_Protocol_Converter_2/system_AXI_Protocol_Converter_2.xml">
+                <ipxact:instanceName>AXI_Protocol_Converter_2</ipxact:instanceName>
+            </ipxact:file>
         </ipxact:fileCollection>
     </ipxact:compositeFile>
 </ipxact:root>

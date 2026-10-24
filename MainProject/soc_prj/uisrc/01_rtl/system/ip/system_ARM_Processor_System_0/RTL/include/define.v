@@ -5,3 +5,4 @@
 `define SD1_cd_Dot_Enable_59fb6a0bf2ca
 `define UART0_Available_59fb6a0bf2ca
 `define GPIO_PL_Dot_Enable_59fb6a0bf2ca
+`define p2f_clk1_Dot_Enable_59fb6a0bf2ca

@@ -23,6 +23,14 @@
                     <ipxact:baseAddress>0x0000000000100000</ipxact:baseAddress>
                     <ipxact:highAddress>0x0000000000100FFF</ipxact:highAddress>
                 </ipxact:addressDest>
+                <ipxact:addressDest type="inst">
+                    <ipxact:name>axi_lite_pwm</ipxact:name>
+                    <ipxact:displayName>axi_lite_pwm_0</ipxact:displayName>
+                    <ipxact:interfaceName>s_axi</ipxact:interfaceName>
+                    <ipxact:slaveSegName>seg0</ipxact:slaveSegName>
+                    <ipxact:baseAddress>0x0000000000200000</ipxact:baseAddress>
+                    <ipxact:highAddress>0x0000000000200FFF</ipxact:highAddress>
+                </ipxact:addressDest>
             </ipxact:addressDests>
         </ipxact:addressSource>
     </ipxact:addressSources>

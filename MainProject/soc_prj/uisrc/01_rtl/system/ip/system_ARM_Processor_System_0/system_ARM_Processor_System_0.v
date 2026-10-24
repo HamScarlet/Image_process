@@ -3,7 +3,7 @@
 **	All Right Reserved.
 \************************************************************/
 /************************************************************\
-**	Build time: Oct 11 2026 16:55:25
+**	Build time: Oct 19 2026 14:08:01
 **	TD version	:	6.2.168116
 ************************************************************/
 `timescale 1ns/1ps
@@ -89,6 +89,7 @@ module system_ARM_Processor_System_0
   output  [0:0]                 pl_gpio_oe,
   output  [0:0]                 pl_gpio_out,
   output                        p2f_rst0_n,
+  output                        p2f_clk1,
   output                        p2f_clk0
 );
 
@@ -178,6 +179,7 @@ module system_ARM_Processor_System_0
       .pl_gpio_oe(pl_gpio_oe),
       .pl_gpio_out(pl_gpio_out),
       .p2f_rst0_n(p2f_rst0_n),
+      .p2f_clk1(p2f_clk1),
       .p2f_clk0(p2f_clk0)
   );
 endmodule

@@ -1361,6 +1361,11 @@ _UL clk_data_0[] = {
     // 0xF880103C[5:0] = 0x00000001
     CONFIG_REG_MASK(0xF880103C, 0x0000003f, 0x00000001),
 
+    // Config p2f_clk1, system div para for fclk1: 8, based on IO400
+    // register: FCLK_CNT_DIV.div_fclk1 = 0x00000007
+    // 0xF880103C[13:8] = 0x00000007
+    CONFIG_REG_MASK(0xF880103C, 0x00003f00, 0x00000700),
+
     // Config QSPI IP Clock, system div para for qspi:50,Clock source IO_1000
     // register: IO1000_CNT_DIV.div_qspi = 0x00000031
     // 0xF8801030[5:0] = 0x00000031

@@ -3,6 +3,7 @@
 	<name>fsbl</name>
 	<comment></comment>
 	<projects>
+		<project>fdma_en</project>
 		<project>soc_base</project>
 	</projects>
 	<buildSpec>

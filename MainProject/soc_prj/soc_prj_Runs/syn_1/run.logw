@@ -4,7 +4,7 @@
    Executable = E:/FPGA/Anlu/bin/run.exe
    Built at =   16:32:07 Jun 12 2025
    Run by =     zhuji
-   Run Date =   Sun Oct 18 13:28:22 2026
+   Run Date =   Sat Oct 24 20:59:29 2026
 
    Run on =     ZHUJIN
 ============================================================
@@ -19,11 +19,11 @@ HDL-5007 WARNING: block identifier is required on this block in ../../uisrc/03_i
 HDL-5370 WARNING: parameter 'C0' becomes localparam in 'Saturation_adj' with formal parameter declaration list in ../../uisrc/03_ip/isp/saturation_adj/Saturation_adj.v(136)
 HDL-5370 WARNING: parameter 'C1' becomes localparam in 'Saturation_adj' with formal parameter declaration list in ../../uisrc/03_ip/isp/saturation_adj/Saturation_adj.v(137)
 HDL-5370 WARNING: parameter 'C2' becomes localparam in 'Saturation_adj' with formal parameter declaration list in ../../uisrc/03_ip/isp/saturation_adj/Saturation_adj.v(138)
-HDL-5007 WARNING: actual bit length 32 differs from formal bit length 64 for port 'slave_hp1_axi_wdata' in ../../uisrc/01_rtl/system/ip/system_ARM_Processor_System_0/RTL/ARM_Processor_System_59fb6a0bf2ca.v(274)
-HDL-5007 WARNING: actual bit length 4 differs from formal bit length 8 for port 'slave_hp1_axi_wstrb' in ../../uisrc/01_rtl/system/ip/system_ARM_Processor_System_0/RTL/ARM_Processor_System_59fb6a0bf2ca.v(276)
-HDL-5007 WARNING: actual bit length 1 differs from formal bit length 64 for port 'gpio_in' in ../../uisrc/01_rtl/system/ip/system_ARM_Processor_System_0/RTL/ARM_Processor_System_59fb6a0bf2ca.v(399)
-HDL-5007 WARNING: actual bit length 1 differs from formal bit length 64 for port 'gpio_oe' in ../../uisrc/01_rtl/system/ip/system_ARM_Processor_System_0/RTL/ARM_Processor_System_59fb6a0bf2ca.v(400)
-HDL-5007 WARNING: actual bit length 1 differs from formal bit length 64 for port 'gpio_out' in ../../uisrc/01_rtl/system/ip/system_ARM_Processor_System_0/RTL/ARM_Processor_System_59fb6a0bf2ca.v(401)
+HDL-5007 WARNING: actual bit length 32 differs from formal bit length 64 for port 'slave_hp1_axi_wdata' in ../../uisrc/01_rtl/system/ip/system_ARM_Processor_System_0/RTL/ARM_Processor_System_59fb6a0bf2ca.v(276)
+HDL-5007 WARNING: actual bit length 4 differs from formal bit length 8 for port 'slave_hp1_axi_wstrb' in ../../uisrc/01_rtl/system/ip/system_ARM_Processor_System_0/RTL/ARM_Processor_System_59fb6a0bf2ca.v(278)
+HDL-5007 WARNING: actual bit length 1 differs from formal bit length 64 for port 'gpio_in' in ../../uisrc/01_rtl/system/ip/system_ARM_Processor_System_0/RTL/ARM_Processor_System_59fb6a0bf2ca.v(401)
+HDL-5007 WARNING: actual bit length 1 differs from formal bit length 64 for port 'gpio_oe' in ../../uisrc/01_rtl/system/ip/system_ARM_Processor_System_0/RTL/ARM_Processor_System_59fb6a0bf2ca.v(402)
+HDL-5007 WARNING: actual bit length 1 differs from formal bit length 64 for port 'gpio_out' in ../../uisrc/01_rtl/system/ip/system_ARM_Processor_System_0/RTL/ARM_Processor_System_59fb6a0bf2ca.v(403)
 HDL-5314 WARNING: net '**' does not have a driver in ../../uisrc/01_rtl/system/ip/system_AXI_GPIO_0/RTL/axi_gpio_top_f2092de78ed0.v(47)
 HDL-5317 WARNING: input port 'gpio_io_i[3]' is not connected on this instance in ../../uisrc/01_rtl/system/ip/system_AXI_GPIO_0/system_AXI_GPIO_0.v(44)
 HDL-5317 WARNING: input port '**' is not connected on this instance in ../../uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_0/RTL/axi_protocol_converter_merge_ba32972ac42e.v(1405)
@@ -33,16 +33,20 @@ HDL-5317 WARNING: input port 'gpio_io_i[31]' is not connected on this instance i
 HDL-5317 WARNING: input port '**' is not connected on this instance in ../../uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_1/RTL/axi_protocol_converter_merge_d9c4fb069a33.v(1405)
 HDL-5317 WARNING: input port '**' is not connected on this instance in ../../uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_1/RTL/axi_protocol_converter_merge_d9c4fb069a33.v(1655)
 HDL-5317 WARNING: input port 'us_axi_awregion[3]' is not connected on this instance in ../../uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_1/system_AXI_Protocol_Converter_1.v(81)
-HDL-5007 WARNING: actual bit length 1 differs from formal bit length 2 for port 'us0_arid' in ../../uisrc/01_rtl/system/ip/system_AXI_Matrix_0/system_AXI_Matrix_0.v(162)
-HDL-5007 WARNING: actual bit length 1 differs from formal bit length 2 for port 'us0_awid' in ../../uisrc/01_rtl/system/ip/system_AXI_Matrix_0/system_AXI_Matrix_0.v(173)
-HDL-5007 WARNING: actual bit length 1 differs from formal bit length 2 for port 'us0_bid' in ../../uisrc/01_rtl/system/ip/system_AXI_Matrix_0/system_AXI_Matrix_0.v(181)
-HDL-5007 WARNING: actual bit length 1 differs from formal bit length 2 for port 'us0_rid' in ../../uisrc/01_rtl/system/ip/system_AXI_Matrix_0/system_AXI_Matrix_0.v(186)
-HDL-5323 WARNING: input port 'us0_aruser[7]' remains unconnected for this instance in ../../uisrc/01_rtl/system/ip/system_AXI_Matrix_0/system_AXI_Matrix_0.v(155)
-HDL-5317 WARNING: input port 'us1_araddr[31]' is not connected on this instance in ../../uisrc/01_rtl/system/ip/system_AXI_Matrix_0/system_AXI_Matrix_0.v(155)
+HDL-5007 WARNING: actual bit length 1 differs from formal bit length 2 for port 'us0_arid' in ../../uisrc/01_rtl/system/ip/system_AXI_Matrix_0/system_AXI_Matrix_0.v(201)
+HDL-5007 WARNING: actual bit length 1 differs from formal bit length 2 for port 'us0_awid' in ../../uisrc/01_rtl/system/ip/system_AXI_Matrix_0/system_AXI_Matrix_0.v(212)
+HDL-5007 WARNING: actual bit length 1 differs from formal bit length 2 for port 'us0_bid' in ../../uisrc/01_rtl/system/ip/system_AXI_Matrix_0/system_AXI_Matrix_0.v(220)
+HDL-5007 WARNING: actual bit length 1 differs from formal bit length 2 for port 'us0_rid' in ../../uisrc/01_rtl/system/ip/system_AXI_Matrix_0/system_AXI_Matrix_0.v(225)
+HDL-5323 WARNING: input port 'us0_aruser[7]' remains unconnected for this instance in ../../uisrc/01_rtl/system/ip/system_AXI_Matrix_0/system_AXI_Matrix_0.v(194)
+HDL-5317 WARNING: input port 'us1_araddr[31]' is not connected on this instance in ../../uisrc/01_rtl/system/ip/system_AXI_Matrix_0/system_AXI_Matrix_0.v(194)
+HDL-5317 WARNING: input port '**' is not connected on this instance in ../../uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_2/RTL/axi_protocol_converter_merge_738e4394c871.v(1405)
+HDL-5317 WARNING: input port '**' is not connected on this instance in ../../uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_2/RTL/axi_protocol_converter_merge_738e4394c871.v(1655)
+HDL-5317 WARNING: input port 'us_axi_awregion[3]' is not connected on this instance in ../../uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_2/system_AXI_Protocol_Converter_2.v(81)
+HDL-5007 WARNING: actual bit length 1 differs from formal bit length 2 for port 'motor_dir' in ../../uisrc/01_rtl/system.v(223)
 HDL-5007 WARNING: actual bit length 24 differs from formal bit length 32 for port 'REG_DATA' in ../../uisrc/03_ip/uics500_cfg/uicfgcs500.v(150)
 HDL-5007 WARNING: actual bit length 32 differs from formal bit length 7 for port 'I' in ../../uisrc/03_ip/uics500_cfg/uicfgcs500.v(154)
 HDL-5007 WARNING: actual bit length 24 differs from formal bit length 32 for port 'REG_DATA' in ../../uisrc/03_ip/uics500_cfg/uicfgcs500.v(160)
-HDL-5007 WARNING: actual bit length 1 differs from formal bit length 2 for port 'O_lane_error' in ../../uisrc/01_rtl/system.v(291)
+HDL-5007 WARNING: actual bit length 1 differs from formal bit length 2 for port 'O_lane_error' in ../../uisrc/01_rtl/system.v(297)
 HDL-5007 WARNING: actual bit length 32 differs from formal bit length 1 for port 'O_raw_tready' in ../../uisrc/03_ip/isp/raw_matrix_3x3_buffer/raw_matrix_3x3_buffer.v(149)
 HDL-5323 WARNING: input port 'dib[31]' remains unconnected for this instance in ../../uisrc/03_ip/isp/raw_matrix_3x3_buffer/zhenghe.v(167)
 HDL-5323 WARNING: input port 'dib[32]' remains unconnected for this instance in ../../uisrc/03_ip/isp/raw_matrix_3x3_buffer/line_buffer_demosaic.v(98)
@@ -119,17 +123,17 @@ HDL-5323 WARNING: input port 'dib[95]' remains unconnected for this instance in 
 HDL-5317 WARNING: input port 'dib[63]' is not connected on this instance in ../../uisrc/03_ip/uifdmadbuf/wfifo/wfifo.v(345)
 HDL-5007 WARNING: actual bit length 11 differs from formal bit length 12 for port 'wrusedw' in ../../uisrc/03_ip/uifdmadbuf/uidbuf.v(405)
 HDL-5317 WARNING: input port 'dib[31]' is not connected on this instance in ../../uisrc/03_ip/uifdmadbuf/rfifo/rfifo.v(345)
-HDL-5007 WARNING: actual bit length 32 differs from formal bit length 1 for port 'I_W_en' in ../../uisrc/01_rtl/system.v(398)
-HDL-5007 WARNING: actual bit length 32 differs from formal bit length 1 for port 'I_R_en' in ../../uisrc/01_rtl/system.v(408)
+HDL-5007 WARNING: actual bit length 32 differs from formal bit length 1 for port 'I_W_en' in ../../uisrc/01_rtl/system.v(404)
+HDL-5007 WARNING: actual bit length 32 differs from formal bit length 1 for port 'I_R_en' in ../../uisrc/01_rtl/system.v(414)
 HDL-5007 WARNING: actual bit length ** differs from formal bit length *** for port '**' in ../../uisrc/03_ip/alip/DR1_HDMI_TX/hdmi_1_4b_transmitter_core_wrapper.enc.v(3316)
 HDL-5007 WARNING: actual bit length ** differs from formal bit length *** for port '**' in ../../uisrc/03_ip/alip/DR1_HDMI_TX/hdmi_1_4b_transmitter_core_wrapper.enc.v(3327)
 HDL-5314 WARNING: net 'S_tx_acr_valid' does not have a driver in ../../uisrc/03_ip/alip/DR1_HDMI_TX/hdmi_tx.v(165)
 HDL-5314 WARNING: net 'S_tx_acr_cts[19]' does not have a driver in ../../uisrc/03_ip/alip/DR1_HDMI_TX/hdmi_tx.v(166)
 HDL-5314 WARNING: net 'S_tx_acr_n[19]' does not have a driver in ../../uisrc/03_ip/alip/DR1_HDMI_TX/hdmi_tx.v(167)
-HDL-5323 WARNING: input port 'rst_n' remains unconnected for this instance in ../../uisrc/01_rtl/system.v(199)
-HDL-5317 WARNING: input port 'I_camera_black_level[9]' is not connected on this instance in ../../uisrc/01_rtl/system.v(309)
-HDL-5323 WARNING: input port 'I_tdest[9]' remains unconnected for this instance in ../../uisrc/01_rtl/system.v(347)
-HDL-5323 WARNING: input port 'I_audio_valid' remains unconnected for this instance in ../../uisrc/01_rtl/system.v(512)
+HDL-5323 WARNING: input port 'rst_n' remains unconnected for this instance in ../../uisrc/01_rtl/system.v(202)
+HDL-5317 WARNING: input port 'I_camera_black_level[9]' is not connected on this instance in ../../uisrc/01_rtl/system.v(315)
+HDL-5323 WARNING: input port 'I_tdest[9]' remains unconnected for this instance in ../../uisrc/01_rtl/system.v(353)
+HDL-5323 WARNING: input port 'I_audio_valid' remains unconnected for this instance in ../../uisrc/01_rtl/system.v(518)
 HDL-5001 WARNING: Contains anonymous inst(s) and/or net(s) that have not been renamed
 HDL-5106 WARNING: Initial value omitted on non-DFF net "scl_r" in ../../uisrc/03_ip/uics500_cfg/uii2c.v(127) 
 HDL-5106 WARNING: Initial value omitted on non-DFF net "sda_o" in ../../uisrc/03_ip/uics500_cfg/uii2c.v(135) 
@@ -931,7 +935,7 @@ SYN-5013 WARNING: Undriven net: model "system_top" / net "u_uidbuf/r_tlast_syn_3
 		the net's pin: pin "i" in ../../uisrc/03_ip/uifdmadbuf/uidbuf.v(537)
 SYN-5025 WARNING: Using 0 for all undriven pins and nets
 SYN-5084 WARNING: Register "system_inst/uiFDMA_0/uiFDMA/rburst_len[0]_syn_3" in ../../uisrc/03_ip/uifdma/uiFDMA.v(257) is described with both an asynchronous reset/set and an initialization value of the opposite polarity. Ignore the initialization value '1'
-SYN-6024 CRITICAL-WARNING: MapIO rule -- ODDR "CMOS_CLK" not have rst or rst is const or ASYNCRST is DISABLE, this may lead PAD tx data out of sync with other PAD. Please consider rewriting code in ../../uisrc/01_rtl/system.v(236).
+SYN-6024 CRITICAL-WARNING: MapIO rule -- ODDR "CMOS_CLK" not have rst or rst is const or ASYNCRST is DISABLE, this may lead PAD tx data out of sync with other PAD. Please consider rewriting code in ../../uisrc/01_rtl/system.v(242).
 SYN-6577 WARNING: The clock signal "S_hs_rx_clk" is added with the synthetic instruction (keep/mark_debug/dont_touch/max_fanout), which may create additional logic on this net
 SYN-6577 WARNING: The clock signal "pclkx1" is added with the synthetic instruction (keep/mark_debug/dont_touch/max_fanout), which may create additional logic on this net
 SYN-6577 WARNING: The clock signal "pclkx5" is added with the synthetic instruction (keep/mark_debug/dont_touch/max_fanout), which may create additional logic on this net

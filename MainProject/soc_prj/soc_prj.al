@@ -419,6 +419,14 @@
                     <Attr Name="CompileOrder" Val="59"/>
                 </FileInfo>
             </File>
+            <File Path="uisrc/01_rtl/axi_lite_pwm.v">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="60"/>
+                </FileInfo>
+            </File>
         </Verilog>
         <System_Verilog>
             <File Path="uisrc/03_ip/alip/mipi_rx/channel_aligner_wrapper.enc.sv">

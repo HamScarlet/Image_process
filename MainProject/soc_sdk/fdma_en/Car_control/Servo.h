@@ -8,6 +8,7 @@
 #ifndef SERVO_H_
 #define SERVO_H_
 
-
+void Servo_init(void);
+void Servo_SetAngle(uint8_t angle);
 
 #endif /* SERVO_H_ */

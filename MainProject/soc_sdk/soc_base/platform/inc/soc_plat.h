@@ -1,6 +1,6 @@
 /* IDE_PATH       : E:/FPGA/Anlu/bin/td.exe */
 /* IDE_VERSION    : Release: 6.2.1 Build: 168116  */
-/* HPF_EXPORT_TIME: 2026/10/18 13:37:53 */
+/* HPF_EXPORT_TIME: 2026/10/24 21:17:06 */
 /* HPFTool_Version: 2025/07/09 15:19:18 */
 
 #ifndef __SOC_PLAT_H
@@ -11,8 +11,8 @@ extern "C" {
 #endif
 
 #define             IDE_VERSION ("Release: 6.2.1 Build: 168116 ")
-#define         HPF_EXPORT_TIME ("2026/10/18 13:37:53")
-#define BITSTREAM_GENERATE_TIME ("2026/10/18 13:36:00")
+#define         HPF_EXPORT_TIME ("2026/10/24 21:17:06")
+#define BITSTREAM_GENERATE_TIME ("2026/10/24 21: 7:00")
 #define         HPFTool_Version ("2025/07/09 15:19:18")
 #define    Bank200_IO_Voltage  ("LVCMOS 3.3V")
 #define    Bank201_IO_Voltage  ("LVCMOS 1.8V")
@@ -86,6 +86,7 @@ extern "C" {
 #define IO_80_FREQ                         79992000
 #define SYSTEM_CLOCK                       33333333
 #define P2F_CLOCK_0                       199980000
+#define P2F_CLOCK_1                        49995000
 #define QSPI_2ND_DIVISOR                          2
 #define QSPI_CLOCK                         19998000
 #define MMC_CLOCK                         399960000
@@ -350,6 +351,10 @@ int  Soc_PlatGetDeviceVersion();
 #define AXI_GPIO_1_DEVICE_ID                                                           1
 #define AXI_GPIO_1_BASEADDR                                           0x0000000000100000
 #define AXI_GPIO_1_HIGHADDR                                           0x0000000000100FFF
+/*  axi_lite_pwm_0 device infomation: device id, address, interrupt id*/
+#define axi_lite_pwm_0_DEVICE_ID                                                       0
+#define axi_lite_pwm_0_BASEADDR                                       0x0000000000200000
+#define axi_lite_pwm_0_HIGHADDR                                       0x0000000000200FFF
 
 #ifdef __cplusplus
 }

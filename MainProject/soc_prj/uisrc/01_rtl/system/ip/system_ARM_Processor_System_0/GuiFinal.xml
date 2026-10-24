@@ -1682,12 +1682,12 @@
         <parameter parameterId="p2f_clk0_Dot_Actual_IO_Frequency" value="199.98" enable="1"/>
         <parameter parameterId="p2f_clk0_Dot_Range" value="6.25:200" enable="1"/>
         <parameter parameterId="p2f_clk0_1st_Divisor" value="2" enable="1"/>
-        <parameter parameterId="p2f_clk1_Dot_Enable" value="0" enable="1"/>
-        <parameter parameterId="p2f_clk1_Dot_Clock_Source" value="IO PLL" enable="0"/>
-        <parameter parameterId="p2f_clk1_Dot_Requested_Frequency" value="50" enable="0"/>
-        <parameter parameterId="p2f_clk1_Dot_Actual_IO_Frequency" value="49.995" enable="0"/>
-        <parameter parameterId="p2f_clk1_Dot_Range" value="6.25:200" enable="0"/>
-        <parameter parameterId="p2f_clk1_1st_Divisor" value="8" enable="0"/>
+        <parameter parameterId="p2f_clk1_Dot_Enable" value="1" enable="1"/>
+        <parameter parameterId="p2f_clk1_Dot_Clock_Source" value="IO PLL" enable="1"/>
+        <parameter parameterId="p2f_clk1_Dot_Requested_Frequency" value="50" enable="1"/>
+        <parameter parameterId="p2f_clk1_Dot_Actual_IO_Frequency" value="49.995" enable="1"/>
+        <parameter parameterId="p2f_clk1_Dot_Range" value="6.25:200" enable="1"/>
+        <parameter parameterId="p2f_clk1_1st_Divisor" value="8" enable="1"/>
         <parameter parameterId="p2f_clk2_Dot_Enable" value="0" enable="1"/>
         <parameter parameterId="p2f_clk2_Dot_Clock_Source" value="IO PLL" enable="0"/>
         <parameter parameterId="p2f_clk2_Dot_Requested_Frequency" value="50" enable="0"/>

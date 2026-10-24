@@ -535,7 +535,12 @@
                 <ipxact:configurableElementValue referenceId="p2f_clk0_Dot_Actual_IO_Frequency">199.98</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="p2f_clk0_Dot_Range">&quot;6.25:200&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="p2f_clk0_1st_Divisor">2</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="p2f_clk1_Dot_Enable">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="p2f_clk1_Dot_Enable">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="p2f_clk1_Dot_Clock_Source">&quot;IO PLL&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="p2f_clk1_Dot_Requested_Frequency">50</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="p2f_clk1_Dot_Actual_IO_Frequency">49.995</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="p2f_clk1_Dot_Range">&quot;6.25:200&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="p2f_clk1_1st_Divisor">8</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="p2f_clk2_Dot_Enable">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="p2f_clk3_Dot_Enable">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="NPU_Dot_Enable">&quot;Disable&quot;</ipxact:configurableElementValue>

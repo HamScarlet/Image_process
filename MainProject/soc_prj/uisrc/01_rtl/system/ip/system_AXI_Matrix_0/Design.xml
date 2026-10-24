@@ -10,7 +10,7 @@
             <ipxact:componentRef vendor="anlogic.com" library="ip" name="AXI_Matrix" version="1.1"/>
             <ipxact:configurableElementValues>
                 <ipxact:configurableElementValue referenceId="AL_US_NUM">1</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="AL_DS_NUM">2</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_DS_NUM">3</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="AL_AXI_ID_WIDTH_USER">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="AL_AXI_ID_WIDTH">2</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="AL_AXI_ADDR_WIDTH">32</ipxact:configurableElementValue>
@@ -18,24 +18,26 @@
                 <ipxact:configurableElementValue referenceId="AL_NUM_ADDR_RANGES">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="AL_AXI_SUPPORTS_USER_SIGNALS">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="AL_PROTOCOL_SEL">0</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="AL_DS_AXI_BASE_ADDR">128'h00000000001000000000000000000000</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_DS_AXI_BASE_ADDR">192'h000000000020000000000000001000000000000000000000</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="AL_US_AXI_THREAD_ID_WIDTH">32'h00000001</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="AL_READ_REGISTER_TYPE">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="AL_US_AXI_SINGLE_THREAD">32'h00000000</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="AL_US_AXI_WRITE_ACCEPTANCE">32'h00000001</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="AL_US_AXI_READ_ACCEPTANCE">32'h00000001</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="AL_DS_AXI_WRITE_ISSUING">64'h0000000400000004</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="AL_DS_AXI_READ_ISSUING">64'h0000000400000004</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_DS_AXI_WRITE_ISSUING">96'h000000040000000400000004</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_DS_AXI_READ_ISSUING">96'h000000040000000400000004</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="AL_US_AXI_ARB_PRIORITY">32'h00000000</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="AL_DS_AXI_SECURE">64'h0000000000000000</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_DS_AXI_SECURE">96'h000000000000000000000000</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="AL_CONNECTIVITY_MODE">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="protocol_axi4">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="protocol_axi3">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="protocol_axi4lite">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="DS0_BASEADDR0">&quot;0000000000000000&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="DS1_BASEADDR0">&quot;0000000000100000&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="DS2_BASEADDR0">&quot;0000000000200000&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="DS0_BASEADDR_WIDTH0">12</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="DS1_BASEADDR_WIDTH0">12</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="DS2_BASEADDR_WIDTH0">12</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ds0range_baseaddr">&quot;0000000000000000&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ds1range_baseaddr">&quot;0000000000100000&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ds2range_baseaddr">&quot;0000000000200000&quot;</ipxact:configurableElementValue>
@@ -68,13 +70,15 @@
                 <ipxact:configurableElementValue referenceId="ds13range_baseaddr_width">&quot;0000000C&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ds14range_baseaddr_width">&quot;0000000C&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ds15range_baseaddr_width">&quot;0000000C&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="AL_DS_AXI_ADDR_WIDTH">64'h0000000C0000000C</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_DS_AXI_ADDR_WIDTH">96'h0000000C0000000C0000000C</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="AL_US_AXI_BASE_ID">32'h00000000</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="us0_thread_id_width">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="write_m0s0">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="write_m1s0">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="write_m2s0">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="read_m0s0">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="read_m1s0">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="read_m2s0">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="write_connectivity_ds0">&quot;00000001&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="write_connectivity_ds1">&quot;00000001&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="write_connectivity_ds2">&quot;00000001&quot;</ipxact:configurableElementValue>
@@ -107,17 +111,20 @@
                 <ipxact:configurableElementValue referenceId="read_connectivity_ds13">&quot;00000001&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="read_connectivity_ds14">&quot;00000001&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="read_connectivity_ds15">&quot;00000001&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="AL_AXI_WRITE_CONNECTIVITY">64'h0000000100000001</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="AL_AXI_READ_CONNECTIVITY">64'h0000000100000001</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_AXI_WRITE_CONNECTIVITY">96'h000000010000000100000001</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_AXI_READ_CONNECTIVITY">96'h000000010000000100000001</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="single_thread_us0">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ot_write_acceptance_us0">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ot_read_acceptance_us0">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ot_write_issuing_ds0">4</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ot_write_issuing_ds1">4</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ot_write_issuing_ds2">4</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ot_read_issuing_ds0">4</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ot_read_issuing_ds1">4</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ot_read_issuing_ds2">4</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="arb_priority_us0">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="support_secure_ds1">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="support_secure_ds2">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="support_secure_ds0">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ds0_base_addr_overflow_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ds1_base_addr_overflow_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
@@ -1007,6 +1014,279 @@
             <ipxact:portReferences>
                 <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds1_wvalid"/>
                 <ipxact:externalPortReference portRef="ds1_wvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_araddr</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_araddr"/>
+                <ipxact:externalPortReference portRef="ds2_araddr"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_arburst</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_arburst"/>
+                <ipxact:externalPortReference portRef="ds2_arburst"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_arcache</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_arcache"/>
+                <ipxact:externalPortReference portRef="ds2_arcache"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_arid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_arid"/>
+                <ipxact:externalPortReference portRef="ds2_arid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_arlen</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_arlen"/>
+                <ipxact:externalPortReference portRef="ds2_arlen"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_arlock</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_arlock"/>
+                <ipxact:externalPortReference portRef="ds2_arlock"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_arprot</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_arprot"/>
+                <ipxact:externalPortReference portRef="ds2_arprot"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_arqos</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_arqos"/>
+                <ipxact:externalPortReference portRef="ds2_arqos"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_arregion</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_arregion"/>
+                <ipxact:externalPortReference portRef="ds2_arregion"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_arready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_arready"/>
+                <ipxact:externalPortReference portRef="ds2_arready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_arsize</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_arsize"/>
+                <ipxact:externalPortReference portRef="ds2_arsize"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_arvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_arvalid"/>
+                <ipxact:externalPortReference portRef="ds2_arvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_awaddr</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_awaddr"/>
+                <ipxact:externalPortReference portRef="ds2_awaddr"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_awburst</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_awburst"/>
+                <ipxact:externalPortReference portRef="ds2_awburst"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_awcache</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_awcache"/>
+                <ipxact:externalPortReference portRef="ds2_awcache"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_awid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_awid"/>
+                <ipxact:externalPortReference portRef="ds2_awid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_awlen</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_awlen"/>
+                <ipxact:externalPortReference portRef="ds2_awlen"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_awlock</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_awlock"/>
+                <ipxact:externalPortReference portRef="ds2_awlock"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_awprot</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_awprot"/>
+                <ipxact:externalPortReference portRef="ds2_awprot"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_awqos</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_awqos"/>
+                <ipxact:externalPortReference portRef="ds2_awqos"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_awregion</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_awregion"/>
+                <ipxact:externalPortReference portRef="ds2_awregion"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_awready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_awready"/>
+                <ipxact:externalPortReference portRef="ds2_awready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_awsize</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_awsize"/>
+                <ipxact:externalPortReference portRef="ds2_awsize"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_awvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_awvalid"/>
+                <ipxact:externalPortReference portRef="ds2_awvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_bid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_bid"/>
+                <ipxact:externalPortReference portRef="ds2_bid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_bready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_bready"/>
+                <ipxact:externalPortReference portRef="ds2_bready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_bresp</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_bresp"/>
+                <ipxact:externalPortReference portRef="ds2_bresp"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_bvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_bvalid"/>
+                <ipxact:externalPortReference portRef="ds2_bvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_rdata</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_rdata"/>
+                <ipxact:externalPortReference portRef="ds2_rdata"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_rid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_rid"/>
+                <ipxact:externalPortReference portRef="ds2_rid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_rlast</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_rlast"/>
+                <ipxact:externalPortReference portRef="ds2_rlast"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_rready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_rready"/>
+                <ipxact:externalPortReference portRef="ds2_rready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_rresp</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_rresp"/>
+                <ipxact:externalPortReference portRef="ds2_rresp"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_rvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_rvalid"/>
+                <ipxact:externalPortReference portRef="ds2_rvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_wdata</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_wdata"/>
+                <ipxact:externalPortReference portRef="ds2_wdata"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_wlast</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_wlast"/>
+                <ipxact:externalPortReference portRef="ds2_wlast"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_wready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_wready"/>
+                <ipxact:externalPortReference portRef="ds2_wready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_wstrb</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_wstrb"/>
+                <ipxact:externalPortReference portRef="ds2_wstrb"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds2_wvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_matrix_wrapper_f41f427955dd_Inst" portRef="ds2_wvalid"/>
+                <ipxact:externalPortReference portRef="ds2_wvalid"/>
             </ipxact:portReferences>
         </ipxact:adHocConnection>
     </ipxact:adHocConnections>

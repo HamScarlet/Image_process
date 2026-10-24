@@ -543,5 +543,5 @@ p2f_rst1_n; 0
 p2f_rst0_n; 1
 p2f_clk3; 0
 p2f_clk2; 0
-p2f_clk1; 0
+p2f_clk1; 1
 p2f_clk0; 1

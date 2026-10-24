@@ -10,3 +10,15 @@
 [warn - InstPort] input port lack of connectioin
     SocInstPort input:AXI_Matrix_0::US_AXI0::us0_awqos[3:0]
 
+[warn - InstPort] input port lack of connectioin
+    SocInstPort input:Processor_System_Reset_0::aux_rst
+
+[warn - InstPort] input port lack of connectioin
+    SocInstPort input:Processor_System_Reset_0::system_rst
+
+[error - InstPort] port lack of driver
+    SocInstPort input:Processor_System_Reset_0::aux_rst
+
+[error - InstPort] port lack of driver
+    SocInstPort input:Processor_System_Reset_0::system_rst
+

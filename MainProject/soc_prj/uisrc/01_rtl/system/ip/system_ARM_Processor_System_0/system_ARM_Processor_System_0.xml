@@ -876,6 +876,13 @@
                 </ipxact:wire>
             </ipxact:port>
             <ipxact:port>
+                <ipxact:name>p2f_clk1</ipxact:name>
+                <ipxact:displayName>p2f_clk1</ipxact:displayName>
+                <ipxact:wire>
+                    <ipxact:direction>out</ipxact:direction>
+                </ipxact:wire>
+            </ipxact:port>
+            <ipxact:port>
                 <ipxact:name>p2f_clk0</ipxact:name>
                 <ipxact:displayName>p2f_clk0</ipxact:displayName>
                 <ipxact:wire>
@@ -1615,6 +1622,27 @@
                             </ipxact:logicalPort>
                             <ipxact:physicalPort>
                                 <ipxact:name>p2f_clk0</ipxact:name>
+                            </ipxact:physicalPort>
+                        </ipxact:portMap>
+                    </ipxact:portMaps>
+                </ipxact:abstractionType>
+            </ipxact:abstractionTypes>
+            <ipxact:master/>
+        </ipxact:busInterface>
+        <ipxact:busInterface>
+            <ipxact:name>P2F_CLK1</ipxact:name>
+            <ipxact:displayName></ipxact:displayName>
+            <ipxact:busType vendor="anlogic.com" library="bus" name="clock" version="1.0"/>
+            <ipxact:abstractionTypes>
+                <ipxact:abstractionType>
+                    <ipxact:abstractionRef vendor="anlogic.com" library="bus" name="clock_rtl" version="1.0"/>
+                    <ipxact:portMaps>
+                        <ipxact:portMap>
+                            <ipxact:logicalPort>
+                                <ipxact:name>CLK</ipxact:name>
+                            </ipxact:logicalPort>
+                            <ipxact:physicalPort>
+                                <ipxact:name>p2f_clk1</ipxact:name>
                             </ipxact:physicalPort>
                         </ipxact:portMap>
                     </ipxact:portMaps>

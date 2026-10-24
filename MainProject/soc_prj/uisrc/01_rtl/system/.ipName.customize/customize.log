@@ -1,7 +1,12 @@
-system_ARM_Processor_System_0 14
+system_ARM_Processor_System_0 17
 system_uiFDMA_0 0
 system_AXI_GPIO_0 3
 system_AXI_Protocol_Converter_0 0
 system_AXI_GPIO_1 1
 system_AXI_Protocol_Converter_1 0
-system_AXI_Matrix_0 0
+system_AXI_Matrix_0 3
+system_PWM_0 0
+system_Processor_System_Reset_0 0
+system_Constant_0 1
+system_axi_lite_pwm_0 0
+system_AXI_Protocol_Converter_2 0

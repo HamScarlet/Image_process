@@ -8,3 +8,56 @@
 [Info] exportPlDts pass
 [Error] Can't open ps dts config file: E:/FPGA/Anlu/ip/depot/ARM_Processor_System_F9F0D0P0_1.0//static/config/pl_core_config.json
 [Info] exportHtml pass
+[Info] HPF_EXPORT_TIME: 2026/10/18 16:22:14
+[Info] idePath: E:/FPGA/Anlu/bin/td.exe
+[Info] write tdInfo pass
+[Info] exportCfg pass
+[Info] parsePlDtsCfg pass 
+[Info] export soc_plat_pl.dtsi pass
+[Info] export pl_drvers pass
+[Info] exportPlDts pass
+[Error] Can't open ps dts config file: E:/FPGA/Anlu/ip/depot/ARM_Processor_System_F9F0D0P0_1.0//static/config/pl_core_config.json
+[Info] exportHtml pass
+[Info] HPF_EXPORT_TIME: 2026/10/18 17:28:12
+[Info] idePath: E:/FPGA/Anlu/bin/td.exe
+[Info] write tdInfo pass
+[Info] exportCfg pass
+[Info] parsePlDtsCfg pass 
+[Info] export soc_plat_pl.dtsi pass
+[Info] export pl_drvers pass
+[Info] exportPlDts pass
+[Error] Can't open ps dts config file: E:/FPGA/Anlu/ip/depot/ARM_Processor_System_F9F0D0P0_1.0//static/config/pl_core_config.json
+[Info] exportHtml pass
+[Info] HPF_EXPORT_TIME: 2026/10/19 15:27:57
+[Info] idePath: E:/FPGA/Anlu/bin/td.exe
+[Info] write tdInfo pass
+[Info] exportCfg pass
+[Info] parsePlDtsCfg pass 
+[Info] export soc_plat_pl.dtsi pass
+[Warning] cannot find ip cfg in bmcfg: axi_lite_pwm
+[Info] export pl_drvers pass
+[Info] exportPlDts pass
+[Error] Can't open ps dts config file: E:/FPGA/Anlu/bin/../ip/depot//ARM_Processor_System_F9F0D0P0_1.0//static/config/pl_core_config.json
+[Info] exportHtml pass
+[Info] HPF_EXPORT_TIME: 2026/10/24 20:25:54
+[Info] idePath: E:/FPGA/Anlu/bin/td.exe
+[Info] write tdInfo pass
+[Info] exportCfg pass
+[Info] parsePlDtsCfg pass 
+[Info] export soc_plat_pl.dtsi pass
+[Warning] cannot find ip cfg in bmcfg: axi_lite_pwm
+[Info] export pl_drvers pass
+[Info] exportPlDts pass
+[Error] Can't open ps dts config file: E:/FPGA/Anlu/ip/depot/ARM_Processor_System_F9F0D0P0_1.0//static/config/pl_core_config.json
+[Info] exportHtml pass
+[Info] HPF_EXPORT_TIME: 2026/10/24 21:17:06
+[Info] idePath: E:/FPGA/Anlu/bin/td.exe
+[Info] write tdInfo pass
+[Info] exportCfg pass
+[Info] parsePlDtsCfg pass 
+[Info] export soc_plat_pl.dtsi pass
+[Warning] cannot find ip cfg in bmcfg: axi_lite_pwm
+[Info] export pl_drvers pass
+[Info] exportPlDts pass
+[Error] Can't open ps dts config file: E:/FPGA/Anlu/ip/depot/ARM_Processor_System_F9F0D0P0_1.0//static/config/pl_core_config.json
+[Info] exportHtml pass
