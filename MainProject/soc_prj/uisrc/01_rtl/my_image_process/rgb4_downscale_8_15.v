@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module rgb4_downscale_8_15 (
     input  wire         I_clk,
     input  wire         I_rst_n,

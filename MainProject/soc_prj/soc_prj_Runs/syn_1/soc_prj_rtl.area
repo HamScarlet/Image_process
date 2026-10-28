@@ -8,24 +8,24 @@ IO Statistics
   #inout                    1
 
 Gate Statistics
-#Basic gates            47892
-  #and                    774
+#Basic gates            50960
+  #and                    824
   #nand                     0
-  #or                     586
+  #or                     638
   #nor                      0
   #xor                    109
   #xnor                     0
   #buf                      0
-  #not                    864
+  #not                    936
   #bufif1                   1
-  #MX21                  1655
+  #MX21                  2341
   #FADD                     0
-  #DFF                  43903
+  #DFF                  46111
   #LATCH                    0
-#MACRO_ADD                473
-#MACRO_EQ                 219
-#MACRO_MULT                48
-#MACRO_MUX               6234
+#MACRO_ADD                576
+#MACRO_EQ                 222
+#MACRO_MULT                61
+#MACRO_MUX               8387
 #MACRO_OTHERS              16
 
 LUT Statistics
@@ -40,7 +40,7 @@ Report Hierarchy Area:
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 |Instance                                                                                                |Module                                                  |gates  |seq    |macros |
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-|top                                                                                                     |system_top                                              |3989   |43903  |756    |
+|top                                                                                                     |system_top                                              |4849   |46111  |875    |
 |  U_pll                                                                                                 |pll                                                     |0      |0      |1      |
 |    dr1_phy_pll_8c99844ac61f_Inst                                                                       |dr1_phy_pll_8c99844ac61f                                |0      |0      |0      |
 |  system_inst                                                                                           |system                                                  |1826   |4907   |238    |
@@ -263,6 +263,12 @@ Report Hierarchy Area:
 |      zhenghe_d                                                                                         |zhenghe                                                 |53     |132    |18     |
 |        blk_mem_gen_zhenghe_d1                                                                          |blk_mem_gen_zhenghe                                     |0      |0      |1      |
 |          ram_8a60c1575720_Inst                                                                         |ram_8a60c1575720                                        |0      |0      |1      |
+|  u_lane_stream_stats                                                                                   |lane_stream_stats                                       |855    |2207   |119    |
+|    GEN_GRAY[0]$u_lane_rgb_gray                                                                         |lane_rgb_gray                                           |0      |0      |6      |
+|    GEN_GRAY[1]$u_lane_rgb_gray                                                                         |lane_rgb_gray                                           |0      |0      |6      |
+|    GEN_GRAY[2]$u_lane_rgb_gray                                                                         |lane_rgb_gray                                           |0      |0      |6      |
+|    GEN_GRAY[3]$u_lane_rgb_gray                                                                         |lane_rgb_gray                                           |0      |0      |6      |
+|    u_lane_result_latch                                                                                 |lane_result_latch                                       |1      |74     |1      |
 |  u_mipi_dphy_rx_over_lvds_wrapper                                                                      |mipi_dphy_rx_over_lvds_wrapper                          |122    |265    |38     |
 |    u_hs_rx_wrapper                                                                                     |hs_rx_wrapper                                           |122    |265    |38     |
 |      MIPI_DATA_LANE_GEN[0]$u_data_lane_rx_wrapper                                                      |data_lane_rx_wrapper                                    |51     |92     |19     |
@@ -278,7 +284,7 @@ Report Hierarchy Area:
 |        ALIGNER_CHANNEL_GEN[1]$u_channel_aligner                                                        |channel_aligner                                         |7      |40     |0      |
 |    u_rx_clk_gen                                                                                        |rx_clk_gen                                              |0      |0      |0      |
 |  u_raw10_unpacket                                                                                      |raw10_unpacket_2lane                                    |98     |153    |4      |
-|  u_rgb4_downscale_8_15                                                                                 |rgb4_downscale_8_15                                     |516    |181    |10     |
+|  u_rgb4_downscale_8_15                                                                                 |rgb4_downscale_8_15                                     |517    |182    |10     |
 |  u_uial2axis                                                                                           |uial2axis                                               |18     |28     |8      |
 |  u_uicfgcs500                                                                                          |uicfgcs500                                              |291    |91     |16     |
 |    gain_tbl                                                                                            |SC500GainTbl                                            |0      |10     |0      |

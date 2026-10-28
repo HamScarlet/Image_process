@@ -49,14 +49,26 @@ AL_S32 main()
     Fclk_Init();
     AlSys_MDelay(250U);
     al_printf("Fclk Init successfully\r\n");
-    //AXI_GPIO_Init();
-    TIM_PWM_Init();
-    al_printf("TIM Init successfully\r\n");
+
+//    AXI_GPIO_Init();
+//    al_printf("AXI GPIO Init successfully\r\n");
+//    TIM_PWM_Init();
+//    al_printf("TIM Init successfully\r\n");
+
+
+    AL_REG32_WRITE(0X80200000,0X01);
+    uint32_t r = AL_REG32_READ(0X80200000);
+    al_printf("addr: %d\r\n", r);
+
+
     while(1)
     {
-    	//AXI_GPIO_Test();
-        TIM_PWM_test();
-        al_printf("TIM Testing\r\n");
+//    	AXI_GPIO_Test();
+//    	al_printf("AXI GPIO Testing\r\n");
+//        TIM_PWM_test();
+//        al_printf("TIM Testing\r\n");
+
+        UART_Test();   
     }
 
 

@@ -1,0 +1,20 @@
+============================================================
+   Tang Dynasty, V6.2.168116
+   Copyright (c) 2012-2025 Anlogic Inc.
+   Executable = E:/FPGA/Anlu/bin/td.exe
+   Built at =   16:32:07 Jun 12 2025
+   Run by =     zhuji
+   Run Date =   Sun Oct 25 12:29:48 2026
+
+   Run on =     ZHUJIN
+============================================================
+HDL-5007 WARNING: block identifier is required on this block in uisrc/03_ip/isp/brightness_adj/Brightness_adjustment.v(83)
+HDL-5007 WARNING: block identifier is required on this block in uisrc/03_ip/isp/contrast_adj/contrast_adj.v(95)
+HDL-5370 WARNING: parameter 'C0' becomes localparam in 'Saturation_adj' with formal parameter declaration list in uisrc/03_ip/isp/saturation_adj/Saturation_adj.v(136)
+HDL-5370 WARNING: parameter 'C1' becomes localparam in 'Saturation_adj' with formal parameter declaration list in uisrc/03_ip/isp/saturation_adj/Saturation_adj.v(137)
+HDL-5370 WARNING: parameter 'C2' becomes localparam in 'Saturation_adj' with formal parameter declaration list in uisrc/03_ip/isp/saturation_adj/Saturation_adj.v(138)
+HDL-5007 WARNING: block identifier is required on this block in uisrc/03_ip/isp/brightness_adj/Brightness_adjustment.v(83)
+HDL-5007 WARNING: block identifier is required on this block in uisrc/03_ip/isp/contrast_adj/contrast_adj.v(95)
+HDL-5370 WARNING: parameter 'C0' becomes localparam in 'Saturation_adj' with formal parameter declaration list in uisrc/03_ip/isp/saturation_adj/Saturation_adj.v(136)
+HDL-5370 WARNING: parameter 'C1' becomes localparam in 'Saturation_adj' with formal parameter declaration list in uisrc/03_ip/isp/saturation_adj/Saturation_adj.v(137)
+HDL-5370 WARNING: parameter 'C2' becomes localparam in 'Saturation_adj' with formal parameter declaration list in uisrc/03_ip/isp/saturation_adj/Saturation_adj.v(138)

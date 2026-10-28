@@ -411,7 +411,7 @@
                     <Attr Name="CompileOrder" Val="58"/>
                 </FileInfo>
             </File>
-            <File Path="uisrc/01_rtl/PWM.v">
+            <File Path="uisrc/01_rtl/my_image_process/lane_rgb_gray.v">
                 <FileInfo>
                     <Attr Name="UsedInSyn" Val="true"/>
                     <Attr Name="UsedInP&R" Val="true"/>
@@ -419,12 +419,36 @@
                     <Attr Name="CompileOrder" Val="59"/>
                 </FileInfo>
             </File>
-            <File Path="uisrc/01_rtl/axi_lite_pwm.v">
+            <File Path="uisrc/01_rtl/my_image_process/lane_result_latch.v">
                 <FileInfo>
                     <Attr Name="UsedInSyn" Val="true"/>
                     <Attr Name="UsedInP&R" Val="true"/>
                     <Attr Name="BelongTo" Val="design_1"/>
                     <Attr Name="CompileOrder" Val="60"/>
+                </FileInfo>
+            </File>
+            <File Path="uisrc/01_rtl/my_image_process/lane_stream_stats.v">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="61"/>
+                </FileInfo>
+            </File>
+            <File Path="uisrc/01_rtl/PWM.v">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="62"/>
+                </FileInfo>
+            </File>
+            <File Path="uisrc/01_rtl/axi_lite_pwm.v">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="63"/>
                 </FileInfo>
             </File>
         </Verilog>

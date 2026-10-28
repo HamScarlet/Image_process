@@ -21,6 +21,11 @@
 #include "motor.h"
 #include "USART.h"
 #include "Servo.h"
+#include "Car_control.h"
+
+
+
+COMMAND cmd = {0};
 
 void car_init(void)
 {
@@ -32,4 +37,10 @@ void car_init(void)
 void car_loop(void)
 {
 
+}
+
+int Process_Cmd(COMMAND cmd)
+{
+	static COMMAND cmd_status = {0};
+	
 }

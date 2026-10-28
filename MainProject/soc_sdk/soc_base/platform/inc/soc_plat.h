@@ -1,6 +1,6 @@
 /* IDE_PATH       : E:/FPGA/Anlu/bin/td.exe */
 /* IDE_VERSION    : Release: 6.2.1 Build: 168116  */
-/* HPF_EXPORT_TIME: 2026/10/24 21:17:06 */
+/* HPF_EXPORT_TIME: 2026/10/25 15:27:32 */
 /* HPFTool_Version: 2025/07/09 15:19:18 */
 
 #ifndef __SOC_PLAT_H
@@ -11,8 +11,8 @@ extern "C" {
 #endif
 
 #define             IDE_VERSION ("Release: 6.2.1 Build: 168116 ")
-#define         HPF_EXPORT_TIME ("2026/10/24 21:17:06")
-#define BITSTREAM_GENERATE_TIME ("2026/10/24 21: 7:00")
+#define         HPF_EXPORT_TIME ("2026/10/25 15:27:32")
+#define BITSTREAM_GENERATE_TIME ("2026/10/25 15:26:00")
 #define         HPFTool_Version ("2025/07/09 15:19:18")
 #define    Bank200_IO_Voltage  ("LVCMOS 3.3V")
 #define    Bank201_IO_Voltage  ("LVCMOS 1.8V")

@@ -126,6 +126,24 @@ module system_top (
   wire          scale_O_tvalid;
   wire          scale_O_tready;
 
+  // Frame-latched lane result interface for later PS, overlay and control use.
+  (* keep = "true" *) wire        lane_result_valid;
+  (* keep = "true" *) wire        lane_valid;
+  (* keep = "true" *) wire        lane_frame_done;
+  (* keep = "true" *) wire        lane_frame_overrun;
+  (* keep = "true" *) wire [31:0] lane_frame_count;
+  (* keep = "true" *) wire [9:0]  lane_left_x;
+  (* keep = "true" *) wire [9:0]  lane_right_x;
+  (* keep = "true" *) wire signed [11:0] lane_center_offset;
+  (* keep = "true" *) wire [1:0]  lane_curve_class;
+  (* keep = "true" *) wire [7:0]  lane_confidence;
+  (* keep = "true" *) wire [77:0] lane_result_hold;
+  assign lane_result_hold = {
+      lane_result_valid, lane_valid, lane_frame_done, lane_frame_overrun,
+      lane_frame_count, lane_left_x, lane_right_x, lane_center_offset,
+      lane_curve_class, lane_confidence
+  };
+
   
   wire [7 : 0] 	wbuf_sync; 
   wire [7 : 0] 	rbuf_sync; 
@@ -458,6 +476,38 @@ wire pwm_clk;
   );
 
   assign ISP_O_tready = scale_I_tready;
+
+  // Tap the accepted downscaled RGB stream. This branch does not change the
+  // existing scaler-to-DDR handshake or video contents.
+  lane_stream_stats #(
+      .IMG_WIDTH( SCALED_IMAGE_WIDTH),
+      .IMG_HEIGHT(SCALED_IMAGE_HEIGHT),
+      .ROI_Y_START(259),
+      .ROI_Y_END(564),
+      .ROI_TOP_MARGIN(82),
+      .THRESHOLD(160),
+      .NUM_ZONES(8),
+      .MIN_ZONE_PIXELS(8),
+      .CURVE_THRESHOLD(18)
+  ) u_lane_stream_stats (
+      .clk             (S_hs_rx_clk),
+      .rst_n           (locked),
+      .I_tdata         (scale_O_tdata),
+      .I_tlast         (scale_O_tlast),
+      .I_tuser         (scale_O_tuser),
+      .I_tvalid        (scale_O_tvalid),
+      .I_tready        (scale_O_tready),
+      .O_result_valid  (lane_result_valid),
+      .O_lane_valid    (lane_valid),
+      .O_frame_done    (lane_frame_done),
+      .O_frame_overrun (lane_frame_overrun),
+      .O_frame_count   (lane_frame_count),
+      .O_left_x        (lane_left_x),
+      .O_right_x       (lane_right_x),
+      .O_center_offset (lane_center_offset),
+      .O_curve_class   (lane_curve_class),
+      .O_confidence    (lane_confidence)
+  );
 
   uirgb32to24 u_uirgb32to24 (
       .rgb24(fdma_O_R_tdata_24),

@@ -1,5 +1,5 @@
 #[INFO] design_integrator V2025.07 (APP main), Windows 64bit (Release), Build 167996 2025/07/10, 13:53:39 Jul 10 2025 on WIN10-204
-#[INFO] Run at Sun Oct 18 17:32:56 2026
+#[INFO] Run at Mon Oct 19 13:59:58 2026
 #[INFO] The Design.xml (E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/al_ip/Design.xml) does not exist.
 #[INFO] The Design.xml (E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/log/Design.xml) does not exist.
 #[INFO] The Design.xml (E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/soc_prj_Runs/Design.xml) does not exist.
@@ -23,152 +23,401 @@ si_select_dialog Open_Design_ProgressDialog
 #E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system/ip/system_AXI_Matrix_0/system_AXI_Matrix_0.v(274): WARNING: instantiating unknown module 'axi_matrix_wrapper_f41f427955dd' (VLG-075)
 #E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system/ip/system_PWM_0/system_PWM_0.v(1): INFO: compiling module 'system_PWM_0' (VLG-004)
 #E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system/ip/system_PWM_0/system_PWM_0.v(21): WARNING: instantiating unknown module 'PWM' (VLG-075)
-#[INFO] si_open_design E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView horizontal 1166
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 923
-si_select_window DesignIntegrator
-si_click_toolbar_item system.DesignDiagram IP+
-si_select_dialog Design_Add_Module
-si_set_line_edit_text Design_Add_Module IP_+.search pro
-si_click_tree_item Design_Add_Module ipModulesTree Soft_IP.Embedded_Processing.Processor_System_Reset 0
-si_double_click_tree_item Design_Add_Module ipModulesTree Soft_IP.Embedded_Processing.Processor_System_Reset 0
-#si_select_dialog AL_HintBox #Add IP
-#[INFO] GUI-2000 : The IP files have been generated successfully. :{DR1M90GEG400(E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system/ip/system_Processor_System_Reset_0/system_Processor_System_Reset_0.xml)}
 #E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system/ip/system_Processor_System_Reset_0/system_Processor_System_Reset_0.v(10): INFO: compiling module 'system_Processor_System_Reset_0' (VLG-004)
 #E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system/ip/system_Processor_System_Reset_0/system_Processor_System_Reset_0.v(46): WARNING: instantiating unknown module 'proc_sys_reset_70e13f731ea2' (VLG-075)
-#[INFO] si_design_add_inst -vlnv anlogic.com:ip:proc_sys_reset:1.0 Processor_System_Reset_0
-si_design_wait_for_adding_ip Soft_IP.Embedded_Processing.Processor_System_Reset
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView horizontal 1332
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 266
-si_select_window DesignIntegrator
-si_select_dialog Design_Add_Module
-si_close_dialog Design_Add_Module
-si_select_window DesignIntegrator
-si_design_diagram_select_port system.DesignDiagram Processor_System_Reset_0 external_reset 1
-si_design_diagram_double_click_port system.DesignDiagram Processor_System_Reset_0 external_reset
-#[INFO] si_design_add_connection Processor_System_Reset_0.external_reset ARM_Processor_System_0.p2f_rst0_n
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView horizontal 1059
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 542
-si_design_diagram_select_port system.DesignDiagram ARM_Processor_System_0 p2f_rst0_n 1
-si_design_diagram_select system.DesignDiagram 1
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView horizontal 1385
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 266
-si_design_diagram_select_port system.DesignDiagram Processor_System_Reset_0 clk 1
-si_design_diagram_double_click_port system.DesignDiagram Processor_System_Reset_0 clk
-#[INFO] si_design_add_connection Processor_System_Reset_0.clk ARM_Processor_System_0.p2f_clk0
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView horizontal 1043
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 742
-si_design_diagram_select_port system.DesignDiagram ARM_Processor_System_0 p2f_clk0 1
-si_design_diagram_select system.DesignDiagram 1
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView horizontal 1739
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 266
-si_select_window DesignIntegrator
-si_design_diagram_select_port system.DesignDiagram Processor_System_Reset_0 pll_locked 1
-si_design_diagram_double_click_port system.DesignDiagram Processor_System_Reset_0 pll_locked
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView horizontal 1739
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 266
-si_design_diagram_key_press system.DesignDiagram esc #right mouse press
-si_design_diagram_select system.DesignDiagram 1
-si_select_window DesignIntegrator
-si_design_diagram_select system.DesignDiagram 1
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView horizontal 1739
-si_design_diagram_popup_menu system.DesignDiagram
-si_close_popup_menu
-si_design_diagram_select system.DesignDiagram 1
-si_click_toolbar_item DesignIntegrator CheckDesign
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView horizontal 1738
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 499
-si_design_diagram_select system.DesignDiagram 1
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView horizontal 1739
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 287
-si_click_tree_item system.DesignDiagram MessageBrowser.ViolationsTree Error.error-InstPort-port_lack_of_driver-SocInstPort_input:Processor_System_Reset_0::aux_rst.SocInstPort_input:Processor_System_Reset_0::aux_rst 0 #si_change_current_tree_item
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 266
-si_click_tree_item system.DesignDiagram MessageBrowser.ViolationsTree Error.error-InstPort-port_lack_of_driver-SocInstPort_input:Processor_System_Reset_0::aux_rst.SocInstPort_input:Processor_System_Reset_0::aux_rst 0
-si_double_click_tree_item system.DesignDiagram MessageBrowser.ViolationsTree Error.error-InstPort-port_lack_of_driver-SocInstPort_input:Processor_System_Reset_0::aux_rst.SocInstPort_input:Processor_System_Reset_0::aux_rst 0
-si_design_diagram_select system.DesignDiagram 1
-si_design_diagram_select_inst system.DesignDiagram Processor_System_Reset_0 1
-#si_select_dialog AL_HintBox #Customize Ip
-si_select_window DesignIntegrator
-si_design_diagram_select system.DesignDiagram 1
-si_select_window DesignIntegrator
-si_design_diagram_select system.DesignDiagram 1
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView horizontal 722
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 334
-si_design_diagram_select_node system.DesignDiagram w_net__uiFDMA_0__M_AXI_AWBURST 1
-si_design_diagram_select system.DesignDiagram 1
-si_design_diagram_select_inst system.DesignDiagram ARM_Processor_System_0 1
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 416
-si_design_diagram_select system.DesignDiagram 1
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView horizontal 1739
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 266
-si_select_window DesignIntegrator
-si_design_diagram_select system.DesignDiagram 1
-si_move_splitter system.DesignPage DesignPage.MainVSplitter 1116 1
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView horizontal 1175
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 1130
-si_design_diagram_select system.DesignDiagram 1
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView horizontal 1738
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 1194
-si_click_push_button system.DesignDiagram AXI_Matrix_0::DS_AXI0.+-
-si_click_push_button system.DesignDiagram AXI_Matrix_0::DS_AXI1.+-
-si_design_diagram_select system.DesignDiagram 1
-si_design_diagram_select_port system.DesignDiagram AXI_Matrix_0 US_AXI0 1
-si_click_push_button system.DesignDiagram AXI_Matrix_0::US_AXI0.+-
-si_design_diagram_select_port system.DesignDiagram AXI_Matrix_0 US_AXI0 1
-si_click_push_button system.DesignDiagram AXI_Matrix_0::US_AXI0.+-
-si_design_diagram_select_port system.DesignDiagram AXI_Matrix_0 US_AXI0 1
-si_design_diagram_select system.DesignDiagram 1
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView horizontal 1759
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 1178
-si_select_window DesignIntegrator
-si_close_window DesignIntegrator
-si_select_dialog ExitDesignIntegrator
-si_resize_dialog ExitDesignIntegrator 900 750
-si_close_dialog ExitDesignIntegrator
-si_select_window DesignIntegrator
-si_design_diagram_select system.DesignDiagram 1
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView horizontal 1764
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 266
-si_design_diagram_popup_menu system.DesignDiagram
-si_close_popup_menu
-si_design_diagram_select system.DesignDiagram 1
-si_click_toolbar_item system.DesignDiagram IP+
-si_select_dialog Design_Add_Module
-si_click_tree_item Design_Add_Module ipModulesTree Soft_IP.Basic_Elements.Constant 0
-si_double_click_tree_item Design_Add_Module ipModulesTree Soft_IP.Basic_Elements.Constant 0
-#si_select_dialog AL_HintBox #Add IP
-#[INFO] GUI-2000 : The IP files have been generated successfully. :{DR1M90GEG400(E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system/ip/system_Constant_0/system_Constant_0.xml)}
 #E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system/ip/system_Constant_0/system_Constant_0.v(9): INFO: compiling module 'system_Constant_0' (VLG-004)
 #E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system/ip/system_Constant_0/system_Constant_0.v(21): WARNING: instantiating unknown module 'Constant_9d838ccae1fb' (VLG-075)
-#[INFO] si_design_add_inst -vlnv anlogic.com:ip:Constant:1.0 Constant_0
-si_design_wait_for_adding_ip Soft_IP.Basic_Elements.Constant
-si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 128
+#[INFO] si_open_design E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system
+si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView horizontal -164
+si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 730
 si_select_window DesignIntegrator
-si_select_dialog Design_Add_Module
-si_close_dialog Design_Add_Module
+si_design_diagram_select system.DesignDiagram 1
+si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView horizontal -164
+si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 848
+si_design_diagram_popup_menu system.DesignDiagram
+si_close_popup_menu
+si_design_diagram_select system.DesignDiagram 1
+si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView horizontal 1357
+si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 923
+si_design_diagram_popup_menu system.DesignDiagram
+si_click_menu_item popup_menu Popup.AddModule
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system.v(153): INFO: undeclared symbol 'S_clk_lane_idelay', assumed default net type 'wire' (VLG-1573)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system.v(154): INFO: undeclared symbol 'S_clk_70m', assumed default net type 'wire' (VLG-1573)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system.v(216): INFO: undeclared symbol 'pl_gpio_out', assumed default net type 'wire' (VLG-1573)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system.v(219): INFO: undeclared symbol 'pwm_out1', assumed default net type 'wire' (VLG-1573)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system.v(291): INFO: undeclared symbol 'S_lane_error', assumed default net type 'wire' (VLG-1573)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system.v(29): INFO: compiling module 'system_top' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system.v(153): WARNING: expression size 5 truncated to fit in target size 1 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system.v(220): WARNING: instantiating unknown module 'system' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system.v(231): WARNING: instantiating unknown module 'pll' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system.v(242): WARNING: instantiating unknown module 'DR1_LOGIC_ODDR' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system.v(253): WARNING: instantiating unknown module 'ae_set' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system.v(267): WARNING: instantiating unknown module 'uicfgcs500' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system.v(292): WARNING: instantiating unknown module 'mipi_dphy_rx_over_lvds_wrapper' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system.v(305): WARNING: instantiating unknown module 'csi_unpacket_2lane' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system.v(322): WARNING: instantiating unknown module 'raw10_unpacket_2lane' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system.v(342): WARNING: instantiating unknown module 'uial2axis' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system.v(362): WARNING: instantiating unknown module 'isp_top' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system.v(371): WARNING: instantiating unknown module 'uisetvbuf' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system.v(437): WARNING: instantiating unknown module 'uidbuf' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system.v(452): WARNING: instantiating unknown module 'rgb4_downscale_8_15' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system.v(459): WARNING: instantiating unknown module 'uirgb32to24' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system.v(463): WARNING: expression size 22 truncated to fit in target size 21 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system.v(495): WARNING: instantiating unknown module 'uivtc' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system.v(528): WARNING: instantiating unknown module 'hdmi_tx' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/alip/DR1_HDMI_TX/hdmi_1_4b_transmitter_core_wrapper.enc.v(5039): WARNING: ignoring the contents of protected block (VLG-1245)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/alip/DR1_HDMI_TX/hdmi_1_4b_transmitter_core_wrapper.enc.v(5040): ERROR: unexpected EOF (VLG-150)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/alip/DR1_HDMI_TX/hdmi_tx.v(48): INFO: compiling module 'hdmi_tx' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/alip/DR1_HDMI_TX/hdmi_tx.v(215): WARNING: instantiating unknown module 'hdmi_1_4b_transmitter_core_wrapper' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/alip/DR1_HDMI_TX/hdmi_tx.v(234): WARNING: instantiating unknown module 'hdmi_tx_phy_wrapper' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/alip/DR1_HDMI_TX/hdmi_tx_phy_warpper.v(3): INFO: compiling module 'hdmi_tx_phy_wrapper' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/alip/DR1_HDMI_TX/hdmi_tx_phy_warpper.v(80): WARNING: instantiating unknown module 'lane_lvds_10_1' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/alip/DR1_HDMI_TX/lane_lvds_10_1.v(4): INFO: compiling module 'lane_lvds_10_1' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/alip/DR1_HDMI_TX/lane_lvds_10_1.v(146): WARNING: instantiating unknown module 'PH1P_LOGIC_HR_OSERDES' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/alip/mipi_rx/data_lane_rx_wrapper.enc.v(529): WARNING: ignoring the contents of protected block (VLG-1245)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/alip/mipi_rx/data_lane_rx_wrapper.enc.v(529): ERROR: unexpected EOF (VLG-150)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/alip/mipi_rx/mipi_dphy_rx_over_lvds_wrapper.v(39): INFO: undeclared symbol 'S_hs_clk', assumed default net type 'wire' (VLG-1573)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/alip/mipi_rx/mipi_dphy_rx_over_lvds_wrapper.v(40): INFO: undeclared symbol 'S_hs_clk_x2', assumed default net type 'wire' (VLG-1573)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/alip/mipi_rx/mipi_dphy_rx_over_lvds_wrapper.v(41): INFO: undeclared symbol 'S_hs_clk_x4', assumed default net type 'wire' (VLG-1573)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/alip/mipi_rx/mipi_dphy_rx_over_lvds_wrapper.v(3): INFO: compiling module 'mipi_dphy_rx_over_lvds_wrapper' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/alip/mipi_rx/mipi_dphy_rx_over_lvds_wrapper.v(42): WARNING: instantiating unknown module 'rx_clk_gen' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/alip/mipi_rx/mipi_dphy_rx_over_lvds_wrapper.v(72): WARNING: instantiating unknown module 'hs_rx_wrapper' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/alip/mipi_rx/rx_clk_gen.v(2): INFO: compiling module 'rx_clk_gen' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/alip/mipi_rx/rx_clk_gen.v(111): WARNING: instantiating unknown module 'EG_LOGIC_BUFIO' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/alip/mipi_rx/rx_clk_gen.v(122): WARNING: instantiating unknown module 'EG_LOGIC_BUFIO' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/rgb32to24/uirgb32to24.v(28): INFO: compiling module 'uirgb32to24' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/rgb32to24/uirgb32to24.v(28): INFO: replacing unknown cell 'uirgb32to24' with a valid definition (VLG-121)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system.v(459): INFO: first instantiation was done here (VLG-531)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uial2axis/uial2axis.v(10): INFO: compiling module 'uial2axis' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uial2axis/uial2axis.v(77): WARNING: expression size 15 truncated to fit in target size 14 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uics500_cfg/SC500GainTbl.v(6): INFO: compiling module 'SC500GainTbl' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uics500_cfg/uicfgcs500.v(141): INFO: undeclared symbol 'iic_busy', assumed default net type 'wire' (VLG-1573)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uics500_cfg/uicfgcs500.v(37): INFO: compiling module 'uicfgcs500' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uics500_cfg/uicfgcs500.v(142): WARNING: instantiating unknown module 'uii2c' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uics500_cfg/uicfgcs500.v(151): WARNING: instantiating unknown module 'uics500reg' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uics500_cfg/uicfgcs500.v(154): WARNING: actual bit length 32 differs from formal bit length 7 for port 'I' (VLG-342)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uics500_cfg/uicfgcs500.v(163): WARNING: instantiating unknown module 'uics500regAE' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uics500_cfg/uics500reg.v(35): INFO: compiling module 'uics500reg' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uics500_cfg/uics500reg.v(35): INFO: replacing unknown cell 'uics500reg' with a valid definition (VLG-121)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uics500_cfg/uicfgcs500.v(151): INFO: first instantiation was done here (VLG-531)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uics500_cfg/uics500regAE.v(33): INFO: compiling module 'uics500regAE' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uics500_cfg/uics500regAE.v(33): INFO: replacing unknown cell 'uics500regAE' with a valid definition (VLG-121)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uics500_cfg/uicfgcs500.v(163): INFO: first instantiation was done here (VLG-531)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uics500_cfg/uii2c.v(41): INFO: compiling module 'uii2c' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uics500_cfg/uii2c.v(145): ERROR: part-select direction is opposite from prefix index direction (VLG-177)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uics500_cfg/uii2c.v(52): INFO: see declaration of 'I_wr_data' (VLG-189)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uics500_cfg/uii2c.v(145): WARNING: index 7 is out of range [-1:0] for 'I_wr_data' (VLG-228)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uics500_cfg/uii2c.v(41): INFO: module 'uii2c' remains a black box due to errors in its contents (VLG-085)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdma/uiFDMA.v(46): INFO: compiling module 'uiFDMA' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdma/uiFDMA.v(145): WARNING: expression size 32 truncated to fit in target size 8 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdma/uiFDMA.v(264): WARNING: expression size 32 truncated to fit in target size 8 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdma/uiFDMA.v(362): WARNING: expression size 32 truncated to fit in target size 16 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/rfifo/rfifo.v(358): WARNING: port 'doa' remains unconnected for this instance (VLG-939)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/rfifo/rfifo.v(13): INFO: compiling module 'rfifo' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/rfifo/rfifo.v(124): WARNING: expression size 11 truncated to fit in target size 10 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/rfifo/rfifo.v(135): WARNING: expression size 11 truncated to fit in target size 10 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/rfifo/rfifo.v(146): WARNING: expression size 11 truncated to fit in target size 10 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/rfifo/rfifo.v(157): WARNING: expression size 14 truncated to fit in target size 13 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/rfifo/rfifo.v(167): WARNING: expression size 14 truncated to fit in target size 13 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/rfifo/rfifo.v(369): INFO: compiling module 'fifo_cross_domain_addr_process_al_rfifo(ADDR_WIDTH=13)' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/rfifo/rfifo.v(369): INFO: compiling module 'fifo_cross_domain_addr_process_al_rfifo(ADDR_WIDTH=10)' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/rfifo/rfifo.v(457): INFO: compiling module 'ram_infer_rfifo(DATAWIDTH_A=256,ADDRWIDTH_A=10,DATAWIDTH_B=32,ADDRWIDTH_B=13)' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/rfifo/rfifo.v(522): INFO: extracting RAM for identifier 'memory' (VLG-1583)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/rfifo/rfifo.v(358): WARNING: input port 'dib[31]' is not connected on this instance (VIN-1013)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/uidbuf.v(589): WARNING: port 'valid' remains unconnected for this instance (VLG-939)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/uidbuf.v(46): INFO: compiling module 'uidbuf' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/uidbuf.v(277): WARNING: expression size 25 truncated to fit in target size 24 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/uidbuf.v(280): WARNING: expression size 25 truncated to fit in target size 24 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/uidbuf.v(406): WARNING: instantiating unknown module 'wfifo' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/uidbuf.v(503): WARNING: expression size 25 truncated to fit in target size 24 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/uidbuf.v(506): WARNING: expression size 25 truncated to fit in target size 24 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/rfifo/rfifo.v(13): INFO: compiling module 'rfifo(DATA_WIDTH_W=128,ADDR_WIDTH_R=12,AL_FULL_NUM=510)' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/rfifo/rfifo.v(124): WARNING: expression size 11 truncated to fit in target size 10 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/rfifo/rfifo.v(135): WARNING: expression size 11 truncated to fit in target size 10 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/rfifo/rfifo.v(146): WARNING: expression size 11 truncated to fit in target size 10 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/rfifo/rfifo.v(157): WARNING: expression size 13 truncated to fit in target size 12 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/rfifo/rfifo.v(167): WARNING: expression size 13 truncated to fit in target size 12 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/rfifo/rfifo.v(369): INFO: compiling module 'fifo_cross_domain_addr_process_al_rfifo(ADDR_WIDTH=12)' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/rfifo/rfifo.v(457): INFO: compiling module 'ram_infer_rfifo(DATAWIDTH_A=128,ADDRWIDTH_A=10,DATAWIDTH_B=32,ADDRWIDTH_B=12)' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/rfifo/rfifo.v(522): INFO: extracting RAM for identifier 'memory' (VLG-1583)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/rfifo/rfifo.v(358): WARNING: input port 'dib[31]' is not connected on this instance (VIN-1013)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/wfifo/wfifo.v(358): WARNING: port 'doa' remains unconnected for this instance (VLG-939)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/wfifo/wfifo.v(13): INFO: compiling module 'wfifo' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/wfifo/wfifo.v(124): WARNING: expression size 12 truncated to fit in target size 11 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/wfifo/wfifo.v(135): WARNING: expression size 12 truncated to fit in target size 11 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/wfifo/wfifo.v(146): WARNING: expression size 12 truncated to fit in target size 11 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/wfifo/wfifo.v(157): WARNING: expression size 11 truncated to fit in target size 10 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/wfifo/wfifo.v(167): WARNING: expression size 11 truncated to fit in target size 10 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/wfifo/wfifo.v(369): INFO: compiling module 'fifo_cross_domain_addr_process_al_wfifo(ADDR_WIDTH=10)' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/wfifo/wfifo.v(369): INFO: compiling module 'fifo_cross_domain_addr_process_al_wfifo(ADDR_WIDTH=11)' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/wfifo/wfifo.v(457): INFO: compiling module 'ram_infer_wfifo(DATAWIDTH_A=128,ADDRWIDTH_A=11,DATAWIDTH_B=256,ADDRWIDTH_B=10)' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/wfifo/wfifo.v(522): INFO: extracting RAM for identifier 'memory' (VLG-1583)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uifdmadbuf/wfifo/wfifo.v(358): WARNING: input port 'dib[255]' is not connected on this instance (VIN-1013)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uiisp_beta/ae_set.v(33): INFO: compiling module 'ae_set' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uiisp_beta/ae_set.v(59): WARNING: expression size 21 truncated to fit in target size 20 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uiisp_beta/ae_set.v(33): INFO: replacing unknown cell 'ae_set' with a valid definition (VLG-121)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system.v(253): INFO: first instantiation was done here (VLG-531)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uiisp_beta/csi_unpacket_2lane.v(36): INFO: compiling module 'csi_unpacket_2lane' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uiisp_beta/csi_unpacket_2lane.v(120): WARNING: expression size 17 truncated to fit in target size 16 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uiisp_beta/csi_unpacket_2lane.v(129): WARNING: expression size 32 truncated to fit in target size 1 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uiisp_beta/csi_unpacket_2lane.v(36): INFO: replacing unknown cell 'csi_unpacket_2lane' with a valid definition (VLG-121)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system.v(305): INFO: first instantiation was done here (VLG-531)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uiisp_beta/raw10_unpacket_2lane.v(33): INFO: compiling module 'raw10_unpacket_2lane' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uiisp_beta/raw10_unpacket_2lane.v(33): INFO: replacing unknown cell 'raw10_unpacket_2lane' with a valid definition (VLG-121)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system.v(322): INFO: first instantiation was done here (VLG-531)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uisetvbuf/uisetvbuf.v(32): INFO: compiling module 'uisetvbuf' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uisetvbuf/uisetvbuf.v(77): WARNING: expression size 32 truncated to fit in target size 8 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/uivtc/uivtc.v(42): INFO: compiling module 'uivtc' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/awb/awb.v(20): INFO: compiling module 'awb' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/awb/awb.v(210): WARNING: instantiating unknown module 'divider' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/awb/awb.v(239): WARNING: instantiating unknown module 'signal_delay' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/awb/awb.v(443): WARNING: expression size 28 truncated to fit in target size 8 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/awb/awb.v(447): WARNING: expression size 28 truncated to fit in target size 8 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/awb/awb.v(451): WARNING: expression size 28 truncated to fit in target size 8 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/awb/awb.v(455): WARNING: expression size 28 truncated to fit in target size 8 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/awb/signal_delay.v(18): INFO: compiling module 'signal_delay' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/awb/signal_delay.v(66): WARNING: expression size 15 truncated to fit in target size 14 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/awb/signal_delay.v(67): WARNING: expression size 15 truncated to fit in target size 14 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/awb/signal_delay.v(91): WARNING: expression size 15 truncated to fit in target size 14 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/awb/signal_delay.v(100): WARNING: expression size 12 truncated to fit in target size 11 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/awb/signal_delay.v(109): WARNING: expression size 12 truncated to fit in target size 11 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/awb/signal_delay.v(133): WARNING: instantiating unknown module 'blk_mem_gen_awb_delay_signal' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/isp_top.v(1): INFO: compiling module 'isp_top' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/isp_top.v(116): WARNING: instantiating unknown module 'BLC' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/isp_top.v(138): WARNING: instantiating unknown module 'raw_matrix_3x3_buffer' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/isp_top.v(158): WARNING: instantiating unknown module 'bilinear_interpolation' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/isp_top.v(163): WARNING: instantiating unknown module 'data128_96' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/isp_top.v(204): WARNING: instantiating unknown module 'image_cut' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/isp_top.v(221): WARNING: instantiating unknown module 'gamma' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/isp_top.v(238): WARNING: instantiating unknown module 'contrast_adj' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/isp_top.v(256): WARNING: instantiating unknown module 'Brightness_adjustment' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/isp_top.v(273): WARNING: instantiating unknown module 'Saturation_adj' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/isp_top.v(278): WARNING: instantiating unknown module 'data96_128' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/BLC/BLC.v(11): INFO: compiling module 'BLC' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/bilinear_interpolation/bilinear_interpolation.v(30): INFO: compiling module 'bilinear_interpolation' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/bilinear_interpolation/bilinear_interpolation.v(309): WARNING: expression size 9 truncated to fit in target size 8 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/bilinear_interpolation/bilinear_interpolation.v(310): WARNING: expression size 10 truncated to fit in target size 8 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/bilinear_interpolation/bilinear_interpolation.v(311): WARNING: expression size 10 truncated to fit in target size 8 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/bilinear_interpolation/bilinear_interpolation.v(313): WARNING: expression size 10 truncated to fit in target size 8 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/bilinear_interpolation/bilinear_interpolation.v(314): WARNING: expression size 10 truncated to fit in target size 8 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/bilinear_interpolation/bilinear_interpolation.v(315): WARNING: expression size 9 truncated to fit in target size 8 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/bilinear_interpolation/bilinear_interpolation.v(317): WARNING: expression size 9 truncated to fit in target size 8 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/bilinear_interpolation/bilinear_interpolation.v(318): WARNING: expression size 10 truncated to fit in target size 8 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/bilinear_interpolation/bilinear_interpolation.v(319): WARNING: expression size 10 truncated to fit in target size 8 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/bilinear_interpolation/bilinear_interpolation.v(321): WARNING: expression size 10 truncated to fit in target size 8 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/bilinear_interpolation/bilinear_interpolation.v(322): WARNING: expression size 10 truncated to fit in target size 8 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/bilinear_interpolation/bilinear_interpolation.v(323): WARNING: expression size 9 truncated to fit in target size 8 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/brightness_adj/Brightness_adjustment.v(99): WARNING: block identifier is required on this block (VLG-224)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/brightness_adj/Brightness_adjustment.v(18): INFO: compiling module 'Brightness_adjustment' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/brightness_adj/Brightness_adjustment.v(111): WARNING: expression size 2 truncated to fit in target size 1 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/brightness_adj/Brightness_adjustment.v(112): WARNING: expression size 2 truncated to fit in target size 1 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/brightness_adj/Brightness_adjustment.v(113): WARNING: expression size 2 truncated to fit in target size 1 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/contrast_adj/contrast_adj.v(139): WARNING: block identifier is required on this block (VLG-224)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/contrast_adj/contrast_adj.v(18): INFO: compiling module 'contrast_adj' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/contrast_adj/contrast_adj.v(116): WARNING: expression size 17 truncated to fit in target size 16 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/contrast_adj/contrast_adj.v(117): WARNING: expression size 17 truncated to fit in target size 16 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/contrast_adj/contrast_adj.v(118): WARNING: expression size 17 truncated to fit in target size 16 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/contrast_adj/contrast_adj.v(129): WARNING: expression size 16 truncated to fit in target size 10 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/contrast_adj/contrast_adj.v(130): WARNING: expression size 16 truncated to fit in target size 10 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/contrast_adj/contrast_adj.v(131): WARNING: expression size 16 truncated to fit in target size 10 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/data128_96/data128_96.v(10): INFO: compiling module 'data128_96' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/data128_96/data128_96.v(10): INFO: replacing unknown cell 'data128_96' with a valid definition (VLG-121)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/isp_top.v(163): INFO: first instantiation was done here (VLG-531)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/data96_128/data96_128.v(10): INFO: compiling module 'data96_128' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/data96_128/data96_128.v(10): INFO: replacing unknown cell 'data96_128' with a valid definition (VLG-121)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/isp_top.v(278): INFO: first instantiation was done here (VLG-531)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/gamma.v(19): INFO: compiling module 'gamma' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/gamma.v(160): WARNING: instantiating unknown module 'lut_2_6' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/gamma.v(182): WARNING: instantiating unknown module 'lut_2_4' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/gamma.v(204): WARNING: instantiating unknown module 'lut_2_2' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/gamma.v(226): WARNING: instantiating unknown module 'lut_2_0' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/gamma.v(248): WARNING: instantiating unknown module 'lut_1_8' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/gamma.v(270): WARNING: instantiating unknown module 'lut_1_6' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/gamma.v(292): WARNING: instantiating unknown module 'lut_1_4' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/gamma.v(314): WARNING: instantiating unknown module 'lut_1_2' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/gamma.v(336): WARNING: instantiating unknown module 'lut_0_8' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/gamma.v(450): WARNING: expression size 32 truncated to fit in target size 21 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/gamma.v(451): WARNING: expression size 32 truncated to fit in target size 21 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/gamma.v(452): WARNING: expression size 32 truncated to fit in target size 21 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/lut_0_8.v(9): INFO: compiling module 'lut_0_8' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/lut_0_8.v(9): INFO: replacing unknown cell 'lut_0_8' with a valid definition (VLG-121)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/gamma.v(336): INFO: first instantiation was done here (VLG-531)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/lut_1_2.v(9): INFO: compiling module 'lut_1_2' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/lut_1_2.v(9): INFO: replacing unknown cell 'lut_1_2' with a valid definition (VLG-121)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/gamma.v(314): INFO: first instantiation was done here (VLG-531)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/lut_1_4.v(9): INFO: compiling module 'lut_1_4' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/lut_1_4.v(9): INFO: replacing unknown cell 'lut_1_4' with a valid definition (VLG-121)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/gamma.v(292): INFO: first instantiation was done here (VLG-531)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/lut_1_6.v(9): INFO: compiling module 'lut_1_6' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/lut_1_6.v(9): INFO: replacing unknown cell 'lut_1_6' with a valid definition (VLG-121)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/gamma.v(270): INFO: first instantiation was done here (VLG-531)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/lut_1_8.v(9): INFO: compiling module 'lut_1_8' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/lut_1_8.v(9): INFO: replacing unknown cell 'lut_1_8' with a valid definition (VLG-121)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/gamma.v(248): INFO: first instantiation was done here (VLG-531)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/lut_2_0.v(9): INFO: compiling module 'lut_2_0' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/lut_2_0.v(9): INFO: replacing unknown cell 'lut_2_0' with a valid definition (VLG-121)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/gamma.v(226): INFO: first instantiation was done here (VLG-531)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/lut_2_2.v(9): INFO: compiling module 'lut_2_2' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/lut_2_2.v(9): INFO: replacing unknown cell 'lut_2_2' with a valid definition (VLG-121)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/gamma.v(204): INFO: first instantiation was done here (VLG-531)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/lut_2_4.v(9): INFO: compiling module 'lut_2_4' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/lut_2_4.v(9): INFO: replacing unknown cell 'lut_2_4' with a valid definition (VLG-121)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/gamma.v(182): INFO: first instantiation was done here (VLG-531)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/lut_2_6.v(9): INFO: compiling module 'lut_2_6' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/lut_2_6.v(9): INFO: replacing unknown cell 'lut_2_6' with a valid definition (VLG-121)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/gamma/gamma.v(160): INFO: first instantiation was done here (VLG-531)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/image_cut/image_cut.v(20): INFO: compiling module 'image_cut' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/image_cut/image_cut.v(70): WARNING: expression size 15 truncated to fit in target size 14 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/image_cut/image_cut.v(71): WARNING: expression size 15 truncated to fit in target size 14 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/saturation_adj/Saturation_adj.v(136): WARNING: parameter 'C0' becomes localparam in 'Saturation_adj' with formal parameter declaration list (VLG-211)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/saturation_adj/Saturation_adj.v(137): WARNING: parameter 'C1' becomes localparam in 'Saturation_adj' with formal parameter declaration list (VLG-211)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/saturation_adj/Saturation_adj.v(138): WARNING: parameter 'C2' becomes localparam in 'Saturation_adj' with formal parameter declaration list (VLG-211)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/saturation_adj/Saturation_adj.v(25): INFO: compiling module 'Saturation_adj' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/saturation_adj/Saturation_adj.v(161): WARNING: expression size 10 truncated to fit in target size 9 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/saturation_adj/Saturation_adj.v(178): WARNING: expression size 32 truncated to fit in target size 8 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/saturation_adj/Saturation_adj.v(197): WARNING: expression size 32 truncated to fit in target size 19 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/raw_matrix_3x3_buffer/line_buffer_demosaic.v(20): INFO: compiling module 'line_buffer_demosaic' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/raw_matrix_3x3_buffer/line_buffer_demosaic.v(62): WARNING: expression size 12 truncated to fit in target size 11 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/raw_matrix_3x3_buffer/line_buffer_demosaic.v(87): WARNING: expression size 12 truncated to fit in target size 11 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/raw_matrix_3x3_buffer/line_buffer_demosaic.v(106): WARNING: instantiating unknown module 'blk_mem_gen_demosaic' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/raw_matrix_3x3_buffer/mipi_to_raw_converter.v(20): INFO: compiling module 'mipi_to_raw_converter' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/raw_matrix_3x3_buffer/raw_matrix_3x3_buffer.v(21): INFO: compiling module 'raw_matrix_3x3_buffer' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/raw_matrix_3x3_buffer/raw_matrix_3x3_buffer.v(149): WARNING: actual bit length 32 differs from formal bit length 1 for port 'O_raw_tready' (VLG-342)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/raw_matrix_3x3_buffer/raw_matrix_3x3_buffer.v(172): WARNING: instantiating unknown module 'zhenghe' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/raw_matrix_3x3_buffer/raw_matrix_3x3_buffer.v(282): WARNING: expression size 15 truncated to fit in target size 14 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/raw_matrix_3x3_buffer/raw_matrix_3x3_buffer.v(283): WARNING: expression size 15 truncated to fit in target size 14 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/raw_matrix_3x3_buffer/zhenghe.v(146): INFO: undeclared symbol 'rd_valid', assumed default net type 'wire' (VLG-1573)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/raw_matrix_3x3_buffer/zhenghe.v(21): INFO: compiling module 'zhenghe' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/raw_matrix_3x3_buffer/zhenghe.v(94): WARNING: expression size 17 truncated to fit in target size 16 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/raw_matrix_3x3_buffer/zhenghe.v(110): WARNING: expression size 15 truncated to fit in target size 14 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/raw_matrix_3x3_buffer/zhenghe.v(135): WARNING: expression size 18 truncated to fit in target size 16 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/raw_matrix_3x3_buffer/zhenghe.v(141): WARNING: expression size 22 truncated to fit in target size 21 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/raw_matrix_3x3_buffer/zhenghe.v(154): WARNING: expression size 12 truncated to fit in target size 11 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/raw_matrix_3x3_buffer/zhenghe.v(164): WARNING: expression size 12 truncated to fit in target size 11 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/isp/raw_matrix_3x3_buffer/zhenghe.v(175): WARNING: instantiating unknown module 'blk_mem_gen_zhenghe' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/my_image_process/rgb4_downscale_8_15.v(1): INFO: compiling module 'rgb4_downscale_8_15' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/my_image_process/rgb4_downscale_8_15.v(1): INFO: replacing unknown cell 'rgb4_downscale_8_15' with a valid definition (VLG-121)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system.v(452): INFO: first instantiation was done here (VLG-531)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/PWM.v(4): INFO: compiling module 'PWM' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/PWM.v(22): WARNING: expression size 6 truncated to fit in target size 5 (VLG-221)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/axi_lite_pwm.v(25): INFO: compiling module 'axi_lite_pwm' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/axi_lite_pwm.v(268): INFO: compiling module 'axi_lite_pwm_channel(RESET_ARR=32'b00000000000000000010011100001110)' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/axi_lite_pwm.v(268): INFO: compiling module 'axi_lite_pwm_channel(RESET_ARR=32'b00000000001111010000011101101111)' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/alip/mipi_rx/channel_aligner_wrapper.enc.sv(158): WARNING: ignoring the contents of protected block (VLG-1245)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/alip/mipi_rx/channel_aligner_wrapper.enc.sv(158): ERROR: unexpected EOF (VLG-150)
+si_select_dialog Add_Module
+si_close_popup_menu
+si_click_tree_item Add_Module addModuleTree axi_lite_pwm_(axi_lite_pwm_v) 0
+si_click_push_button Add_Module AL_AddModuleDlg.Ok
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/axi_lite_pwm.v(268): INFO: compiling module 'axi_lite_pwm_channel' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/axi_lite_pwm.v(25): INFO: compiling module 'axi_lite_pwm' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/axi_lite_pwm.v(268): INFO: compiling module 'axi_lite_pwm_channel(RESET_ARR=32'b00000000000000000010011100001110)' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/axi_lite_pwm.v(268): INFO: replacing existing cell 'axi_lite_pwm_channel(RESET_ARR=32'b00000000000000000010011100001110)' (VLG-120)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/axi_lite_pwm.v(268): INFO: compiling module 'axi_lite_pwm_channel(RESET_ARR=32'b00000000001111010000011101101111)' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/axi_lite_pwm.v(268): INFO: replacing existing cell 'axi_lite_pwm_channel(RESET_ARR=32'b00000000001111010000011101101111)' (VLG-120)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/axi_lite_pwm.v(25): INFO: replacing existing cell 'axi_lite_pwm' (VLG-120)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/alip/mipi_rx/hs_rx_wrapper.sv(1): INFO: compiling module 'hs_rx_wrapper' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/alip/mipi_rx/hs_rx_wrapper.sv(54): WARNING: instantiating unknown module 'data_lane_rx_wrapper' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/03_ip/alip/mipi_rx/hs_rx_wrapper.sv(71): WARNING: instantiating unknown module 'channel_aligner_wrapper' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system/ip/system_axi_lite_pwm_0/system_axi_lite_pwm_0.v(1): INFO: compiling module 'system_axi_lite_pwm_0' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/axi_lite_pwm.v(25): INFO: compiling module 'axi_lite_pwm(RESET_MOTOR_ARR=32'b00000000000000000010011100001110,RESET_SERVO_ARR=32'b00000000001111010000011101101111)' (VLG-004)
+#[INFO] si_design_add_inst -type module -reference axi_lite_pwm axi_lite_pwm_0
+si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 70
 si_select_window DesignIntegrator
-si_design_diagram_select_port system.DesignDiagram Constant_0 dout 1
-si_design_diagram_select_inst system.DesignDiagram Constant_0 1
+si_design_diagram_select_inst system.DesignDiagram axi_lite_pwm_0 1
 si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 266
-si_design_diagram_move_inst system.DesignDiagram Constant_0 3053.299805 516.000122
-si_design_diagram_select_inst system.DesignDiagram Constant_0 1
+si_design_diagram_move_inst system.DesignDiagram axi_lite_pwm_0 3117.399902 1332.800415
+si_design_diagram_select system.DesignDiagram 1
+si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView horizontal 1371
+si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 923
+si_design_diagram_select_inst system.DesignDiagram axi_lite_pwm_0 1
+si_design_diagram_move_inst system.DesignDiagram axi_lite_pwm_0 3109.599854 1725.200562
+si_design_diagram_select_port system.DesignDiagram AXI_Matrix_0 US_AXI0 1
+si_design_diagram_double_click_port system.DesignDiagram AXI_Matrix_0 US_AXI0
+si_design_diagram_select_inst system.DesignDiagram AXI_Matrix_0 1
 #si_select_dialog AL_HintBox #Customize Ip
-#[INFO] GUI-2000 : The IP files have been generated successfully. :{DR1M90GEG400(E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system/ip/system_Constant_0/system_Constant_0.xml)}
-#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system/ip/system_Constant_0/system_Constant_0.v(9): INFO: compiling module 'system_Constant_0' (VLG-004)
-#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system/ip/system_Constant_0/system_Constant_0.v(9): INFO: replacing existing cell 'system_Constant_0' (VLG-120)
-si_design_diagram_recustomize_inst system.DesignDiagram Constant_0 1
+#[INFO] GUI-2000 : The IP files have been generated successfully. :{DR1M90GEG400(E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system/ip/system_AXI_Matrix_0/system_AXI_Matrix_0.xml)}
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system/ip/system_AXI_Matrix_0/system_AXI_Matrix_0.v(10): INFO: compiling module 'system_AXI_Matrix_0' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system/ip/system_AXI_Matrix_0/system_AXI_Matrix_0.v(352): WARNING: instantiating unknown module 'axi_matrix_wrapper_f41f427955dd' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system/ip/system_AXI_Matrix_0/system_AXI_Matrix_0.v(10): INFO: replacing existing cell 'system_AXI_Matrix_0' (VLG-120)
+si_design_diagram_recustomize_inst system.DesignDiagram AXI_Matrix_0 3
 si_select_window DesignIntegrator
-si_design_diagram_select_inst system.DesignDiagram Constant_0 1
-si_design_diagram_move_inst system.DesignDiagram Constant_0 3365.799805 468.000092
+si_design_diagram_select_port system.DesignDiagram AXI_Matrix_0 DS_AXI2 1
+si_design_diagram_double_click_port system.DesignDiagram AXI_Matrix_0 DS_AXI2
+si_click_push_button system.DesignDiagram axi_lite_pwm_0::s_axi.+-
+si_design_diagram_select_port system.DesignDiagram AXI_Matrix_0 DS_AXI2 1
+si_click_push_button system.DesignDiagram axi_lite_pwm_0::s_axi.+-
+si_design_diagram_select_port system.DesignDiagram AXI_Matrix_0 DS_AXI2 1
+si_design_diagram_key_press system.DesignDiagram esc #right mouse press
+si_design_diagram_select_port system.DesignDiagram AXI_Matrix_0 DS_AXI2 1
+si_design_diagram_select_inst system.DesignDiagram axi_lite_pwm_0 1
+si_design_diagram_recustomize_inst system.DesignDiagram axi_lite_pwm_0 0
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/axi_lite_pwm.v(25): INFO: compiling module 'axi_lite_pwm' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/axi_lite_pwm.v(268): INFO: compiling module 'axi_lite_pwm_channel(RESET_ARR=32'b00000000000000000010011100001110)' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/axi_lite_pwm.v(268): INFO: replacing existing cell 'axi_lite_pwm_channel(RESET_ARR=32'b00000000000000000010011100001110)' (VLG-120)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/axi_lite_pwm.v(268): INFO: compiling module 'axi_lite_pwm_channel(RESET_ARR=32'b00000000001111010000011101101111)' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/axi_lite_pwm.v(268): INFO: replacing existing cell 'axi_lite_pwm_channel(RESET_ARR=32'b00000000001111010000011101101111)' (VLG-120)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/axi_lite_pwm.v(25): INFO: replacing existing cell 'axi_lite_pwm' (VLG-120)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system/ip/system_axi_lite_pwm_0/system_axi_lite_pwm_0.v(1): INFO: compiling module 'system_axi_lite_pwm_0' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system/ip/system_axi_lite_pwm_0/system_axi_lite_pwm_0.v(59): WARNING: instantiating unknown module 'axi_lite_pwm' (VLG-075)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system/ip/system_axi_lite_pwm_0/system_axi_lite_pwm_0.v(1): INFO: replacing existing cell 'system_axi_lite_pwm_0' (VLG-120)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system/ip/system_axi_lite_pwm_0/system_axi_lite_pwm_0.v(1): INFO: compiling module 'system_axi_lite_pwm_0' (VLG-004)
+si_select_dialog Re-customize_Module_Reference
+si_close_dialog Re-customize_Module_Reference
+si_select_window DesignIntegrator
+si_select_tab system.DesignPage DesignPage.DesigniagramView Address_Editor 1
+si_click_tree_item system.DesignDiagram AddressBrowser.AddressEditorTree /ARM_Processor_System_0 0 #si_change_current_tree_item
+si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView horizontal 208
+si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 517
+si_select_tab system.DesignPage DesignPage.DesigniagramView Diagram 0
 si_design_diagram_select system.DesignDiagram 1
-si_design_diagram_select_port system.DesignDiagram Constant_0 dout 1
-si_design_diagram_double_click_port system.DesignDiagram Constant_0 dout
-si_design_diagram_select_port system.DesignDiagram Constant_0 dout 1
-#[INFO] si_design_add_connection Constant_0.dout Processor_System_Reset_0.pll_locked
-si_design_diagram_select_port system.DesignDiagram Processor_System_Reset_0 pll_locked 1
+si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView horizontal 1174
+si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 806
+si_design_diagram_select_inst system.DesignDiagram axi_lite_pwm_0 1
+si_design_diagram_inst_popup_menu system.DesignDiagram axi_lite_pwm_0
+si_click_menu_item popup_menu Popup.CustomizeIp
+si_design_diagram_recustomize_inst system.DesignDiagram axi_lite_pwm_0 0
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/axi_lite_pwm.v(25): INFO: compiling module 'axi_lite_pwm' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/axi_lite_pwm.v(268): INFO: compiling module 'axi_lite_pwm_channel(RESET_ARR=32'b00000000000000000010011100001110)' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/axi_lite_pwm.v(268): INFO: replacing existing cell 'axi_lite_pwm_channel(RESET_ARR=32'b00000000000000000010011100001110)' (VLG-120)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/axi_lite_pwm.v(268): INFO: compiling module 'axi_lite_pwm_channel(RESET_ARR=32'b00000000001111010000011101101111)' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/axi_lite_pwm.v(268): INFO: replacing existing cell 'axi_lite_pwm_channel(RESET_ARR=32'b00000000001111010000011101101111)' (VLG-120)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/axi_lite_pwm.v(25): INFO: replacing existing cell 'axi_lite_pwm' (VLG-120)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system/ip/system_axi_lite_pwm_0/system_axi_lite_pwm_0.v(1): INFO: compiling module 'system_axi_lite_pwm_0' (VLG-004)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system/ip/system_axi_lite_pwm_0/system_axi_lite_pwm_0.v(1): INFO: replacing existing cell 'system_axi_lite_pwm_0' (VLG-120)
+#E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/system/ip/system_axi_lite_pwm_0/system_axi_lite_pwm_0.v(1): INFO: compiling module 'system_axi_lite_pwm_0' (VLG-004)
+si_select_dialog Re-customize_Module_Reference
+si_close_popup_menu
+si_close_dialog Re-customize_Module_Reference
+si_select_window DesignIntegrator
+si_design_diagram_select_inst system.DesignDiagram axi_lite_pwm_0 1
+si_design_diagram_inst_popup_menu system.DesignDiagram axi_lite_pwm_0
+si_click_menu_item DesignIntegrator Diagram.Delete
+si_select_dialog StandardMessageBox #Delete Instance
+si_close_popup_menu
+si_click_push_button StandardMessageBox Yes
+#[INFO] si_design_remove_inst axi_lite_pwm_0
+si_select_window DesignIntegrator
 si_design_diagram_select system.DesignDiagram 1
+si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView horizontal 916
+si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 796
 si_click_toolbar_item DesignIntegrator CheckDesign
+si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView horizontal 915
+si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 1389
+si_click_tree_item system.DesignDiagram MessageBrowser.ViolationsTree Error.error-InstPort-port_lack_of_driver-SocInstPort_input:Processor_System_Reset_0::aux_rst.SocInstPort_input:Processor_System_Reset_0::aux_rst 0 #si_change_current_tree_item
+si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView horizontal 1795
+si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 266
+si_click_tree_item system.DesignDiagram MessageBrowser.ViolationsTree Error.error-InstPort-port_lack_of_driver-SocInstPort_input:Processor_System_Reset_0::aux_rst.SocInstPort_input:Processor_System_Reset_0::aux_rst 0
+si_click_tree_item system.DesignDiagram MessageBrowser.ViolationsTree Error.error-InstPort-port_lack_of_driver-SocInstPort_input:Processor_System_Reset_0::aux_rst.SocInstPort_input:Processor_System_Reset_0::aux_rst 0 #si_change_current_tree_item
+si_double_click_tree_item system.DesignDiagram MessageBrowser.ViolationsTree Error.error-InstPort-port_lack_of_driver-SocInstPort_input:Processor_System_Reset_0::aux_rst.SocInstPort_input:Processor_System_Reset_0::aux_rst 0
 si_design_diagram_select system.DesignDiagram 1
+si_resize_window_central DesignIntegrator 2560 1427 Navigation 640 480  640 480
+si_move_splitter system.DesignPage DesignPage.MainVSplitter 1174 1
+si_design_diagram_select system.DesignDiagram 1
+si_close_window DesignIntegrator
+si_select_dialog ExitDesignIntegrator
+si_click_push_button ExitDesignIntegrator Cancel
+si_select_window DesignIntegrator
 si_click_toolbar_item DesignIntegrator DesignIntegrator.Flow.Generate_Design
 si_select_dialog Generate_Design
 si_click_push_button Generate_Design GenerateDesign.Generate

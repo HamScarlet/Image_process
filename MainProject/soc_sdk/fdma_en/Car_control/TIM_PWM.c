@@ -36,7 +36,7 @@ void TIM_PWM_test(void)
 
 void TIM_PWM_Init(void)
 {
-    int v = UI_In32(REG_VERSION);
+    //int v = UI_In32(REG_VERSION);
     //al_printf(v);
     UI_Out32(AXI_PWM_REG_BASE,0);
     UI_Out32(REG_CTRL,0);
