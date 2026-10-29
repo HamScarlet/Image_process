@@ -1,0 +1,83 @@
+/*
+ * Copyright (c) 2023, Anlogic Inc. and Contributors. All rights reserved.
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+
+#include <stdio.h>
+#include <math.h>
+#include <time.h>
+#include "al_core.h"
+#include <stdlib.h>
+#include "ui_io.h"
+#include "ui_type.h"
+
+#define AXI_GPIO0_DATA_REG (0X80000000 + 0)
+#define AXI_GPIO0_TRI_REG  (0X80000000 + 4)
+#define AXI_GPIO0_IER_REG  (0X80000000 + 0x100)
+#define AXI_GPIO0_SER_REG  (0X80000000 + 0x104)
+
+#define AXI_GPIO1_DATA_REG (0X80100000 + 0)
+#define AXI_GPIO1_TRI_REG  (0X80100000 + 4)
+#define AXI_GPIO1_IER_REG  (0X80100000 + 0x100)
+#define AXI_GPIO1_SER_REG  (0X80100000 + 0x104)
+
+
+#define PL_IRQ_NUM0  114
+#define PL_IRQ_NUM1  115
+
+//pl interrupt call_back function
+int gpio0_intr_func_handle(void) {
+
+	al_printf("btn0 intr_func_handle\r\n");
+	UI_Out32(AXI_GPIO0_SER_REG,0x01);//set gpio input
+	return 0;
+}
+
+int gpio1_intr_func_handle(void) {
+
+	al_printf("btn1 intr_func_handle\r\n");
+	UI_Out32(AXI_GPIO1_SER_REG,0x01);//set gpio input
+	return 0;
+}
+
+
+
+
+int main()
+{
+	u32 btn_val;
+
+	printf("AXI GPIO TEST!\r\n");
+	printf("PL interrupt  TEST!\r\n");
+
+	UI_Out32(AXI_GPIO0_TRI_REG,0x01);//set gpio input
+	UI_Out32(AXI_GPIO0_IER_REG,0x01);//set gpio channel1 interrupt enable
+
+	UI_Out32(AXI_GPIO1_TRI_REG,0x01);//set gpio input
+	UI_Out32(AXI_GPIO1_IER_REG,0x01);//set gpio channel1 interrupt enable
+
+	AL_INTR_AttrStrct *IntrAttr_PL_INTER0 = malloc(sizeof(AL_INTR_AttrStrct));
+	IntrAttr_PL_INTER0->TrigMode = POSTIVE_EDGE_TRIGGER;// set interrupt as edge trigger
+	IntrAttr_PL_INTER0->Priority   =  137,
+	AlIntr_RegHandler(PL_IRQ_NUM0, IntrAttr_PL_INTER0, gpio0_intr_func_handle, NULL);
+
+
+	AL_INTR_AttrStrct *IntrAttr_PL_INTER1 = malloc(sizeof(AL_INTR_AttrStrct));
+	IntrAttr_PL_INTER1->TrigMode = POSTIVE_EDGE_TRIGGER;// set interrupt as edge trigger
+	IntrAttr_PL_INTER1->Priority   =  137,
+	AlIntr_RegHandler(PL_IRQ_NUM1, IntrAttr_PL_INTER1, gpio1_intr_func_handle, NULL);
+
+    AlIntr_SetLocalInterrupt(1); // enable local interrupt
+
+
+
+	while(1)
+	{
+		//btn_val = UI_In32(AXI_GPIO1_DATA_REG);//read button
+
+		//UI_Out32(AXI_GPIO_DATA_REG,btn_val);   //write led
+	}
+
+    return 0;
+}

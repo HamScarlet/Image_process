@@ -1,0 +1,15 @@
+#[INFO] alps V2025.10 (APP main), Windows 64bit (Release), Build 177648 2025/10/21, 09:44:09 Oct 22 2025 on WIN10-204
+#[INFO] Run at Wed Oct 28 21:28:44 2026
+
+#[ERROR] Func:validateNewValue, Line:152, failed to convert new val to INT:0xffffffff 400.00 115207 115207
+#[ERROR] Func:validateNewValue, Line:152, failed to convert new val to INT:0xffffffff
+ps_gui_graphics_view_scroll Processor_System PsDiagram.GraphicsView horizontal 0
+ps_gui_graphics_view_scroll Processor_System PsDiagram.GraphicsView vertical 0
+ps_gui_select_dialog Processor_System
+ps_design_select_block Processor_System FPSoC_Design UART0
+ps_gui_select_tab Processor_System psIpCfgPageNaviTab Clocks 3
+ps_gui_close_dialog Processor_System
+ps_gui_select_dialog StandardMessageBox #Info
+ps_gui_click_push_button StandardMessageBox Yes
+#Func:closeBtnClickCB, Line:25, Click close message >> PSGUI-002 : The IP have been clicked cancel.
+

@@ -1,0 +1,84 @@
+============================================================
+   Tang Dynasty, V5.9.112584
+   Copyright (c) 2012-2024 Anlogic Inc.
+   Executable = C:/Anlogic/TD_5.9.1_DR1_ES1.1_112.584/bin/td.exe
+   Built at =   11:02:34 Mar  4 2024
+   Run by =     ui
+   Run Date =   Sun Jun 30 17:14:36 2024
+
+   Run on =     DESKTOP-99A57QR
+============================================================
+RUN-001 : GUI based run...
+RUN-1002 : start command "open_project soc_prj.al -update"
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : -----------------------------------------------------
+RUN-1001 :   Parameters   |  Settings  |  Default Values  |  Note  
+RUN-1001 : -----------------------------------------------------
+RUN-1001 :     message    |  standard  |     standard     |        
+RUN-1001 :   qor_monitor  |     on     |        on        |        
+RUN-1001 :   syn_ip_flow  |    off     |       off        |        
+RUN-1001 :     thread     |    auto    |       auto       |        
+RUN-1001 : -----------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 :        infer_add       |     on     |        on        |        
+RUN-1001 :        infer_fsm       |    off     |       off        |        
+RUN-1001 :       infer_mult       |     on     |        on        |        
+RUN-1001 :        infer_ram       |     on     |        on        |        
+RUN-1001 :      infer_shifter     |     on     |        on        |        
+RUN-1001 : -------------------------------------------------------------
+HDL-1007 : analyze verilog file uisrc/01_rtl/system/hdl/system.v
+HDL-1007 : analyze verilog file uisrc/01_rtl/system/ip/system_ARM_Processor_System_0/ARM_Processor_System_59fb6a0bf2ca.v
+HDL-1007 : analyze verilog file uisrc/01_rtl/system/ip/system_ARM_Processor_System_0/system_ARM_Processor_System_0.v
+HDL-1007 : analyze verilog file uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v
+Copyright (c) 1998-2019 The OpenSSL Project.  All rights reserved.
+This product includes software developed by the OpenSSL Project
+for use in the OpenSSL Toolkit (http://www.openssl.org/)
+Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com)
+All rights reserved.
+This product includes cryptographic software written by Eric Young (eay@cryptsoft.com)
+HDL-5007 WARNING: block identifier is required on this block in uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(0)
+HDL-1007 : back to file 'uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v' in uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(360)
+HDL-1007 : back to file 'uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v' in uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(1456)
+HDL-1007 : analyze verilog file uisrc/01_rtl/system/ip/system_AXI_GPIO_0/system_AXI_GPIO_0.v
+HDL-5007 WARNING: literal value 'hFFFFFFFF truncated to fit in 2 bits in uisrc/01_rtl/system/ip/system_AXI_GPIO_0/system_AXI_GPIO_0.v(41)
+HDL-1007 : analyze verilog file uisrc/01_rtl/system/ip/system_AXI_GPIO_1/axi_gpio_top_224f1901496b.v
+HDL-5007 WARNING: block identifier is required on this block in uisrc/01_rtl/system/ip/system_AXI_GPIO_1/axi_gpio_top_224f1901496b.v(0)
+HDL-1007 : back to file 'uisrc/01_rtl/system/ip/system_AXI_GPIO_1/axi_gpio_top_224f1901496b.v' in uisrc/01_rtl/system/ip/system_AXI_GPIO_1/axi_gpio_top_224f1901496b.v(360)
+HDL-1007 : back to file 'uisrc/01_rtl/system/ip/system_AXI_GPIO_1/axi_gpio_top_224f1901496b.v' in uisrc/01_rtl/system/ip/system_AXI_GPIO_1/axi_gpio_top_224f1901496b.v(1456)
+HDL-1007 : analyze verilog file uisrc/01_rtl/system/ip/system_AXI_GPIO_1/system_AXI_GPIO_1.v
+HDL-5007 WARNING: literal value 'hFFFFFFFF truncated to fit in 2 bits in uisrc/01_rtl/system/ip/system_AXI_GPIO_1/system_AXI_GPIO_1.v(41)
+HDL-1007 : analyze verilog file uisrc/01_rtl/system/ip/system_AXI_Matrix_0/axi_matrix_wrapper_e4db57b5a5da.v
+HDL-1007 : undeclared symbol '**', assumed default net type '**' in uisrc/01_rtl/system/ip/system_AXI_Matrix_0/axi_matrix_wrapper_e4db57b5a5da.v(0)
+HDL-1007 : undeclared symbol '**', assumed default net type '**' in uisrc/01_rtl/system/ip/system_AXI_Matrix_0/axi_matrix_wrapper_e4db57b5a5da.v(0)
+HDL-1007 : undeclared symbol '**', assumed default net type '**' in uisrc/01_rtl/system/ip/system_AXI_Matrix_0/axi_matrix_wrapper_e4db57b5a5da.v(0)
+HDL-1007 : undeclared symbol '**', assumed default net type '**' in uisrc/01_rtl/system/ip/system_AXI_Matrix_0/axi_matrix_wrapper_e4db57b5a5da.v(0)
+HDL-1007 : undeclared symbol '**', assumed default net type '**' in uisrc/01_rtl/system/ip/system_AXI_Matrix_0/axi_matrix_wrapper_e4db57b5a5da.v(0)
+HDL-1007 : back to file 'uisrc/01_rtl/system/ip/system_AXI_Matrix_0/axi_matrix_wrapper_e4db57b5a5da.v' in uisrc/01_rtl/system/ip/system_AXI_Matrix_0/axi_matrix_wrapper_e4db57b5a5da.v(17060)
+HDL-1007 : analyze verilog file uisrc/01_rtl/system/ip/system_AXI_Matrix_0/system_AXI_Matrix_0.v
+HDL-1007 : analyze verilog file uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_0/axi_protocol_converter_top_5d2fe900d7ba.v
+HDL-1007 : back to file 'uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_0/axi_protocol_converter_top_5d2fe900d7ba.v' in uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_0/axi_protocol_converter_top_5d2fe900d7ba.v(4702)
+HDL-1007 : analyze verilog file uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_0/system_AXI_Protocol_Converter_0.v
+HDL-1007 : analyze verilog file uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_1/axi_protocol_converter_top_827b6aa40090.v
+HDL-1007 : back to file 'uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_1/axi_protocol_converter_top_827b6aa40090.v' in uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_1/axi_protocol_converter_top_827b6aa40090.v(4702)
+HDL-1007 : analyze verilog file uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_1/axi_protocol_converter_top_c94048ca636c.v
+HDL-1007 : back to file 'uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_1/axi_protocol_converter_top_c94048ca636c.v' in uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_1/axi_protocol_converter_top_c94048ca636c.v(4702)
+HDL-1007 : analyze verilog file uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_1/system_AXI_Protocol_Converter_1.v
+HDL-1007 : analyze verilog file uisrc/01_rtl/system_top.v
+RUN-1001 : Project manager successfully analyzed 15 source files.
+RUN-1002 : start command "import_device dr1_90.db -package DR1M90GEG484 -speed 2"
+ARC-1001 : Device Initialization.
+ARC-1001 : ------------------------------------------------------------
+ARC-1001 :           OPTION          |        IO         |   SETTING   
+ARC-1001 : ------------------------------------------------------------
+ARC-1001 :   non_jtag_persist(none)  |      35 IOs       |    gpio    
+ARC-1001 :            jtag           |  G11/G12/H13/G14  |  dedicate  
+ARC-1001 : ------------------------------------------------------------
+RUN-1003 : finish command "import_device dr1_90.db -package DR1M90GEG484 -speed 2" in  2.877337s wall, 2.906250s user + 0.046875s system = 2.953125s CPU (102.6%)
+
+RUN-1004 : used memory is 375 MB, reserved memory is 350 MB, peak memory is 405 MB

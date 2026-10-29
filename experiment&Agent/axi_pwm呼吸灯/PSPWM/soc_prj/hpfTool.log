@@ -1,0 +1,22 @@
+#[INFO] hpfTool V2024.10 (APP rel5.9), Windows 64bit (Release), Build 127919 2024/09/06, 12:41:28 Oct 29 2024 on WIN10-203
+#[INFO] Run at Sat Nov 30 15:57:13 2024
+#E:\TD\TD5.9.1_202410\bin\hpfTool.exe -prj_path I:/Anlogic/l1_dr1/3_2_1_sdk_base/09_axi_gpio_pl_intr/soc_prj -prj_name soc_prj -ps_path I:/Anlogic/l1_dr1/3_2_1_sdk_base/09_axi_gpio_pl_intr/soc_prj/uisrc/01_rtl/system/ip/system_ARM_Processor_System_0 -design_path I:/Anlogic/l1_dr1/3_2_1_sdk_base/09_axi_gpio_pl_intr/soc_prj/uisrc/01_rtl/system -bitstream_path I:/Anlogic/l1_dr1/3_2_1_sdk_base/09_axi_gpio_pl_intr/soc_prj/soc_prj_Runs/phy_1\soc_prj.bit -bitstream_status latest
+#[INFO] E:/TD/TD5.9.1_202410/bin/../ip/depot/
+#[INFO] Loading I:/Anlogic/l1_dr1/3_2_1_sdk_base/09_axi_gpio_pl_intr/soc_prj/uisrc/01_rtl/system/ip/system_ARM_Processor_System_0/Design.xml
+si_select_dialog HpfToolDialog
+si_set_checkbox HpfToolDialog HpfToolDialog.IncludeBitstream checked
+si_select_combobox_item HpfToolDialog HpfToolDialog.ExportTo Choose_Location... 1
+si_select_file_dialog HpfExportPathFileDialog I:/Anlogic/l1_dr1/3_2_1_sdk_base/09_axi_gpio_pl_intr/soc_hw
+si_select_dialog HpfToolDialog
+si_click_push_button HpfToolDialog HpfToolDialog.OK
+#[INFO] Loading I:/Anlogic/l1_dr1/3_2_1_sdk_base/09_axi_gpio_pl_intr/soc_prj/soc_prj_Runs/phy_1/soc_prj.bit
+#[INFO] ipCfgPath:E:/TD/TD5.9.1_202410/bin/../ip/depot//ARM_Processor_System_F9F0D0P0_1.0 outHpfPath:I:/Anlogic/l1_dr1/3_2_1_sdk_base/09_axi_gpio_pl_intr/soc_prj
+#[INFO] plipAddressPath: I:/Anlogic/l1_dr1/3_2_1_sdk_base/09_axi_gpio_pl_intr/soc_prj/uisrc/01_rtl/system/system.address.xml
+#[INFO] param_val count:557
+#[INFO] bitstream_path: I:/Anlogic/l1_dr1/3_2_1_sdk_base/09_axi_gpio_pl_intr/soc_prj/soc_prj_Runs/phy_1/soc_prj.bit
+#[INFO] device:DR1M90GEG484 speed:-2
+#[INFO] Remove HPFs folder success!
+si_select_dialog StandardMessageBox #Info
+si_click_push_button StandardMessageBox Ok
+#[INFO] exit hpf tool
+si_select_dialog HpfToolDialog

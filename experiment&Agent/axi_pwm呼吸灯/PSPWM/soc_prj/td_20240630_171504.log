@@ -1,0 +1,37 @@
+============================================================
+   Tang Dynasty, V5.9.112584
+   Copyright (c) 2012-2024 Anlogic Inc.
+   Executable = C:/Anlogic/TD_5.9.1_DR1_ES1.1_112.584/bin/td_commands_prompt.exe
+   Built at =   11:02:34 Mar  4 2024
+   Run by =     ui
+   Run Date =   Sun Jun 30 17:15:04 2024
+
+   Run on =     DESKTOP-99A57QR
+============================================================
+RUN-1001 : Start xmlipgen command
+RUN-1002 : start command "analyze -file C:/Users/ui/Desktop/dr1/sdk_axi_gpio_pl_intr/soc_prj/uisrc/01_rtl/system/ip/system_ARM_Processor_System_0/ARM_Processor_System_59fb6a0bf2ca.v"
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : -----------------------------------------------------
+RUN-1001 :   Parameters   |  Settings  |  Default Values  |  Note  
+RUN-1001 : -----------------------------------------------------
+RUN-1001 :     message    |  standard  |     standard     |        
+RUN-1001 :   qor_monitor  |     on     |        on        |        
+RUN-1001 :   syn_ip_flow  |    off     |       off        |        
+RUN-1001 :     thread     |    auto    |       auto       |        
+RUN-1001 : -----------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 :        infer_add       |     on     |        on        |        
+RUN-1001 :        infer_fsm       |    off     |       off        |        
+RUN-1001 :       infer_mult       |     on     |        on        |        
+RUN-1001 :        infer_ram       |     on     |        on        |        
+RUN-1001 : -------------------------------------------------------------
+HDL-1008 : devive name is not set, so there is no need to read *macro.v
+HDL-1007 : analyze verilog file C:/Users/ui/Desktop/dr1/sdk_axi_gpio_pl_intr/soc_prj/uisrc/01_rtl/system/ip/system_ARM_Processor_System_0/ARM_Processor_System_59fb6a0bf2ca.v
+RUN-1002 : start command "write_hdl C:/Users/ui/Desktop/dr1/sdk_axi_gpio_pl_intr/soc_prj/uisrc/01_rtl/system/ip/system_ARM_Processor_System_0/ARM_Processor_System_59fb6a0bf2ca.v"
+RUN-1001 : Finish xmlipgen command

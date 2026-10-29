@@ -1,0 +1,20 @@
+============================================================
+   Tang Dynasty, V5.9.151508
+   Copyright (c) 2012-2025 Anlogic Inc.
+   Executable = D:/Anlu_2025_1/bin/td.exe
+   Built at =   12:47:27 Feb 21 2025
+   Run by =     VLKUS_Li
+   Run Date =   Tue Mar 18 15:49:38 2025
+
+   Run on =     DESKTOP-2EA0AIV
+============================================================
+Copyright (c) 1998-2019 The OpenSSL Project.  All rights reserved.
+This product includes software developed by the OpenSSL Project
+for use in the OpenSSL Toolkit (http://www.openssl.org/)
+Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com)
+All rights reserved.
+This product includes cryptographic software written by Eric Young (eay@cryptsoft.com)
+HDL-5007 WARNING: block identifier is required on this block in uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(0)
+HDL-5007 WARNING: literal value 'hFFFFFFFF truncated to fit in 1 bits in uisrc/01_rtl/system/ip/system_AXI_GPIO_0/system_AXI_GPIO_0.v(42)
+HDL-5007 WARNING: block identifier is required on this block in uisrc/01_rtl/system/ip/system_AXI_GPIO_1/axi_gpio_top_224f1901496b.v(0)
+HDL-5007 WARNING: literal value 'hFFFFFFFF truncated to fit in 1 bits in uisrc/01_rtl/system/ip/system_AXI_GPIO_1/system_AXI_GPIO_1.v(42)

@@ -1,0 +1,676 @@
+Created by          : Tang Dynasty Release_2026.1_SP2
+                    : Copyright (c) 2012-2026 Anlogic Inc.
+Generated           : Thu Oct 29 19:18:41 2026
+
+Top Model           : system_top
+Device              : DR1M90GEG400
+Speed               : 2
+STA coverage        : 94.40%
+Constraint File     : D:/FPGAproject/AnLuRun/PSPWM/soc_prj/uisrc/04_pin/timing.sdc;
+Confidence          : Synthesized
+Check Corner        : Both (Slow and Fast)
+CRPR Enabled        : Yes
+Report Scheme       : 10 end point(s) per path group, 1 path(s) per end point
+
+
+Check Status
+-------------
+
+Corner   | Max      Min     
+------------------------------------
+Slow     | yes      yes     
+Fast     | yes      yes     
+
+
+Timing Status
+--------------------
+	SWNS: 3.691ns, STNS: 0.000ns
+	HWNS: 0.000ns, HTNS: 0.000ns
+	Period Check WNS: 0.000ns
+
+
+Clock Summary
+--------------------
+
+       Clock-Id:       C-Freq       Fanout   Clock-Name
+--------------------------------------------------------------------------------
+           clk0:      100.000         3290   p2f_clk0
+           clk1:      100.000            0   I_system/system_ARM_Processor_System_0_Inst/ARM_Processor_System_644123ab1028_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.master_gp0_axi_aclk
+--------------------------------------------------------------------------------
+
+       Name            Type         Rise(ns)   Fall(ns)          C-Period(ns)     C-Freq(MHz)          R-Period(ns)     R-Freq(MHz)         SWNS(ns)   STNS(ns)         HWNS(ns)   HTNS(ns)         Skew(ns)           Fanout        Max-Level        CC-From    CC-To
+       clk0           local            0.000      5.000                10.000         100.000                 6.309         158.504            3.691      0.000            0.000      0.000            0.000             3290                7             no       no
+       clk1           local            0.000      5.000                10.000         100.000                10.000         100.000            0.000      0.000            0.000      0.000            0.000                0                0             no       no
+
+Notes
+----------
+C-Period  :  constraint period
+C-Freq    :  constraint freq
+R-Period  :  report min period
+R-Freq    :  report fmax
+CC-From   :  has path(s) from cross-domain clock
+CC-To     :  has path(s) to cross-domain clock
+
+
+*   Clock R-Period data only takes intra-clock timing. SWNS/STNS/HWNS/HTNS take both intra-clock and inter-clock timing.
+*   If there is mismatch between R-Period and SWNS, check inter-clock timing of this clock as capture clock.
+*   SWNS/STNS/HWNS/HTNS of timing exception (SMCP/SMD) only counted in global Timing Status, not counted in Clock Summary.
+
+Intra clock domain timing
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     p2f_clk0 -> p2f_clk0
+Type           :     Self
+From Clock     :     p2f_clk0
+To Clock       :     p2f_clk0
+Min Period     :     6.309ns
+Fmax           :     158.504MHz
+
+Statistics:
+Max            : SWNS      3.691ns, STNS      0.000ns,         0 Viol Endpoints,      7623 Total Endpoints,    127363 Paths Analyzed
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+Slack               : 3.691ns
+Begin Point         : I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt_reg[0].clk (rising edge triggered by clock p2f_clk0  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+End Point           : I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_reg[0].d (rising edge triggered by clock p2f_clk0  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 10.000ns { p2f_clk0 rising@10.000ns - p2f_clk0 rising@0.000ns }
+Data Path Delay     : 6.239ns (cell 1.663ns (26%), net 4.576ns (74%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( LUT6=2  LUT2=2  LUT5=1  LUT4=1 )
+Max Fanout          : 31
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+SOC                                     0.000          0.000          pin: I_system/system_ARM_Processor_System_0_Inst/ARM_Processor_System_644123ab1028_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.p2f_clk0
+net (fo=3290)                           0.000          0.000          net: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/s_axi_aclk,  ../../uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(21)
+                                                                      pin: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt_reg[0].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt_reg[0].q
+net (fo=6)                              0.615          0.766          net: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt[0],  ../../uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(0)
+                                                                      pin: I_system/system_AXI_Matrix_0_Inst/axi_matrix_wrapper_Inst/rvazhd/zkbala$lgctmr/pndhsx/hhwxuo_reg_syn_11.c
+LUT6                                    0.238    r     1.004       1  pin: I_system/system_AXI_Matrix_0_Inst/axi_matrix_wrapper_Inst/rvazhd/zkbala$lgctmr/pndhsx/hhwxuo_reg_syn_11.o
+net (fo=7)                              0.638          1.642          net: I_system/w_port__AXI_Protocol_Converter_0__ds_axi_awready_syn_2,  ../../uisrc/01_rtl/system/hdl/system.v(152)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_6.a
+LUT2                                    0.240    r     1.882       2  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_6.o
+net (fo=3)                              0.520          2.402          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_fsm_aw/jump_en2idle_n1,  NOFILE(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_8.a
+LUT6                                    0.238    r     2.640       3  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_8.o
+net (fo=16)                             0.766          3.406          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$b_channel/bid_fifo/wr_en,  ../../uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_0/axi_protocol_converter_top_5d2fe900d7ba.v(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_9.a
+LUT2                                    0.240    r     3.646       4  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_9.o
+net (fo=31)                             0.867          4.513          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_10,  ../../uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_0/axi_protocol_converter_top_5d2fe900d7ba.v(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[4]_syn_3.a
+LUT4                                    0.240    r     4.753       5  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[4]_syn_3.o
+net (fo=12)                             0.722          5.475          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b_n,  NOFILE(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[0]_syn_1.a
+LUT5                                    0.240    r     5.715       6  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[0]_syn_1.o
+net (fo=1)                              0.448          6.163          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[0],  NOFILE(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_reg[0].d
+SEQ (reg)                               0.076    f     6.239               
+--------------------------------------------------------------------  ---------------
+Arrival                                                6.239               
+
+source latency                          0.000          0.000               
+SOC                                     0.000          0.000          pin: I_system/system_ARM_Processor_System_0_Inst/ARM_Processor_System_644123ab1028_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.p2f_clk0
+net (fo=3290)                           0.000          0.000          net: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/s_axi_aclk,  ../../uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(21)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_reg[0].clk
+capture edge                           10.000    r    10.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          9.930               
+clock uncertainty                       0.000          9.930               
+clock pessimism                         0.000          9.930               
+--------------------------------------------------------------------  ---------------
+Required                                               9.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  3.691               
+
+Slack               : 3.691ns
+Begin Point         : I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt_reg[0].clk (rising edge triggered by clock p2f_clk0  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+End Point           : I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_reg[1].d (rising edge triggered by clock p2f_clk0  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 10.000ns { p2f_clk0 rising@10.000ns - p2f_clk0 rising@0.000ns }
+Data Path Delay     : 6.239ns (cell 1.663ns (26%), net 4.576ns (74%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( LUT6=2  LUT2=2  LUT5=1  LUT4=1 )
+Max Fanout          : 31
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+SOC                                     0.000          0.000          pin: I_system/system_ARM_Processor_System_0_Inst/ARM_Processor_System_644123ab1028_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.p2f_clk0
+net (fo=3290)                           0.000          0.000          net: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/s_axi_aclk,  ../../uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(21)
+                                                                      pin: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt_reg[0].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt_reg[0].q
+net (fo=6)                              0.615          0.766          net: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt[0],  ../../uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(0)
+                                                                      pin: I_system/system_AXI_Matrix_0_Inst/axi_matrix_wrapper_Inst/rvazhd/zkbala$lgctmr/pndhsx/hhwxuo_reg_syn_11.c
+LUT6                                    0.238    r     1.004       1  pin: I_system/system_AXI_Matrix_0_Inst/axi_matrix_wrapper_Inst/rvazhd/zkbala$lgctmr/pndhsx/hhwxuo_reg_syn_11.o
+net (fo=7)                              0.638          1.642          net: I_system/w_port__AXI_Protocol_Converter_0__ds_axi_awready_syn_2,  ../../uisrc/01_rtl/system/hdl/system.v(152)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_6.a
+LUT2                                    0.240    r     1.882       2  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_6.o
+net (fo=3)                              0.520          2.402          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_fsm_aw/jump_en2idle_n1,  NOFILE(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_8.a
+LUT6                                    0.238    r     2.640       3  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_8.o
+net (fo=16)                             0.766          3.406          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$b_channel/bid_fifo/wr_en,  ../../uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_0/axi_protocol_converter_top_5d2fe900d7ba.v(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_9.a
+LUT2                                    0.240    r     3.646       4  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_9.o
+net (fo=31)                             0.867          4.513          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_10,  ../../uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_0/axi_protocol_converter_top_5d2fe900d7ba.v(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[4]_syn_3.a
+LUT4                                    0.240    r     4.753       5  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[4]_syn_3.o
+net (fo=12)                             0.722          5.475          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b_n,  NOFILE(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[1]_syn_1.a
+LUT5                                    0.240    r     5.715       6  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[1]_syn_1.o
+net (fo=1)                              0.448          6.163          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[1],  NOFILE(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_reg[1].d
+SEQ (reg)                               0.076    f     6.239               
+--------------------------------------------------------------------  ---------------
+Arrival                                                6.239               
+
+source latency                          0.000          0.000               
+SOC                                     0.000          0.000          pin: I_system/system_ARM_Processor_System_0_Inst/ARM_Processor_System_644123ab1028_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.p2f_clk0
+net (fo=3290)                           0.000          0.000          net: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/s_axi_aclk,  ../../uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(21)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_reg[1].clk
+capture edge                           10.000    r    10.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          9.930               
+clock uncertainty                       0.000          9.930               
+clock pessimism                         0.000          9.930               
+--------------------------------------------------------------------  ---------------
+Required                                               9.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  3.691               
+
+Slack               : 3.691ns
+Begin Point         : I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt_reg[0].clk (rising edge triggered by clock p2f_clk0  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+End Point           : I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_reg[2].d (rising edge triggered by clock p2f_clk0  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 10.000ns { p2f_clk0 rising@10.000ns - p2f_clk0 rising@0.000ns }
+Data Path Delay     : 6.239ns (cell 1.663ns (26%), net 4.576ns (74%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( LUT6=2  LUT2=2  LUT5=1  LUT4=1 )
+Max Fanout          : 31
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+SOC                                     0.000          0.000          pin: I_system/system_ARM_Processor_System_0_Inst/ARM_Processor_System_644123ab1028_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.p2f_clk0
+net (fo=3290)                           0.000          0.000          net: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/s_axi_aclk,  ../../uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(21)
+                                                                      pin: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt_reg[0].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt_reg[0].q
+net (fo=6)                              0.615          0.766          net: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt[0],  ../../uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(0)
+                                                                      pin: I_system/system_AXI_Matrix_0_Inst/axi_matrix_wrapper_Inst/rvazhd/zkbala$lgctmr/pndhsx/hhwxuo_reg_syn_11.c
+LUT6                                    0.238    r     1.004       1  pin: I_system/system_AXI_Matrix_0_Inst/axi_matrix_wrapper_Inst/rvazhd/zkbala$lgctmr/pndhsx/hhwxuo_reg_syn_11.o
+net (fo=7)                              0.638          1.642          net: I_system/w_port__AXI_Protocol_Converter_0__ds_axi_awready_syn_2,  ../../uisrc/01_rtl/system/hdl/system.v(152)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_6.a
+LUT2                                    0.240    r     1.882       2  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_6.o
+net (fo=3)                              0.520          2.402          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_fsm_aw/jump_en2idle_n1,  NOFILE(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_8.a
+LUT6                                    0.238    r     2.640       3  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_8.o
+net (fo=16)                             0.766          3.406          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$b_channel/bid_fifo/wr_en,  ../../uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_0/axi_protocol_converter_top_5d2fe900d7ba.v(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_9.a
+LUT2                                    0.240    r     3.646       4  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_9.o
+net (fo=31)                             0.867          4.513          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_10,  ../../uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_0/axi_protocol_converter_top_5d2fe900d7ba.v(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[4]_syn_3.a
+LUT4                                    0.240    r     4.753       5  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[4]_syn_3.o
+net (fo=12)                             0.722          5.475          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b_n,  NOFILE(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[2]_syn_1.a
+LUT5                                    0.240    r     5.715       6  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[2]_syn_1.o
+net (fo=1)                              0.448          6.163          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[2],  NOFILE(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_reg[2].d
+SEQ (reg)                               0.076    f     6.239               
+--------------------------------------------------------------------  ---------------
+Arrival                                                6.239               
+
+source latency                          0.000          0.000               
+SOC                                     0.000          0.000          pin: I_system/system_ARM_Processor_System_0_Inst/ARM_Processor_System_644123ab1028_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.p2f_clk0
+net (fo=3290)                           0.000          0.000          net: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/s_axi_aclk,  ../../uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(21)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_reg[2].clk
+capture edge                           10.000    r    10.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          9.930               
+clock uncertainty                       0.000          9.930               
+clock pessimism                         0.000          9.930               
+--------------------------------------------------------------------  ---------------
+Required                                               9.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  3.691               
+
+Slack               : 3.691ns
+Begin Point         : I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt_reg[0].clk (rising edge triggered by clock p2f_clk0  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+End Point           : I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_reg[3].d (rising edge triggered by clock p2f_clk0  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 10.000ns { p2f_clk0 rising@10.000ns - p2f_clk0 rising@0.000ns }
+Data Path Delay     : 6.239ns (cell 1.663ns (26%), net 4.576ns (74%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( LUT6=2  LUT2=2  LUT5=1  LUT4=1 )
+Max Fanout          : 31
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+SOC                                     0.000          0.000          pin: I_system/system_ARM_Processor_System_0_Inst/ARM_Processor_System_644123ab1028_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.p2f_clk0
+net (fo=3290)                           0.000          0.000          net: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/s_axi_aclk,  ../../uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(21)
+                                                                      pin: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt_reg[0].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt_reg[0].q
+net (fo=6)                              0.615          0.766          net: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt[0],  ../../uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(0)
+                                                                      pin: I_system/system_AXI_Matrix_0_Inst/axi_matrix_wrapper_Inst/rvazhd/zkbala$lgctmr/pndhsx/hhwxuo_reg_syn_11.c
+LUT6                                    0.238    r     1.004       1  pin: I_system/system_AXI_Matrix_0_Inst/axi_matrix_wrapper_Inst/rvazhd/zkbala$lgctmr/pndhsx/hhwxuo_reg_syn_11.o
+net (fo=7)                              0.638          1.642          net: I_system/w_port__AXI_Protocol_Converter_0__ds_axi_awready_syn_2,  ../../uisrc/01_rtl/system/hdl/system.v(152)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_6.a
+LUT2                                    0.240    r     1.882       2  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_6.o
+net (fo=3)                              0.520          2.402          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_fsm_aw/jump_en2idle_n1,  NOFILE(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_8.a
+LUT6                                    0.238    r     2.640       3  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_8.o
+net (fo=16)                             0.766          3.406          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$b_channel/bid_fifo/wr_en,  ../../uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_0/axi_protocol_converter_top_5d2fe900d7ba.v(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_9.a
+LUT2                                    0.240    r     3.646       4  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_9.o
+net (fo=31)                             0.867          4.513          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_10,  ../../uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_0/axi_protocol_converter_top_5d2fe900d7ba.v(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[4]_syn_3.a
+LUT4                                    0.240    r     4.753       5  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[4]_syn_3.o
+net (fo=12)                             0.722          5.475          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b_n,  NOFILE(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[3]_syn_1.a
+LUT5                                    0.240    r     5.715       6  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[3]_syn_1.o
+net (fo=1)                              0.448          6.163          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[3],  NOFILE(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_reg[3].d
+SEQ (reg)                               0.076    f     6.239               
+--------------------------------------------------------------------  ---------------
+Arrival                                                6.239               
+
+source latency                          0.000          0.000               
+SOC                                     0.000          0.000          pin: I_system/system_ARM_Processor_System_0_Inst/ARM_Processor_System_644123ab1028_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.p2f_clk0
+net (fo=3290)                           0.000          0.000          net: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/s_axi_aclk,  ../../uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(21)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_reg[3].clk
+capture edge                           10.000    r    10.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          9.930               
+clock uncertainty                       0.000          9.930               
+clock pessimism                         0.000          9.930               
+--------------------------------------------------------------------  ---------------
+Required                                               9.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  3.691               
+
+Slack               : 3.691ns
+Begin Point         : I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt_reg[0].clk (rising edge triggered by clock p2f_clk0  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+End Point           : I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_reg[4].d (rising edge triggered by clock p2f_clk0  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 10.000ns { p2f_clk0 rising@10.000ns - p2f_clk0 rising@0.000ns }
+Data Path Delay     : 6.239ns (cell 1.663ns (26%), net 4.576ns (74%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( LUT6=2  LUT2=2  LUT5=1  LUT4=1 )
+Max Fanout          : 31
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+SOC                                     0.000          0.000          pin: I_system/system_ARM_Processor_System_0_Inst/ARM_Processor_System_644123ab1028_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.p2f_clk0
+net (fo=3290)                           0.000          0.000          net: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/s_axi_aclk,  ../../uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(21)
+                                                                      pin: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt_reg[0].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt_reg[0].q
+net (fo=6)                              0.615          0.766          net: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt[0],  ../../uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(0)
+                                                                      pin: I_system/system_AXI_Matrix_0_Inst/axi_matrix_wrapper_Inst/rvazhd/zkbala$lgctmr/pndhsx/hhwxuo_reg_syn_11.c
+LUT6                                    0.238    r     1.004       1  pin: I_system/system_AXI_Matrix_0_Inst/axi_matrix_wrapper_Inst/rvazhd/zkbala$lgctmr/pndhsx/hhwxuo_reg_syn_11.o
+net (fo=7)                              0.638          1.642          net: I_system/w_port__AXI_Protocol_Converter_0__ds_axi_awready_syn_2,  ../../uisrc/01_rtl/system/hdl/system.v(152)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_6.a
+LUT2                                    0.240    r     1.882       2  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_6.o
+net (fo=3)                              0.520          2.402          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_fsm_aw/jump_en2idle_n1,  NOFILE(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_8.a
+LUT6                                    0.238    r     2.640       3  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_8.o
+net (fo=16)                             0.766          3.406          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$b_channel/bid_fifo/wr_en,  ../../uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_0/axi_protocol_converter_top_5d2fe900d7ba.v(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_9.a
+LUT2                                    0.240    r     3.646       4  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_9.o
+net (fo=31)                             0.867          4.513          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_10,  ../../uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_0/axi_protocol_converter_top_5d2fe900d7ba.v(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[4]_syn_3.a
+LUT4                                    0.240    r     4.753       5  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[4]_syn_3.o
+net (fo=12)                             0.722          5.475          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b_n,  NOFILE(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[4]_syn_4.a
+LUT5                                    0.240    r     5.715       6  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[4]_syn_4.o
+net (fo=1)                              0.448          6.163          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[4],  NOFILE(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_reg[4].d
+SEQ (reg)                               0.076    f     6.239               
+--------------------------------------------------------------------  ---------------
+Arrival                                                6.239               
+
+source latency                          0.000          0.000               
+SOC                                     0.000          0.000          pin: I_system/system_ARM_Processor_System_0_Inst/ARM_Processor_System_644123ab1028_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.p2f_clk0
+net (fo=3290)                           0.000          0.000          net: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/s_axi_aclk,  ../../uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(21)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_reg[4].clk
+capture edge                           10.000    r    10.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          9.930               
+clock uncertainty                       0.000          9.930               
+clock pessimism                         0.000          9.930               
+--------------------------------------------------------------------  ---------------
+Required                                               9.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  3.691               
+
+Slack               : 3.691ns
+Begin Point         : I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt_reg[0].clk (rising edge triggered by clock p2f_clk0  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+End Point           : I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_reg[5].d (rising edge triggered by clock p2f_clk0  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 10.000ns { p2f_clk0 rising@10.000ns - p2f_clk0 rising@0.000ns }
+Data Path Delay     : 6.239ns (cell 1.663ns (26%), net 4.576ns (74%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( LUT6=2  LUT2=2  LUT5=1  LUT4=1 )
+Max Fanout          : 31
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+SOC                                     0.000          0.000          pin: I_system/system_ARM_Processor_System_0_Inst/ARM_Processor_System_644123ab1028_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.p2f_clk0
+net (fo=3290)                           0.000          0.000          net: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/s_axi_aclk,  ../../uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(21)
+                                                                      pin: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt_reg[0].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt_reg[0].q
+net (fo=6)                              0.615          0.766          net: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt[0],  ../../uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(0)
+                                                                      pin: I_system/system_AXI_Matrix_0_Inst/axi_matrix_wrapper_Inst/rvazhd/zkbala$lgctmr/pndhsx/hhwxuo_reg_syn_11.c
+LUT6                                    0.238    r     1.004       1  pin: I_system/system_AXI_Matrix_0_Inst/axi_matrix_wrapper_Inst/rvazhd/zkbala$lgctmr/pndhsx/hhwxuo_reg_syn_11.o
+net (fo=7)                              0.638          1.642          net: I_system/w_port__AXI_Protocol_Converter_0__ds_axi_awready_syn_2,  ../../uisrc/01_rtl/system/hdl/system.v(152)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_6.a
+LUT2                                    0.240    r     1.882       2  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_6.o
+net (fo=3)                              0.520          2.402          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_fsm_aw/jump_en2idle_n1,  NOFILE(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_8.a
+LUT6                                    0.238    r     2.640       3  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_8.o
+net (fo=16)                             0.766          3.406          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$b_channel/bid_fifo/wr_en,  ../../uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_0/axi_protocol_converter_top_5d2fe900d7ba.v(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_9.a
+LUT2                                    0.240    r     3.646       4  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_9.o
+net (fo=31)                             0.867          4.513          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_10,  ../../uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_0/axi_protocol_converter_top_5d2fe900d7ba.v(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[4]_syn_3.a
+LUT4                                    0.240    r     4.753       5  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[4]_syn_3.o
+net (fo=12)                             0.722          5.475          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b_n,  NOFILE(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[5]_syn_1.a
+LUT5                                    0.240    r     5.715       6  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[5]_syn_1.o
+net (fo=1)                              0.448          6.163          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[5],  NOFILE(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_reg[5].d
+SEQ (reg)                               0.076    f     6.239               
+--------------------------------------------------------------------  ---------------
+Arrival                                                6.239               
+
+source latency                          0.000          0.000               
+SOC                                     0.000          0.000          pin: I_system/system_ARM_Processor_System_0_Inst/ARM_Processor_System_644123ab1028_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.p2f_clk0
+net (fo=3290)                           0.000          0.000          net: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/s_axi_aclk,  ../../uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(21)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_reg[5].clk
+capture edge                           10.000    r    10.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          9.930               
+clock uncertainty                       0.000          9.930               
+clock pessimism                         0.000          9.930               
+--------------------------------------------------------------------  ---------------
+Required                                               9.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  3.691               
+
+Slack               : 3.691ns
+Begin Point         : I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt_reg[0].clk (rising edge triggered by clock p2f_clk0  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+End Point           : I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_reg[6].d (rising edge triggered by clock p2f_clk0  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 10.000ns { p2f_clk0 rising@10.000ns - p2f_clk0 rising@0.000ns }
+Data Path Delay     : 6.239ns (cell 1.663ns (26%), net 4.576ns (74%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( LUT6=2  LUT2=2  LUT5=1  LUT4=1 )
+Max Fanout          : 31
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+SOC                                     0.000          0.000          pin: I_system/system_ARM_Processor_System_0_Inst/ARM_Processor_System_644123ab1028_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.p2f_clk0
+net (fo=3290)                           0.000          0.000          net: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/s_axi_aclk,  ../../uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(21)
+                                                                      pin: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt_reg[0].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt_reg[0].q
+net (fo=6)                              0.615          0.766          net: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt[0],  ../../uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(0)
+                                                                      pin: I_system/system_AXI_Matrix_0_Inst/axi_matrix_wrapper_Inst/rvazhd/zkbala$lgctmr/pndhsx/hhwxuo_reg_syn_11.c
+LUT6                                    0.238    r     1.004       1  pin: I_system/system_AXI_Matrix_0_Inst/axi_matrix_wrapper_Inst/rvazhd/zkbala$lgctmr/pndhsx/hhwxuo_reg_syn_11.o
+net (fo=7)                              0.638          1.642          net: I_system/w_port__AXI_Protocol_Converter_0__ds_axi_awready_syn_2,  ../../uisrc/01_rtl/system/hdl/system.v(152)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_6.a
+LUT2                                    0.240    r     1.882       2  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_6.o
+net (fo=3)                              0.520          2.402          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_fsm_aw/jump_en2idle_n1,  NOFILE(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_8.a
+LUT6                                    0.238    r     2.640       3  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_8.o
+net (fo=16)                             0.766          3.406          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$b_channel/bid_fifo/wr_en,  ../../uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_0/axi_protocol_converter_top_5d2fe900d7ba.v(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_9.a
+LUT2                                    0.240    r     3.646       4  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_9.o
+net (fo=31)                             0.867          4.513          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_10,  ../../uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_0/axi_protocol_converter_top_5d2fe900d7ba.v(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[4]_syn_3.a
+LUT4                                    0.240    r     4.753       5  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[4]_syn_3.o
+net (fo=12)                             0.722          5.475          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b_n,  NOFILE(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[6]_syn_1.a
+LUT5                                    0.240    r     5.715       6  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[6]_syn_1.o
+net (fo=1)                              0.448          6.163          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[6],  NOFILE(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_reg[6].d
+SEQ (reg)                               0.076    f     6.239               
+--------------------------------------------------------------------  ---------------
+Arrival                                                6.239               
+
+source latency                          0.000          0.000               
+SOC                                     0.000          0.000          pin: I_system/system_ARM_Processor_System_0_Inst/ARM_Processor_System_644123ab1028_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.p2f_clk0
+net (fo=3290)                           0.000          0.000          net: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/s_axi_aclk,  ../../uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(21)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_reg[6].clk
+capture edge                           10.000    r    10.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          9.930               
+clock uncertainty                       0.000          9.930               
+clock pessimism                         0.000          9.930               
+--------------------------------------------------------------------  ---------------
+Required                                               9.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  3.691               
+
+Slack               : 3.691ns
+Begin Point         : I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt_reg[0].clk (rising edge triggered by clock p2f_clk0  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+End Point           : I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_reg[7].d (rising edge triggered by clock p2f_clk0  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 10.000ns { p2f_clk0 rising@10.000ns - p2f_clk0 rising@0.000ns }
+Data Path Delay     : 6.239ns (cell 1.663ns (26%), net 4.576ns (74%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( LUT6=2  LUT2=2  LUT5=1  LUT4=1 )
+Max Fanout          : 31
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+SOC                                     0.000          0.000          pin: I_system/system_ARM_Processor_System_0_Inst/ARM_Processor_System_644123ab1028_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.p2f_clk0
+net (fo=3290)                           0.000          0.000          net: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/s_axi_aclk,  ../../uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(21)
+                                                                      pin: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt_reg[0].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt_reg[0].q
+net (fo=6)                              0.615          0.766          net: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt[0],  ../../uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(0)
+                                                                      pin: I_system/system_AXI_Matrix_0_Inst/axi_matrix_wrapper_Inst/rvazhd/zkbala$lgctmr/pndhsx/hhwxuo_reg_syn_11.c
+LUT6                                    0.238    r     1.004       1  pin: I_system/system_AXI_Matrix_0_Inst/axi_matrix_wrapper_Inst/rvazhd/zkbala$lgctmr/pndhsx/hhwxuo_reg_syn_11.o
+net (fo=7)                              0.638          1.642          net: I_system/w_port__AXI_Protocol_Converter_0__ds_axi_awready_syn_2,  ../../uisrc/01_rtl/system/hdl/system.v(152)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_6.a
+LUT2                                    0.240    r     1.882       2  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_6.o
+net (fo=3)                              0.520          2.402          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_fsm_aw/jump_en2idle_n1,  NOFILE(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_8.a
+LUT6                                    0.238    r     2.640       3  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_8.o
+net (fo=16)                             0.766          3.406          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$b_channel/bid_fifo/wr_en,  ../../uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_0/axi_protocol_converter_top_5d2fe900d7ba.v(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_9.a
+LUT2                                    0.240    r     3.646       4  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_9.o
+net (fo=31)                             0.867          4.513          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_10,  ../../uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_0/axi_protocol_converter_top_5d2fe900d7ba.v(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[4]_syn_3.a
+LUT4                                    0.240    r     4.753       5  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[4]_syn_3.o
+net (fo=12)                             0.722          5.475          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b_n,  NOFILE(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[7]_syn_1.a
+LUT5                                    0.240    r     5.715       6  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[7]_syn_1.o
+net (fo=1)                              0.448          6.163          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[7],  NOFILE(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_reg[7].d
+SEQ (reg)                               0.076    f     6.239               
+--------------------------------------------------------------------  ---------------
+Arrival                                                6.239               
+
+source latency                          0.000          0.000               
+SOC                                     0.000          0.000          pin: I_system/system_ARM_Processor_System_0_Inst/ARM_Processor_System_644123ab1028_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.p2f_clk0
+net (fo=3290)                           0.000          0.000          net: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/s_axi_aclk,  ../../uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(21)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_reg[7].clk
+capture edge                           10.000    r    10.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          9.930               
+clock uncertainty                       0.000          9.930               
+clock pessimism                         0.000          9.930               
+--------------------------------------------------------------------  ---------------
+Required                                               9.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  3.691               
+
+Slack               : 3.691ns
+Begin Point         : I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt_reg[0].clk (rising edge triggered by clock p2f_clk0  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+End Point           : I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_reg[8].d (rising edge triggered by clock p2f_clk0  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 10.000ns { p2f_clk0 rising@10.000ns - p2f_clk0 rising@0.000ns }
+Data Path Delay     : 6.239ns (cell 1.663ns (26%), net 4.576ns (74%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( LUT6=2  LUT2=2  LUT5=1  LUT4=1 )
+Max Fanout          : 31
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+SOC                                     0.000          0.000          pin: I_system/system_ARM_Processor_System_0_Inst/ARM_Processor_System_644123ab1028_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.p2f_clk0
+net (fo=3290)                           0.000          0.000          net: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/s_axi_aclk,  ../../uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(21)
+                                                                      pin: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt_reg[0].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt_reg[0].q
+net (fo=6)                              0.615          0.766          net: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt[0],  ../../uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(0)
+                                                                      pin: I_system/system_AXI_Matrix_0_Inst/axi_matrix_wrapper_Inst/rvazhd/zkbala$lgctmr/pndhsx/hhwxuo_reg_syn_11.c
+LUT6                                    0.238    r     1.004       1  pin: I_system/system_AXI_Matrix_0_Inst/axi_matrix_wrapper_Inst/rvazhd/zkbala$lgctmr/pndhsx/hhwxuo_reg_syn_11.o
+net (fo=7)                              0.638          1.642          net: I_system/w_port__AXI_Protocol_Converter_0__ds_axi_awready_syn_2,  ../../uisrc/01_rtl/system/hdl/system.v(152)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_6.a
+LUT2                                    0.240    r     1.882       2  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_6.o
+net (fo=3)                              0.520          2.402          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_fsm_aw/jump_en2idle_n1,  NOFILE(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_8.a
+LUT6                                    0.238    r     2.640       3  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_8.o
+net (fo=16)                             0.766          3.406          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$b_channel/bid_fifo/wr_en,  ../../uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_0/axi_protocol_converter_top_5d2fe900d7ba.v(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_9.a
+LUT2                                    0.240    r     3.646       4  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_9.o
+net (fo=31)                             0.867          4.513          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_10,  ../../uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_0/axi_protocol_converter_top_5d2fe900d7ba.v(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[4]_syn_3.a
+LUT4                                    0.240    r     4.753       5  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[4]_syn_3.o
+net (fo=12)                             0.722          5.475          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b_n,  NOFILE(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[8]_syn_1.a
+LUT5                                    0.240    r     5.715       6  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[8]_syn_1.o
+net (fo=1)                              0.448          6.163          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[8],  NOFILE(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_reg[8].d
+SEQ (reg)                               0.076    f     6.239               
+--------------------------------------------------------------------  ---------------
+Arrival                                                6.239               
+
+source latency                          0.000          0.000               
+SOC                                     0.000          0.000          pin: I_system/system_ARM_Processor_System_0_Inst/ARM_Processor_System_644123ab1028_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.p2f_clk0
+net (fo=3290)                           0.000          0.000          net: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/s_axi_aclk,  ../../uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(21)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_reg[8].clk
+capture edge                           10.000    r    10.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          9.930               
+clock uncertainty                       0.000          9.930               
+clock pessimism                         0.000          9.930               
+--------------------------------------------------------------------  ---------------
+Required                                               9.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  3.691               
+
+Slack               : 3.691ns
+Begin Point         : I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt_reg[0].clk (rising edge triggered by clock p2f_clk0  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+End Point           : I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_reg[9].d (rising edge triggered by clock p2f_clk0  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 10.000ns { p2f_clk0 rising@10.000ns - p2f_clk0 rising@0.000ns }
+Data Path Delay     : 6.239ns (cell 1.663ns (26%), net 4.576ns (74%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( LUT6=2  LUT2=2  LUT5=1  LUT4=1 )
+Max Fanout          : 31
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+SOC                                     0.000          0.000          pin: I_system/system_ARM_Processor_System_0_Inst/ARM_Processor_System_644123ab1028_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.p2f_clk0
+net (fo=3290)                           0.000          0.000          net: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/s_axi_aclk,  ../../uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(21)
+                                                                      pin: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt_reg[0].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt_reg[0].q
+net (fo=6)                              0.615          0.766          net: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/U_axi_slave_if/rnw_cnt[0],  ../../uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(0)
+                                                                      pin: I_system/system_AXI_Matrix_0_Inst/axi_matrix_wrapper_Inst/rvazhd/zkbala$lgctmr/pndhsx/hhwxuo_reg_syn_11.c
+LUT6                                    0.238    r     1.004       1  pin: I_system/system_AXI_Matrix_0_Inst/axi_matrix_wrapper_Inst/rvazhd/zkbala$lgctmr/pndhsx/hhwxuo_reg_syn_11.o
+net (fo=7)                              0.638          1.642          net: I_system/w_port__AXI_Protocol_Converter_0__ds_axi_awready_syn_2,  ../../uisrc/01_rtl/system/hdl/system.v(152)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_6.a
+LUT2                                    0.240    r     1.882       2  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_6.o
+net (fo=3)                              0.520          2.402          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_fsm_aw/jump_en2idle_n1,  NOFILE(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_8.a
+LUT6                                    0.238    r     2.640       3  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_8.o
+net (fo=16)                             0.766          3.406          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$b_channel/bid_fifo/wr_en,  ../../uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_0/axi_protocol_converter_top_5d2fe900d7ba.v(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_9.a
+LUT2                                    0.240    r     3.646       4  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_9.o
+net (fo=31)                             0.867          4.513          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/incr_cmd/axlen_cnt_reg[0]_syn_10,  ../../uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_0/axi_protocol_converter_top_5d2fe900d7ba.v(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[4]_syn_3.a
+LUT4                                    0.240    r     4.753       5  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[4]_syn_3.o
+net (fo=12)                             0.722          5.475          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b_n,  NOFILE(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[9]_syn_1.a
+LUT5                                    0.240    r     5.715       6  pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[9]_syn_1.o
+net (fo=1)                              0.448          6.163          net: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_b[9],  NOFILE(0)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_reg[9].d
+SEQ (reg)                               0.076    f     6.239               
+--------------------------------------------------------------------  ---------------
+Arrival                                                6.239               
+
+source latency                          0.000          0.000               
+SOC                                     0.000          0.000          pin: I_system/system_ARM_Processor_System_0_Inst/ARM_Processor_System_644123ab1028_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.p2f_clk0
+net (fo=3290)                           0.000          0.000          net: I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/s_axi_aclk,  ../../uisrc/01_rtl/system/ip/system_AXI_GPIO_0/axi_gpio_top_3819c9412610.v(21)
+                                                                      pin: I_system/system_AXI_Protocol_Converter_0_Inst/axi_protocol_converter_top_5d2fe900d7ba_Inst/conversion_to_lite$axi_axilite/WR$aw_channel/cmd_translator_w/wrap_cmd/axaddr_wrap_reg[9].clk
+capture edge                           10.000    r    10.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          9.930               
+clock uncertainty                       0.000          9.930               
+clock pessimism                         0.000          9.930               
+--------------------------------------------------------------------  ---------------
+Required                                               9.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  3.691               
+
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+Inter clock domain timing
+--------------------------------------------------
+
+IP timing
+--------------------------------------------------

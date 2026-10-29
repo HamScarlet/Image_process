@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PackProject Version="110">
+    <ProjectName Name="axi_lite_pwm_1.0" Path="D:/FPGAproject/AnLuRun/PSPWM/ip_repo/axi_lite_pwm_1.0" Step="0"/>
+    <CompFile Filename="Component.xml"/>
+    <Dependency Filename="Dependency.tcl"/>
+    <Layout Filename="Layout.tcl"/>
+    <Filesets Path="D:/FPGAproject/AnLuRun/PSPWM/ip_repo/axi_lite_pwm_1.0">
+        <Fileset Name="axi_lite_pwm_files"/>
+    </Filesets>
+</PackProject>
