@@ -338,7 +338,7 @@ p2f_irq_spi0_mst; 0
 p2f_irq_spi0_slv; 0
 p2f_irq_spi1_mst; 0
 p2f_irq_spi1_slv; 0
-p2f_irq_uart0; 0
+p2f_irq_uart0; 1
 p2f_irq_uart1; 0
 p2f_irq_can0; 0
 p2f_irq_can1; 0

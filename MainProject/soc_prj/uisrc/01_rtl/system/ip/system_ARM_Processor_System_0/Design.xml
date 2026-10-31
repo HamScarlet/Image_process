@@ -22,7 +22,7 @@
                 <ipxact:configurableElementValue referenceId="P2F_IRQ_GPIO2_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P2F_IRQ_USB0_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P2F_IRQ_SDIO0_Available">0</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="P2F_IRQ_UART0_Available">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="P2F_IRQ_UART0_Available">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P2F_IRQ_SDIO1_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P2F_IRQ_UART1_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="Event_interface">0</ipxact:configurableElementValue>
@@ -1087,6 +1087,13 @@
             <ipxact:portReferences>
                 <ipxact:internalPortReference componentRef="ARM_Processor_System_59fb6a0bf2ca_Inst" portRef="master_gp0_axi_wvalid"/>
                 <ipxact:externalPortReference portRef="master_gp0_axi_wvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>p2f_irq_uart0</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_59fb6a0bf2ca_Inst" portRef="p2f_irq_uart0"/>
+                <ipxact:externalPortReference portRef="p2f_irq_uart0"/>
             </ipxact:portReferences>
         </ipxact:adHocConnection>
         <ipxact:adHocConnection>

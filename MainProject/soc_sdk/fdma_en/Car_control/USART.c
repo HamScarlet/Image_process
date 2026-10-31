@@ -1,72 +1,93 @@
-/*
- * USART.c
- *
- *  Created on: 2026年10月13日
- *      Author: zhuji
- */
-
-#include <string.h> // 字符串操作函数
-#include <stdlib.h> // 标准库函数
-#include "al_uart_hal.h" // UART 硬件抽象层接口
+/* Interrupt-driven UART receive and command frame parsing. */
+#include <stdint.h>
+#include "al_uart_hal.h"
 #include "Car_control.h"
 #include "USART.h"
+#include <stdlib.h>
+#include <string.h>
 
-#define BUF_SIZE 32 // 数据缓冲区大小
-#define AL_UART_TIME_OUT_MS 10000 // 超时时间（毫秒）
-#define AL_UART_DEVID 1 // 使用的 UART 设备 ID
+#define BUF_SIZE 32U
+#define AL_UART_DEVID 0U
 
 static AL_UART_InitStruct UART_InitStruct = {
-    .BaudRate = 115200, // 波特率： 115200
-    .Parity = AL_UART_NO_PARITY, // 无奇偶校验
-    .WordLength = AL_UART_CHAR_8BITS, // 8 位数据位
-    .StopBits = AL_UART_STOP_1BIT, // 1 位停止位
-    .HwFlowCtl = AL_FALSE, // 禁用硬件流控
-    .CharTimeoutEnable = AL_TRUE // 启用字符超时检测
+    .BaudRate = 115200U,
+    .Parity = AL_UART_NO_PARITY,
+    .WordLength = AL_UART_CHAR_8BITS,
+    .StopBits = AL_UART_STOP_1BIT,
+    .HwFlowCtl = AL_FALSE,
+    .CharTimeoutEnable = AL_TRUE
 };
 
-static AL_S32 AlUart_Test_RecvAndSendNonBlock(AL_VOID); // UART 非阻塞收发测试函数
+static uint8_t Rx_data[BUF_SIZE];
+static AL_UART_HalStruct *UartHandle;
+static volatile uint32_t RxReceivedLength;
+static volatile uint8_t RxDataReady;
+static AL_S32 Ret;
 
+/* The callback runs in interrupt context; parsing is deferred to Cmd_Receive. */
+static AL_VOID UART_EventCallback(AL_UART_EventStruct event, AL_VOID *callback_ref)
+{
+    (void)callback_ref;
 
-uint8_t Rx_data[BUF_SIZE] = {0};
-uint8_t Tx_data[BUF_SIZE] = {0};
-AL_S32 Ret;
-AL_UART_HalStruct *UartHandle; // UART 控制器句柄指针
-
+    if ((event.Events == AL_UART_EVENT_RECEIVE_DONE) ||
+        (event.Events == AL_UART_EVENT_CHAR_TIMEOUT)) {
+        /* RECEIVE_DONE means the requested buffer is full. Use that known
+         * length directly; some HAL versions report a stale EventData when
+         * all requested bytes were already in the FIFO at request time. */
+        RxReceivedLength = (event.Events == AL_UART_EVENT_RECEIVE_DONE) ?
+                           BUF_SIZE : event.EventData;
+        RxDataReady = 1U;
+    }
+}
 
 void UART_init(void)
 {
-    Ret = AL_OK; // 返回值变量
-    Ret = AlUart_Hal_Init(&UartHandle, AL_UART_DEVID, &UART_InitStruct, AL_NULL);
-    AlIntr_SetLocalInterrupt(AL_FUNC_ENABLE);
+    RxReceivedLength = 0U;
+    RxDataReady = 0U;
+    Ret = AlUart_Hal_Init(&UartHandle, AL_UART_DEVID, &UART_InitStruct,
+                          UART_EventCallback);
+    if (Ret != AL_OK) {
+        UartHandle = AL_NULL;
+        return;
+    }
 
+    AlIntr_SetLocalInterrupt(AL_FUNC_ENABLE);
+    UART_ReceiveData();
 }
 
+/* Arms one interrupt-driven receive. It is safe to call from the main loop. */
 void UART_ReceiveData(void)
 {
+    if ((UartHandle == AL_NULL) || (RxDataReady != 0U) ||
+        AlUart_Hal_IsRxBusy(UartHandle)) {
+        return;
+    }
+
     Ret = AlUart_Hal_RecvData(UartHandle, Rx_data, BUF_SIZE);
 }
 
-void UART_SendData(void)
+int32_t UART_SendData(const uint8_t *data, uint32_t length)
 {
-    Ret = AlUart_Hal_SendData(UartHandle, Tx_data, UartHandle->Dev.RecvBuffer.HandledCnt);
-}
+    if ((UartHandle == AL_NULL) || (data == AL_NULL) || (length == 0U)) {
+        return (int32_t)AL_UART_ERR_ILLEGAL_PARAM;
+    }
+    uint8_t tx_data[100] = {0};
+    tx_data[0] = 0xA5;
 
-
-void UART_Test(void)
-{
-    UART_ReceiveData();
-    memcpy(Tx_data,Rx_data,BUF_SIZE);
-    UART_SendData();
+    memcpy(tx_data + 1,data, length);
+    tx_data[length + 1] = 0x5A;
+    /* HAL send is asynchronous; the caller retains data until SEND_DONE. */
+    return (int32_t)AlUart_Hal_SendData(UartHandle, (AL_U8 *)tx_data, length + 2);
 }
 
 void Cmd_Receive(COMMAND *cmd)
 {
-    UART_ReceiveData();
     uint8_t index;
     uint8_t data_valid = 0;
     uint8_t valid_data[BUF_SIZE] = {0};
     uint8_t i = 0;
     uint8_t head_cnt = 0,tail_cnt = 0;
+    if(!RxDataReady) return;
     while(index < BUF_SIZE)
     {
         if(Rx_data[index++] == FRAME_HEAD && data_valid == 0)
@@ -93,5 +114,17 @@ void Cmd_Receive(COMMAND *cmd)
             }
             index++;
         }
+    }
+    UART_ReceiveData();
+}
+
+void UART_test(void)
+{
+    if(RxDataReady)
+    {
+        UART_SendData(Rx_data,RxReceivedLength);
+        while(AlUart_Hal_IsRxBusy(UartHandle));
+        UART_ReceiveData();
+        RxDataReady = 0;
     }
 }

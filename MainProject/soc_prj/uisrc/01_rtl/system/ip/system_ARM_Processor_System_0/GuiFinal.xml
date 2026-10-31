@@ -33,7 +33,7 @@
         <parameter parameterId="P2F_IRQ_I2C0_Available" value="0" enable="0"/>
         <parameter parameterId="P2F_IRQ_SPI0_SLAVE_Available" value="0" enable="0"/>
         <parameter parameterId="P2F_IRQ_SPI0_MASTER_Available" value="0" enable="0"/>
-        <parameter parameterId="P2F_IRQ_UART0_Available" value="0" enable="1"/>
+        <parameter parameterId="P2F_IRQ_UART0_Available" value="1" enable="1"/>
         <parameter parameterId="P2F_IRQ_CAN0_Available" value="0" enable="0"/>
         <parameter parameterId="P2F_IRQ_USB1_Available" value="0" enable="0"/>
         <parameter parameterId="P2F_IRQ_ETH_PHY1_Available" value="0" enable="0"/>

@@ -13,6 +13,7 @@
 //   0x20 PWM1_PSC, 0x24 PWM1_ARR, 0x28 PWM1_CCR
 //   0x30 PWM2_PSC, 0x34 PWM2_ARR, 0x38 PWM2_CCR
 //   0x40 UPDATE   write-one to bits [2:0] to commit PWM0/1/2 settings
+//   0x50..0x74 lane-result register bank (see lane_result_axi.v)
 //
 // Each PWM channel counts from 0 through ARR. The prescaler divides the input
 // clock by PSC+1, and the output is high while counter < CCR. New PSC/ARR/CCR
@@ -48,6 +49,10 @@ module axi_lite_pwm #(
     output reg  [1:0]                        s_axi_rresp,
     output reg                               s_axi_rvalid,
     input  wire                              s_axi_rready,
+
+    input  wire                              lane_result_update,
+    input  wire [75:0]                       lane_result_bundle,
+    input  wire                              lane_cdc_overrun,
 
     output wire [2:0]                        pwm_out,
     output wire [1:0]                        motor_dir,
@@ -99,6 +104,9 @@ module axi_lite_pwm #(
 
     reg [31:0] read_data_mux;
     reg        read_addr_valid_mux;
+    wire [31:0] lane_read_data;
+    wire        lane_read_valid;
+    wire        lane_write_addr_valid;
 
     assign s_axi_awready = !aw_pending && !s_axi_bvalid;
     assign s_axi_wready  = !w_pending  && !s_axi_bvalid;
@@ -147,11 +155,32 @@ module axi_lite_pwm #(
             REG_PWM2_ARR:   read_data_mux = pwm2_arr_shadow;
             REG_PWM2_CCR:   read_data_mux = pwm2_ccr_shadow;
             default: begin
-                read_data_mux = 32'd0;
-                read_addr_valid_mux = 1'b0;
+                if (lane_read_valid) begin
+                    read_data_mux = lane_read_data;
+                    read_addr_valid_mux = 1'b1;
+                end else begin
+                    read_data_mux = 32'd0;
+                    read_addr_valid_mux = 1'b0;
+                end
             end
         endcase
     end
+
+    lane_result_axi u_lane_result_axi (
+        .clk              (s_axi_aclk),
+        .rst_n            (s_axi_aresetn),
+        .I_result_update  (lane_result_update),
+        .I_result_bundle  (lane_result_bundle),
+        .I_cdc_overrun    (lane_cdc_overrun),
+        .I_wr_en          (write_commit && lane_write_addr_valid),
+        .I_wr_addr        (write_addr[7:0]),
+        .I_wr_data        (write_data),
+        .I_wr_strb        (write_strb),
+        .I_rd_addr        (s_axi_araddr[7:0]),
+        .O_rd_valid       (lane_read_valid),
+        .O_rd_data        (lane_read_data),
+        .O_wr_addr_valid  (lane_write_addr_valid)
+    );
 
     axi_lite_pwm_channel #(.RESET_ARR(RESET_MOTOR_ARR)) u_pwm0 (
         .clk(s_axi_aclk), .rst_n(s_axi_aresetn), .enable(ctrl_reg[0] & ctrl_reg[3]),
@@ -245,7 +274,12 @@ module axi_lite_pwm #(
                         if (write_strb[0])
                             commit_req <= write_data[2:0];
                     end
-                    default: s_axi_bresp <= 2'b10;
+                    default: begin
+                        if (lane_write_addr_valid)
+                            s_axi_bresp <= 2'b00;
+                        else
+                            s_axi_bresp <= 2'b10;
+                    end
                 endcase
             end
 

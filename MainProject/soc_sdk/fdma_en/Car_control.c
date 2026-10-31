@@ -43,7 +43,7 @@ void car_loop(void)
 void Process_Cmd(COMMAND cmd)
 {
 	static COMMAND cmd_status = {0};
-	if(!memcmp(cmd,cmd_status))
+	if ((cmd.direct != cmd_status.direct) || (cmd.speed != cmd_status.speed))
 	{
 		cmd_status.direct = cmd.direct;
 		cmd_status.speed = cmd.speed;

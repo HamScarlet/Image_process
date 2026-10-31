@@ -31,6 +31,24 @@
                 </ipxact:wire>
             </ipxact:port>
             <ipxact:port>
+                <ipxact:name>lane_result_update</ipxact:name>
+                <ipxact:displayName>lane_result_update</ipxact:displayName>
+                <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+            </ipxact:port>
+            <ipxact:port>
+                <ipxact:name>lane_result_bundle</ipxact:name>
+                <ipxact:displayName>lane_result_bundle</ipxact:displayName>
+                <ipxact:wire>
+                    <ipxact:direction>in</ipxact:direction>
+                    <ipxact:vectors><ipxact:vector><ipxact:left>75</ipxact:left><ipxact:right>0</ipxact:right></ipxact:vector></ipxact:vectors>
+                </ipxact:wire>
+            </ipxact:port>
+            <ipxact:port>
+                <ipxact:name>lane_cdc_overrun</ipxact:name>
+                <ipxact:displayName>lane_cdc_overrun</ipxact:displayName>
+                <ipxact:wire><ipxact:direction>in</ipxact:direction></ipxact:wire>
+            </ipxact:port>
+            <ipxact:port>
                 <ipxact:name>s_axi_awaddr</ipxact:name>
                 <ipxact:displayName>s_axi_awaddr</ipxact:displayName>
                 <ipxact:wire>

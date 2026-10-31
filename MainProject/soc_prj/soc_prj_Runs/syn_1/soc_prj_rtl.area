@@ -2,30 +2,30 @@ standard
 ***Report Model: system_top Device: DR1M90GEG400***
 
 IO Statistics
-#IO                        27
-  #input                   10
-  #output                  16
+#IO                        29
+  #input                   11
+  #output                  17
   #inout                    1
 
 Gate Statistics
-#Basic gates            50960
-  #and                    824
+#Basic gates            51573
+  #and                    839
   #nand                     0
-  #or                     638
+  #or                     653
   #nor                      0
-  #xor                    109
+  #xor                    112
   #xnor                     0
   #buf                      0
-  #not                    936
+  #not                    943
   #bufif1                   1
-  #MX21                  2341
+  #MX21                  2564
   #FADD                     0
-  #DFF                  46111
+  #DFF                  46461
   #LATCH                    0
-#MACRO_ADD                576
-#MACRO_EQ                 222
+#MACRO_ADD                577
+#MACRO_EQ                 234
 #MACRO_MULT                61
-#MACRO_MUX               8387
+#MACRO_MUX               7659
 #MACRO_OTHERS              16
 
 LUT Statistics
@@ -40,10 +40,10 @@ Report Hierarchy Area:
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 |Instance                                                                                                |Module                                                  |gates  |seq    |macros |
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-|top                                                                                                     |system_top                                              |4849   |46111  |875    |
+|top                                                                                                     |system_top                                              |5112   |46461  |888    |
 |  U_pll                                                                                                 |pll                                                     |0      |0      |1      |
 |    dr1_phy_pll_8c99844ac61f_Inst                                                                       |dr1_phy_pll_8c99844ac61f                                |0      |0      |0      |
-|  system_inst                                                                                           |system                                                  |1826   |4907   |238    |
+|  system_inst                                                                                           |system                                                  |2093   |5092   |251    |
 |    ARM_Processor_System_0                                                                              |system_ARM_Processor_System_0                           |0      |0      |0      |
 |      ARM_Processor_System_59fb6a0bf2ca_Inst                                                            |ARM_Processor_System_59fb6a0bf2ca                       |0      |0      |0      |
 |    AXI_GPIO_0                                                                                          |system_AXI_GPIO_0                                       |75     |52     |3      |
@@ -190,8 +190,9 @@ Report Hierarchy Area:
 |          WR$b_channel                                                                                  |axi_protocol_converter_lite_b_738e4394c871              |23     |40     |8      |
 |            bid_fifo                                                                                    |axi_protocol_converter_lite_simple_fifo_738e4394c871    |5      |22     |3      |
 |            bresp_fifo                                                                                  |axi_protocol_converter_lite_simple_fifo_738e4394c871    |5      |6      |2      |
-|    axi_lite_pwm_0                                                                                      |system_axi_lite_pwm_0                                   |150    |862    |40     |
-|      axi_lite_pwm                                                                                      |axi_lite_pwm                                            |150    |862    |40     |
+|    axi_lite_pwm_0                                                                                      |system_axi_lite_pwm_0                                   |417    |1047   |53     |
+|      axi_lite_pwm                                                                                      |axi_lite_pwm                                            |417    |1047   |53     |
+|        u_lane_result_axi                                                                               |lane_result_axi                                         |96     |185    |13     |
 |        u_pwm0                                                                                          |axi_lite_pwm_channel                                    |7      |161    |5      |
 |        u_pwm1                                                                                          |axi_lite_pwm_channel                                    |7      |161    |5      |
 |        u_pwm2                                                                                          |axi_lite_pwm_channel                                    |7      |161    |5      |
@@ -263,7 +264,8 @@ Report Hierarchy Area:
 |      zhenghe_d                                                                                         |zhenghe                                                 |53     |132    |18     |
 |        blk_mem_gen_zhenghe_d1                                                                          |blk_mem_gen_zhenghe                                     |0      |0      |1      |
 |          ram_8a60c1575720_Inst                                                                         |ram_8a60c1575720                                        |0      |0      |1      |
-|  u_lane_stream_stats                                                                                   |lane_stream_stats                                       |855    |2207   |119    |
+|  u_lane_result_cdc                                                                                     |lane_result_cdc                                         |10     |165    |0      |
+|  u_lane_stream_stats                                                                                   |lane_stream_stats                                       |839    |2207   |119    |
 |    GEN_GRAY[0]$u_lane_rgb_gray                                                                         |lane_rgb_gray                                           |0      |0      |6      |
 |    GEN_GRAY[1]$u_lane_rgb_gray                                                                         |lane_rgb_gray                                           |0      |0      |6      |
 |    GEN_GRAY[2]$u_lane_rgb_gray                                                                         |lane_rgb_gray                                           |0      |0      |6      |

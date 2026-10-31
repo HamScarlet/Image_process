@@ -54,6 +54,8 @@ AL_S32 main()
     AlSys_MDelay(250U);
     al_printf("Fclk Init successfully\r\n");
 
+    UART_init();
+
 //    AXI_GPIO_Init();
 //    al_printf("AXI GPIO Init successfully\r\n");
 //    TIM_PWM_Init();
@@ -72,7 +74,7 @@ AL_S32 main()
 //        TIM_PWM_test();
 //        al_printf("TIM Testing\r\n");
 
-        UART_Test();   
+        UART_test();
     }
 
 

@@ -12,7 +12,7 @@ AL_AXI_WUSER_WIDTH : 1 : U : Dis :  :  :
 AL_AXI_RUSER_WIDTH : 1 : U : Dis :  :  : 
 AL_AXI_BUSER_WIDTH : 1 : U : Dis :  :  : 
 AL_PROTOCOL_SEL : 0 : G : En :  :  : 
-AL_DS_AXI_BASE_ADDR : 192'h000000000020000000000000001000000000000000000000 : G : En :  :  : 
+AL_DS_AXI_BASE_ADDR : 192'h000000008020000000000000801000000000000080000000 : G : En :  :  : 
 AL_US_AXI_THREAD_ID_WIDTH : 32'h00000001 : G : En :  :  : 
 AL_READ_REGISTER_TYPE : 0 : G : En :  :  : 
 AL_US_AXI_SINGLE_THREAD : 32'h00000000 : G : En :  :  : 
@@ -26,7 +26,7 @@ AL_CONNECTIVITY_MODE : 1 : G : En :  :  :
 protocol_axi4 : 1 : U : En :  :  : 
 protocol_axi3 : 0 : U : En :  :  : 
 protocol_axi4lite : 0 : U : En :  :  : 
-DS0_BASEADDR0 : 0000000000000000 : U : En :  :  : 
+DS0_BASEADDR0 : 0000000080000000 : U : En :  :  : 
 DS0_BASEADDR1 : FFFFFFFFFFFFFFFF : U : Dis :  :  : 
 DS0_BASEADDR2 : FFFFFFFFFFFFFFFF : U : Dis :  :  : 
 DS0_BASEADDR3 : FFFFFFFFFFFFFFFF : U : Dis :  :  : 
@@ -42,7 +42,7 @@ DS0_BASEADDR12 : FFFFFFFFFFFFFFFF : U : Dis :  :  :
 DS0_BASEADDR13 : FFFFFFFFFFFFFFFF : U : Dis :  :  : 
 DS0_BASEADDR14 : FFFFFFFFFFFFFFFF : U : Dis :  :  : 
 DS0_BASEADDR15 : FFFFFFFFFFFFFFFF : U : Dis :  :  : 
-DS1_BASEADDR0 : 0000000000100000 : U : En :  :  : 
+DS1_BASEADDR0 : 0000000080100000 : U : En :  :  : 
 DS1_BASEADDR1 : FFFFFFFFFFFFFFFF : U : Dis :  :  : 
 DS1_BASEADDR2 : FFFFFFFFFFFFFFFF : U : Dis :  :  : 
 DS1_BASEADDR3 : FFFFFFFFFFFFFFFF : U : Dis :  :  : 
@@ -58,7 +58,7 @@ DS1_BASEADDR12 : FFFFFFFFFFFFFFFF : U : Dis :  :  :
 DS1_BASEADDR13 : FFFFFFFFFFFFFFFF : U : Dis :  :  : 
 DS1_BASEADDR14 : FFFFFFFFFFFFFFFF : U : Dis :  :  : 
 DS1_BASEADDR15 : FFFFFFFFFFFFFFFF : U : Dis :  :  : 
-DS2_BASEADDR0 : 0000000000200000 : U : En :  :  : 
+DS2_BASEADDR0 : 0000000080200000 : U : En :  :  : 
 DS2_BASEADDR1 : FFFFFFFFFFFFFFFF : U : Dis :  :  : 
 DS2_BASEADDR2 : FFFFFFFFFFFFFFFF : U : Dis :  :  : 
 DS2_BASEADDR3 : FFFFFFFFFFFFFFFF : U : Dis :  :  : 
@@ -314,7 +314,7 @@ DS1_BASEADDR_WIDTH12 : 0 : U : Dis :  :  :
 DS1_BASEADDR_WIDTH13 : 0 : U : Dis :  :  : 
 DS1_BASEADDR_WIDTH14 : 0 : U : Dis :  :  : 
 DS1_BASEADDR_WIDTH15 : 0 : U : Dis :  :  : 
-DS2_BASEADDR_WIDTH0 : 12 : U : En :  :  : 
+DS2_BASEADDR_WIDTH0 : 12 : U : En :  : 12 : 32
 DS2_BASEADDR_WIDTH1 : 0 : U : Dis :  :  : 
 DS2_BASEADDR_WIDTH2 : 0 : U : Dis :  :  : 
 DS2_BASEADDR_WIDTH3 : 0 : U : Dis :  :  : 
@@ -538,9 +538,9 @@ DS15_BASEADDR_WIDTH12 : 0 : U : Dis :  :  :
 DS15_BASEADDR_WIDTH13 : 0 : U : Dis :  :  : 
 DS15_BASEADDR_WIDTH14 : 0 : U : Dis :  :  : 
 DS15_BASEADDR_WIDTH15 : 0 : U : Dis :  :  : 
-ds0range_baseaddr : 0000000000000000 : G : En :  :  : 
-ds1range_baseaddr : 0000000000100000 : G : En :  :  : 
-ds2range_baseaddr : 0000000000200000 : G : En :  :  : 
+ds0range_baseaddr : 0000000080000000 : G : En :  :  : 
+ds1range_baseaddr : 0000000080100000 : G : En :  :  : 
+ds2range_baseaddr : 0000000080200000 : G : En :  :  : 
 ds3range_baseaddr : 0000000000300000 : G : En :  :  : 
 ds4range_baseaddr : 0000000000400000 : G : En :  :  : 
 ds5range_baseaddr : 0000000000500000 : G : En :  :  : 
@@ -1279,9 +1279,9 @@ ds13_base_addr_align_check : 0 -1 : G : En :  :  :
 ds14_base_addr_align_check : 0 -1 : G : En :  :  : 
 ds15_base_addr_align_check : 0 -1 : G : En :  :  : 
 global_check : 0 : G : En :  :  : 
-ds0_base_addr_upper_bound : 0xfff : G : En :  :  : 
-ds1_base_addr_upper_bound : 0x100fff : G : En :  :  : 
-ds2_base_addr_upper_bound : 0x200fff : G : En :  :  : 
+ds0_base_addr_upper_bound : 0x80000fff : G : En :  :  : 
+ds1_base_addr_upper_bound : 0x80100fff : G : En :  :  : 
+ds2_base_addr_upper_bound : 0x80200fff : G : En :  :  : 
 ds3_base_addr_upper_bound : 0x300fff : G : En :  :  : 
 ds4_base_addr_upper_bound : 0x400fff : G : En :  :  : 
 ds5_base_addr_upper_bound : 0x500fff : G : En :  :  : 
@@ -1295,9 +1295,9 @@ ds12_base_addr_upper_bound : 0xc00fff : G : En :  :  :
 ds13_base_addr_upper_bound : 0xd00fff : G : En :  :  : 
 ds14_base_addr_upper_bound : 0xe00fff : G : En :  :  : 
 ds15_base_addr_upper_bound : 0xf00fff : G : En :  :  : 
-ds0_base_addr_lower_bound : 0x0000000000000000 : G : En :  :  : 
-ds1_base_addr_lower_bound : 0x0000000000100000 : G : En :  :  : 
-ds2_base_addr_lower_bound : 0x0000000000200000 : G : En :  :  : 
+ds0_base_addr_lower_bound : 0x0000000080000000 : G : En :  :  : 
+ds1_base_addr_lower_bound : 0x0000000080100000 : G : En :  :  : 
+ds2_base_addr_lower_bound : 0x0000000080200000 : G : En :  :  : 
 ds3_base_addr_lower_bound : 0x0000000000300000 : G : En :  :  : 
 ds4_base_addr_lower_bound : 0x0000000000400000 : G : En :  :  : 
 ds5_base_addr_lower_bound : 0x0000000000500000 : G : En :  :  : 

@@ -22,7 +22,7 @@
                 <ipxact:configurableElementValue referenceId="P2F_IRQ_GPIO2_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P2F_IRQ_USB0_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P2F_IRQ_SDIO0_Available">0</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="P2F_IRQ_UART0_Available">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="P2F_IRQ_UART0_Available">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P2F_IRQ_SDIO1_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P2F_IRQ_UART1_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="Event_interface">0</ipxact:configurableElementValue>

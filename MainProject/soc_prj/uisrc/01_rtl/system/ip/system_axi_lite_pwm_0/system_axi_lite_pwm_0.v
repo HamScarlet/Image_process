@@ -7,6 +7,9 @@ module system_axi_lite_pwm_0
 (
     input             s_axi_aclk ,
     input             s_axi_aresetn ,
+    input             lane_result_update ,
+    input      [75:0] lane_result_bundle ,
+    input             lane_cdc_overrun ,
     input  [(C_S_AXI_ADDR_WIDTH - 1):0] s_axi_awaddr ,
     input             s_axi_awvalid ,
     output            s_axi_awready ,
@@ -53,6 +56,9 @@ module system_axi_lite_pwm_0
         .s_axi_rresp(s_axi_rresp) ,
         .s_axi_rvalid(s_axi_rvalid) ,
         .s_axi_rready(s_axi_rready) ,
+        .lane_result_update(lane_result_update) ,
+        .lane_result_bundle(lane_result_bundle) ,
+        .lane_cdc_overrun(lane_cdc_overrun) ,
         .pwm_out(pwm_out) ,
         .motor_dir(motor_dir) ,
         .motor_enable(motor_enable)

@@ -87,6 +87,8 @@ module ARM_Processor_System_59fb6a0bf2ca
 	output    [3:0]               master_gp0_axi_wstrb,
 	output                        master_gp0_axi_wvalid,
 
+	output                        p2f_irq_uart0,
+
 	input                         uart0_rx_in,
 	output                        uart0_tx_out,
 	
@@ -117,6 +119,8 @@ module ARM_Processor_System_59fb6a0bf2ca
 	assign f2p_irq_TB[19] = 1'b0;
 
 //p2f_irq
+
+	assign p2f_irq_uart0 = p2f_irq[31];
 
 //	localparam real P2F_CLK0_DIV = p2f_clk0_1st_Divisor/2;
 	

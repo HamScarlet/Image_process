@@ -283,7 +283,7 @@
                 <ipxact:configurableElementValue referenceId="P2F_IRQ_QSPI_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P2F_IRQ_SDIO0_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P2F_IRQ_SDIO1_Available">0</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="P2F_IRQ_UART0_Available">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="P2F_IRQ_UART0_Available">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P2F_IRQ_UART1_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P2F_IRQ_USB0_Available">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="P2F_Reset0_Available">1</ipxact:configurableElementValue>
@@ -723,7 +723,7 @@
                 <ipxact:configurableElementValue referenceId="ds0_base_addr_align_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ds0_base_addr_lower_bound">&quot;0x0000000080000000&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ds0_base_addr_overflow_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ds0_base_addr_upper_bound">&quot;0xfff&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds0_base_addr_upper_bound">&quot;0x80000fff&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ds0range_baseaddr">&quot;0000000080000000&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ds0range_baseaddr_width">&quot;0000000C&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ds10_base_addr_align_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
@@ -765,13 +765,13 @@
                 <ipxact:configurableElementValue referenceId="ds1_base_addr_align_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ds1_base_addr_lower_bound">&quot;0x0000000080100000&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ds1_base_addr_overflow_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ds1_base_addr_upper_bound">&quot;0x100fff&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds1_base_addr_upper_bound">&quot;0x80100fff&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ds1range_baseaddr">&quot;0000000080100000&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ds1range_baseaddr_width">&quot;0000000C&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ds2_base_addr_align_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ds2_base_addr_lower_bound">&quot;0x0000000080200000&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ds2_base_addr_overflow_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ds2_base_addr_upper_bound">&quot;0x200fff&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ds2_base_addr_upper_bound">&quot;0x80200fff&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ds2range_baseaddr">&quot;0000000080200000&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ds2range_baseaddr_width">&quot;0000000C&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ds3_base_addr_align_check">&quot;0 -1&quot;</ipxact:configurableElementValue>
@@ -953,6 +953,24 @@
             <ipxact:direction>output</ipxact:direction>
         </ipxact:designPort>
         <ipxact:designPort>
+            <ipxact:name>lane_axi_clk</ipxact:name>
+            <ipxact:direction>output</ipxact:direction>
+        </ipxact:designPort>
+        <ipxact:designPort>
+            <ipxact:name>lane_result_update</ipxact:name>
+            <ipxact:direction>input</ipxact:direction>
+        </ipxact:designPort>
+        <ipxact:designPort>
+            <ipxact:name>lane_result_bundle</ipxact:name>
+            <ipxact:vectorL>75</ipxact:vectorL>
+            <ipxact:vectorR>0</ipxact:vectorR>
+            <ipxact:direction>input</ipxact:direction>
+        </ipxact:designPort>
+        <ipxact:designPort>
+            <ipxact:name>lane_cdc_overrun</ipxact:name>
+            <ipxact:direction>input</ipxact:direction>
+        </ipxact:designPort>
+        <ipxact:designPort>
             <ipxact:name>I_fdma_waddr</ipxact:name>
             <ipxact:vectorL>31</ipxact:vectorL>
             <ipxact:vectorR>0</ipxact:vectorR>
@@ -1052,6 +1070,14 @@
         </ipxact:designPort>
         <ipxact:designPort>
             <ipxact:name>motor_enable</ipxact:name>
+            <ipxact:direction>output</ipxact:direction>
+        </ipxact:designPort>
+        <ipxact:designPort>
+            <ipxact:name>uart0_rx_in</ipxact:name>
+            <ipxact:direction>input</ipxact:direction>
+        </ipxact:designPort>
+        <ipxact:designPort>
+            <ipxact:name>uart0_tx_out</ipxact:name>
             <ipxact:direction>output</ipxact:direction>
         </ipxact:designPort>
     </ipxact:designPorts>
@@ -1240,6 +1266,7 @@
             <ipxact:name>w_net__ARM_Processor_System_0__p2f_clk1</ipxact:name>
             <ipxact:portReferences>
                 <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="p2f_clk1"/>
+                <ipxact:externalPortReference portRef="lane_axi_clk"/>
                 <ipxact:internalPortReference componentRef="AXI_Matrix_0" portRef="aclk"/>
                 <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_0" portRef="aclk"/>
                 <ipxact:internalPortReference componentRef="AXI_Protocol_Converter_1" portRef="aclk"/>
@@ -1341,6 +1368,13 @@
             <ipxact:portReferences>
                 <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="slave_hp0_axi_wready"/>
                 <ipxact:internalPortReference componentRef="uiFDMA_0" portRef="M_AXI_WREADY"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__uart0_tx_out</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="uart0_tx_out"/>
+                <ipxact:externalPortReference portRef="uart0_tx_out"/>
             </ipxact:portReferences>
         </ipxact:adHocConnection>
         <ipxact:adHocConnection>
@@ -2674,6 +2708,27 @@
             </ipxact:portReferences>
         </ipxact:adHocConnection>
         <ipxact:adHocConnection>
+            <ipxact:name>w_net__lane_cdc_overrun</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_lite_pwm_0" portRef="lane_cdc_overrun"/>
+                <ipxact:externalPortReference portRef="lane_cdc_overrun"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__lane_result_bundle</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_lite_pwm_0" portRef="lane_result_bundle"/>
+                <ipxact:externalPortReference portRef="lane_result_bundle"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__lane_result_update</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_lite_pwm_0" portRef="lane_result_update"/>
+                <ipxact:externalPortReference portRef="lane_result_update"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
             <ipxact:name>w_net__pwm_clk</ipxact:name>
             <ipxact:portReferences>
                 <ipxact:internalPortReference componentRef="PWM_0" portRef="clk"/>
@@ -2685,6 +2740,13 @@
             <ipxact:portReferences>
                 <ipxact:internalPortReference componentRef="PWM_0" portRef="rst_n"/>
                 <ipxact:externalPortReference portRef="rst_n"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__uart0_rx_in</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="uart0_rx_in"/>
+                <ipxact:externalPortReference portRef="uart0_rx_in"/>
             </ipxact:portReferences>
         </ipxact:adHocConnection>
         <ipxact:adHocConnection>

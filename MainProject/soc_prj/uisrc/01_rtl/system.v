@@ -41,9 +41,11 @@ module system_top (
 	input  wire[1:0]	I_data_hs_p , 
 	input  wire[1:0]	I_data_lp_p ,
 	input  wire[1:0]	I_data_lp_n ,
+    input  wire         I_uart_rx,
 
 	output wire       	O_hdmi_clk_p,  //HDMI时钟输出差分P
     output wire [2:0] 	O_hdmi_tx_p,	   //HDMI数据输出差分P
+    output wire         O_uart_tx,
 
     output wire [3:0]   O_code_driver,
     output wire         O_pwm_out1,
@@ -137,6 +139,14 @@ module system_top (
   (* keep = "true" *) wire signed [11:0] lane_center_offset;
   (* keep = "true" *) wire [1:0]  lane_curve_class;
   (* keep = "true" *) wire [7:0]  lane_confidence;
+  wire lane_axi_clk;
+  wire lane_result_update_p2f;
+  wire [75:0] lane_result_bundle_p2f;
+  wire lane_cdc_overrun_p2f;
+  wire [75:0] lane_result_bundle_pixel = {
+      lane_result_valid, lane_valid, lane_frame_count, lane_left_x,
+      lane_right_x, lane_center_offset, lane_curve_class, lane_confidence
+  };
   (* keep = "true" *) wire [77:0] lane_result_hold;
   assign lane_result_hold = {
       lane_result_valid, lane_valid, lane_frame_done, lane_frame_overrun,
@@ -216,10 +226,28 @@ end
 
 wire pwm_clk;
 
+  // Cross the stable frame-result bundle into the actual GP0 AXI clock
+  // domain (p2f_clk1, exported here as lane_axi_clk).
+  lane_result_cdc #(.BUNDLE_WIDTH(76)) u_lane_result_cdc (
+      .src_clk       (S_hs_rx_clk),
+      .src_rst_n     (locked),
+      .I_src_update  (lane_frame_done),
+      .I_src_bundle  (lane_result_bundle_pixel),
+      .dst_clk       (lane_axi_clk),
+      .dst_rst_n     (p2f_rst0_n),
+      .O_dst_update  (lane_result_update_p2f),
+      .O_dst_bundle  (lane_result_bundle_p2f),
+      .O_dst_overrun (lane_cdc_overrun_p2f)
+  );
+
   //调用Design Integrator
   system system_inst (
       .p2f_clk0    (p2f_clk0  	 ),
       .p2f_rst0_n   (p2f_rst0_n  ),
+      .lane_axi_clk (lane_axi_clk),
+      .lane_result_update(lane_result_update_p2f),
+      .lane_result_bundle(lane_result_bundle_p2f),
+      .lane_cdc_overrun(lane_cdc_overrun_p2f),
       .I_fdma_waddr (fdma_waddr  ),
       .I_fdma_wareq (fdma_wareq  ),
       .I_fdma_wsize (fdma_wsize  ),
@@ -239,8 +267,9 @@ wire pwm_clk;
       .pwm_out1     (pwm_out1),
       .pwm_out      (O_motor_pwm),
       .motor_dir    (O_motor_dir),
-      .motor_enable (O_motor_enable)
-      
+      .motor_enable (O_motor_enable),
+      .uart0_rx_in    (I_uart_rx),
+      .uart0_tx_out    (O_uart_tx)
   );
 
   pll U_pll (

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project Version="3" Minor="2" Path="D:/FPGA_Git/Image_process/MainProject/soc_prj">
+<Project Version="3" Minor="2" Path="E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj">
     <Project_Created_Time></Project_Created_Time>
     <TD_Encoding>UTF-8</TD_Encoding>
-    <TD_Version>6.2.200067</TD_Version>
+    <TD_Version>6.2.168116</TD_Version>
     <Name>soc_prj</Name>
     <HardWare>
         <Family>DR1</Family>
@@ -449,6 +449,22 @@
                     <Attr Name="UsedInP&R" Val="true"/>
                     <Attr Name="BelongTo" Val="design_1"/>
                     <Attr Name="CompileOrder" Val="63"/>
+                </FileInfo>
+            </File>
+            <File Path="uisrc/01_rtl/my_image_process/lane_result_axi.v">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="64"/>
+                </FileInfo>
+            </File>
+            <File Path="uisrc/01_rtl/my_image_process/lane_result_cdc.v">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="65"/>
                 </FileInfo>
             </File>
         </Verilog>

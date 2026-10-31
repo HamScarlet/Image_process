@@ -816,6 +816,13 @@
                 </ipxact:wire>
             </ipxact:port>
             <ipxact:port>
+                <ipxact:name>p2f_irq_uart0</ipxact:name>
+                <ipxact:displayName>p2f_irq_uart0</ipxact:displayName>
+                <ipxact:wire>
+                    <ipxact:direction>out</ipxact:direction>
+                </ipxact:wire>
+            </ipxact:port>
+            <ipxact:port>
                 <ipxact:name>uart0_rx_in</ipxact:name>
                 <ipxact:displayName>uart0_rx_in</ipxact:displayName>
                 <ipxact:wire>

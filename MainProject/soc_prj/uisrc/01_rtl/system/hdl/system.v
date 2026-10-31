@@ -1,4 +1,7 @@
 module system (
+    input     wire              lane_result_update ,
+    input     wire       [75:0] lane_result_bundle ,
+    input     wire              lane_cdc_overrun ,
     input     wire       [31:0] I_fdma_waddr ,
     input     wire              I_fdma_wareq ,
     input     wire       [15:0] I_fdma_wsize ,
@@ -10,8 +13,10 @@ module system (
     input     wire       [63:0] I_fdma_wdata ,
     input     wire              pwm_clk ,
     input     wire              rst_n ,
+    input     wire              uart0_rx_in ,
     output    wire              p2f_clk0 ,
     output    wire              p2f_rst0_n ,
+    output    wire              lane_axi_clk ,
     output    wire              O_fdma_wbusy ,
     output    wire              O_fdma_wvalid ,
     output    wire              O_fdma_rbusy ,
@@ -21,7 +26,8 @@ module system (
     output    wire              pwm_out1 ,
     output    wire        [2:0] pwm_out ,
     output    wire        [1:0] motor_dir ,
-    output    wire              motor_enable
+    output    wire              motor_enable ,
+    output    wire              uart0_tx_out
 ); 
     wire [32:0]       w_port__ARM_Processor_System_0__master_gp0_axi_araddr ;
     wire [31:0]       w_port__AXI_Matrix_0__us0_araddr ;
@@ -191,6 +197,9 @@ module system (
     wire              w_port__ARM_Processor_System_0__slave_hp0_axi_wready ;
     wire              w_port__uiFDMA_0__M_AXI_WREADY ;
     wire              w_net__ARM_Processor_System_0__slave_hp0_axi_wready ; 
+
+    wire              w_port__ARM_Processor_System_0__uart0_tx_out ;
+    wire              w_net__ARM_Processor_System_0__uart0_tx_out ; 
 
     wire [3:0]        w_port__AXI_GPIO_0__gpio_io_o ;
     wire [3:0]        w_net__AXI_GPIO_0__gpio_io_o ; 
@@ -938,11 +947,23 @@ module system (
     wire              w_port__AXI_Protocol_Converter_2__ds_axi_wready ;
     wire              w_net__axi_lite_pwm_0__s_axi_wready ; 
 
+    wire              w_port__axi_lite_pwm_0__lane_cdc_overrun ;
+    wire              w_net__lane_cdc_overrun ; 
+
+    wire [75:0]       w_port__axi_lite_pwm_0__lane_result_bundle ;
+    wire [75:0]       w_net__lane_result_bundle ; 
+
+    wire              w_port__axi_lite_pwm_0__lane_result_update ;
+    wire              w_net__lane_result_update ; 
+
     wire              w_port__PWM_0__clk ;
     wire              w_net__pwm_clk ; 
 
     wire              w_port__PWM_0__rst_n ;
     wire              w_net__rst_n ; 
+
+    wire              w_port__ARM_Processor_System_0__uart0_rx_in ;
+    wire              w_net__uart0_rx_in ; 
 
     wire [31:0]       w_port__uiFDMA_0__M_AXI_ARADDR ;
     wire [32:0]       w_port__ARM_Processor_System_0__slave_hp0_axi_araddr ;
@@ -1150,6 +1171,7 @@ module system (
     assign w_port__Processor_System_Reset_0__clk = w_net__ARM_Processor_System_0__p2f_clk0 ;
 
     assign w_net__ARM_Processor_System_0__p2f_clk1 = w_port__ARM_Processor_System_0__p2f_clk1 ;
+    assign lane_axi_clk = w_net__ARM_Processor_System_0__p2f_clk1 ;
     assign w_port__AXI_Matrix_0__aclk = w_net__ARM_Processor_System_0__p2f_clk1 ;
     assign w_port__AXI_Protocol_Converter_0__aclk = w_net__ARM_Processor_System_0__p2f_clk1 ;
     assign w_port__AXI_Protocol_Converter_1__aclk = w_net__ARM_Processor_System_0__p2f_clk1 ;
@@ -1202,6 +1224,9 @@ module system (
 
     assign w_net__ARM_Processor_System_0__slave_hp0_axi_wready = w_port__ARM_Processor_System_0__slave_hp0_axi_wready ;
     assign w_port__uiFDMA_0__M_AXI_WREADY = w_net__ARM_Processor_System_0__slave_hp0_axi_wready ;
+
+    assign w_net__ARM_Processor_System_0__uart0_tx_out = w_port__ARM_Processor_System_0__uart0_tx_out ;
+    assign uart0_tx_out = w_net__ARM_Processor_System_0__uart0_tx_out ;
 
     assign w_net__AXI_GPIO_0__gpio_io_o = w_port__AXI_GPIO_0__gpio_io_o ;
     assign code_driver = w_net__AXI_GPIO_0__gpio_io_o ;
@@ -1773,11 +1798,23 @@ module system (
     assign w_net__axi_lite_pwm_0__s_axi_wready = w_port__axi_lite_pwm_0__s_axi_wready ;
     assign w_port__AXI_Protocol_Converter_2__ds_axi_wready = w_net__axi_lite_pwm_0__s_axi_wready ;
 
+    assign w_net__lane_cdc_overrun = lane_cdc_overrun ;
+    assign w_port__axi_lite_pwm_0__lane_cdc_overrun = w_net__lane_cdc_overrun ;
+
+    assign w_net__lane_result_bundle = lane_result_bundle ;
+    assign w_port__axi_lite_pwm_0__lane_result_bundle = w_net__lane_result_bundle ;
+
+    assign w_net__lane_result_update = lane_result_update ;
+    assign w_port__axi_lite_pwm_0__lane_result_update = w_net__lane_result_update ;
+
     assign w_net__pwm_clk = pwm_clk ;
     assign w_port__PWM_0__clk = w_net__pwm_clk ;
 
     assign w_net__rst_n = rst_n ;
     assign w_port__PWM_0__rst_n = w_net__rst_n ;
+
+    assign w_net__uart0_rx_in = uart0_rx_in ;
+    assign w_port__ARM_Processor_System_0__uart0_rx_in = w_net__uart0_rx_in ;
 
     assign w_net__uiFDMA_0__M_AXI_ARADDR = w_port__uiFDMA_0__M_AXI_ARADDR ;
     assign w_port__ARM_Processor_System_0__slave_hp0_axi_araddr = {1'b0,w_net__uiFDMA_0__M_AXI_ARADDR} ;
@@ -1957,8 +1994,9 @@ module system (
                                                           , .pl_gpio_in(1'b0)
                                                           , .pl_gpio_oe()
                                                           , .pl_gpio_out()
-                                                          , .uart0_rx_in(1'b0)
-                                                          , .uart0_tx_out()
+                                                          , .uart0_rx_in(w_port__ARM_Processor_System_0__uart0_rx_in)
+                                                          , .uart0_tx_out(w_port__ARM_Processor_System_0__uart0_tx_out)
+                                                          , .p2f_irq_uart0()
                                                           , .p2f_rst0_n(w_port__ARM_Processor_System_0__p2f_rst0_n)
                                                           , .p2f_clk1(w_port__ARM_Processor_System_0__p2f_clk1)
                                                           , .p2f_clk0(w_port__ARM_Processor_System_0__p2f_clk0) );
@@ -2384,6 +2422,9 @@ module system (
                                           , .s_axi_rready(w_port__axi_lite_pwm_0__s_axi_rready)
                                           , .s_axi_aclk(w_port__axi_lite_pwm_0__s_axi_aclk)
                                           , .s_axi_aresetn(w_port__axi_lite_pwm_0__s_axi_aresetn)
+                                          , .lane_result_update(w_port__axi_lite_pwm_0__lane_result_update)
+                                          , .lane_result_bundle(w_port__axi_lite_pwm_0__lane_result_bundle)
+                                          , .lane_cdc_overrun(w_port__axi_lite_pwm_0__lane_cdc_overrun)
                                           , .pwm_out(w_port__axi_lite_pwm_0__pwm_out)
                                           , .motor_dir(w_port__axi_lite_pwm_0__motor_dir)
                                           , .motor_enable(w_port__axi_lite_pwm_0__motor_enable) );

@@ -36,6 +36,40 @@
                 </ipxact:wire>
             </ipxact:port>
             <ipxact:port>
+                <ipxact:name>lane_axi_clk</ipxact:name>
+                <ipxact:displayName>lane_axi_clk</ipxact:displayName>
+                <ipxact:wire>
+                    <ipxact:direction>out</ipxact:direction>
+                </ipxact:wire>
+            </ipxact:port>
+            <ipxact:port>
+                <ipxact:name>lane_result_update</ipxact:name>
+                <ipxact:displayName>lane_result_update</ipxact:displayName>
+                <ipxact:wire>
+                    <ipxact:direction>in</ipxact:direction>
+                </ipxact:wire>
+            </ipxact:port>
+            <ipxact:port>
+                <ipxact:name>lane_result_bundle</ipxact:name>
+                <ipxact:displayName>lane_result_bundle</ipxact:displayName>
+                <ipxact:wire>
+                    <ipxact:direction>in</ipxact:direction>
+                    <ipxact:vectors>
+                        <ipxact:vector>
+                            <ipxact:left>75</ipxact:left>
+                            <ipxact:right>0</ipxact:right>
+                        </ipxact:vector>
+                    </ipxact:vectors>
+                </ipxact:wire>
+            </ipxact:port>
+            <ipxact:port>
+                <ipxact:name>lane_cdc_overrun</ipxact:name>
+                <ipxact:displayName>lane_cdc_overrun</ipxact:displayName>
+                <ipxact:wire>
+                    <ipxact:direction>in</ipxact:direction>
+                </ipxact:wire>
+            </ipxact:port>
+            <ipxact:port>
                 <ipxact:name>I_fdma_waddr</ipxact:name>
                 <ipxact:displayName>I_fdma_waddr</ipxact:displayName>
                 <ipxact:wire>
@@ -232,6 +266,20 @@
             <ipxact:port>
                 <ipxact:name>motor_enable</ipxact:name>
                 <ipxact:displayName>motor_enable</ipxact:displayName>
+                <ipxact:wire>
+                    <ipxact:direction>out</ipxact:direction>
+                </ipxact:wire>
+            </ipxact:port>
+            <ipxact:port>
+                <ipxact:name>uart0_rx_in</ipxact:name>
+                <ipxact:displayName>uart0_rx_in</ipxact:displayName>
+                <ipxact:wire>
+                    <ipxact:direction>in</ipxact:direction>
+                </ipxact:wire>
+            </ipxact:port>
+            <ipxact:port>
+                <ipxact:name>uart0_tx_out</ipxact:name>
+                <ipxact:displayName>uart0_tx_out</ipxact:displayName>
                 <ipxact:wire>
                     <ipxact:direction>out</ipxact:direction>
                 </ipxact:wire>

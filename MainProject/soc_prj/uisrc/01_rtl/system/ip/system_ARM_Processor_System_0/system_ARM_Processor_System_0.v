@@ -3,7 +3,7 @@
 **	All Right Reserved.
 \************************************************************/
 /************************************************************\
-**	Build time: Oct 19 2026 14:08:01
+**	Build time: Oct 31 2026 19:56:29
 **	TD version	:	6.2.168116
 ************************************************************/
 `timescale 1ns/1ps
@@ -83,6 +83,7 @@ module system_ARM_Processor_System_0
   input                         master_gp0_axi_wready,
   output  [3:0]                 master_gp0_axi_wstrb,
   output                        master_gp0_axi_wvalid,
+  output                        p2f_irq_uart0,
   input                         uart0_rx_in,
   output                        uart0_tx_out,
   input   [0:0]                 pl_gpio_in,
@@ -173,6 +174,7 @@ module system_ARM_Processor_System_0
       .master_gp0_axi_wready(master_gp0_axi_wready),
       .master_gp0_axi_wstrb(master_gp0_axi_wstrb),
       .master_gp0_axi_wvalid(master_gp0_axi_wvalid),
+      .p2f_irq_uart0(p2f_irq_uart0),
       .uart0_rx_in(uart0_rx_in),
       .uart0_tx_out(uart0_tx_out),
       .pl_gpio_in(pl_gpio_in),
