@@ -19,6 +19,10 @@
 #include <stdint.h>
 #include "AXI_GPIO_test.h"
 #include "TIM_PWM.h"
+#include "motor.h"
+#include "USART.h"
+#include "Servo.h"
+#include "Car_control.h"
 
 void Fclk_Init()
 {
@@ -56,9 +60,9 @@ AL_S32 main()
 //    al_printf("TIM Init successfully\r\n");
 
 
-    AL_REG32_WRITE(0X80200000,0X01);
-    uint32_t r = AL_REG32_READ(0X80200000);
-    al_printf("addr: %d\r\n", r);
+//    AL_REG32_WRITE(0X80200000,0X01);
+//    uint32_t r = AL_REG32_READ(0X80200000);
+//    al_printf("addr: %d\r\n", r);
 
 
     while(1)

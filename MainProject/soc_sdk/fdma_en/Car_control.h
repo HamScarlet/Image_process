@@ -9,10 +9,11 @@
 #define CAR_CONTROL_H_
 
 typedef struct {
-    uint8_t direct;     // 0: forward   1: backward
-    uint8_t diversion;  // 0: left      1: right
-    uint8_t speed       // 
+    uint8_t direct;     // 0: forward   1: backward     2: left     3: right        4: stop
+    int8_t speed       // 
 }COMMAND;
+
+void Process_Cmd(COMMAND cmd);
 
 
 #endif /* CAR_CONTROL_H_ */

@@ -36,11 +36,48 @@ void car_init(void)
 
 void car_loop(void)
 {
-
+	Cmd_Receive(&cmd);
+	Process_Cmd(cmd);
 }
 
-int Process_Cmd(COMMAND cmd)
+void Process_Cmd(COMMAND cmd)
 {
 	static COMMAND cmd_status = {0};
-	
+	if(!memcmp(cmd,cmd_status))
+	{
+		cmd_status.direct = cmd.direct;
+		cmd_status.speed = cmd.speed;
+
+		int8_t speed = cmd_status.speed;
+		switch (cmd_status.direct)
+		{
+			case 0:
+				SetSpeed(speed,speed);
+				/* code */
+				break;
+			
+			case 1:
+				SetSpeed(-speed,-speed);
+				/* code */
+				break;
+
+			case 2:
+				SetSpeed(-speed,speed);
+				/* code */
+				break;
+
+			case 3:
+				SetSpeed(speed,-speed);
+				/* code */
+				break;
+
+			case 4:
+				SetSpeed(0,0);
+				/* code */
+				break;
+			
+			default:
+				break;
+		}
+	}
 }
