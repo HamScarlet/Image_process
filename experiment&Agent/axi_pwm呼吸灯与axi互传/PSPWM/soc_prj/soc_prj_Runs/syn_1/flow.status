@@ -1,0 +1,23 @@
+Location         : D:\FPGAproject\AnLuRun\PSPWM\soc_prj\soc_prj_Runs\syn_1
+Running with     : Tang Dynasty Release_2026.1_SP2
+                   Copyright (c) 2012-2026 Anlogic Inc.
+Top Model        : system_top
+Device           : DR1M90GEG400
+Speed            : 2
+
+Timing Mode      : basic
+Setup            : WNS  3081ps  TNS        0ps  NUM_FEPS     0
+Hold             : WNS 2147483647ps  TNS        0ps  NUM_FEPS     0
+
+Flow Statistics  :
+--------------------------------------------------------------------------------------------------
+     command     |  #calls  |  wall time  |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
+--------------------------------------------------------------------------------------------------
+  optimize_gate  |    1     |  38s(52%)   |    38(54%)    |        838        |        857        
+  optimize_rtl   |    1     |  31s(42%)   |    29(41%)    |        705        |        817        
+  import_device  |    1     |   4s(5%)    |     3(4%)     |        397        |        397        
+    read_adc     |    1     |   0s(0%)    |     0(0%)     |        562        |        564        
+    read_sdc     |    2     |   0s(0%)    |     0(0%)     |        562        |        564        
+--------------------------------------------------------------------------------------------------
+      total      |    6     |    1m13s    |      70       |        838        |        857        
+--------------------------------------------------------------------------------------------------

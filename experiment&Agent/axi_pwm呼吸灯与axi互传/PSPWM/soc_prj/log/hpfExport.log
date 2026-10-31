@@ -1,0 +1,49 @@
+[Info] HPF_EXPORT_TIME: 2025/03/24 15:24:13
+[Info] write tdInfo pass
+[Info] exportCfg pass
+[Info] parsePlDtsCfg pass 
+[Info] export soc_plat_pl.dtsi pass
+[Info] export pl_drvers pass
+[Info] exportPlDts pass
+[Info] HPF_EXPORT_TIME: 2025/06/06 13:42:18
+[Info] write tdInfo pass
+[Info] exportCfg pass
+[Info] parsePlDtsCfg pass 
+[Info] export soc_plat_pl.dtsi pass
+[Info] export pl_drvers pass
+[Info] exportPlDts pass
+[Info] HPF_EXPORT_TIME: 2025/07/02 20:10:14
+[Info] write tdInfo pass
+[Info] exportCfg pass
+[Info] parsePlDtsCfg pass 
+[Info] export soc_plat_pl.dtsi pass
+[Info] export pl_drvers pass
+[Info] exportPlDts pass
+[Info] HPF_EXPORT_TIME: 2025/07/22 11:02:22
+[Info] write tdInfo pass
+[Info] exportCfg pass
+[Info] parsePlDtsCfg pass 
+[Info] export soc_plat_pl.dtsi pass
+[Info] export pl_drvers pass
+[Info] exportPlDts pass
+[Info] device: DR1M90GEG400
+[Info] cfgRoot: D:/exe/Anlu/TD/bin/../ip/depot/
+psPath: D:/FPGAproject/AnLuRun/3_2_01_sdk_base/14_axi_gpio_pl_intr/soc_prj/uisrc/01_rtl/system/ip/system_ARM_Processor_System_1
+designPath: D:/FPGAproject/AnLuRun/3_2_01_sdk_base/14_axi_gpio_pl_intr/soc_prj/uisrc/01_rtl/system
+[Info] Export Ps File Pass: ARM_Processor_System_0
+[Info] preParePlData Pass
+[Info] export Bm Driver Pass: ARM_Processor_System_0
+[Info] device: DR1M90GEG400
+[Info] cfgRoot: D:/exe/Anlu/TD/ip/depot
+psPath: D:/FPGAproject/AnLuRun/PSPWM/soc_prj/uisrc/01_rtl/system/ip/system_ARM_Processor_System_1
+designPath: D:/FPGAproject/AnLuRun/PSPWM/soc_prj/uisrc/01_rtl/system
+[Info] Export Ps File Pass: ARM_Processor_System_0
+[Info] preParePlData Pass
+[Info] export Bm Driver Pass: ARM_Processor_System_0
+[Info] device: DR1M90GEG400
+[Info] cfgRoot: D:/exe/Anlu/TD/ip/depot
+psPath: D:/FPGAproject/AnLuRun/PSPWM/soc_prj/uisrc/01_rtl/system/ip/system_ARM_Processor_System_1
+designPath: D:/FPGAproject/AnLuRun/PSPWM/soc_prj/uisrc/01_rtl/system
+[Info] Export Ps File Pass: ARM_Processor_System_0
+[Info] preParePlData Pass
+[Info] export Bm Driver Pass: ARM_Processor_System_0
