@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:design xmlns:xsi="http" xmlns:ipxact="http" xmlns:anlogic="http" xsi:schemaLocation="http">
+    <ipxact:vendor>anlogic.com</ipxact:vendor>
+    <ipxact:library>customized</ipxact:library>
+    <ipxact:name>design_design_0</ipxact:name>
+    <ipxact:version>1.0</ipxact:version>
+    <ipxact:componentInstances/>
+    <ipxact:designPorts/>
+    <ipxact:adHocConnections/>
+    <ipxact:interconnections/>
+    <ipxact:vendorExtensions>
+        <anlogic:device>DR1M90GEG484</anlogic:device>
+    </ipxact:vendorExtensions>
+</ipxact:design>

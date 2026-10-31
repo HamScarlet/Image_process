@@ -1,0 +1,22 @@
+Location         : D:\FPGAproject\AnLuRun\MainProject\soc_prj\soc_prj_Runs\phy_1
+Running with     : Tang Dynasty Release_2026.1_SP2
+                   Copyright (c) 2012-2026 Anlogic Inc.
+Top Model        : system_top
+Device           : DR1M90GEG400
+Speed            : 2
+
+Timing Mode      : manhattan
+Setup            : WNS  -160ps  TNS     -256ps  NUM_FEPS     2
+Hold             : WNS 2147483647ps  TNS        0ps  NUM_FEPS     0
+
+Flow Statistics  :
+---------------------------------------------------------------------------------------------------
+     command     |  #calls  |  wall time   |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
+---------------------------------------------------------------------------------------------------
+      place      |    1     |  5m32s(98%)  |   1098(99%)   |       2036        |       2036        
+  import_device  |    1     |    3s(0%)    |     3(0%)     |        399        |        399        
+    import_db    |    3     |    2s(0%)    |     1(0%)     |       1279        |       1279        
+      pack       |    1     |    0s(0%)    |     0(0%)     |       1365        |       1365        
+---------------------------------------------------------------------------------------------------
+      total      |    6     |    5m37s     |     1102      |       2036        |       2036        
+---------------------------------------------------------------------------------------------------

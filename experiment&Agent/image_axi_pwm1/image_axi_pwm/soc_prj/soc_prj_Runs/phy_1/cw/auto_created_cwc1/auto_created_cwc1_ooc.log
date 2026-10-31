@@ -1,0 +1,313 @@
+============================================================
+   TD Release_2026.1_SP2
+   Copyright (c) 2012-2026 Anlogic Inc.
+   Executable = D:/exe/Anlu/TD/bin/run.exe
+   Build number = 6.2.2.200067
+   Built at =   16:15:53 Apr 23 2026
+   Run by =     21996
+   Run Date =   Sat Oct 31 18:45:59 2026
+
+   Run on =     HYZY-X7-1
+============================================================
+RUN-1002 : start command "import_device dr1_90.db -package DR1M90GEG400"
+RUN-1001 : Using default speed grade: 2
+ARC-1001 : Device Initialization.
+ARC-1001 : --------------------------------------------------------
+ARC-1001 :           OPTION          |      IO       |   SETTING   
+ARC-1001 : --------------------------------------------------------
+ARC-1001 :   non_jtag_persist(none)  |    35 IOs     |    gpio    
+ARC-1001 :            jtag           |  F9/J6/G6/F6  |  dedicate  
+ARC-1001 : --------------------------------------------------------
+RUN-1003 : finish command "import_device dr1_90.db -package DR1M90GEG400" in  3.604293s wall, 3.359375s user + 0.125000s system = 3.484375s CPU (96.7%)
+
+RUN-1004 : used memory is 400 MB, reserved memory is 391 MB, peak memory is 400 MB
+RUN-1002 : start command "set_param flow ooc_flow on"
+RUN-1002 : start command "read_verilog -file auto_created_cwc1_watcherInst.sv"
+HDL-1007 : analyze verilog file auto_created_cwc1_watcherInst.sv
+HDL-1007 : analyze verilog file D:\exe\Anlu\TD\ip/apm/apm_cwc/apm_cwc.sv
+Copyright (c) 1998-2019 The OpenSSL Project.  All rights reserved.
+This product includes software developed by the OpenSSL Project
+for use in the OpenSSL Toolkit (http://www.openssl.org/)
+Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com)
+All rights reserved.
+This product includes cryptographic software written by Eric Young (eay@cryptsoft.com)
+HDL-1007 : undeclared symbol '**', assumed default net type '**' in D:\exe\Anlu\TD\ip/apm/apm_cwc/apm_cwc.sv(492)
+HDL-1007 : undeclared symbol '**', assumed default net type '**' in D:\exe\Anlu\TD\ip/apm/apm_cwc/apm_cwc.sv(493)
+HDL-1007 : back to file 'D:\exe\Anlu\TD\ip/apm/apm_cwc/apm_cwc.sv' in D:\exe\Anlu\TD\ip/apm/apm_cwc/apm_cwc.sv(1)
+HDL-1007 : elaborate module auto_created_cwc1 in auto_created_cwc1_watcherInst.sv(1)
+HDL-1007 : elaborate module ** in D:\exe\Anlu\TD\ip/apm/apm_cwc/apm_cwc.sv(3)
+HDL-1007 : elaborate module ** in D:\exe\Anlu\TD\ip/apm/apm_cwc/apm_cwc.sv(212)
+HDL-1007 : elaborate module ** in D:\exe\Anlu\TD\ip/apm/apm_cwc/apm_cwc.sv(573)
+HDL-1007 : elaborate module ** in D:\exe\Anlu\TD\ip/apm/apm_cwc/apm_cwc.sv(629)
+HDL-1007 : elaborate module ** in D:\exe\Anlu\TD\ip/apm/apm_cwc/apm_cwc.sv(629)
+HDL-1007 : elaborate module ** in D:\exe\Anlu\TD\ip/apm/apm_cwc/apm_cwc.sv(629)
+HDL-1007 : elaborate module ** in D:\exe\Anlu\TD\ip/apm/apm_cwc/apm_cwc.sv(629)
+HDL-1007 : elaborate module ** in D:\exe\Anlu\TD\ip/apm/apm_cwc/apm_cwc.sv(629)
+HDL-1007 : elaborate module ** in D:\exe\Anlu\TD\ip/apm/apm_cwc/apm_cwc.sv(788)
+HDL-1007 : elaborate module ** in D:\exe\Anlu\TD\ip/apm/apm_cwc/apm_cwc.sv(1025)
+HDL-1007 : elaborate module ** in D:\exe\Anlu\TD\ip/apm/apm_cwc/apm_cwc.sv(1025)
+HDL-1007 : elaborate module ** in D:\exe\Anlu\TD\ip/apm/apm_cwc/apm_cwc.sv(1025)
+HDL-1007 : elaborate module ** in D:\exe\Anlu\TD\ip/apm/apm_cwc/apm_cwc.sv(1025)
+HDL-1007 : elaborate module ** in D:\exe\Anlu\TD\ip/apm/apm_cwc/apm_cwc.sv(1025)
+HDL-1007 : elaborate module ** in D:\exe\Anlu\TD\ip/apm/apm_cwc/apm_cwc.sv(1025)
+HDL-1007 : elaborate module ** in D:\exe\Anlu\TD\ip/apm/apm_cwc/apm_cwc.sv(995)
+HDL-1007 : extracting RAM for identifier '**' in D:\exe\Anlu\TD\ip/apm/apm_cwc/apm_cwc.sv(1010)
+HDL-1200 : Current top model is auto_created_cwc1
+HDL-1100 : Inferred 1 RAMs.
+RUN-1002 : start command "optimize_rtl"
+RUN-1001 : Open license file D:/exe/Anlu/TD/license/Anlogic.lic
+SYN-1001 : Stage 1 | Optimize RTL
+SYN-1001 : Stage 1.1 | Check Design Sanity
+SYN-1001 : End Stage 1.1 | Check Design Sanity; Time: 0.005691s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (274.6%); Memory(MB): used = 406, reserved = 391, peak = 406;
+
+SYN-1079 : finish stage Check Design Sanity. Total instances: 5692, Total nets: 12814.
+
+SYN-1001 : Stage 1.2 | Initialize Design
+SYN-1001 : End Stage 1.2 | Initialize Design; Time: 0.069596s wall, 0.062500s user + 0.000000s system = 0.062500s CPU (89.8%); Memory(MB): used = 406, reserved = 391, peak = 406;
+
+SYN-1079 : finish stage Initialize Design. Total instances: 2452, Total nets: 7998.
+
+SYN-1001 : Stage 1.3 | Flatten Module
+SYN-1011 : Flatten model auto_created_cwc1
+SYN-1050 : Instances selected by 'keep_hierarchy':
+RUN-1001 : ------------------------------------------------------------------------------------------------------------
+RUN-1001 :           instance           |  keep_hierarchy  |         down_module         |         file(line)          
+RUN-1001 : ------------------------------------------------------------------------------------------------------------
+RUN-1001 :   wrapper_cwc_top/U_cwc_ram  |       true       | anlogic05_cwc_ram(DATA_...  | D:\exe\Anlu\TD\ip/apm/a...  
+RUN-1001 : ------------------------------------------------------------------------------------------------------------
+SYN-1001 : End Stage 1.3 | Flatten Module; Time: 0.079809s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (97.9%); Memory(MB): used = 406, reserved = 391, peak = 406;
+
+SYN-1079 : finish stage Flatten Module. Total instances: 3589, Total nets: 6365.
+
+SYN-1001 : Stage 1.4 | Uniform Instance
+SYN-1001 : End Stage 1.4 | Uniform Instance; Time: 0.020560s wall, 0.015625s user + 0.015625s system = 0.031250s CPU (152.0%); Memory(MB): used = 394, reserved = 389, peak = 406;
+
+SYN-1079 : finish stage Uniform Instance. Total instances: 3189, Total nets: 5965.
+
+SYN-1001 : Stage 1.5 | Optimize Design
+SYN-1032 : 5956/2 useful/useless nets, 3187/2 useful/useless insts
+SYN-1016 : Merged 165 instances.
+SYN-1016 : Merged 16 instances.
+SYN-1001 : End Stage 1.5 | Optimize Design; Time: 0.606654s wall, 0.578125s user + 0.015625s system = 0.593750s CPU (97.9%); Memory(MB): used = 396, reserved = 390, peak = 406;
+
+SYN-1079 : finish stage Optimize Design. Total instances: 5090, Total nets: 5783.
+
+SYN-1001 : Stage 1.6 | Optimize Iteratively
+SYN-1014 : Optimize round 1
+SYN-1017 : Remove 3 const input seq instances
+SYN-1020 : Optimized 16 distributor mux.
+SYN-1015 : Optimize round 1, 122 better
+SYN-1014 : Optimize round 2
+SYN-1016 : Merged 8 instances.
+SYN-1015 : Optimize round 2, 16 better
+SYN-3010 : Optimized 2 DFF(s)
+SYN-1014 : Optimize round 1
+SYN-1015 : Optimize round 1, 0 better
+SYN-1001 : End Stage 1.6 | Optimize Iteratively; Time: 1.905391s wall, 1.843750s user + 0.062500s system = 1.906250s CPU (100.0%); Memory(MB): used = 420, reserved = 412, peak = 429;
+
+SYN-1079 : finish stage Optimize Iteratively. Total instances: 5088, Total nets: 5781.
+
+SYN-1001 : Stage 1.7 | Check Design
+SYN-1001 : End Stage 1.7 | Check Design; Time: 0.001238s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 420, reserved = 412, peak = 429;
+
+SYN-1079 : finish stage Check Design. Total instances: 5088, Total nets: 5781.
+
+SYN-1001 : End Stage 1 | Optimize RTL; Time: 2.690198s wall, 2.593750s user + 0.093750s system = 2.687500s CPU (99.9%); Memory(MB): used = 420, reserved = 412, peak = 429;
+
+SYN-1079 : finish stage Optimize RTL. Total instances: 5088, Total nets: 5781.
+
+RUN-1003 : finish command "optimize_rtl" in  2.716588s wall, 2.609375s user + 0.093750s system = 2.703125s CPU (99.5%)
+
+RUN-1004 : used memory is 420 MB, reserved memory is 412 MB, peak memory is 429 MB
+RUN-1002 : start command "map_macro"
+SYN-1001 : Stage 2 | Map Reg
+SYN-1001 : End Stage 2 | Map Reg; Time: 0.093908s wall, 0.093750s user + 0.000000s system = 0.093750s CPU (99.8%); Memory(MB): used = 419, reserved = 411, peak = 429;
+
+SYN-1079 : finish stage Map Reg. Total instances: 5088, Total nets: 5781.
+
+SYN-1001 : Stage 3 | Map IO
+SYN-2001 : Map 0 IOs to PADs of model 'auto_created_cwc1'
+SYN-1001 : End Stage 3 | Map IO; Time: 0.006590s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (237.1%); Memory(MB): used = 419, reserved = 412, peak = 429;
+
+SYN-1001 : Stage 4 | Map Macro
+RUN-1002 : start command "update_pll_param -module auto_created_cwc1"
+SYN-2501 : Processed 0 LOGIC_BUF instances.
+SYN-2571 : Optimize after map_dsp, round 1
+SYN-2571 : Optimize after map_dsp, round 1, 0 better
+SYN-1001 : Throwback 5 control mux instances
+SYN-2501 : Optimize round 1
+SYN-1016 : Merged 3 instances.
+SYN-2501 : Optimize round 1, 129 better
+SYN-2501 : Optimize round 2
+SYN-2501 : Optimize round 2, 0 better
+SYN-2501 : Optimize round 1
+SYN-2501 : Optimize round 1, 0 better
+SYN-2501 : Map 26 macro adder(s)
+SYN-1016 : Merged 322 instances.
+SYN-1001 : End Stage 4 | Map Macro; Time: 1.441586s wall, 1.390625s user + 0.031250s system = 1.421875s CPU (98.6%); Memory(MB): used = 428, reserved = 420, peak = 429;
+
+SYN-1079 : finish stage Map Macro. Total instances: 5350, Total nets: 6208.
+
+RUN-1003 : finish command "map_macro" in  1.545871s wall, 1.500000s user + 0.031250s system = 1.531250s CPU (99.1%)
+
+RUN-1004 : used memory is 428 MB, reserved memory is 420 MB, peak memory is 429 MB
+RUN-1002 : start command "map"
+SYN-1001 : Stage 5 | Map Gate
+SYN-3001 : Collect 1179 PI 528 PO (no timing constraint) for mapping
+SYN-2581 : Mapping with K=6, #lut = 771 (3.62), #lev = 4 (1.37), #crit_level = 0, #edge = 2792
+SYN-2551 : Post LUT mapping optimization.
+SYN-2581 : Mapping with K=6, #lut = 761 (3.60), #lev = 4 (1.40), #crit_level = 0, #edge = 2740
+SYN-3001 : Logic optimization opt = 0.42 sec, map = 0.10 sec, post map opt = 0.65 sec.
+SYN-1001 : End Stage 5 | Map Gate; Time: 1.391367s wall, 1.390625s user + 0.000000s system = 1.390625s CPU (99.9%); Memory(MB): used = 438, reserved = 424, peak = 438;
+
+RUN-1003 : finish command "map" in  1.416502s wall, 1.421875s user + 0.000000s system = 1.421875s CPU (100.4%)
+
+RUN-1004 : used memory is 438 MB, reserved memory is 424 MB, peak memory is 438 MB
+RUN-1002 : start command "pack"
+SYN-1001 : Packing model "auto_created_cwc1" ...
+SYN-1001 : Stage 6 | Pack Gate
+SYN-4010 : Pack lib has 78 rtl pack models with 50 top pack blocks
+SYN-1014 : Optimize round 1
+SYN-1015 : Optimize round 1, 0 better
+SYN-4002 : Packing 1468 DFF/LATCH to SEQ ...
+SYN-1001 : Remove 2 carry adders
+RUN-1002 : start command "start_timer"
+TMR-2502 : Net delay update with mode: Synthesized
+RUN-1002 : start command "end_timer"
+SYN-4009 : Pack 2 carry chain into lslice
+SYN-1001 : End Stage 6 | Pack Gate; Time: 0.446008s wall, 0.437500s user + 0.000000s system = 0.437500s CPU (98.1%); Memory(MB): used = 438, reserved = 435, peak = 438;
+
+RUN-1002 : start command "report_qor -step gate -file gate.qor"
+RUN-1002 : start command "start_timer"
+TMR-2502 : Net delay update with mode: Synthesized
+-----------------------------------------------------------
+| QoR metrics               |         value               |
+-----------------------------------------------------------
+| Timing                    |                             |
+|     Setup WNS             |        16112                |
+|     Setup TNS             |            0                |
+|     Num of violated S-EP  |            0                |
+-----------------------------------------------------------
+| Utilization               |                             |
+|     #registers            |         1468                |
+|     #luts                 |          761                |
+|     #lut1                 |           36                |
+|     #lut1(~A)             |           36                |
+|     #slices               |           92                |
+|     slices percentage     |        0.18%                |
+|     #RAMs                 |            6                |
+|     #DSPs                 |            0                |
+|     #f7mux                |        0.00%                |
+|     #MACROs               |            9                |
+|     #insts in MACRO       |           99                |
+-----------------------------------------------------------
+| kept_net                  |                             |
+|     #syn_keep             |          667                |
+|     #keep_hier            |          130                |
+|     #dont_touch           |            0                |
+|     #mark_debug           |            0                |
+|     #max_fanout_keep      |            0                |
+|     #async_reg            |            0                |
+-----------------------------------------------------------
+| Top 1% datanet fanout#    |         8.78                |
+| dff(single fanout)->dff   |           44                |
+| dff(single fanout)->dram  |            0                |
+-----------------------------------------------------------
+| Over-quota path num*      |                             |
+|     Total Number          |            0                |
+|     Total Level Slack     |            0                |
+|     Worst Level Slack     |           20                |
+-----------------------------------------------------------
+| Rent**                    |                             |
+-----------------------------------------------------------
+Note*: Over-quota path shows the over-path-level-threshold path number of each clock.
+       The clock will not be shown if no path is with path level over the threshold.
+       The threshold is defined as worst path_margin / 800ps.
+Note**: Rent shows the rent exponent value of the modules whose rent value exceeds the threshold.
+        Only modules under top are reported, and the threshold is defined as 0.7.
+
+Logic Level Distribution
+-------------------------------------------------------------------------
+  Clock        |  Period            |  0    |  1    |  2   |  3   |  4
+-------------------------------------------------------------------------
+  DeriveClock  |  20.000ns (50MHz)  |  296  |  806  |  45  |  81  |  19
+-------------------------------------------------------------------------
+Note: The table count the worst 100000 paths, each endpoint count only one time.(1247 paths analyzed)
+
+Hierarchical Rent Exponent Report
++----------------------------------------------------------------------------+
+|Inst              |Model             |Rent     |Cell     |Pin     |Term     |
++----------------------------------------------------------------------------+
+|top               |auto_created_cwc1 |0.09     |3798     |11211   |6        |
+|  wrapper_cwc_top |top_cwc_hub_1     |0.66     |3798     |11211   |668      |
++----------------------------------------------------------------------------+
+Note: Cell represents total number of cells inside module; Pin represents total number of pins
+      which have net connection inside module; Term represents total number of PIs and POs of module.
+      Rent represents the relationship between number of terms and number of cells in module.
+      A module with higher rent corresponds to highly connected logic and strong connectivity with others.
+Report gate stage QoR done.
+
+RUN-0008 : Do critical warning check and 0 issue(s) found.
+RUN-0008 : Do timing check and 0 issue(s) found.
+RUN-0008 : Do area check and 0 issue(s) found.
+SYN-1001 : The design has 123 dangling syn_keep insts.
+RUN-1003 : finish command "pack" in  1.205806s wall, 1.187500s user + 0.000000s system = 1.187500s CPU (98.5%)
+
+RUN-1004 : used memory is 440 MB, reserved memory is 435 MB, peak memory is 440 MB
+RUN-1002 : start command "report_area -file auto_created_cwc1_gate.area"
+SYN-4034 : The count of slices with lut is 32.
+SYN-4035 : The count of slices with lut+ripple is 4.
+RUN-1001 : standard
+***Report Model: auto_created_cwc1 Device: DR1M90GEG400***
+
+Design Statistics
+#IO                       668   out of    126  530.16%
+  #input                  644
+  #output                  24
+  #inout                    0
+#lut                      853
+  #lut1                    36
+  #lut2                   298
+  #lut3                    20
+  #lut4                   105
+  #lut5                   184
+  #lut6                   210
+#reg                     1468
+  #slice reg             1468   out of 104960    1.40%
+  #pad reg                  0
+
+Utilization Statistics
+#slice*                   865   out of  52480    1.65%
+  #used ram                56
+    #dram lut               0
+    #shifter lut           56
+  #used logic             809
+    #with luts*           598
+    #with adder             4
+    #reg only*            207
+#f7mux                      0   out of  26240    0.00%
+#f8mux                      0   out of  13120    0.00%
+#eram                       6   out of    280    2.14%
+  #eram20k                  6
+  #fifo20k                  0
+#dsp                        0   out of    240    0.00%
+#pad                        0   out of    126    0.00%
+#pll                        0   out of      8    0.00%
+#gclk                       0   out of     32    0.00%
+#lclk                       0   out of     20    0.00%
+#sclk                       0   out of     72    0.00%
+#mlclk                      0   out of      8    0.00%
+#ioclk                      0   out of     16    0.00%
+
+* Note! The LUT and Slice count after Optimize-Gate is not the final value, Run Optimize-place for a more realistic count.
+
+RUN-1002 : start command "export_db -mode ooc auto_created_cwc1_ooc.db"
+RUN-1001 : Exported /
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models

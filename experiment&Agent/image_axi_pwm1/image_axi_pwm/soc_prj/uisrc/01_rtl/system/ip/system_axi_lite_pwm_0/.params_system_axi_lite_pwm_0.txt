@@ -1,0 +1,5 @@
+C_S_AXI_ADDR_WIDTH : 32 : U : En :  : -2147483648 : 2147483647
+RESET_MOTOR_ARR_Display : 32'd9999 : U : En :  :  : 
+RESET_SERVO_ARR_Display : 32'd3999599 : U : En :  :  : 
+RESET_MOTOR_ARR : 32'd9999 : G : En :  :  : 
+RESET_SERVO_ARR : 32'd3999599 : G : En :  :  : 

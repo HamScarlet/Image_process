@@ -1,0 +1,21 @@
+module	AXI_test
+parameter	31:0	RUN_TARGET	32'h0010_0000	
+in	0	s_axi_aclk	
+in	0	s_axi_aresetn	
+in	31:0	s_axi_awaddr	
+in	0	s_axi_awvalid	
+out	0	s_axi_awready	
+in	31:0	s_axi_wdata	
+in	3:0	s_axi_wstrb	
+in	0	s_axi_wvalid	
+out	0	s_axi_wready	
+out	1:0	s_axi_bresp	
+out	0	s_axi_bvalid	
+in	0	s_axi_bready	
+in	31:0	s_axi_araddr	
+in	0	s_axi_arvalid	
+out	0	s_axi_arready	
+out	31:0	s_axi_rdata	
+out	1:0	s_axi_rresp	
+out	0	s_axi_rvalid	
+in	0	s_axi_rready	

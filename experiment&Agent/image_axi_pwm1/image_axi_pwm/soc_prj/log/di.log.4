@@ -1,0 +1,92 @@
+#[INFO] design_integrator V2026.05 (APP main), Windows 64bit (Release), Build 197563 2026/05/12, 13:37:10 May 12 2026 on WIN10-204
+#[INFO] Run at Sat Oct 31 16:28:36 2026
+#[INFO] The Design.xml (D:/FPGAproject/AnLuRun/MainProject/soc_prj/al_ip/Design.xml) does not exist.
+#[INFO] The Design.xml (D:/FPGAproject/AnLuRun/MainProject/soc_prj/log/Design.xml) does not exist.
+#[INFO] The Design.xml (D:/FPGAproject/AnLuRun/MainProject/soc_prj/soc_prj_Runs/Design.xml) does not exist.
+#[INFO] The Design.xml (D:/FPGAproject/AnLuRun/MainProject/soc_prj/uisrc/Design.xml) does not exist.
+si_select_window DesignIntegrator
+si_resize_window DesignIntegrator 2880 1659
+si_select_dialog Open_Design_ProgressDialog
+#[INFO] si_open_design D:/FPGAproject/AnLuRun/MainProject/soc_prj/uisrc/01_rtl/system
+si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView horizontal 2322
+si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 1219
+si_select_window DesignIntegrator
+si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView horizontal 2320
+si_click_toolbar_item system.DesignDiagram IP+
+si_select_dialog Design_Add_Module
+si_click_tree_item Design_Add_Module ipModulesTree User.D:/FPGAproject/AnLuRun/MainProject/ip_repo.axi_lite_pwm 0
+si_click_push_button Design_Add_Module AddIp.Close
+si_select_window DesignIntegrator
+si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView horizontal 2322
+si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 1220
+si_click_toolbar_item system.DesignDiagram IP+
+si_select_dialog Design_Add_Module
+si_click_tree_item Design_Add_Module ipModulesTree User.D:/FPGAproject/AnLuRun/MainProject/ip_repo.axi_lite_pwm 0
+si_double_click_tree_item Design_Add_Module ipModulesTree User.D:/FPGAproject/AnLuRun/MainProject/ip_repo.axi_lite_pwm 0
+#si_select_dialog AL_HintBox #Add IP
+#[INFO] GUI-2000 : The IP files have been generated successfully. :{DR1M90GEG400(D:/FPGAproject/AnLuRun/MainProject/soc_prj/uisrc/01_rtl/system/ip/system_axi_lite_pwm_0/system_axi_lite_pwm_0.xml)}
+#[INFO] si_design_add_inst -vlnv user:module:axi_lite_pwm:1.0 axi_lite_pwm_0
+si_design_wait_for_adding_ip User.D:/FPGAproject/AnLuRun/MainProject/ip_repo.axi_lite_pwm
+si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 96
+si_select_window DesignIntegrator
+si_select_dialog Design_Add_Module
+si_close_dialog Design_Add_Module
+si_select_window DesignIntegrator
+si_design_diagram_select_inst system.DesignDiagram axi_lite_pwm_0 1
+si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 320
+si_design_diagram_move_inst system.DesignDiagram axi_lite_pwm_0 3706.339844 1289.000000
+si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 1220
+si_design_diagram_select_inst system.DesignDiagram axi_lite_pwm_0 1
+si_design_diagram_move_inst system.DesignDiagram axi_lite_pwm_0 3706.339844 1753.000000
+si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView horizontal 2320
+si_design_diagram_select system.DesignDiagram 1
+si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView horizontal 2320
+si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 1165
+si_design_diagram_select_design_port system.DesignDiagram motor_enable 1
+si_design_diagram_move_design_port system.DesignDiagram motor_enable 4380.339844 1883.199951
+si_design_diagram_select_design_port system.DesignDiagram motor_dir 1
+si_design_diagram_move_design_port system.DesignDiagram motor_dir 4380.339844 1809.199951
+si_design_diagram_select_design_port system.DesignDiagram pwm_out 1
+si_design_diagram_move_design_port system.DesignDiagram pwm_out 4380.339844 1759.199951
+si_design_diagram_select_port system.DesignDiagram AXI_Protocol_Converter_2 DS_AXI 1
+si_design_diagram_double_click_port system.DesignDiagram AXI_Protocol_Converter_2 DS_AXI
+#[INFO] si_design_add_connection AXI_Protocol_Converter_2.DS_AXI axi_lite_pwm_0.S_AXI
+si_design_diagram_select_port system.DesignDiagram axi_lite_pwm_0 S_AXI 1
+si_design_diagram_select_port system.DesignDiagram axi_lite_pwm_0 s_axi_aclk 1
+si_design_diagram_double_click_port system.DesignDiagram axi_lite_pwm_0 s_axi_aclk
+si_design_diagram_select_port system.DesignDiagram axi_lite_pwm_0 s_axi_aclk 1
+si_design_diagram_double_click_port system.DesignDiagram AXI_GPIO_0 s_axi_aclk
+#[INFO] si_design_add_connection axi_lite_pwm_0.s_axi_aclk AXI_GPIO_0.s_axi_aclk
+si_design_diagram_select_port system.DesignDiagram AXI_GPIO_0 s_axi_aclk 1
+si_design_diagram_select_port system.DesignDiagram axi_lite_pwm_0 s_axi_aresetn 1
+si_design_diagram_double_click_port system.DesignDiagram axi_lite_pwm_0 s_axi_aresetn
+si_design_diagram_select_port system.DesignDiagram axi_lite_pwm_0 s_axi_aresetn 1
+#[INFO] si_design_add_connection axi_lite_pwm_0.s_axi_aresetn AXI_GPIO_0.s_axi_aresetn
+si_design_diagram_select_port system.DesignDiagram AXI_GPIO_0 s_axi_aresetn 1
+si_design_diagram_select_port system.DesignDiagram axi_lite_pwm_0 pwm_out 1
+si_design_diagram_double_click_port system.DesignDiagram axi_lite_pwm_0 pwm_out
+si_design_diagram_select_port system.DesignDiagram axi_lite_pwm_0 pwm_out 1
+si_design_diagram_double_click_design_port system.DesignDiagram pwm_out
+#[INFO] si_design_add_connection axi_lite_pwm_0.pwm_out pwm_out
+si_design_diagram_select_design_port system.DesignDiagram pwm_out 1
+si_design_diagram_select_port system.DesignDiagram axi_lite_pwm_0 motor_dir 1
+si_design_diagram_double_click_port system.DesignDiagram axi_lite_pwm_0 motor_dir
+si_design_diagram_select_port system.DesignDiagram axi_lite_pwm_0 motor_dir 1
+si_design_diagram_double_click_design_port system.DesignDiagram motor_dir
+#[INFO] si_design_add_connection axi_lite_pwm_0.motor_dir motor_dir
+si_design_diagram_select_design_port system.DesignDiagram motor_dir 1
+si_design_diagram_select_port system.DesignDiagram axi_lite_pwm_0 motor_enable 1
+si_design_diagram_double_click_port system.DesignDiagram axi_lite_pwm_0 motor_enable
+si_design_diagram_select_port system.DesignDiagram axi_lite_pwm_0 motor_enable 1
+si_design_diagram_double_click_design_port system.DesignDiagram motor_enable
+#[INFO] si_design_add_connection axi_lite_pwm_0.motor_enable motor_enable
+si_design_diagram_select_design_port system.DesignDiagram motor_enable 1
+si_graphics_view_scroll system.DesignDiagram DesignDiagram.GraphicsView vertical 1220
+si_design_diagram_select system.DesignDiagram 1
+si_click_toolbar_item DesignIntegrator DesignIntegrator.Flow.Generate_Design
+si_select_dialog Generate_Design
+si_click_push_button Generate_Design GenerateDesign.Generate
+#[INFO] GUI-2000 : The Design Integrator files have been generated successfully. :{DR1M90GEG400(D:/FPGAproject/AnLuRun/MainProject/soc_prj/uisrc/01_rtl/system/system.xml)}
+#[INFO] si_generate_design
+si_exit
+#[INFO] Exit 0

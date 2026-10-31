@@ -1,0 +1,48 @@
+-----------------------------------------------------------
+| QoR metrics               |         value               |
+-----------------------------------------------------------
+| Timing                    |                             |
+|     Setup WNS             |         -537                |
+|     Setup TNS             |        -4875                |
+|     Num of violated S-EP  |           30                |
+|     Hold WNS              |        -2315                |
+|     Hold TNS              |       -23150                |
+|     Num of violated H-EP  |           11                |
+-----------------------------------------------------------
+| Routing Resource          |                             |
+|     Wire length           |      5763600                |
+-----------------------------------------------------------
+| Utilization               |                             |
+|     #slices               |        31005                |
+|     slices percentage     |       59.08%                |
+|     #RAMs                 |           76                |
+|     #DSPs                 |           48                |
+|     #DRAMHARDCON          |            2                |
+-----------------------------------------------------------
+Report route stage QoR done.
+
+QoR Evaluation
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+  ID        |  Priority  |  Description                                               |  Suggestion
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+  QOR-1301  |  HIGH      |  - Route SWNS -537ps smaller than 0, do not meet timing.   |  - Try following method to drive timing meet:
+            |            |                                                            |      set_param route post_route_opt high
+            |            |                                                            |      set_param route postrt_opt_extra_round 4
+            |            |                                                            |  
+  QOR-1302  |  MEDIUM    |  - Route HWNS -2315ps smaller than 0, do not meet timing.  |  - Try following method to drive timing meet:
+            |            |                                                            |      set_param route fix_hold high
+            |            |                                                            |  
+  QOR-2502  |  MEDIUM    |  - Large cell delay percentage 71% on critical path        |  - Routing delay is smaller enough, check following items:
+            |            |                                                            |    Check design and try to reduce number of macro cell on criti
+            |            |                                                            |    cal path.
+            |            |                                                            |    Check design and try to reduce logic level on this clock gro
+            |            |                                                            |    up.
+            |            |                                                            |  
+  QOR-2605  |  LOW       |  - There are total 1 driver or sink unmovable nets         |  - Please launch multi-seed runs to get better floorplan.
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Note* (*) means this parameter has been set already.
+      (+) means this parameter has been set, suggest to upgrade higher effort level.
+Note** plesae resolve priority MUST FIX and HIGH issues firstly
+       because these have highly possible to block the timing convergence even stop the flow.
+Note*** some suggested settings are not suitable to use together
+        take care of using them separately if suggestion mentioned.

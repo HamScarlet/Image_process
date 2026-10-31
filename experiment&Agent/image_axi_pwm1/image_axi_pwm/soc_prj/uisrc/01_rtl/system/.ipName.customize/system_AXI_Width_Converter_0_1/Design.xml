@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:anlogic="http" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+    <ipxact:vendor>anlogic.com</ipxact:vendor>
+    <ipxact:library>customized</ipxact:library>
+    <ipxact:name>design_system_AXI_Width_Converter_0</ipxact:name>
+    <ipxact:version>1.0</ipxact:version>
+    <ipxact:componentInstances>
+        <ipxact:componentInstance>
+            <ipxact:instanceName>axi_width_converter_top_86cf6e4e58e3_Inst</ipxact:instanceName>
+            <ipxact:componentRef vendor="anlogic.com" library="ip" name="AXI_Width_Converter" version="1.0"/>
+            <ipxact:configurableElementValues>
+                <ipxact:configurableElementValue referenceId="AL_US_AXI_ID_WIDTH">8</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AXI_ADDR_WIDTH_Min">12</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_US_AXI_DATA_WIDTH">128</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_AXI_ADDR_WIDTH">32</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_DS_AXI_DATA_WIDTH">64</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_AXI_SUPPORTS_WRITE">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_AXI_SUPPORTS_READ">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_MAX_SPLIT_BEATS">16</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="packing_level_de">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="PROTOCOL_DISP">&quot;AXI4&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="READ_WRITE_Mode">&quot;READ WRITE&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_AXI_PROTOCOL">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="axlen">7</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="axlock">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="Packing_level_disp">&quot;Always&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_PACKING_LEVEL">2</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="COMMON_CLK_EN_PC">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="BRAM_AUTO">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="Protocol_not_axi4lite">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="Protocol_is_axi4">1</ipxact:configurableElementValue>
+            </ipxact:configurableElementValues>
+        </ipxact:componentInstance>
+    </ipxact:componentInstances>
+    <ipxact:adHocConnections>
+        <ipxact:adHocConnection>
+            <ipxact:name>aclk</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="aclk"/>
+                <ipxact:externalPortReference portRef="aclk"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>aresetn</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="aresetn"/>
+                <ipxact:externalPortReference portRef="aresetn"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_awid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_awid"/>
+                <ipxact:externalPortReference portRef="us_awid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_awaddr</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_awaddr"/>
+                <ipxact:externalPortReference portRef="us_awaddr"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_awlen</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_awlen"/>
+                <ipxact:externalPortReference portRef="us_awlen"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_awsize</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_awsize"/>
+                <ipxact:externalPortReference portRef="us_awsize"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_awburst</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_awburst"/>
+                <ipxact:externalPortReference portRef="us_awburst"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_awlock</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_awlock"/>
+                <ipxact:externalPortReference portRef="us_awlock"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_awcache</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_awcache"/>
+                <ipxact:externalPortReference portRef="us_awcache"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_awprot</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_awprot"/>
+                <ipxact:externalPortReference portRef="us_awprot"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_awregion</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_awregion"/>
+                <ipxact:externalPortReference portRef="us_awregion"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_awqos</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_awqos"/>
+                <ipxact:externalPortReference portRef="us_awqos"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_awvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_awvalid"/>
+                <ipxact:externalPortReference portRef="us_awvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_awready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_awready"/>
+                <ipxact:externalPortReference portRef="us_awready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_wdata</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_wdata"/>
+                <ipxact:externalPortReference portRef="us_wdata"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_wstrb</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_wstrb"/>
+                <ipxact:externalPortReference portRef="us_wstrb"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_wlast</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_wlast"/>
+                <ipxact:externalPortReference portRef="us_wlast"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_wvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_wvalid"/>
+                <ipxact:externalPortReference portRef="us_wvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_wready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_wready"/>
+                <ipxact:externalPortReference portRef="us_wready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_bid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_bid"/>
+                <ipxact:externalPortReference portRef="us_bid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_bresp</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_bresp"/>
+                <ipxact:externalPortReference portRef="us_bresp"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_bvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_bvalid"/>
+                <ipxact:externalPortReference portRef="us_bvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_bready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_bready"/>
+                <ipxact:externalPortReference portRef="us_bready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_arid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_arid"/>
+                <ipxact:externalPortReference portRef="us_arid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_araddr</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_araddr"/>
+                <ipxact:externalPortReference portRef="us_araddr"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_arlen</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_arlen"/>
+                <ipxact:externalPortReference portRef="us_arlen"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_arsize</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_arsize"/>
+                <ipxact:externalPortReference portRef="us_arsize"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_arburst</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_arburst"/>
+                <ipxact:externalPortReference portRef="us_arburst"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_arlock</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_arlock"/>
+                <ipxact:externalPortReference portRef="us_arlock"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_arcache</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_arcache"/>
+                <ipxact:externalPortReference portRef="us_arcache"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_arprot</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_arprot"/>
+                <ipxact:externalPortReference portRef="us_arprot"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_arregion</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_arregion"/>
+                <ipxact:externalPortReference portRef="us_arregion"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_arqos</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_arqos"/>
+                <ipxact:externalPortReference portRef="us_arqos"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_arvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_arvalid"/>
+                <ipxact:externalPortReference portRef="us_arvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_arready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_arready"/>
+                <ipxact:externalPortReference portRef="us_arready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_rid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_rid"/>
+                <ipxact:externalPortReference portRef="us_rid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_rdata</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_rdata"/>
+                <ipxact:externalPortReference portRef="us_rdata"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_rresp</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_rresp"/>
+                <ipxact:externalPortReference portRef="us_rresp"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_rlast</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_rlast"/>
+                <ipxact:externalPortReference portRef="us_rlast"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_rvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_rvalid"/>
+                <ipxact:externalPortReference portRef="us_rvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>us_rready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="us_rready"/>
+                <ipxact:externalPortReference portRef="us_rready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_awaddr</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_awaddr"/>
+                <ipxact:externalPortReference portRef="ds_awaddr"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_awlen</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_awlen"/>
+                <ipxact:externalPortReference portRef="ds_awlen"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_awsize</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_awsize"/>
+                <ipxact:externalPortReference portRef="ds_awsize"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_awburst</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_awburst"/>
+                <ipxact:externalPortReference portRef="ds_awburst"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_awlock</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_awlock"/>
+                <ipxact:externalPortReference portRef="ds_awlock"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_awcache</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_awcache"/>
+                <ipxact:externalPortReference portRef="ds_awcache"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_awprot</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_awprot"/>
+                <ipxact:externalPortReference portRef="ds_awprot"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_awregion</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_awregion"/>
+                <ipxact:externalPortReference portRef="ds_awregion"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_awqos</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_awqos"/>
+                <ipxact:externalPortReference portRef="ds_awqos"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_awvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_awvalid"/>
+                <ipxact:externalPortReference portRef="ds_awvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_awready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_awready"/>
+                <ipxact:externalPortReference portRef="ds_awready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_wdata</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_wdata"/>
+                <ipxact:externalPortReference portRef="ds_wdata"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_wstrb</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_wstrb"/>
+                <ipxact:externalPortReference portRef="ds_wstrb"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_wlast</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_wlast"/>
+                <ipxact:externalPortReference portRef="ds_wlast"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_wvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_wvalid"/>
+                <ipxact:externalPortReference portRef="ds_wvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_wready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_wready"/>
+                <ipxact:externalPortReference portRef="ds_wready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_bresp</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_bresp"/>
+                <ipxact:externalPortReference portRef="ds_bresp"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_bvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_bvalid"/>
+                <ipxact:externalPortReference portRef="ds_bvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_bready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_bready"/>
+                <ipxact:externalPortReference portRef="ds_bready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_araddr</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_araddr"/>
+                <ipxact:externalPortReference portRef="ds_araddr"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_arlen</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_arlen"/>
+                <ipxact:externalPortReference portRef="ds_arlen"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_arsize</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_arsize"/>
+                <ipxact:externalPortReference portRef="ds_arsize"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_arburst</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_arburst"/>
+                <ipxact:externalPortReference portRef="ds_arburst"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_arlock</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_arlock"/>
+                <ipxact:externalPortReference portRef="ds_arlock"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_arcache</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_arcache"/>
+                <ipxact:externalPortReference portRef="ds_arcache"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_arprot</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_arprot"/>
+                <ipxact:externalPortReference portRef="ds_arprot"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_arregion</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_arregion"/>
+                <ipxact:externalPortReference portRef="ds_arregion"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_arqos</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_arqos"/>
+                <ipxact:externalPortReference portRef="ds_arqos"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_arvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_arvalid"/>
+                <ipxact:externalPortReference portRef="ds_arvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_arready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_arready"/>
+                <ipxact:externalPortReference portRef="ds_arready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_rdata</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_rdata"/>
+                <ipxact:externalPortReference portRef="ds_rdata"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_rresp</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_rresp"/>
+                <ipxact:externalPortReference portRef="ds_rresp"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_rlast</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_rlast"/>
+                <ipxact:externalPortReference portRef="ds_rlast"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_rvalid</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_rvalid"/>
+                <ipxact:externalPortReference portRef="ds_rvalid"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>ds_rready</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="axi_width_converter_top_86cf6e4e58e3_Inst" portRef="ds_rready"/>
+                <ipxact:externalPortReference portRef="ds_rready"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+    </ipxact:adHocConnections>
+    <ipxact:vendorExtensions>
+        <anlogic:device>DR1M90MEG484</anlogic:device>
+        <anlogic:displayname>AXI_Width_Converter_1.0</anlogic:displayname>
+        <anlogic:ipGenVersion>1.0</anlogic:ipGenVersion>
+    </ipxact:vendorExtensions>
+</ipxact:design>

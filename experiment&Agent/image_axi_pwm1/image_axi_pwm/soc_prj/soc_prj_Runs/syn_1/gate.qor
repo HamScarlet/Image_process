@@ -1,0 +1,80 @@
+-----------------------------------------------------------
+| QoR metrics               |         value               |
+-----------------------------------------------------------
+| Timing                    |                             |
+|     Setup WNS             |         -698                |
+|     Setup TNS             |       -14948                |
+|     Num of violated S-EP  |           33                |
+-----------------------------------------------------------
+| Utilization               |                             |
+|     #registers            |        34018                |
+|     #luts                 |        17453                |
+|     #lut1                 |           96                |
+|     #lut1(~A)             |           94                |
+|     #slices               |        12114                |
+|     slices percentage     |       23.08%                |
+|     #RAMs                 |           72                |
+|     #DSPs                 |           61                |
+|     #f7mux                |        1.98%                |
+|     #MACROs               |          888                |
+|     #insts in MACRO       |        12620                |
+-----------------------------------------------------------
+| kept_net                  |                             |
+|     #syn_keep             |         1398                |
+|     #keep_hier            |            0                |
+|     #dont_touch           |            0                |
+|     #mark_debug           |          119                |
+|     #max_fanout_keep      |            0                |
+|     #async_reg            |            0                |
+-----------------------------------------------------------
+| Top 1% datanet fanout#    |        25.01                |
+| dff(single fanout)->dff   |         1503                |
+| dff(single fanout)->dram  |            8                |
+-----------------------------------------------------------
+| Over-quota path num*      |                             |
+|     Total Number          |            0                |
+|     Total Level Slack     |            0                |
+|     Worst Level Slack     |            3                |
+-----------------------------------------------------------
+| Rent**                    |                             |
+-----------------------------------------------------------
+Note*: Over-quota path shows the over-path-level-threshold path number of each clock.
+       The clock will not be shown if no path is with path level over the threshold.
+       The threshold is defined as worst path_margin / 800ps.
+Note**: Rent shows the rent exponent value of the modules whose rent value exceeds the threshold.
+        Only modules under top are reported, and the threshold is defined as 0.7.
+
+Logic Level Distribution
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Clock                                                                                                                                    |  Period             |  0     |  1     |  2     |  3    |  4    |  5    |  6    |  7   |  8   |  9   |  10
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  clk24m                                                                                                                                   |  41.500ns (24MHz)   |  35    |  44    |  8     |  23   |  34   |  21   |  0    |  0   |  0   |  0   |  0
+  clk70m                                                                                                                                   |  14.500ns (68MHz)   |  8     |  6     |  4     |  0    |  0    |  0    |  0    |  0   |  0   |  0   |  0
+  pclkx1                                                                                                                                   |  20.000ns (50MHz)   |  1021  |  595   |  188   |  92   |  89   |  59   |  27   |  44  |  28  |  10  |  3
+  pclkx5                                                                                                                                   |  4.000ns (250MHz)   |  16    |  33    |  0     |  0    |  0    |  0    |  0    |  0   |  0   |  0   |  0
+  sysclk                                                                                                                                   |  10.000ns (100MHz)  |  0     |  0     |  0     |  0    |  0    |  0    |  0    |  0   |  0   |  0   |  0
+  system_inst/system_ARM_Processor_System_0_Inst/ARM_Processor_System_59fb6a0bf2ca_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.GEN_PL_GP0S          |  20.000ns (50MHz)   |  24    |  39    |  2     |  1    |  0    |  0    |  0    |  0   |  0   |  0   |  0
+  system_inst/system_ARM_Processor_System_0_Inst/ARM_Processor_System_59fb6a0bf2ca_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.GEN_PL_HP0           |  5.000ns (200MHz)   |  68    |  69    |  0     |  0    |  0    |  0    |  0    |  0   |  0   |  0   |  0
+  system_inst/system_ARM_Processor_System_0_Inst/ARM_Processor_System_59fb6a0bf2ca_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.master_gp0_axi_aclk  |  20.000ns (50MHz)   |  0     |  0     |  0     |  0    |  0    |  0    |  0    |  0   |  0   |  0   |  0
+  system_inst/system_ARM_Processor_System_0_Inst/ARM_Processor_System_59fb6a0bf2ca_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.p2f_clk0             |  5.000ns (200MHz)   |  261   |  354   |  286   |  115  |  0    |  0    |  0    |  0   |  0   |  0   |  0
+  system_inst/system_ARM_Processor_System_0_Inst/ARM_Processor_System_59fb6a0bf2ca_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.p2f_clk1             |  20.000ns (50MHz)   |  5774  |  885   |  2665  |  644  |  306  |  102  |  381  |  52  |  12  |  0   |  0
+  system_inst/system_ARM_Processor_System_0_Inst/ARM_Processor_System_59fb6a0bf2ca_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.slave_hp0_axi_aclk   |  5.000ns (200MHz)   |  0     |  0     |  0     |  0    |  0    |  0    |  0    |  0   |  0   |  0   |  0
+  Total                                                                                                                                    |  NA                 |  7207  |  2025  |  3153  |  875  |  429  |  182  |  408  |  96  |  40  |  10  |  3
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Hierarchical Rent Exponent Report
++----------------------------------------------------------------------------------+
+|Inst                  |Model               |Rent     |Cell     |Pin     |Term     |
++----------------------------------------------------------------------------------+
+|top                   |system_top          |0.13     |67229    |287871  |18       |
+|  u_uidbuf            |uidbuf_13           |0.62     |1263     |5761    |391      |
+|  system_inst         |system_2            |0.44     |8045     |36386   |239      |
+|  u_lane_stream_stats |lane_stream_stats_7 |0.40     |4909     |29014   |177      |
+|  u_hdmi_tx           |hdmi_tx_5           |0.36     |1852     |7015    |56       |
+|  u_isp_top           |isp_top_6           |0.33     |46729    |195534  |144      |
++----------------------------------------------------------------------------------+
+Note: Cell represents total number of cells inside module; Pin represents total number of pins
+      which have net connection inside module; Term represents total number of PIs and POs of module.
+      Rent represents the relationship between number of terms and number of cells in module.
+      A module with higher rent corresponds to highly connected logic and strong connectivity with others.
+Report gate stage QoR done.
+
