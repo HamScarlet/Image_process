@@ -1,0 +1,71 @@
+#[INFO] IpTool V2026.03 (APP OFF), Windows 64bit (Release), Build 193873 2026/03/31, 14:47:47 Mar 31 2026 on WIN10-204
+#[INFO] Run at Sun Oct 18 11:29:32 2026
+
+#[INFO] The DI instance xml path: D:/FPGAproject/AnLuRun/3_2_01_sdk_base/14_axi_gpio_pl_intr/soc_prj/uisrc/01_rtl/system/system.xml
+#[INFO] The Tool Ip instance xml path: D:/FPGAproject/AnLuRun/3_2_01_sdk_base/14_axi_gpio_pl_intr/soc_prj/uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_0/system_AXI_Protocol_Converter_0.xml
+#[INFO] Load instance data success from D:/FPGAproject/AnLuRun/3_2_01_sdk_base/14_axi_gpio_pl_intr/soc_prj/uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_0
+#[INFO] Load Catalog data success for IP Name AXI_Protocol_Converter
+#[INFO] Load Component data success from D:/exe/Anlu/TD/ip/depot/AXI_Protocol_Converter_1.0
+#[INFO] The upgrade.tcl path: D:/exe/Anlu/TD/ip/depot/AXI_Protocol_Converter_1.0/AXI_MM/Other/upgrade.tcl
+#[INFO] Run report tcl cmd: report_ip_status 1.0.0 1.0.0 0 DR1M90GEG484 DR1M90GEG400
+#[INFO] Tcl cmd return value: 3 1 1 0
+#[INFO] Load report status data success from D:/exe/Anlu/TD/ip/depot/AXI_Protocol_Converter_1.0/AXI_MM/Other/upgrade.tcl
+#[INFO] The Tool Ip instance xml path: D:/FPGAproject/AnLuRun/3_2_01_sdk_base/14_axi_gpio_pl_intr/soc_prj/uisrc/01_rtl/system/ip/system_AXI_GPIO_0/system_AXI_GPIO_0.xml
+#[INFO] Load instance data success from D:/FPGAproject/AnLuRun/3_2_01_sdk_base/14_axi_gpio_pl_intr/soc_prj/uisrc/01_rtl/system/ip/system_AXI_GPIO_0
+#[INFO] Load Catalog data success for IP Name AXI_GPIO
+#[INFO] Load Component data success from D:/exe/Anlu/TD/ip/depot/AXI_GPIO_1.0
+#[ERROR] The D:/exe/Anlu/TD/ip/depot/AXI_GPIO_1.0 not exist upgrade.tcl
+#[INFO] system_AXI_GPIO_0 >> Instance Version:1.0.0 Recommend Version:1.0.1
+#[INFO] The Tool Ip instance xml path: D:/FPGAproject/AnLuRun/3_2_01_sdk_base/14_axi_gpio_pl_intr/soc_prj/uisrc/01_rtl/system/ip/system_AXI_Matrix_0/system_AXI_Matrix_0.xml
+#[INFO] Load instance data success from D:/FPGAproject/AnLuRun/3_2_01_sdk_base/14_axi_gpio_pl_intr/soc_prj/uisrc/01_rtl/system/ip/system_AXI_Matrix_0
+#[INFO] Load Catalog data success for IP Name AXI_Matrix
+#[INFO] Load Component data success from D:/exe/Anlu/TD/ip/depot/AXI_Matrix_1.1
+#[ERROR] The D:/exe/Anlu/TD/ip/depot/AXI_Matrix_1.1 not exist upgrade.tcl
+#[INFO] system_AXI_Matrix_0 >> Instance Version:1.1.0 Recommend Version:1.1.0
+#[INFO] The Tool Ip instance xml path: D:/FPGAproject/AnLuRun/3_2_01_sdk_base/14_axi_gpio_pl_intr/soc_prj/uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_1/system_AXI_Protocol_Converter_1.xml
+#[INFO] Load instance data success from D:/FPGAproject/AnLuRun/3_2_01_sdk_base/14_axi_gpio_pl_intr/soc_prj/uisrc/01_rtl/system/ip/system_AXI_Protocol_Converter_1
+#[INFO] Load Catalog data success for IP Name AXI_Protocol_Converter
+#[INFO] Load Component data success from D:/exe/Anlu/TD/ip/depot/AXI_Protocol_Converter_1.0
+#[INFO] The upgrade.tcl path: D:/exe/Anlu/TD/ip/depot/AXI_Protocol_Converter_1.0/AXI_MM/Other/upgrade.tcl
+#[INFO] Run report tcl cmd: report_ip_status 1.0.0 1.0.0 0 DR1M90GEG484 DR1M90GEG400
+#[INFO] Tcl cmd return value: 3 1 1 0
+#[INFO] Load report status data success from D:/exe/Anlu/TD/ip/depot/AXI_Protocol_Converter_1.0/AXI_MM/Other/upgrade.tcl
+#[INFO] The Tool Ip instance xml path: D:/FPGAproject/AnLuRun/3_2_01_sdk_base/14_axi_gpio_pl_intr/soc_prj/uisrc/01_rtl/system/ip/system_AXI_GPIO_1/system_AXI_GPIO_1.xml
+#[INFO] Load instance data success from D:/FPGAproject/AnLuRun/3_2_01_sdk_base/14_axi_gpio_pl_intr/soc_prj/uisrc/01_rtl/system/ip/system_AXI_GPIO_1
+#[INFO] Load Catalog data success for IP Name AXI_GPIO
+#[INFO] Load Component data success from D:/exe/Anlu/TD/ip/depot/AXI_GPIO_1.0
+#[ERROR] The D:/exe/Anlu/TD/ip/depot/AXI_GPIO_1.0 not exist upgrade.tcl
+#[INFO] system_AXI_GPIO_1 >> Instance Version:1.0.0 Recommend Version:1.0.1
+#[INFO] The Tool Ip instance xml path: D:/FPGAproject/AnLuRun/3_2_01_sdk_base/14_axi_gpio_pl_intr/soc_prj/uisrc/01_rtl/system/ip/system_Concat_0/system_Concat_0.xml
+#[INFO] Load instance data success from D:/FPGAproject/AnLuRun/3_2_01_sdk_base/14_axi_gpio_pl_intr/soc_prj/uisrc/01_rtl/system/ip/system_Concat_0
+#[INFO] Load Catalog data success for IP Name Concat
+#[INFO] Load Component data success from D:/exe/Anlu/TD/ip/depot/Concat_1.0
+#[ERROR] The D:/exe/Anlu/TD/ip/depot/Concat_1.0 not exist upgrade.tcl
+#[INFO] system_Concat_0 >> Instance Version:1.0.0 Recommend Version:1.0.0
+#[INFO] The Tool Ip instance xml path: D:/FPGAproject/AnLuRun/3_2_01_sdk_base/14_axi_gpio_pl_intr/soc_prj/uisrc/01_rtl/system/ip/system_Constant_0/system_Constant_0.xml
+#[INFO] Load instance data success from D:/FPGAproject/AnLuRun/3_2_01_sdk_base/14_axi_gpio_pl_intr/soc_prj/uisrc/01_rtl/system/ip/system_Constant_0
+#[INFO] Load Catalog data success for IP Name Constant
+#[INFO] Load Component data success from D:/exe/Anlu/TD/ip/depot/Constant_1.0
+#[ERROR] The D:/exe/Anlu/TD/ip/depot/Constant_1.0 not exist upgrade.tcl
+#[INFO] system_Constant_0 >> Instance Version:1.0.0 Recommend Version:1.0.0
+#[INFO] The Tool Ip instance xml path: D:/FPGAproject/AnLuRun/3_2_01_sdk_base/14_axi_gpio_pl_intr/soc_prj/uisrc/01_rtl/system/ip/system_ARM_Processor_System_1/system_ARM_Processor_System_1.xml
+#[INFO] Load instance data success from D:/FPGAproject/AnLuRun/3_2_01_sdk_base/14_axi_gpio_pl_intr/soc_prj/uisrc/01_rtl/system/ip/system_ARM_Processor_System_1
+#[INFO] Load Catalog data success for IP Name ARM_Processor_System_F9F0D0P0
+#[INFO] Load Component data success from D:/exe/Anlu/TD/ip/depot/ARM_Processor_System_F9F0D0P0_1.0
+#[ERROR] The D:/exe/Anlu/TD/ip/depot/ARM_Processor_System_F9F0D0P0_1.0 not exist upgrade.tcl
+#[INFO] system_ARM_Processor_System_1 >> Instance Version:1.0.0 Recommend Version:1.0.0
+#[INFO] The Tool Ip instance xml path: D:/FPGAproject/AnLuRun/3_2_01_sdk_base/14_axi_gpio_pl_intr/soc_prj/uisrc/01_rtl/system/ip/system_Processor_System_Reset_0/system_Processor_System_Reset_0.xml
+#[INFO] Load instance data success from D:/FPGAproject/AnLuRun/3_2_01_sdk_base/14_axi_gpio_pl_intr/soc_prj/uisrc/01_rtl/system/ip/system_Processor_System_Reset_0
+#[INFO] Load Catalog data success for IP Name proc_sys_reset
+#[INFO] Load Component data success from D:/exe/Anlu/TD/ip/depot/proc_sys_reset_1.0
+#[ERROR] The D:/exe/Anlu/TD/ip/depot/proc_sys_reset_1.0 not exist upgrade.tcl
+#[INFO] system_Processor_System_Reset_0 >> Instance Version:1.0.0 Recommend Version:1.0.0
+#[INFO] The Tool Ip instance xml path: D:/FPGAproject/AnLuRun/3_2_01_sdk_base/14_axi_gpio_pl_intr/soc_prj/uisrc/01_rtl/system/ip/system_Constant_1/system_Constant_1.xml
+#[INFO] Load instance data success from D:/FPGAproject/AnLuRun/3_2_01_sdk_base/14_axi_gpio_pl_intr/soc_prj/uisrc/01_rtl/system/ip/system_Constant_1
+#[INFO] Load Catalog data success for IP Name Constant
+#[INFO] Load Component data success from D:/exe/Anlu/TD/ip/depot/Constant_1.0
+#[ERROR] The D:/exe/Anlu/TD/ip/depot/Constant_1.0 not exist upgrade.tcl
+#[INFO] system_Constant_1 >> Instance Version:1.0.0 Recommend Version:1.0.0
+#[INFO] Load DI data success from D:/FPGAproject/AnLuRun/3_2_01_sdk_base/14_axi_gpio_pl_intr/soc_prj/uisrc/01_rtl/system/system.xml
+ipst_gui_select_dialog IP_Status
+ipst_gui_close_dialog IP_Status

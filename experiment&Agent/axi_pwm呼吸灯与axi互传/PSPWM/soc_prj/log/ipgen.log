@@ -1,0 +1,13 @@
+ipgen_gui_select_window IP_Generator
+ipgen_gui_select_tab IP_Generator Tab_0 US_Interface 1
+ipgen_gui_select_tab IP_Generator Tab_0 DS_Interface 2
+ipgen_gui_resize_window IP_Generator 2880 1659
+ipgen_gui_select_tab IP_Generator Tab_0 US_Interface 1
+ipgen_gui_select_tab IP_Generator Tab_0 Address 3
+ipgen_gui_click_push_button IP_Generator OK
+ipgen_gui_select_dialog IP_Generating_Options
+ipgen_gui_click_push_button IP_Generator GenOptionDialog.Generate
+ipgen_gui_select_window IP_Generator
+ipgen_gui_select_dialog StandardMessageBox #IP Gen Succeeded
+ipgen_gui_click_push_button StandardMessageBox Ok
+#GUI-2000 : The IP files have been generated successfully. :{DR1M90GEG484(D:/FPGAproject/AnLuRun/PSPWM/soc_prj/uisrc/01_rtl/system/ip/system_AXI_Matrix_0/system_AXI_Matrix_0.xml)}

@@ -1,0 +1,21 @@
+AL_DUAL_CHANNEL : 0 : U : En :  :  : 
+AL_ALL_IN_PORTS : 1 : U : En :  :  : 
+AL_ALL_OUT_PORTS : 0 : U : En :  :  : 
+IN_OUT_USE : 0 : U : En :  :  : 
+AL_ALL_IN_PORTS_2 : 0 : U : Dis :  :  : 
+AL_ALL_OUT_PORTS_2 : 0 : U : Dis :  :  : 
+IN_OUT_USE_2 : 1 : U : Dis :  :  : 
+AL_INTR_ENABLE : 0 : U : En :  :  : 
+AL_GPIO_WD : 2 : U : En :  : 1 : 32
+DOUT_DEFAULT : 'h00000000 : U : Dis :  :  : 
+TRI_DEFAULT : 'hFFFFFFFF : U : Dis :  :  : 
+GPIO2_WIDTH : 32 : U : Dis :  :  : 
+TRI_DEFAULT_2 : 'hFFFFFFFF : U : Dis :  :  : 
+DOUT_DEFAULT_2 : 'h00000000 : U : Dis :  :  : 
+AL_AXIS_ADDR_WD : 32 : G : En :  :  : 
+AL_AXIS_DATA_WD : 32 : G : En :  :  : 
+AL_RESET_TRI : 0 : G : En :  :  : 
+AL_RESET_DOUT : 0 : G : En :  :  : 
+AL_GPIO2_WD : 32 : G : En :  :  : 
+AL_RESET_TRI_2 : 0 : G : En :  :  : 
+AL_RESET_DOUT_2 : 0 : G : En :  :  : 

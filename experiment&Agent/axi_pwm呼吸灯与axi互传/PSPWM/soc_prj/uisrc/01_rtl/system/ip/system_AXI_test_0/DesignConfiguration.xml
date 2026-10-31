@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:designConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:user="http" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+    <ipxact:vendor>user</ipxact:vendor>
+    <ipxact:library>customized</ipxact:library>
+    <ipxact:name>designConfig_system_AXI_test_0</ipxact:name>
+    <ipxact:version>1.0</ipxact:version>
+    <ipxact:viewConfiguration>
+        <ipxact:instanceName>AXI_test_system_AXI_test_0_Inst</ipxact:instanceName>
+        <ipxact:view viewRef="AXI_test_rtl"/>
+    </ipxact:viewConfiguration>
+    <ipxact:vendorExtensions>
+        <user:displayname>AXI_test</user:displayname>
+        <user:ipGenVersion value="193873 2026/03/31">1.0</user:ipGenVersion>
+    </ipxact:vendorExtensions>
+</ipxact:designConfiguration>
