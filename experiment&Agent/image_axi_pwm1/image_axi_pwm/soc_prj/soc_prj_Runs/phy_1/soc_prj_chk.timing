@@ -9,8 +9,8 @@ Table of Contents
 7. checking soft fifo timing exception constraints(0) (HIGH)
 8. checking no path constraints(0) (MEDIUM)
 9. checking shadowed/ignored timing exception constraints(0) (MEDIUM)
-10. checking no input delay(11) (MEDIUM)
-11. checking no output delay(18) (MEDIUM)
+10. checking no input delay(12) (MEDIUM)
+11. checking no output delay(19) (MEDIUM)
 12. checking partial input delay(0) (MEDIUM)
 13. checking partial output delay(0) (MEDIUM)
 14. checking abnormal input delay(0) (MEDIUM)
@@ -23,10 +23,10 @@ There are 14 clock nets that with no clock driven by root clock pin: I_clk_hs_p.
 	S_hs_rx_clk_created_gclkinst_auto_created_sclk_s_2_l_bk4_sclk_outnet
 	S_hs_rx_clk
 	I_clk_hs_p
+	S_hs_rx_clk_created_gclkinst_auto_created_sclk_s_1_l_bk1_sclk_outnet
 	I_clk_hs_p_dup_1
 	S_hs_rx_clk_created_gclkinst_auto_created_sclk_s_0_l_bk1_sclk_outnet
 	S_hs_rx_clk_created_gclkinst_auto_created_sclk_s_0_r_bk1_sclk_outnet
-	S_hs_rx_clk_created_gclkinst_auto_created_sclk_s_1_l_bk2_sclk_outnet
 	S_hs_rx_clk_created_gclkinst_auto_created_sclk_s_1_r_bk1_sclk_outnet
 	S_hs_rx_clk_created_gclkinst_auto_created_sclk_s_2_r_bk3_sclk_outnet
 	S_hs_rx_clk_syn_5
@@ -483,72 +483,72 @@ DummyNode in Model: DR1_PHY_DSPSIOU
 	u_isp_top/u_Saturation_adj/mult13_syn_165.z[44]
 
 DummyNode in Model: DR1_PHY_ERAM
-	u_hdmi_tx/hdmi_1_4b_transmitter_core_wrapper/u_hdmi_tx_controller_wrapper/u_hdmi_island_data_gen/U_audio_sample_packet_2_channel/u_w96_d1024_fifo/u_logic_ramfifo_syn_524.orstb
-	u_hdmi_tx/hdmi_1_4b_transmitter_core_wrapper/u_hdmi_tx_controller_wrapper/u_hdmi_island_data_gen/U_audio_sample_packet_2_channel/u_w96_d1024_fifo/u_logic_ramfifo_syn_524.orsta
-	u_hdmi_tx/hdmi_1_4b_transmitter_core_wrapper/u_hdmi_tx_controller_wrapper/u_hdmi_island_data_gen/U_audio_sample_packet_2_channel/u_w96_d1024_fifo/u_logic_ramfifo_syn_587.orstb
-	u_hdmi_tx/hdmi_1_4b_transmitter_core_wrapper/u_hdmi_tx_controller_wrapper/u_hdmi_island_data_gen/U_audio_sample_packet_2_channel/u_w96_d1024_fifo/u_logic_ramfifo_syn_587.orsta
 	u_hdmi_tx/hdmi_1_4b_transmitter_core_wrapper/u_hdmi_tx_controller_wrapper/u_hdmi_island_data_gen/U_audio_sample_packet_2_channel/u_w96_d1024_fifo/u_logic_ramfifo_syn_608.orstb
+	u_hdmi_tx/hdmi_1_4b_transmitter_core_wrapper/u_hdmi_tx_controller_wrapper/u_hdmi_island_data_gen/U_audio_sample_packet_2_channel/u_w96_d1024_fifo/u_logic_ramfifo_syn_587.orsta
+	u_hdmi_tx/hdmi_1_4b_transmitter_core_wrapper/u_hdmi_tx_controller_wrapper/u_hdmi_island_data_gen/U_audio_sample_packet_2_channel/u_w96_d1024_fifo/u_logic_ramfifo_syn_524.orsta
+	u_hdmi_tx/hdmi_1_4b_transmitter_core_wrapper/u_hdmi_tx_controller_wrapper/u_hdmi_island_data_gen/U_audio_sample_packet_2_channel/u_w96_d1024_fifo/u_logic_ramfifo_syn_524.orstb
+	u_hdmi_tx/hdmi_1_4b_transmitter_core_wrapper/u_hdmi_tx_controller_wrapper/u_hdmi_island_data_gen/U_audio_sample_packet_2_channel/u_w96_d1024_fifo/u_logic_ramfifo_syn_587.orstb
 	u_hdmi_tx/hdmi_1_4b_transmitter_core_wrapper/u_hdmi_tx_controller_wrapper/u_hdmi_island_data_gen/U_audio_sample_packet_2_channel/u_w96_d1024_fifo/u_logic_ramfifo_syn_608.orsta
 	u_hdmi_tx/hdmi_1_4b_transmitter_core_wrapper/u_hdmi_tx_controller_wrapper/u_video_axi_stream_receiver/u_w24_d1024_fifo/u_logic_ramfifo_syn_380.orsta
 	u_hdmi_tx/hdmi_1_4b_transmitter_core_wrapper/u_hdmi_tx_controller_wrapper/u_video_axi_stream_receiver/u_w24_d1024_fifo/u_logic_ramfifo_syn_380.orstb
-	u_hdmi_tx/hdmi_1_4b_transmitter_core_wrapper/u_hdmi_tx_controller_wrapper/u_video_axi_stream_receiver/u_w24_d1024_fifo/u_logic_ramfifo_syn_401.orsta
 	u_hdmi_tx/hdmi_1_4b_transmitter_core_wrapper/u_hdmi_tx_controller_wrapper/u_video_axi_stream_receiver/u_w24_d1024_fifo/u_logic_ramfifo_syn_401.orstb
+	u_hdmi_tx/hdmi_1_4b_transmitter_core_wrapper/u_hdmi_tx_controller_wrapper/u_video_axi_stream_receiver/u_w24_d1024_fifo/u_logic_ramfifo_syn_401.orsta
 	u_isp_top/u_gamma/LUT[0]$lut_2_2_R/mux0_syn_13.orstb
+	u_isp_top/u_gamma/LUT[2]$lut_2_2_R/mux0_syn_13.orstb
+	u_isp_top/u_gamma/LUT[2]$lut_2_2_G/mux0_syn_13.orstb
+	u_isp_top/u_gamma/LUT[3]$lut_2_2_R/mux0_syn_13.orstb
+	u_isp_top/u_gamma/LUT[1]$lut_2_2_B/mux0_syn_13.orstb
+	u_isp_top/u_gamma/LUT[1]$lut_2_2_G/mux0_syn_13.orstb
 	u_isp_top/u_gamma/LUT[0]$lut_2_2_G/mux0_syn_13.orstb
+	u_isp_top/u_gamma/LUT[0]$lut_2_2_B/mux0_syn_13.orstb
+	u_isp_top/u_gamma/LUT[3]$lut_2_2_B/mux0_syn_13.orstb
+	u_isp_top/u_gamma/LUT[3]$lut_2_2_G/mux0_syn_13.orstb
 	u_isp_top/u_gamma/LUT[1]$lut_2_2_R/mux0_syn_13.orstb
 	u_isp_top/u_gamma/LUT[2]$lut_2_2_B/mux0_syn_13.orstb
-	u_isp_top/u_gamma/LUT[2]$lut_2_2_G/mux0_syn_13.orstb
-	u_isp_top/u_gamma/LUT[2]$lut_2_2_R/mux0_syn_13.orstb
-	u_isp_top/u_gamma/LUT[3]$lut_2_2_G/mux0_syn_13.orstb
-	u_isp_top/u_gamma/LUT[1]$lut_2_2_G/mux0_syn_13.orstb
-	u_isp_top/u_gamma/LUT[3]$lut_2_2_R/mux0_syn_13.orstb
-	u_isp_top/u_gamma/LUT[3]$lut_2_2_B/mux0_syn_13.orstb
-	u_isp_top/u_gamma/LUT[1]$lut_2_2_B/mux0_syn_13.orstb
-	u_isp_top/u_gamma/LUT[0]$lut_2_2_B/mux0_syn_13.orstb
-	u_uidbuf/rdbuf_fifo/ram_inst/ramread0_syn_19.orstb
+	u_uidbuf/rdbuf_fifo/ram_inst/ramread0_syn_25.orstb
 	u_uidbuf/rdbuf_fifo/ram_inst/ramread0_syn_13.orstb
+	u_uidbuf/rdbuf_fifo/ram_inst/ramread0_syn_19.orstb
 	u_uidbuf/rdbuf_fifo/ram_inst/ramread0_syn_31.orstb
 	u_uidbuf/rdbuf_fifo/ram_inst/ramread0_syn_37.orstb
-	u_uidbuf/rdbuf_fifo/ram_inst/ramread0_syn_25.orstb
-	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_127.orstb
-	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_85.orstb
-	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_13.orstb
-	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_55.orstb
-	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_157.orstb
-	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_43.orstb
-	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_49.orstb
-	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_121.orstb
-	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_115.orstb
-	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_151.orstb
-	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_79.orstb
 	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_139.orstb
 	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_67.orstb
-	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_103.orstb
-	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_31.orstb
-	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_91.orstb
-	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_19.orstb
-	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_145.orstb
-	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_73.orstb
-	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_97.orstb
-	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_25.orstb
 	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_109.orstb
 	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_37.orstb
-	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_133.orstb
+	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_85.orstb
+	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_13.orstb
+	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_121.orstb
+	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_97.orstb
+	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_25.orstb
+	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_49.orstb
+	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_145.orstb
+	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_73.orstb
+	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_151.orstb
+	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_79.orstb
+	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_103.orstb
+	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_31.orstb
+	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_157.orstb
+	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_19.orstb
 	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_61.orstb
+	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_115.orstb
+	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_133.orstb
+	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_91.orstb
+	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_55.orstb
+	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_43.orstb
+	u_uidbuf/wdbuf_fifo/ram_inst/ramread0_syn_127.orstb
 
 DummyNode in Model: DR1_PHY_LSLICE
-	auto_created_cwc1/wrapper_cwc_top/watch_pipe/data_in_d1_reg[78]_syn_2.ofa
+	auto_created_cwc1/wrapper_cwc_top/U_cwc/U_cwc_bus_top/CWC_BUS_DETECTOR[6]$BUS_DETECTOR$U_cwc_bus_det/bus_reg_reg[15]_syn_2.ofa
 	auto_created_cwc1/wrapper_cwc_top/watch_pipe/data_in_d1_reg[77]_syn_2.ofa
-	auto_created_cwc1/wrapper_cwc_top/watch_pipe/data_in_d1_reg[76]_syn_2.ofa
 	auto_created_cwc1/wrapper_cwc_top/watch_pipe/data_in_d1_reg[77]_syn_2.ofb
-	auto_created_cwc1/wrapper_cwc_top/watch_pipe/data_in_d1_reg[65]_syn_2.ofb
-	auto_created_cwc1/wrapper_cwc_top/U_cwc/U_cwc_bus_top/CWC_BUS_DETECTOR[6]$BUS_DETECTOR$U_cwc_bus_det/bus_reg_reg[1]_syn_2.ofb
+	auto_created_cwc1/wrapper_cwc_top/watch_pipe/data_in_d1_reg[75]_syn_2.ofa
+	auto_created_cwc1/wrapper_cwc_top/U_cwc/U_cwc_bus_top/CWC_BUS_DETECTOR[6]$BUS_DETECTOR$U_cwc_bus_det/bus_reg_reg[2]_syn_2.ofa
+	auto_created_cwc1/wrapper_cwc_top/U_cwc/U_cwc_bus_top/CWC_BUS_DETECTOR[6]$BUS_DETECTOR$U_cwc_bus_det/bus_reg_reg[2]_syn_2.ofb
 	auto_created_cwc1/wrapper_cwc_top/watch_pipe/data_in_d1_reg[63]_syn_2.ofa
-	system_inst/system_uiFDMA_0_Inst/uiFDMA/wburst_len_reg[0]_syn_9.ofb
-	u_uidbuf/I_W_en_syn_1149.ofb
-	u_uidbuf/I_W_en_syn_1150.ofb
-	u_uidbuf/I_W_en_syn_1148.ofb
-	auto_created_cwc1/wrapper_cwc_top/U_cwc/force_acq_reg_reg[0]_syn_2.ofb
+	u_uidbuf/WR_S_reg[2]_syn_2.ofb
+	u_isp_top/u_awb/div_gen[3]$div_gen_G_R_r1/al_954c18ee_syn_1.ofa
+	u_isp_top/u_awb/div_gen[3]$div_gen_G_R_r1/al_3490d663_syn_1.ofa
+	u_isp_top/u_awb/div_gen[2]$divide_G_B_r1/al_4f93f2bf_syn_3.ofa
+	auto_created_cwc1/wrapper_cwc_top/U_cwc/TRIG_ONLY_MODE$U_emb_ctrl/overflow_reg_syn_13.ofb
 
 DummyNode in Model: DR1_PHY_PAD
 	I_clk_lp_p_syn_2.ipad
@@ -633,9 +633,10 @@ MCP/SMD Summary
 
 10. checking no input delay (MEDIUM)
 --------------------------
-There are 11 input ports that with no input delay specified. (MEDIUM)
+There are 12 input ports that with no input delay specified. (MEDIUM)
 
 	IO_cam_sda
+	I_bt_uart_rx
 	I_button[1]
 	I_button[0]
 	I_clk_hs_p
@@ -649,9 +650,10 @@ There are 11 input ports that with no input delay specified. (MEDIUM)
 
 11. checking no output delay (MEDIUM)
 --------------------------
-There are 18 output ports that with no output delay specified. (MEDIUM)
+There are 19 output ports that with no output delay specified. (MEDIUM)
 
 	IO_cam_sda
+	O_bt_uart_tx
 	O_cam_rst
 	O_cam_scl
 	O_clk_24m

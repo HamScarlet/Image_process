@@ -2,9 +2,9 @@ standard
 ***Report Model: system_top Device: DR1M90GEG400***
 
 IO Statistics
-#IO                        28
-  #input                   10
-  #output                  17
+#IO                        30
+  #input                   11
+  #output                  18
   #inout                    1
 
 Gate Statistics

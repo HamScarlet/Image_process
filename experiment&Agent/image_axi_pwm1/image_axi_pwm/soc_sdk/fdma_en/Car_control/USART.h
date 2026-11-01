@@ -1,11 +1,17 @@
 /*
- * USART.h - 串口（PS MIO48/49，115200 8N1）
+ * USART.h - 串口（PS 硬核 UART0，走 EMIO 到 J12 的 U8/U9，接 JDY-31 蓝牙）
  *
- * 帧格式（与上位机约定，可改）：
+ * 【2026-11-01 本期改动】
+ *   1. 归属改为 **UART0**（AL_UART_DEVID 0）。原来用 UART1，而 UART1 是 printf 的
+ *      日志口（MIO48/49 走到那个二合一 Type-C 的 PS_UART），两者会互相干扰。
+ *      现在：UART0 = 蓝牙回环，UART1 = 日志，彻底分开。
+ *   2. 波特率改 **9600**，与 JDY-31 出厂默认对齐（D1 决策：先 9600，通了再 AT 改 115200）。
+ *   3. 打开接收（USART_RX_ENABLE 1）并启用**纯字节回环**（USART_LOOPBACK_ENABLE 1）。
+ *      本期目标是"通路通不通"，不做协议。
+ *
+ * 【帧格式（阶段 5 再用，本期不启用）】
  *   0x55 | direct | diversion | speed | 0x56
- *   direct  0=前进 1=后退
- *   diversion 0=左 1=右
- *   speed   0..100
+ *   direct  0=前进 1=后退 ; diversion 0=左 1=右 ; speed 0..100
  *
  * 【接收模型 —— 必须按 SDK 的真实语义写，别想当然】
  *   读 al_uart_dev.c 的 AlUart_Dev_RecvData() 实测确认：
@@ -21,13 +27,11 @@
  *     ❌ 不能改用 AlUart_Hal_RecvDataPolling —— 它是 `while (HandledCnt < Size)`
  *        **阻塞读满**，会卡住呼吸灯节拍。
  *   ✅ 正解：**中断回调 + 分段接收**。回调里只把数据搬进环形缓冲并置标志，
- *      续订下一段（再次调用 AlUart_Hal_RecvData）放在主循环上下文里做，
- *      避免在中断上下文里调 SDK API。
+ *      续订下一段（再次调用 AlUart_Hal_RecvData）放在主循环上下文里做。
  *
- * 【本期范围】
- *   USART_RX_ENABLE 默认 0 —— 本期只验证 AXI PWM 呼吸灯，不引入接收链路的变量。
- *   阶段 5（蓝牙 / 串口屏）接上时置 1 即可，代码路径已经就绪。
- *   发送方向随时可用（printf 本身也走 UART1，见 al_log.c 的 AlLog_Write）。
+ *   ⚠️ 还有一条最容易踩的：**DONE 事件只在"搬满一段"时才触发**。
+ *      所以回环场景下 USART_RX_SEG_SIZE 必须是 1，否则发不满 16 字节就永远没反应
+ *      （会表现为"发几个字节毫无动静"）。逐字节中断在 9600 下约 1 kHz，开销可忽略。
  */
 
 #ifndef USART_H_
@@ -40,28 +44,37 @@
 #define FRAME_TAIL              0x56U
 #define CMD_PAYLOAD_LEN         3U      /* direct + diversion + speed */
 
-/* 1 = 启用中断回调接收；0 = 只保留发送（本期默认） */
-#define USART_RX_ENABLE         0
+/* 1 = 启用中断回调接收。本期必须为 1，否则回环收不到任何字节。 */
+#define USART_RX_ENABLE         1
 
-/* 分段接收：每次启动接收的字节数。太小则中断频率高，太大则首帧响应慢。
- * 16 字节在 115200 下约 1.4 ms 一段，够用。 */
+/* 1 = 纯字节回环（收到什么发回什么，不解析帧）；0 = 走 FRAME_HEAD/TAIL 帧解析。
+ * 本期按 D4 决策取 1：先把通路验通，协议留到通了之后再加。 */
+#define USART_LOOPBACK_ENABLE   1
+
+/* 分段接收：每次启动接收的字节数。
+ * ⚠️ 回环时必须为 1（原因见文件头）。将来做帧解析可以放宽到 8~16 降低中断频率。 */
+#if (USART_LOOPBACK_ENABLE != 0)
+#define USART_RX_SEG_SIZE       1U
+#else
 #define USART_RX_SEG_SIZE       16U
+#endif
 
 /* 环形缓冲大小（必须是 2 的幂，索引用取模实现） */
 #define USART_RX_RING_SIZE      64U
 
 void USART_Init(void);
 
-/* 主循环里调用：若有段数据待处理，则续订下一段接收并解析帧（非阻塞） */
+/* 主循环里调用：续订下一段接收，并按 USART_LOOPBACK_ENABLE 决定回环还是解析帧（非阻塞）。
+ * ⚠️ 必须每轮都调，否则接收段永远续订不上，表现为"只收到最开始那一字节"。 */
 void USART_Poll(void);
 
-/* 取最近一条有效命令：有新命令返回 1，否则 0 */
+/* 取最近一条有效命令：有新命令返回 1，否则 0（回环模式下恒返回 0） */
 int  USART_GetCmd(COMMAND *out);
 
 /* 发送原始字节 */
 void USART_Send(const u8 *buf, u32 len);
 
-/* 回环自测（收到什么发回什么），调试用；仅在 USART_RX_ENABLE=1 时有效 */
+/* 回环自测（把环形缓冲里的字节原样发回）；仅在 USART_RX_ENABLE=1 时有效 */
 void USART_Test(void);
 
 /* 兼容旧名 */

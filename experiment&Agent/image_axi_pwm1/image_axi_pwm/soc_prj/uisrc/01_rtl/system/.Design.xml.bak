@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ipxact:design xmlns:xsi="http" xmlns:ipxact="http" xmlns:anlogic="http" xsi:schemaLocation="http">
+<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:anlogic="http" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     <ipxact:vendor>anlogic.com</ipxact:vendor>
     <ipxact:library>customized</ipxact:library>
     <ipxact:name>design_system</ipxact:name>
@@ -1031,6 +1031,14 @@
         </ipxact:designPort>
         <ipxact:designPort>
             <ipxact:name>motor_enable</ipxact:name>
+            <ipxact:direction>output</ipxact:direction>
+        </ipxact:designPort>
+        <ipxact:designPort>
+            <ipxact:name>uart0_rx_in</ipxact:name>
+            <ipxact:direction>input</ipxact:direction>
+        </ipxact:designPort>
+        <ipxact:designPort>
+            <ipxact:name>uart0_tx_out</ipxact:name>
             <ipxact:direction>output</ipxact:direction>
         </ipxact:designPort>
     </ipxact:designPorts>
@@ -2848,6 +2856,20 @@
                 <ipxact:externalPortReference portRef="O_fdma_wvalid"/>
             </ipxact:portReferences>
         </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__uart0_rx_in</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="uart0_rx_in"/>
+                <ipxact:externalPortReference portRef="uart0_rx_in"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>w_net__ARM_Processor_System_0__uart0_tx_out</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="ARM_Processor_System_0" portRef="uart0_tx_out"/>
+                <ipxact:externalPortReference portRef="uart0_tx_out"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
     </ipxact:adHocConnections>
     <ipxact:interconnections>
         <ipxact:interconnection>
@@ -2887,13 +2909,13 @@
         </ipxact:interconnection>
     </ipxact:interconnections>
     <ipxact:ipCatalogDir>
-        <ipxact:name>E:/FPGA/Anlu/ip/depot</ipxact:name>
         <ipxact:name>D:/exe/Anlu/TD/ip/depot</ipxact:name>
+        <ipxact:name>E:/FPGA/Anlu/ip/depot</ipxact:name>
         <ipxact:name>E:/Anlogic/TD_5.9.1_DR1_2025.1_151.508/ip/depot</ipxact:name>
     </ipxact:ipCatalogDir>
     <ipxact:vendorExtensions>
         <anlogic:device>DR1M90GEG400</anlogic:device>
-        <anlogic:version>167996 2025/07/10</anlogic:version>
+        <anlogic:version>197563 2026/05/12</anlogic:version>
         <anlogic:customTool>use_integrator</anlogic:customTool>
         <anlogic:directives>
             <anlogic:instantiations/>

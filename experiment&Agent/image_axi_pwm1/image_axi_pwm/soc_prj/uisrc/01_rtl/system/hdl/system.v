@@ -3,7 +3,7 @@
 **	All Right Reserved.
 \************************************************************/
 /************************************************************\
-**	Gen time	:	2026-10-31 18:31:14
+**	Gen time	:	2026-11-01 16:05:32
 **	DI version	:	197563 2026/05/12
 **	App version	:	(build number:6.2.2.200067)
 \************************************************************/
@@ -18,6 +18,7 @@ module system (
     input     wire       [15:0] I_fdma_rsize ,
     input     wire              I_fdma_rready ,
     input     wire       [63:0] I_fdma_wdata ,
+    input     wire              uart0_rx_in ,
     output    wire              p2f_clk0 ,
     output    wire              p2f_rst0_n ,
     output    wire              O_fdma_wbusy ,
@@ -28,7 +29,8 @@ module system (
     output    wire        [3:0] code_driver ,
     output    wire        [2:0] pwm_out ,
     output    wire        [1:0] motor_dir ,
-    output    wire              motor_enable
+    output    wire              motor_enable ,
+    output    wire              uart0_tx_out
 ); 
     wire [32:0]       w_port__ARM_Processor_System_0__master_gp0_axi_araddr ;
     wire [31:0]       w_port__AXI_Matrix_0__us0_araddr ;
@@ -198,6 +200,12 @@ module system (
     wire              w_port__ARM_Processor_System_0__slave_hp0_axi_wready ;
     wire              w_port__uiFDMA_0__M_AXI_WREADY ;
     wire              w_net__ARM_Processor_System_0__slave_hp0_axi_wready ; 
+
+    wire              w_port__ARM_Processor_System_0__uart0_rx_in ;
+    wire              w_net__uart0_rx_in ; 
+
+    wire              w_port__ARM_Processor_System_0__uart0_tx_out ;
+    wire              w_net__ARM_Processor_System_0__uart0_tx_out ; 
 
     wire [3:0]        w_port__AXI_GPIO_0__gpio_io_o ;
     wire [3:0]        w_net__AXI_GPIO_0__gpio_io_o ; 
@@ -1193,6 +1201,12 @@ module system (
     assign w_net__ARM_Processor_System_0__slave_hp0_axi_wready = w_port__ARM_Processor_System_0__slave_hp0_axi_wready ;
     assign w_port__uiFDMA_0__M_AXI_WREADY = w_net__ARM_Processor_System_0__slave_hp0_axi_wready ;
 
+    assign w_net__uart0_rx_in = uart0_rx_in ;
+    assign w_port__ARM_Processor_System_0__uart0_rx_in = w_net__uart0_rx_in ;
+
+    assign w_net__ARM_Processor_System_0__uart0_tx_out = w_port__ARM_Processor_System_0__uart0_tx_out ;
+    assign uart0_tx_out = w_net__ARM_Processor_System_0__uart0_tx_out ;
+
     assign w_net__AXI_GPIO_0__gpio_io_o = w_port__AXI_GPIO_0__gpio_io_o ;
     assign code_driver = w_net__AXI_GPIO_0__gpio_io_o ;
 
@@ -1932,8 +1946,8 @@ module system (
                                                                       , .pl_gpio_in(1'b0)
                                                                       , .pl_gpio_oe()
                                                                       , .pl_gpio_out()
-                                                                      , .uart0_rx_in(1'b0)
-                                                                      , .uart0_tx_out()
+                                                                      , .uart0_rx_in(w_port__ARM_Processor_System_0__uart0_rx_in)
+                                                                      , .uart0_tx_out(w_port__ARM_Processor_System_0__uart0_tx_out)
                                                                       , .p2f_rst0_n(w_port__ARM_Processor_System_0__p2f_rst0_n)
                                                                       , .p2f_clk1(w_port__ARM_Processor_System_0__p2f_clk1)
                                                                       , .p2f_clk0(w_port__ARM_Processor_System_0__p2f_clk0) );

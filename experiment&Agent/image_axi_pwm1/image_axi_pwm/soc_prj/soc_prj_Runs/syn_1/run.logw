@@ -5,7 +5,7 @@
    Build number = 6.2.2.200067
    Built at =   16:15:53 Apr 23 2026
    Run by =     21996
-   Run Date =   Sat Oct 31 18:40:40 2026
+   Run Date =   Sun Nov  1 16:13:48 2026
 
    Run on =     HYZY-X7-1
 ============================================================
@@ -46,7 +46,7 @@ HDL-5317 WARNING: input port 'us_axi_awregion[3]' is not connected on this insta
 HDL-5007 WARNING: actual bit length 24 differs from formal bit length 32 for port 'REG_DATA' in ../../uisrc/03_ip/uics500_cfg/uicfgcs500.v(150)
 HDL-5007 WARNING: actual bit length 32 differs from formal bit length 7 for port 'I' in ../../uisrc/03_ip/uics500_cfg/uicfgcs500.v(154)
 HDL-5007 WARNING: actual bit length 24 differs from formal bit length 32 for port 'REG_DATA' in ../../uisrc/03_ip/uics500_cfg/uicfgcs500.v(160)
-HDL-5007 WARNING: actual bit length 1 differs from formal bit length 2 for port 'O_lane_error' in ../../uisrc/01_rtl/system.v(318)
+HDL-5007 WARNING: actual bit length 1 differs from formal bit length 2 for port 'O_lane_error' in ../../uisrc/01_rtl/system.v(328)
 HDL-5007 WARNING: actual bit length 32 differs from formal bit length 1 for port 'O_raw_tready' in ../../uisrc/03_ip/isp/raw_matrix_3x3_buffer/raw_matrix_3x3_buffer.v(149)
 HDL-5323 WARNING: input port 'dib[31]' remains unconnected for this instance in ../../uisrc/03_ip/isp/raw_matrix_3x3_buffer/zhenghe.v(167)
 HDL-5323 WARNING: input port 'dib[32]' remains unconnected for this instance in ../../uisrc/03_ip/isp/raw_matrix_3x3_buffer/line_buffer_demosaic.v(98)
@@ -123,16 +123,16 @@ HDL-5323 WARNING: input port 'dib[95]' remains unconnected for this instance in 
 HDL-5317 WARNING: input port 'dib[63]' is not connected on this instance in ../../uisrc/03_ip/uifdmadbuf/wfifo/wfifo.v(345)
 HDL-5007 WARNING: actual bit length 11 differs from formal bit length 12 for port 'wrusedw' in ../../uisrc/03_ip/uifdmadbuf/uidbuf.v(405)
 HDL-5317 WARNING: input port 'dib[31]' is not connected on this instance in ../../uisrc/03_ip/uifdmadbuf/rfifo/rfifo.v(345)
-HDL-5007 WARNING: actual bit length 32 differs from formal bit length 1 for port 'I_W_en' in ../../uisrc/01_rtl/system.v(425)
-HDL-5007 WARNING: actual bit length 32 differs from formal bit length 1 for port 'I_R_en' in ../../uisrc/01_rtl/system.v(435)
+HDL-5007 WARNING: actual bit length 32 differs from formal bit length 1 for port 'I_W_en' in ../../uisrc/01_rtl/system.v(435)
+HDL-5007 WARNING: actual bit length 32 differs from formal bit length 1 for port 'I_R_en' in ../../uisrc/01_rtl/system.v(445)
 HDL-5007 WARNING: actual bit length ** differs from formal bit length *** for port '**' in ../../uisrc/03_ip/alip/DR1_HDMI_TX/hdmi_1_4b_transmitter_core_wrapper.enc.v(3316)
 HDL-5007 WARNING: actual bit length ** differs from formal bit length *** for port '**' in ../../uisrc/03_ip/alip/DR1_HDMI_TX/hdmi_1_4b_transmitter_core_wrapper.enc.v(3327)
 HDL-5314 WARNING: net 'S_tx_acr_valid' does not have a driver in ../../uisrc/03_ip/alip/DR1_HDMI_TX/hdmi_tx.v(165)
 HDL-5314 WARNING: net 'S_tx_acr_cts[19]' does not have a driver in ../../uisrc/03_ip/alip/DR1_HDMI_TX/hdmi_tx.v(166)
 HDL-5314 WARNING: net 'S_tx_acr_n[19]' does not have a driver in ../../uisrc/03_ip/alip/DR1_HDMI_TX/hdmi_tx.v(167)
-HDL-5317 WARNING: input port 'I_camera_black_level[9]' is not connected on this instance in ../../uisrc/01_rtl/system.v(336)
-HDL-5323 WARNING: input port 'I_tdest[9]' remains unconnected for this instance in ../../uisrc/01_rtl/system.v(374)
-HDL-5323 WARNING: input port 'I_audio_valid' remains unconnected for this instance in ../../uisrc/01_rtl/system.v(571)
+HDL-5317 WARNING: input port 'I_camera_black_level[9]' is not connected on this instance in ../../uisrc/01_rtl/system.v(346)
+HDL-5323 WARNING: input port 'I_tdest[9]' remains unconnected for this instance in ../../uisrc/01_rtl/system.v(384)
+HDL-5323 WARNING: input port 'I_audio_valid' remains unconnected for this instance in ../../uisrc/01_rtl/system.v(581)
 HDL-5106 WARNING: Initial value omitted on non-DFF net "scl_r" in ../../uisrc/03_ip/uics500_cfg/uii2c.v(127) 
 HDL-5106 WARNING: Initial value omitted on non-DFF net "sda_o" in ../../uisrc/03_ip/uics500_cfg/uii2c.v(135) 
 SYN-5013 WARNING: Undriven net: model "system_top" / net "u_hdmi_tx/hdmi_1_4b_transmitter_core_wrapper/I_arc_cts[19]" in ../../uisrc/03_ip/alip/DR1_HDMI_TX/hdmi_1_4b_transmitter_core_wrapper.enc.v(54)
@@ -931,7 +931,7 @@ SYN-5013 WARNING: Undriven net: model "system_top" / net "u_uidbuf/r_tlast_syn_3
 		the net's pin: pin "i" in ../../uisrc/03_ip/uifdmadbuf/uidbuf.v(537)
 SYN-5025 WARNING: Using 0 for all undriven pins and nets
 SYN-5084 WARNING: Register "system_inst/system_uiFDMA_0_Inst/uiFDMA/rburst_len[0]_syn_3" in ../../uisrc/03_ip/uifdma/uiFDMA.v(257) is described with both an asynchronous reset/set and an initialization value of the opposite polarity. Ignore the initialization value '1'
-SYN-6024 CRITICAL-WARNING: MapIO rule -- ODDR "CMOS_CLK" not have rst or rst is const or ASYNCRST is DISABLE, this may lead PAD tx data out of sync with other PAD. Please consider rewriting code in ../../uisrc/01_rtl/system.v(263).
+SYN-6024 CRITICAL-WARNING: MapIO rule -- ODDR "CMOS_CLK" not have rst or rst is const or ASYNCRST is DISABLE, this may lead PAD tx data out of sync with other PAD. Please consider rewriting code in ../../uisrc/01_rtl/system.v(273).
 SYN-6577 WARNING: The clock signal "S_hs_rx_clk" is added with the synthetic instruction (keep/mark_debug/dont_touch/max_fanout), which may create additional logic on this net
 SYN-6577 WARNING: The clock signal "pclkx1" is added with the synthetic instruction (keep/mark_debug/dont_touch/max_fanout), which may create additional logic on this net
 SYN-6577 WARNING: The clock signal "pclkx5" is added with the synthetic instruction (keep/mark_debug/dont_touch/max_fanout), which may create additional logic on this net

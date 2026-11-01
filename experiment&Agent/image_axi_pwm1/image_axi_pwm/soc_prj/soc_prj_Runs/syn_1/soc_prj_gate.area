@@ -2,9 +2,9 @@ standard
 ***Report Model: system_top Device: DR1M90GEG400***
 
 Design Statistics
-#IO                        29   out of    126   23.02%
-  #input                   11
-  #output                  17
+#IO                        31   out of    126   24.60%
+  #input                   12
+  #output                  18
   #inout                    1
 #lut                    29567
   #lut1                    96
@@ -33,7 +33,7 @@ Utilization Statistics
   #fifo20k                  0
 #dsp                       61   out of    240   25.42%
 #soc                        1   out of      1  100.00%
-#pad                       37   out of    126   29.37%
+#pad                       39   out of    126   30.95%
 #pll                        1   out of      8   12.50%
 #gclk                       1   out of     32    3.12%
 #lclk                       2   out of     20   10.00%

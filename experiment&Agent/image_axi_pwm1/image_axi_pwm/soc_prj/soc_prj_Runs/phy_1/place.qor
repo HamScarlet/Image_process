@@ -2,27 +2,27 @@
 | QoR metrics               |         value               |
 -----------------------------------------------------------
 | Timing                    |                             |
-|     Setup WNS             |         -160                |
-|     Setup TNS             |         -256                |
+|     Setup WNS             |         -100                |
+|     Setup TNS             |         -122                |
 |     Num of violated S-EP  |            2                |
-|     FMAX                  |   193.798MHz                |
+|     FMAX                  |   196.078MHz                |
 |     SWNS path clock period|       5000ps                |
 -----------------------------------------------------------
 | Routing Resource          |                             |
-|     Wire length           |      3343717                |
-|     Route Net Num         |        51210                |
+|     Wire length           |      3346765                |
+|     Route Net Num         |        51185                |
 -----------------------------------------------------------
 | Utilization               |                             |
-|     #slices               |        31005                |
-|     slices percentage     |       59.08%                |
+|     #slices               |        31070                |
+|     slices percentage     |       59.20%                |
 |     #RAMs                 |           76                |
 |     #DSPs                 |           48                |
 |     #DRAMHARDCON          |            2                |
 -----------------------------------------------------------
 | Congestion                |                             |
-|     Top 1% tile util      |           65                |
-|     Top 1% tile avg util  |       71.30%                |
-|     Over 100% util #tile  |            1                |
+|     Top 1% tile util      |           64                |
+|     Top 1% tile avg util  |       69.79%                |
+|     Over 100% util #tile  |            0                |
 -----------------------------------------------------------
 Report place stage QoR done.
 
@@ -30,7 +30,7 @@ QoR Evaluation
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
   ID        |  Priority  |  Description                                                     |  Suggestion
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
-  QOR-1201  |  HIGH      |  - Place SWNS -160ps do not have enough margin, smaller than th  |  - Please adjust placement strategy to improve timing.
+  QOR-1201  |  HIGH      |  - Place SWNS -100ps do not have enough margin, smaller than th  |  - Please adjust placement strategy to improve timing.
             |            |    reshold 500ps.                                                |      set_param place effort high
             |            |                                                                  |      set_param place opt_timing high
             |            |                                                                  |      set_param place enable_extra_timing on

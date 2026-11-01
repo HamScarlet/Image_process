@@ -65,9 +65,9 @@ Hierarchical Rent Exponent Report
 +----------------------------------------------------------------------------------+
 |Inst                  |Model               |Rent     |Cell     |Pin     |Term     |
 +----------------------------------------------------------------------------------+
-|top                   |system_top          |0.13     |67229    |287871  |18       |
+|top                   |system_top          |0.14     |67231    |287877  |20       |
 |  u_uidbuf            |uidbuf_13           |0.62     |1263     |5761    |391      |
-|  system_inst         |system_2            |0.44     |8045     |36386   |239      |
+|  system_inst         |system_2            |0.44     |8045     |36388   |241      |
 |  u_lane_stream_stats |lane_stream_stats_7 |0.40     |4909     |29014   |177      |
 |  u_hdmi_tx           |hdmi_tx_5           |0.36     |1852     |7015    |56       |
 |  u_isp_top           |isp_top_6           |0.33     |46729    |195534  |144      |

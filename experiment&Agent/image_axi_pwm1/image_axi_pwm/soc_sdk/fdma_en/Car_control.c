@@ -37,6 +37,11 @@ void car_Loop(void)
 {
     COMMAND c;
 
+    /* 每轮都要跑：续订 UART 接收段并回显。
+     * ⚠️ 上一版全工程没人调 USART_Poll()，接收段续订不上，
+     *    表现就是"只收到最开始那一字节"。 */
+    USART_Poll();
+
     if (USART_GetCmd(&c) != 0) {
         s_cmd = c;
         (void)Process_Cmd(&s_cmd);

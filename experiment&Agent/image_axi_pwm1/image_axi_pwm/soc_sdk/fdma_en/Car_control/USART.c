@@ -1,38 +1,27 @@
 /*
- * USART.c - 串口收发与命令帧解析
+ * USART.c - 串口收发（本期：UART0 + JDY-31 纯字节回环）
  *
- * 【原实现的问题】
+ * 【2026-11-01 本期改动（相对 10-31 版）】
+ *   1. AL_UART_DEVID  1 -> 0   —— UART0，走 PS 硬核 EMIO 到 J12 的 U8/U9。
+ *      原来用 UART1，而 UART1 是 printf 的日志口；两者其实是同一个静态实例
+ *      （AlUart_Hal_Init 内部 *Handle = &AlUartHandle[DevId]），会互相打架。
+ *   2. 波特率 115200 -> 9600 —— 与 JDY-31 出厂默认一致（D1：先 9600，通了再改 115200）。
+ *   3. 开启接收 + 纯字节回环（USART_LOOPBACK_ENABLE），帧解析保留但本期不启用。
+ *   4. **补上 USART_Poll() 的调用**：上一版这个函数全工程没人调，
+ *      接收段续订不上，表现就是"只收到最开始那一字节"。现在由 car_Loop() 每轮调用。
+ *
+ * 【原实现的问题（10-31 修掉的，记录保留）】
  *   1. Cmd_Receive 里 index 未初始化就参与 while(index < BUF_SIZE) —— 未定义行为
  *   2. 同一次循环里 index++ 两次（if 条件里一次、else 分支里又一次），会跳字节
  *   3. Rx_data[index] 在 index 已自增后取值，末尾会越界读
  *   4. 要求连续 4 个 0x55 才算帧头、连续 4 个 0x56 才算帧尾，与注释里的单字节语义不符
  *   5. memcpy(Tx_data, Rx_data, BUF_SIZE) 无视实际收到多少字节，回环永远是 32 字节
  *
- * 【2026-10-31 重写：按 SDK 的真实接收模型改】
- *   参考官方成功工程 D:\FPGAproject\AnLuRun\PSPWM\soc_sdk\axi_intr，
- *   并逐行核对 FD SDK 源码（soc_base/dr1m90_fpsoc_cpu0/driver/ps_driver/uart/src/）：
- *
- *   AlUart_Dev_RecvData(Uart, ReceiveBuf, ReceiveSize) 的真实行为：
- *     1) 先把 RX FIFO 里现成的字节搬进 ReceiveBuf；
- *     2) 若 ReceivedCount < ReceiveSize：
- *          记下 RecvBuffer.{RequestedCnt, HandledCnt, BufferPtr}，
- *          **使能 RX 线中断**，由中断继续往 ReceiveBuf 搬，
- *          搬满 ReceiveSize 字节才触发 AL_UART_EVENT_RECEIVE_DONE；
- *     3) 若一次就搬满了（ReceivedCount >= ReceiveSize）：
- *          直接触发 RECEIVE_DONE，并且**不更新 RecvBuffer.HandledCnt**。
- *
- *   ⇒ 由此得出三条硬约束（上一版就踩了前两条）：
- *     ❌ 不能在主循环里反复轮询调用 AlUart_Hal_RecvData：
- *        第二次调用会撞上 AL_ASSERT(!AlUart_Dev_IsRxBusy(Uart))；
- *        而且 HandledCnt 只在"没搬满"的分支才更新，读出来是陈旧值。
- *     ❌ 不能改用 AlUart_Hal_RecvDataPolling：它是 `while (HandledCnt < Size)`
- *        **阻塞读满**，会把呼吸灯的主循环节拍卡住。
- *     ✅ 正解：**中断回调 + 分段接收**：
- *        回调（中断上下文）里只做"把数据搬进环形缓冲 + 置标志"；
- *        续订下一段（再次调用 AlUart_Hal_RecvData）放回主循环上下文，
- *        避免在中断上下文里调 SDK API。
- *
- *   本版改为：环形缓冲 + 单字节状态机解析帧，边界全部显式判断。
+ * 【SDK 接收模型的硬约束（详见 USART.h 文件头）】
+ *   ❌ 不能在主循环里反复轮询 AlUart_Hal_RecvData（撞 AL_ASSERT，且 HandledCnt 是陈旧值）
+ *   ❌ 不能用 AlUart_Hal_RecvDataPolling（阻塞读满，卡死呼吸灯节拍）
+ *   ✅ 中断回调 + 分段接收：回调只搬数据置标志，续订放回主循环
+ *   ⚠️ RECEIVE_DONE 只在"搬满一段"时触发 ⇒ 回环必须 SEG_SIZE = 1
  */
 
 #include <string.h>
@@ -40,10 +29,15 @@
 #include "al_core.h"
 #include "USART.h"
 
-#define AL_UART_DEVID       1
+/* UART0 = 蓝牙回环口（PS 硬核 EMIO → J12 U9/U8）
+ * ⚠️ 别再改回 1：UART1 是 printf 的日志口（MIO48/49 → 二合一 Type-C 的 PS_UART） */
+#define AL_UART_DEVID       0
+
+/* 9600 8N1：与 JDY-31 出厂默认对齐 */
+#define AL_UART_BAUDRATE    9600
 
 static AL_UART_InitStruct UART_InitStruct = {
-    .BaudRate = 115200,
+    .BaudRate = AL_UART_BAUDRATE,
     .Parity = AL_UART_NO_PARITY,
     .WordLength = AL_UART_CHAR_8BITS,
     .StopBits = AL_UART_STOP_1BIT,
@@ -64,7 +58,7 @@ static u32 s_tail = 0U;
 /* 回调置位：有一段数据待主循环处理 */
 static volatile int s_seg_ready = 0;
 
-/* ---- 解析结果 ---- */
+/* ---- 解析结果（回环模式下不产生，仅保留接口） ---- */
 static COMMAND s_cmd;
 static volatile int s_cmd_ready = 0;
 
@@ -89,7 +83,9 @@ static int rx_pop(u8 *b)
     return 1;
 }
 
-/* 帧状态机：等待头 -> 收 3 字节载荷 -> 等尾 */
+#if (USART_LOOPBACK_ENABLE == 0)
+/* 帧状态机：等待头 -> 收 3 字节载荷 -> 等尾
+ * 回环模式下不启用，避免与 USART_Test() 抢同一份环形缓冲数据。 */
 static void frame_parse(void)
 {
     static u8  state = 0U;
@@ -137,6 +133,7 @@ static void frame_parse(void)
         }
     }
 }
+#endif /* USART_LOOPBACK_ENABLE == 0 */
 
 #if (USART_RX_ENABLE != 0)
 /* ---------------------------------------------------------------------------
@@ -145,8 +142,8 @@ static void frame_parse(void)
  *   只做两件事：把 SDK 收到的那一段搬进环形缓冲、置标志。
  *   **不调用任何 SDK API** —— 续订下一段要回到主循环上下文做。
  *
- *   数据来源：AlUart_Dev_RecvData 走中断路径收满一段后，
- *   RecvBuffer.HandledCnt 是本段实际字节数，RecvBuffer.BufferPtr 指向 s_rxseg。
+ *   ⚠️ RECEIVE_DONE 只在"搬满一段"时才触发。所以 USART_RX_SEG_SIZE=1 时每收
+ *      一个字节就进一次这里，这正是回环想要的节拍。
  * ------------------------------------------------------------------------- */
 static void uart_evt_cb(AL_UART_EventStruct ev, AL_VOID *ref)
 {
@@ -194,7 +191,7 @@ void USART_Init(void)
          * 所以 s_rxseg 必须是静态数组，不能是栈上临时变量。 */
         (void)AlUart_Hal_RecvData(UartHandle, s_rxseg, USART_RX_SEG_SIZE);
 #endif
-        al_printf("[UART] init ok\r\n");
+        al_printf("[UART] init ok (UART0, %d 8N1)\r\n", (int)AL_UART_BAUDRATE);
     } else {
         UartHandle = AL_NULL;
         al_printf("[UART] init failed, ret=%d\r\n", (int)ret);
@@ -205,16 +202,22 @@ void USART_Poll(void)
 {
 #if (USART_RX_ENABLE != 0)
     if ((s_seg_ready == 0) || (UartHandle == AL_NULL)) {
-        return;
+        return;                 /* 没有新一段，别去碰 SDK */
     }
     s_seg_ready = 0;
 
-    /* 续订下一段。主循环上下文，可以安全调 SDK。
-     * 返回值非 AL_OK 说明上一段还没被驱动收尾（RxLock 拿不到），下一轮再来。 */
-    if (AlUart_Hal_RecvData(UartHandle, s_rxseg, USART_RX_SEG_SIZE) == AL_OK) {
-        frame_parse();
+    /* 先续订下一段。SEG_SIZE=1 且 FIFO 里已有字节时，SDK 会同步搬进来并回调，
+     * 也就是本轮就能把刚到的字节回显出去。 */
+    if (AlUart_Hal_RecvData(UartHandle, s_rxseg, USART_RX_SEG_SIZE) != AL_OK) {
+        s_seg_ready = 1;        /* 续订失败（上一段还没收尾）：保持待命，下一轮重试 */
     }
+
+#if (USART_LOOPBACK_ENABLE != 0)
+    USART_Test();               /* 纯字节回环：把环形缓冲里的字节原样发回 */
+#else
+    frame_parse();
 #endif
+#endif /* USART_RX_ENABLE */
 }
 
 int USART_GetCmd(COMMAND *out)
