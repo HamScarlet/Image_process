@@ -49,7 +49,15 @@ module system_top (
     output wire         O_pwm_led      ,  // J15 板载 LED3：AXI PWM CH0 呼吸灯
     output wire         O_motor_enable ,  // J12 U10：电机驱动使能
     output wire [1:0]   O_motor_pwm    ,  // J12 V6/U5：AXI PWM CH1/CH2
-    output wire [1:0]   O_motor_dir       // J12 T9/T5：电机方向
+    output wire [1:0]   O_motor_dir    ,  // J12 T9/T5：电机方向
+
+    // ---------------- 蓝牙 UART（PS 硬核 EMIO 直连，完全不经 AXI） ---------------
+    //   I_bt_uart_rx : 蓝牙 TXD -> J12 U9 -> PS UART0 RX
+    //   O_bt_uart_tx : PS UART0 TX    -> J12 U8 -> 蓝牙 RXD
+    //   速率由 PS 侧 AlUart_Hal_Init 决定（USART.c 当前 9600 8N1）
+    // ---------------------------------------------------------------------------
+    input  wire         I_bt_uart_rx   ,  // J12 U9：蓝牙 TXD -> FPGA
+    output wire         O_bt_uart_tx      // J12 U8：FPGA -> 蓝牙 RXD
 );
 
   localparam IMG_WIDTH = 1920;
@@ -238,7 +246,9 @@ end
       .code_driver  (O_code_driver),
       .pwm_out      (pwm_ch       ),
       .motor_dir    (O_motor_dir  ),
-      .motor_enable (O_motor_enable)
+      .motor_enable (O_motor_enable),
+      .uart0_rx_in  (I_bt_uart_rx ),
+      .uart0_tx_out (O_bt_uart_tx )
   );
 
   // AXI PWM 通道展开：CH0 -> 板载 LED1，CH1/CH2 -> J12 电机 PWM

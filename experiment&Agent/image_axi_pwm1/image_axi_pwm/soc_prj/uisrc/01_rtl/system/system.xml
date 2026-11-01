@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<ipxact:component xmlns:anlogic="http" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ipxact:component xmlns:anlogic="http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     <ipxact:vendor>anlogic.com</ipxact:vendor>
     <ipxact:library>customized</ipxact:library>
     <ipxact:name>system</ipxact:name>
@@ -17,7 +17,7 @@
             </ipxact:componentInstantiation>
             <ipxact:designInstantiation>
                 <ipxact:name>design_system_Inst</ipxact:name>
-                <ipxact:designRef version="1.0" vendor="anlogic.com" library="customized" name="design_system"/>
+                <ipxact:designRef vendor="anlogic.com" name="design_system" library="customized" version="1.0"/>
             </ipxact:designInstantiation>
         </ipxact:instantiations>
         <ipxact:ports>
@@ -211,6 +211,20 @@
             <ipxact:port>
                 <ipxact:name>motor_enable</ipxact:name>
                 <ipxact:displayName>motor_enable</ipxact:displayName>
+                <ipxact:wire>
+                    <ipxact:direction>out</ipxact:direction>
+                </ipxact:wire>
+            </ipxact:port>
+            <ipxact:port>
+                <ipxact:name>uart0_rx_in</ipxact:name>
+                <ipxact:displayName>uart0_rx_in</ipxact:displayName>
+                <ipxact:wire>
+                    <ipxact:direction>in</ipxact:direction>
+                </ipxact:wire>
+            </ipxact:port>
+            <ipxact:port>
+                <ipxact:name>uart0_tx_out</ipxact:name>
+                <ipxact:displayName>uart0_tx_out</ipxact:displayName>
                 <ipxact:wire>
                     <ipxact:direction>out</ipxact:direction>
                 </ipxact:wire>

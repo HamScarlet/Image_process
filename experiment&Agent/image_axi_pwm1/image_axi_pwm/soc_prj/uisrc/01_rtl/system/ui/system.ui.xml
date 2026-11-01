@@ -1,12 +1,359 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ipxact:position xmlns:xsi="http" xmlns:ipxact="http" xmlns:anlogic="http" xsi:schemaLocation="http">
+<ipxact:position xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:anlogic="http" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
     <ipxact:instances>
         <ipxact:instance vendor="anlogic.com" library="ip" name="ARM_Processor_System_0" version="1.0">
-            <ipxact:xPos>814</ipxact:xPos>
-            <ipxact:yPos>362</ipxact:yPos>
-            <ipxact:width>522</ipxact:width>
-            <ipxact:height>1481</ipxact:height>
+            <ipxact:xPos>1300.78</ipxact:xPos>
+            <ipxact:yPos>646</ipxact:yPos>
+            <ipxact:width>548</ipxact:width>
+            <ipxact:height>1469</ipxact:height>
             <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#40629d</ipxact:highlight>
+            <ipxact:instPorts>
+                <ipxact:instPort>
+                    <ipxact:name>S_AXI_HP0</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_araddr</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_arburst</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_arcache</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_arid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_arlen</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_arlock</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_arprot</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_arqos</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_arready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_arsize</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_arvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_awaddr</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_awburst</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_awcache</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_awid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_awlen</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_awlock</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_awprot</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_awqos</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_awready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_awsize</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_awvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_bid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_bready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_bresp</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_bvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_rdata</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_rid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_rlast</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_rready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_rresp</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_rvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_wdata</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_wlast</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_wready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_wstrb</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_wvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>slave_hp0_axi_aclk</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_aclk</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_GP0</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_araddr</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_arburst</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_arcache</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_arid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_arlen</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_arlock</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_arprot</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_arready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_arsize</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_arvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_awaddr</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_awburst</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_awcache</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_awid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_awlen</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_awlock</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_awprot</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_awready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_awsize</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_awvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_bid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_bready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_bresp</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_bvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_rdata</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_rid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_rlast</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_rready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_rresp</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_rvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_wdata</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_wlast</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_wready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_wstrb</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>master_gp0_axi_wvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>GPIO</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>pl_gpio_in</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>pl_gpio_oe</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>pl_gpio_out</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>UART0</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>uart0_rx_in</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>uart0_tx_out</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>p2f_rst0_n</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>p2f_clk1</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>p2f_clk0</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+            </ipxact:instPorts>
             <ipxact:instBusPorts>
                 <ipxact:instBusPort>
                     <ipxact:name>S_AXI_HP0</ipxact:name>
@@ -27,19 +374,329 @@
             </ipxact:instBusPorts>
         </ipxact:instance>
         <ipxact:instance vendor="anlogic.com" library="ip" name="uiFDMA_0" version="1.0">
-            <ipxact:xPos>1660</ipxact:xPos>
-            <ipxact:yPos>502</ipxact:yPos>
-            <ipxact:width>490</ipxact:width>
-            <ipxact:height>1201</ipxact:height>
+            <ipxact:xPos>2378.78</ipxact:xPos>
+            <ipxact:yPos>786</ipxact:yPos>
+            <ipxact:width>460</ipxact:width>
+            <ipxact:height>1189</ipxact:height>
             <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#40629d</ipxact:highlight>
+            <ipxact:instPorts>
+                <ipxact:instPort>
+                    <ipxact:name>I_fdma_waddr</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>I_fdma_wareq</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>I_fdma_wsize</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>I_fdma_wdata</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>I_fdma_wready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>I_fdma_raddr</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>I_fdma_rareq</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>I_fdma_rsize</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>I_fdma_rready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_ACLK</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_ARESETN</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_AWREADY</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_WREADY</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_BID</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_BRESP</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_BVALID</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_ARREADY</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_RID</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_RDATA</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_RRESP</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_RLAST</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_RVALID</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>O_fdma_wbusy</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>O_fdma_wvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>O_fdma_rbusy</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>O_fdma_rdata</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>O_fdma_rvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_AWID</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_AWADDR</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_AWLEN</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_AWSIZE</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_AWBURST</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_AWLOCK</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_AWCACHE</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_AWPROT</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_AWQOS</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_AWVALID</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_WID</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_WDATA</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_WSTRB</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_WLAST</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_WVALID</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_BREADY</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_ARID</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_ARADDR</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_ARLEN</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_ARSIZE</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_ARBURST</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_ARLOCK</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_ARCACHE</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_ARPROT</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_ARQOS</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_ARVALID</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>M_AXI_RREADY</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+            </ipxact:instPorts>
             <ipxact:instBusPorts/>
         </ipxact:instance>
         <ipxact:instance vendor="anlogic.com" library="ip" name="AXI_GPIO_0" version="1.0">
-            <ipxact:xPos>2892</ipxact:xPos>
-            <ipxact:yPos>2159</ipxact:yPos>
-            <ipxact:width>333</ipxact:width>
-            <ipxact:height>186</ipxact:height>
+            <ipxact:xPos>3702.34</ipxact:xPos>
+            <ipxact:yPos>2157</ipxact:yPos>
+            <ipxact:width>360</ipxact:width>
+            <ipxact:height>174</ipxact:height>
             <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#40629d</ipxact:highlight>
+            <ipxact:instPorts>
+                <ipxact:instPort>
+                    <ipxact:name>S_AXI_Lite</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_awaddr</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_awvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_awready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_wdata</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_wstrb</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_wvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_wready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_bresp</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_bvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_bready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_araddr</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_arvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_arready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_rdata</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_rresp</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_rvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_rready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_aclk</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_aresetn</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>GPIO</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>gpio_io_o</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+            </ipxact:instPorts>
             <ipxact:instBusPorts>
                 <ipxact:instBusPort>
                     <ipxact:name>S_AXI_Lite</ipxact:name>
@@ -52,11 +709,110 @@
             </ipxact:instBusPorts>
         </ipxact:instance>
         <ipxact:instance vendor="anlogic.com" library="ip" name="AXI_GPIO_1" version="1.0">
-            <ipxact:xPos>2879</ipxact:xPos>
-            <ipxact:yPos>2375</ipxact:yPos>
-            <ipxact:width>359</ipxact:width>
-            <ipxact:height>221</ipxact:height>
+            <ipxact:xPos>3690.34</ipxact:xPos>
+            <ipxact:yPos>2396</ipxact:yPos>
+            <ipxact:width>384</ipxact:width>
+            <ipxact:height>209</ipxact:height>
             <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#40629d</ipxact:highlight>
+            <ipxact:instPorts>
+                <ipxact:instPort>
+                    <ipxact:name>S_AXI_Lite</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_awaddr</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_awvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_awready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_wdata</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_wstrb</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_wvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_wready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_bresp</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_bvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_bready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_araddr</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_arvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_arready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_rdata</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_rresp</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_rvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_rready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_aclk</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_aresetn</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>GPIO</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>gpio_io_o</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>GPIO2</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>gpio2_io_o</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+            </ipxact:instPorts>
             <ipxact:instBusPorts>
                 <ipxact:instBusPort>
                     <ipxact:name>S_AXI_Lite</ipxact:name>
@@ -73,11 +829,654 @@
             </ipxact:instBusPorts>
         </ipxact:instance>
         <ipxact:instance vendor="anlogic.com" library="ip" name="AXI_Matrix_0" version="1.0">
-            <ipxact:xPos>1773</ipxact:xPos>
-            <ipxact:yPos>2159</ipxact:yPos>
-            <ipxact:width>264</ipxact:width>
-            <ipxact:height>186</ipxact:height>
+            <ipxact:xPos>2487.78</ipxact:xPos>
+            <ipxact:yPos>2157</ipxact:yPos>
+            <ipxact:width>242</ipxact:width>
+            <ipxact:height>174</ipxact:height>
             <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#40629d</ipxact:highlight>
+            <ipxact:instPorts>
+                <ipxact:instPort>
+                    <ipxact:name>US_AXI0</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_araddr</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_arburst</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_arcache</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_arid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_arlen</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_arlock</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_arprot</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_arqos</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_arready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_arsize</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_arvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_awaddr</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_awburst</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_awcache</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_awid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_awlen</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_awlock</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_awprot</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_awqos</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_awready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_awsize</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_awvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_bid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_bready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_bresp</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_bvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_rdata</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_rid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_rlast</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_rready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_rresp</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_rvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_wdata</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_wlast</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_wready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_wstrb</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us0_wvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>aclk</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>aresetn</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>DS_AXI0</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_araddr</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_arburst</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_arcache</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_arid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_arlen</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_arlock</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_arprot</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_arqos</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_arregion</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_arready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_arsize</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_arvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_awaddr</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_awburst</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_awcache</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_awid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_awlen</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_awlock</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_awprot</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_awqos</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_awregion</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_awready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_awsize</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_awvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_bid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_bready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_bresp</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_bvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_rdata</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_rid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_rlast</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_rready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_rresp</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_rvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_wdata</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_wlast</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_wready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_wstrb</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds0_wvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>DS_AXI1</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_araddr</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_arburst</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_arcache</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_arid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_arlen</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_arlock</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_arprot</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_arqos</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_arregion</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_arready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_arsize</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_arvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_awaddr</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_awburst</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_awcache</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_awid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_awlen</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_awlock</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_awprot</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_awqos</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_awregion</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_awready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_awsize</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_awvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_bid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_bready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_bresp</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_bvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_rdata</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_rid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_rlast</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_rready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_rresp</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_rvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_wdata</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_wlast</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_wready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_wstrb</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds1_wvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>DS_AXI2</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_araddr</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_arburst</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_arcache</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_arid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_arlen</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_arlock</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_arprot</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_arqos</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_arregion</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_arready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_arsize</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_arvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_awaddr</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_awburst</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_awcache</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_awid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_awlen</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_awlock</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_awprot</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_awqos</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_awregion</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_awready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_awsize</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_awvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_bid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_bready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_bresp</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_bvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_rdata</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_rid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_rlast</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_rready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_rresp</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_rvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_wdata</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_wlast</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_wready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_wstrb</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds2_wvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+            </ipxact:instPorts>
             <ipxact:instBusPorts>
                 <ipxact:instBusPort>
                     <ipxact:name>US_AXI0</ipxact:name>
@@ -98,27 +1497,320 @@
             </ipxact:instBusPorts>
         </ipxact:instance>
         <ipxact:instance vendor="anlogic.com" library="ip" name="Processor_System_Reset_0" version="1.0">
-            <ipxact:xPos>1679.5</ipxact:xPos>
-            <ipxact:yPos>1873</ipxact:yPos>
-            <ipxact:width>451</ipxact:width>
-            <ipxact:height>256</ipxact:height>
+            <ipxact:xPos>3634.34</ipxact:xPos>
+            <ipxact:yPos>340</ipxact:yPos>
+            <ipxact:width>496</ipxact:width>
+            <ipxact:height>244</ipxact:height>
             <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#40629d</ipxact:highlight>
+            <ipxact:instPorts>
+                <ipxact:instPort>
+                    <ipxact:name>clk</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>external_reset</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>aux_rst</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>system_rst</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>pll_locked</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>soc_reset</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>bus_reset</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>peripheral_reset</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>interconnect_aresetn</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>peripheral_aresetn</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+            </ipxact:instPorts>
             <ipxact:instBusPorts/>
         </ipxact:instance>
         <ipxact:instance vendor="anlogic.com" library="ip" name="Constant_0" version="1.0">
-            <ipxact:xPos>236</ipxact:xPos>
-            <ipxact:yPos>1044.5</ipxact:yPos>
-            <ipxact:width>154</ipxact:width>
-            <ipxact:height>116</ipxact:height>
+            <ipxact:xPos>3282.78</ipxact:xPos>
+            <ipxact:yPos>468</ipxact:yPos>
+            <ipxact:width>151</ipxact:width>
+            <ipxact:height>104</ipxact:height>
             <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#40629d</ipxact:highlight>
+            <ipxact:instPorts>
+                <ipxact:instPort>
+                    <ipxact:name>dout</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+            </ipxact:instPorts>
             <ipxact:instBusPorts/>
         </ipxact:instance>
         <ipxact:instance vendor="anlogic.com" library="ip" name="AXI_Protocol_Converter_2" version="1.0">
-            <ipxact:xPos>2504</ipxact:xPos>
-            <ipxact:yPos>2626</ipxact:yPos>
-            <ipxact:width>311</ipxact:width>
-            <ipxact:height>186</ipxact:height>
+            <ipxact:xPos>3198.78</ipxact:xPos>
+            <ipxact:yPos>1752.42</ipxact:yPos>
+            <ipxact:width>319</ipxact:width>
+            <ipxact:height>174</ipxact:height>
             <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#40629d</ipxact:highlight>
+            <ipxact:instPorts>
+                <ipxact:instPort>
+                    <ipxact:name>US_AXI</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awaddr</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awlen</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awsize</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awburst</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awlock</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awcache</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awprot</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awqos</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_wdata</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_wstrb</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_wlast</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_wvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_wready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_bid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_bresp</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_bvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_bready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_arid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_araddr</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_arlen</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_arsize</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_arburst</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_arlock</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_arcache</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_arprot</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_arqos</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_arvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_arready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_rid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_rdata</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_rresp</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_rlast</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_rvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_rready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>aclk</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>aresetn</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>DS_AXI</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_awaddr</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_awprot</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_awvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_awready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_wdata</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_wstrb</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_wvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_wready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_bresp</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_bvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_bready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_araddr</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_arprot</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_arvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_arready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_rdata</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_rresp</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_rvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_rready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+            </ipxact:instPorts>
             <ipxact:instBusPorts>
                 <ipxact:instBusPort>
                     <ipxact:name>US_AXI</ipxact:name>
@@ -131,11 +1823,254 @@
             </ipxact:instBusPorts>
         </ipxact:instance>
         <ipxact:instance vendor="anlogic.com" library="ip" name="AXI_Protocol_Converter_0" version="1.0">
-            <ipxact:xPos>2504</ipxact:xPos>
-            <ipxact:yPos>2159</ipxact:yPos>
-            <ipxact:width>311</ipxact:width>
-            <ipxact:height>186</ipxact:height>
+            <ipxact:xPos>3198.78</ipxact:xPos>
+            <ipxact:yPos>2421.2</ipxact:yPos>
+            <ipxact:width>319</ipxact:width>
+            <ipxact:height>174</ipxact:height>
             <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#40629d</ipxact:highlight>
+            <ipxact:instPorts>
+                <ipxact:instPort>
+                    <ipxact:name>US_AXI</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awaddr</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awlen</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awsize</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awburst</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awlock</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awcache</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awprot</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awqos</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_wdata</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_wstrb</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_wlast</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_wvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_wready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_bid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_bresp</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_bvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_bready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_arid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_araddr</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_arlen</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_arsize</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_arburst</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_arlock</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_arcache</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_arprot</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_arqos</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_arvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_arready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_rid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_rdata</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_rresp</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_rlast</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_rvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_rready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>aclk</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>aresetn</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>DS_AXI</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_awaddr</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_awprot</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_awvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_awready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_wdata</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_wstrb</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_wvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_wready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_bresp</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_bvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_bready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_araddr</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_arprot</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_arvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_arready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_rdata</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_rresp</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_rvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_rready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+            </ipxact:instPorts>
             <ipxact:instBusPorts>
                 <ipxact:instBusPort>
                     <ipxact:name>US_AXI</ipxact:name>
@@ -148,11 +2083,254 @@
             </ipxact:instBusPorts>
         </ipxact:instance>
         <ipxact:instance vendor="anlogic.com" library="ip" name="AXI_Protocol_Converter_1" version="1.0">
-            <ipxact:xPos>2504</ipxact:xPos>
-            <ipxact:yPos>2392.5</ipxact:yPos>
-            <ipxact:width>311</ipxact:width>
-            <ipxact:height>186</ipxact:height>
+            <ipxact:xPos>3198.78</ipxact:xPos>
+            <ipxact:yPos>2076</ipxact:yPos>
+            <ipxact:width>319</ipxact:width>
+            <ipxact:height>174</ipxact:height>
             <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#40629d</ipxact:highlight>
+            <ipxact:instPorts>
+                <ipxact:instPort>
+                    <ipxact:name>US_AXI</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awaddr</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awlen</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awsize</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awburst</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awlock</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awcache</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awprot</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awqos</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_awready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_wdata</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_wstrb</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_wlast</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_wvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_wready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_bid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_bresp</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_bvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_bready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_arid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_araddr</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_arlen</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_arsize</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_arburst</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_arlock</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_arcache</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_arprot</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_arqos</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_arvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_arready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_rid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_rdata</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_rresp</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_rlast</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_rvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>us_axi_rready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>aclk</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>aresetn</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>DS_AXI</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_awaddr</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_awprot</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_awvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_awready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_wdata</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_wstrb</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_wvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_wready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_bresp</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_bvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_bready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_araddr</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_arprot</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_arvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_arready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_rdata</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_rresp</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_rvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>ds_axi_rready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+            </ipxact:instPorts>
             <ipxact:instBusPorts>
                 <ipxact:instBusPort>
                     <ipxact:name>US_AXI</ipxact:name>
@@ -165,11 +2343,106 @@
             </ipxact:instBusPorts>
         </ipxact:instance>
         <ipxact:instance vendor="anlogic.com" library="ip" name="axi_lite_pwm_0" version="1.0">
-            <ipxact:xPos>2897</ipxact:xPos>
-            <ipxact:yPos>2626</ipxact:yPos>
-            <ipxact:width>323</ipxact:width>
-            <ipxact:height>186</ipxact:height>
+            <ipxact:xPos>3706.34</ipxact:xPos>
+            <ipxact:yPos>1753</ipxact:yPos>
+            <ipxact:width>352</ipxact:width>
+            <ipxact:height>174</ipxact:height>
             <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#40629d</ipxact:highlight>
+            <ipxact:instPorts>
+                <ipxact:instPort>
+                    <ipxact:name>S_AXI</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_awaddr</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_awvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_awready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_wdata</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_wstrb</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_wvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_wready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_bresp</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_bvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_bready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_araddr</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_arvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_arready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_rdata</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_rresp</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_rvalid</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_rready</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_aclk</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>s_axi_aresetn</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>pwm_out</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>motor_dir</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+                <ipxact:instPort>
+                    <ipxact:name>motor_enable</ipxact:name>
+                    <ipxact:highlight>#000000</ipxact:highlight>
+                </ipxact:instPort>
+            </ipxact:instPorts>
             <ipxact:instBusPorts>
                 <ipxact:instBusPort>
                     <ipxact:name>S_AXI</ipxact:name>
@@ -180,152 +2453,591 @@
     </ipxact:instances>
     <ipxact:designPorts>
         <ipxact:designPort name="p2f_clk0">
-            <ipxact:xPos>3393.5</ipxact:xPos>
-            <ipxact:yPos>397</ipxact:yPos>
+            <ipxact:xPos>4400.34</ipxact:xPos>
+            <ipxact:yPos>365</ipxact:yPos>
             <ipxact:width>15</ipxact:width>
             <ipxact:height>10</ipxact:height>
             <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#000000</ipxact:highlight>
         </ipxact:designPort>
         <ipxact:designPort name="p2f_rst0_n">
-            <ipxact:xPos>3393.5</ipxact:xPos>
-            <ipxact:yPos>367</ipxact:yPos>
+            <ipxact:xPos>4400.34</ipxact:xPos>
+            <ipxact:yPos>435</ipxact:yPos>
             <ipxact:width>15</ipxact:width>
             <ipxact:height>10</ipxact:height>
             <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#000000</ipxact:highlight>
         </ipxact:designPort>
         <ipxact:designPort name="I_fdma_waddr">
-            <ipxact:xPos>58.5</ipxact:xPos>
-            <ipxact:yPos>367</ipxact:yPos>
+            <ipxact:xPos>610.78</ipxact:xPos>
+            <ipxact:yPos>838.217</ipxact:yPos>
             <ipxact:width>15</ipxact:width>
             <ipxact:height>10</ipxact:height>
             <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#000000</ipxact:highlight>
         </ipxact:designPort>
         <ipxact:designPort name="I_fdma_wareq">
-            <ipxact:xPos>58.5</ipxact:xPos>
-            <ipxact:yPos>397</ipxact:yPos>
+            <ipxact:xPos>610.78</ipxact:xPos>
+            <ipxact:yPos>890.435</ipxact:yPos>
             <ipxact:width>15</ipxact:width>
             <ipxact:height>10</ipxact:height>
             <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#000000</ipxact:highlight>
         </ipxact:designPort>
         <ipxact:designPort name="I_fdma_wsize">
-            <ipxact:xPos>58.5</ipxact:xPos>
-            <ipxact:yPos>427</ipxact:yPos>
+            <ipxact:xPos>610.78</ipxact:xPos>
+            <ipxact:yPos>942.652</ipxact:yPos>
             <ipxact:width>15</ipxact:width>
             <ipxact:height>10</ipxact:height>
             <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#000000</ipxact:highlight>
         </ipxact:designPort>
         <ipxact:designPort name="I_fdma_wready">
-            <ipxact:xPos>58.5</ipxact:xPos>
-            <ipxact:yPos>487</ipxact:yPos>
+            <ipxact:xPos>610.78</ipxact:xPos>
+            <ipxact:yPos>1047.09</ipxact:yPos>
             <ipxact:width>15</ipxact:width>
             <ipxact:height>10</ipxact:height>
             <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#000000</ipxact:highlight>
         </ipxact:designPort>
         <ipxact:designPort name="I_fdma_raddr">
-            <ipxact:xPos>58.5</ipxact:xPos>
-            <ipxact:yPos>517</ipxact:yPos>
+            <ipxact:xPos>610.78</ipxact:xPos>
+            <ipxact:yPos>1099.3</ipxact:yPos>
             <ipxact:width>15</ipxact:width>
             <ipxact:height>10</ipxact:height>
             <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#000000</ipxact:highlight>
         </ipxact:designPort>
         <ipxact:designPort name="I_fdma_rareq">
-            <ipxact:xPos>58.5</ipxact:xPos>
-            <ipxact:yPos>547</ipxact:yPos>
+            <ipxact:xPos>610.78</ipxact:xPos>
+            <ipxact:yPos>1151.52</ipxact:yPos>
             <ipxact:width>15</ipxact:width>
             <ipxact:height>10</ipxact:height>
             <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#000000</ipxact:highlight>
         </ipxact:designPort>
         <ipxact:designPort name="I_fdma_rsize">
-            <ipxact:xPos>58.5</ipxact:xPos>
-            <ipxact:yPos>577</ipxact:yPos>
+            <ipxact:xPos>610.78</ipxact:xPos>
+            <ipxact:yPos>1203.74</ipxact:yPos>
             <ipxact:width>15</ipxact:width>
             <ipxact:height>10</ipxact:height>
             <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#000000</ipxact:highlight>
         </ipxact:designPort>
         <ipxact:designPort name="I_fdma_rready">
-            <ipxact:xPos>58.5</ipxact:xPos>
-            <ipxact:yPos>607</ipxact:yPos>
+            <ipxact:xPos>610.78</ipxact:xPos>
+            <ipxact:yPos>1255.96</ipxact:yPos>
             <ipxact:width>15</ipxact:width>
             <ipxact:height>10</ipxact:height>
             <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#000000</ipxact:highlight>
         </ipxact:designPort>
         <ipxact:designPort name="O_fdma_wbusy">
-            <ipxact:xPos>3393.5</ipxact:xPos>
-            <ipxact:yPos>560</ipxact:yPos>
+            <ipxact:xPos>4400.34</ipxact:xPos>
+            <ipxact:yPos>844</ipxact:yPos>
             <ipxact:width>15</ipxact:width>
             <ipxact:height>10</ipxact:height>
             <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#000000</ipxact:highlight>
         </ipxact:designPort>
         <ipxact:designPort name="O_fdma_wvalid">
-            <ipxact:xPos>3393.5</ipxact:xPos>
-            <ipxact:yPos>595</ipxact:yPos>
+            <ipxact:xPos>4400.34</ipxact:xPos>
+            <ipxact:yPos>879</ipxact:yPos>
             <ipxact:width>15</ipxact:width>
             <ipxact:height>10</ipxact:height>
             <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#000000</ipxact:highlight>
         </ipxact:designPort>
         <ipxact:designPort name="O_fdma_rbusy">
-            <ipxact:xPos>3393.5</ipxact:xPos>
-            <ipxact:yPos>630</ipxact:yPos>
+            <ipxact:xPos>4400.34</ipxact:xPos>
+            <ipxact:yPos>914</ipxact:yPos>
             <ipxact:width>15</ipxact:width>
             <ipxact:height>10</ipxact:height>
             <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#000000</ipxact:highlight>
         </ipxact:designPort>
         <ipxact:designPort name="O_fdma_rvalid">
-            <ipxact:xPos>3393.5</ipxact:xPos>
-            <ipxact:yPos>700</ipxact:yPos>
+            <ipxact:xPos>4400.34</ipxact:xPos>
+            <ipxact:yPos>984</ipxact:yPos>
             <ipxact:width>15</ipxact:width>
             <ipxact:height>10</ipxact:height>
             <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#000000</ipxact:highlight>
         </ipxact:designPort>
         <ipxact:designPort name="I_fdma_wdata">
-            <ipxact:xPos>58.5</ipxact:xPos>
-            <ipxact:yPos>457</ipxact:yPos>
+            <ipxact:xPos>610.78</ipxact:xPos>
+            <ipxact:yPos>994.87</ipxact:yPos>
             <ipxact:width>15</ipxact:width>
             <ipxact:height>10</ipxact:height>
             <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#000000</ipxact:highlight>
         </ipxact:designPort>
         <ipxact:designPort name="O_fdma_rdata">
-            <ipxact:xPos>3393.5</ipxact:xPos>
-            <ipxact:yPos>665</ipxact:yPos>
+            <ipxact:xPos>4400.34</ipxact:xPos>
+            <ipxact:yPos>949</ipxact:yPos>
             <ipxact:width>15</ipxact:width>
             <ipxact:height>10</ipxact:height>
             <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#000000</ipxact:highlight>
         </ipxact:designPort>
         <ipxact:designPort name="code_driver">
-            <ipxact:xPos>3393.5</ipxact:xPos>
-            <ipxact:yPos>2283</ipxact:yPos>
+            <ipxact:xPos>4400.34</ipxact:xPos>
+            <ipxact:yPos>2281</ipxact:yPos>
             <ipxact:width>15</ipxact:width>
             <ipxact:height>10</ipxact:height>
             <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#000000</ipxact:highlight>
         </ipxact:designPort>
         <ipxact:designPort name="pwm_out">
-            <ipxact:xPos>3393.5</ipxact:xPos>
-            <ipxact:yPos>2684</ipxact:yPos>
+            <ipxact:xPos>4400.34</ipxact:xPos>
+            <ipxact:yPos>1759.2</ipxact:yPos>
             <ipxact:width>15</ipxact:width>
             <ipxact:height>10</ipxact:height>
             <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#000000</ipxact:highlight>
         </ipxact:designPort>
         <ipxact:designPort name="motor_dir">
-            <ipxact:xPos>3393.5</ipxact:xPos>
-            <ipxact:yPos>2719</ipxact:yPos>
+            <ipxact:xPos>4400.34</ipxact:xPos>
+            <ipxact:yPos>1809.2</ipxact:yPos>
             <ipxact:width>15</ipxact:width>
             <ipxact:height>10</ipxact:height>
             <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#000000</ipxact:highlight>
         </ipxact:designPort>
         <ipxact:designPort name="motor_enable">
-            <ipxact:xPos>3393.5</ipxact:xPos>
-            <ipxact:yPos>2754</ipxact:yPos>
+            <ipxact:xPos>4400.34</ipxact:xPos>
+            <ipxact:yPos>1883.2</ipxact:yPos>
             <ipxact:width>15</ipxact:width>
             <ipxact:height>10</ipxact:height>
             <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#000000</ipxact:highlight>
+        </ipxact:designPort>
+        <ipxact:designPort name="uart0_rx_in">
+            <ipxact:xPos>610.78</ipxact:xPos>
+            <ipxact:yPos>380</ipxact:yPos>
+            <ipxact:width>15</ipxact:width>
+            <ipxact:height>10</ipxact:height>
+            <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#000000</ipxact:highlight>
+        </ipxact:designPort>
+        <ipxact:designPort name="uart0_tx_out">
+            <ipxact:xPos>4400.34</ipxact:xPos>
+            <ipxact:yPos>400</ipxact:yPos>
+            <ipxact:width>15</ipxact:width>
+            <ipxact:height>10</ipxact:height>
+            <ipxact:isPin>false</ipxact:isPin>
+            <ipxact:highlight>#000000</ipxact:highlight>
         </ipxact:designPort>
     </ipxact:designPorts>
+    <ipxact:nodes>
+        <ipxact:node name="w_net__ARM_Processor_System_0__master_gp0_axi_araddr"/>
+        <ipxact:node name="w_net__ARM_Processor_System_0__master_gp0_axi_arburst"/>
+        <ipxact:node name="w_net__ARM_Processor_System_0__master_gp0_axi_arcache"/>
+        <ipxact:node name="w_net__ARM_Processor_System_0__master_gp0_axi_arid"/>
+        <ipxact:node name="w_net__ARM_Processor_System_0__master_gp0_axi_arlen"/>
+        <ipxact:node name="w_net__ARM_Processor_System_0__master_gp0_axi_arlock"/>
+        <ipxact:node name="w_net__ARM_Processor_System_0__master_gp0_axi_arprot"/>
+        <ipxact:node name="w_net__ARM_Processor_System_0__master_gp0_axi_arsize"/>
+        <ipxact:node name="w_net__ARM_Processor_System_0__master_gp0_axi_arvalid"/>
+        <ipxact:node name="w_net__ARM_Processor_System_0__master_gp0_axi_awaddr"/>
+        <ipxact:node name="w_net__ARM_Processor_System_0__master_gp0_axi_awburst"/>
+        <ipxact:node name="w_net__ARM_Processor_System_0__master_gp0_axi_awcache"/>
+        <ipxact:node name="w_net__ARM_Processor_System_0__master_gp0_axi_awid"/>
+        <ipxact:node name="w_net__ARM_Processor_System_0__master_gp0_axi_awlen"/>
+        <ipxact:node name="w_net__ARM_Processor_System_0__master_gp0_axi_awlock"/>
+        <ipxact:node name="w_net__ARM_Processor_System_0__master_gp0_axi_awprot"/>
+        <ipxact:node name="w_net__ARM_Processor_System_0__master_gp0_axi_awsize"/>
+        <ipxact:node name="w_net__ARM_Processor_System_0__master_gp0_axi_awvalid"/>
+        <ipxact:node name="w_net__ARM_Processor_System_0__master_gp0_axi_bready"/>
+        <ipxact:node name="w_net__ARM_Processor_System_0__master_gp0_axi_rready"/>
+        <ipxact:node name="w_net__ARM_Processor_System_0__master_gp0_axi_wdata"/>
+        <ipxact:node name="w_net__ARM_Processor_System_0__master_gp0_axi_wlast"/>
+        <ipxact:node name="w_net__ARM_Processor_System_0__master_gp0_axi_wstrb"/>
+        <ipxact:node name="w_net__ARM_Processor_System_0__master_gp0_axi_wvalid"/>
+        <ipxact:node name="w_net__ARM_Processor_System_0__p2f_clk0">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__ARM_Processor_System_0__p2f_clk1">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__ARM_Processor_System_0__p2f_rst0_n">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__ARM_Processor_System_0__slave_hp0_axi_arready">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__ARM_Processor_System_0__slave_hp0_axi_awready">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__ARM_Processor_System_0__slave_hp0_axi_bid">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__ARM_Processor_System_0__slave_hp0_axi_bresp">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__ARM_Processor_System_0__slave_hp0_axi_bvalid">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__ARM_Processor_System_0__slave_hp0_axi_rdata">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__ARM_Processor_System_0__slave_hp0_axi_rid">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__ARM_Processor_System_0__slave_hp0_axi_rlast">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__ARM_Processor_System_0__slave_hp0_axi_rresp">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__ARM_Processor_System_0__slave_hp0_axi_rvalid">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__ARM_Processor_System_0__slave_hp0_axi_wready">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__uart0_rx_in">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__ARM_Processor_System_0__uart0_tx_out">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__AXI_GPIO_0__gpio_io_o">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__AXI_GPIO_0__s_axi_arready"/>
+        <ipxact:node name="w_net__AXI_GPIO_0__s_axi_awready"/>
+        <ipxact:node name="w_net__AXI_GPIO_0__s_axi_bresp"/>
+        <ipxact:node name="w_net__AXI_GPIO_0__s_axi_bvalid"/>
+        <ipxact:node name="w_net__AXI_GPIO_0__s_axi_rdata"/>
+        <ipxact:node name="w_net__AXI_GPIO_0__s_axi_rresp"/>
+        <ipxact:node name="w_net__AXI_GPIO_0__s_axi_rvalid"/>
+        <ipxact:node name="w_net__AXI_GPIO_0__s_axi_wready"/>
+        <ipxact:node name="w_net__AXI_GPIO_1__s_axi_arready"/>
+        <ipxact:node name="w_net__AXI_GPIO_1__s_axi_awready"/>
+        <ipxact:node name="w_net__AXI_GPIO_1__s_axi_bresp"/>
+        <ipxact:node name="w_net__AXI_GPIO_1__s_axi_bvalid"/>
+        <ipxact:node name="w_net__AXI_GPIO_1__s_axi_rdata"/>
+        <ipxact:node name="w_net__AXI_GPIO_1__s_axi_rresp"/>
+        <ipxact:node name="w_net__AXI_GPIO_1__s_axi_rvalid"/>
+        <ipxact:node name="w_net__AXI_GPIO_1__s_axi_wready"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds0_araddr"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds0_arburst"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds0_arcache"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds0_arid"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds0_arlen"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds0_arlock"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds0_arprot"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds0_arqos"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds0_arsize"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds0_arvalid"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds0_awaddr"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds0_awburst"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds0_awcache"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds0_awid"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds0_awlen"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds0_awlock"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds0_awprot"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds0_awqos"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds0_awsize"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds0_awvalid"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds0_bready"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds0_rready"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds0_wdata"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds0_wlast"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds0_wstrb"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds0_wvalid"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds1_araddr"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds1_arburst"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds1_arcache"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds1_arid"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds1_arlen"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds1_arlock"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds1_arprot"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds1_arqos"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds1_arsize"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds1_arvalid"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds1_awaddr"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds1_awburst"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds1_awcache"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds1_awid"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds1_awlen"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds1_awlock"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds1_awprot"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds1_awqos"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds1_awsize"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds1_awvalid"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds1_bready"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds1_rready"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds1_wdata"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds1_wlast"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds1_wstrb"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds1_wvalid"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds2_araddr"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds2_arburst"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds2_arcache"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds2_arid"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds2_arlen"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds2_arlock"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds2_arprot"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds2_arqos"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds2_arsize"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds2_arvalid"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds2_awaddr"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds2_awburst"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds2_awcache"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds2_awid"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds2_awlen"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds2_awlock"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds2_awprot"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds2_awqos"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds2_awsize"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds2_awvalid"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds2_bready"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds2_rready"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds2_wdata"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds2_wlast"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds2_wstrb"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__ds2_wvalid"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__us0_arready"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__us0_awready"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__us0_bid"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__us0_bresp"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__us0_bvalid"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__us0_rdata"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__us0_rid"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__us0_rlast"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__us0_rresp"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__us0_rvalid"/>
+        <ipxact:node name="w_net__AXI_Matrix_0__us0_wready"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_0__ds_axi_araddr"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_0__ds_axi_arvalid"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_0__ds_axi_awaddr"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_0__ds_axi_awvalid"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_0__ds_axi_bready"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_0__ds_axi_rready"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_0__ds_axi_wdata"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_0__ds_axi_wstrb"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_0__ds_axi_wvalid"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_0__us_axi_arready"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_0__us_axi_awready"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_0__us_axi_bid"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_0__us_axi_bresp"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_0__us_axi_bvalid"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_0__us_axi_rdata"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_0__us_axi_rid"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_0__us_axi_rlast"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_0__us_axi_rresp"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_0__us_axi_rvalid"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_0__us_axi_wready"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_1__ds_axi_araddr"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_1__ds_axi_arvalid"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_1__ds_axi_awaddr"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_1__ds_axi_awvalid"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_1__ds_axi_bready"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_1__ds_axi_rready"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_1__ds_axi_wdata"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_1__ds_axi_wstrb"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_1__ds_axi_wvalid"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_1__us_axi_arready"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_1__us_axi_awready"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_1__us_axi_bid"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_1__us_axi_bresp"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_1__us_axi_bvalid"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_1__us_axi_rdata"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_1__us_axi_rid"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_1__us_axi_rlast"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_1__us_axi_rresp"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_1__us_axi_rvalid"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_1__us_axi_wready"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_2__ds_axi_araddr"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_2__ds_axi_arvalid"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_2__ds_axi_awaddr"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_2__ds_axi_awvalid"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_2__ds_axi_bready"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_2__ds_axi_rready"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_2__ds_axi_wdata"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_2__ds_axi_wstrb"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_2__ds_axi_wvalid"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_2__us_axi_arready"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_2__us_axi_awready"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_2__us_axi_bid"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_2__us_axi_bresp"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_2__us_axi_bvalid"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_2__us_axi_rdata"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_2__us_axi_rid"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_2__us_axi_rlast"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_2__us_axi_rresp"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_2__us_axi_rvalid"/>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_2__us_axi_wready"/>
+        <ipxact:node name="w_net__Constant_0__dout">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__I_fdma_raddr">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__I_fdma_rareq">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__I_fdma_rready">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__I_fdma_rsize">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__I_fdma_waddr">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__I_fdma_wareq">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__I_fdma_wdata">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__I_fdma_wready">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__I_fdma_wsize">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__axi_lite_pwm_0__motor_dir">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__axi_lite_pwm_0__motor_enable">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__axi_lite_pwm_0__pwm_out">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__axi_lite_pwm_0__s_axi_arready"/>
+        <ipxact:node name="w_net__axi_lite_pwm_0__s_axi_awready"/>
+        <ipxact:node name="w_net__axi_lite_pwm_0__s_axi_bresp"/>
+        <ipxact:node name="w_net__axi_lite_pwm_0__s_axi_bvalid"/>
+        <ipxact:node name="w_net__axi_lite_pwm_0__s_axi_rdata"/>
+        <ipxact:node name="w_net__axi_lite_pwm_0__s_axi_rresp"/>
+        <ipxact:node name="w_net__axi_lite_pwm_0__s_axi_rvalid"/>
+        <ipxact:node name="w_net__axi_lite_pwm_0__s_axi_wready"/>
+        <ipxact:node name="w_net__uiFDMA_0__M_AXI_ARADDR">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__uiFDMA_0__M_AXI_ARBURST">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__uiFDMA_0__M_AXI_ARCACHE">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__uiFDMA_0__M_AXI_ARID">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__uiFDMA_0__M_AXI_ARLEN">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__uiFDMA_0__M_AXI_ARLOCK">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__uiFDMA_0__M_AXI_ARPROT">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__uiFDMA_0__M_AXI_ARQOS">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__uiFDMA_0__M_AXI_ARSIZE">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__uiFDMA_0__M_AXI_ARVALID">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__uiFDMA_0__M_AXI_AWADDR">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__uiFDMA_0__M_AXI_AWBURST">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__uiFDMA_0__M_AXI_AWCACHE">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__uiFDMA_0__M_AXI_AWID">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__uiFDMA_0__M_AXI_AWLEN">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__uiFDMA_0__M_AXI_AWLOCK">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__uiFDMA_0__M_AXI_AWPROT">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__uiFDMA_0__M_AXI_AWQOS">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__uiFDMA_0__M_AXI_AWSIZE">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__uiFDMA_0__M_AXI_AWVALID">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__uiFDMA_0__M_AXI_BREADY">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__uiFDMA_0__M_AXI_RREADY">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__uiFDMA_0__M_AXI_WDATA">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__uiFDMA_0__M_AXI_WLAST">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__uiFDMA_0__M_AXI_WSTRB">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__uiFDMA_0__M_AXI_WVALID">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__uiFDMA_0__O_fdma_rbusy">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__uiFDMA_0__O_fdma_rdata">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__uiFDMA_0__O_fdma_rvalid">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__uiFDMA_0__O_fdma_wbusy">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__uiFDMA_0__O_fdma_wvalid">
+            <ipxact:highlight>#0e2232</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__ARM_Processor_System_0__M_AXI_GP0">
+            <ipxact:highlight>#41629f</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__AXI_Matrix_0__DS_AXI0">
+            <ipxact:highlight>#41629f</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__AXI_Matrix_0__DS_AXI1">
+            <ipxact:highlight>#41629f</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__AXI_Matrix_0__DS_AXI2">
+            <ipxact:highlight>#41629f</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_0__DS_AXI">
+            <ipxact:highlight>#41629f</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_1__DS_AXI">
+            <ipxact:highlight>#41629f</ipxact:highlight>
+        </ipxact:node>
+        <ipxact:node name="w_net__AXI_Protocol_Converter_2__DS_AXI">
+            <ipxact:highlight>#41629f</ipxact:highlight>
+        </ipxact:node>
+    </ipxact:nodes>
     <ipxact:scrollBar>
-        <ipxact:hValue>527</ipxact:hValue>
-        <ipxact:vValue>495</ipxact:vValue>
+        <ipxact:hValue>358</ipxact:hValue>
+        <ipxact:vValue>307</ipxact:vValue>
     </ipxact:scrollBar>
     <ipxact:scale>
-        <ipxact:xScale>0.694444</ipxact:xScale>
-        <ipxact:yScale>0.694444</ipxact:yScale>
+        <ipxact:xScale>1</ipxact:xScale>
+        <ipxact:yScale>1</ipxact:yScale>
     </ipxact:scale>
 </ipxact:position>

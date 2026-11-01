@@ -5,7 +5,7 @@
    Build number = 6.2.2.200067
    Built at =   16:15:53 Apr 23 2026
    Run by =     21996
-   Run Date =   Sat Oct 31 18:45:59 2026
+   Run Date =   Sun Nov  1 16:18:02 2026
 
    Run on =     HYZY-X7-1
 ============================================================
@@ -18,7 +18,7 @@ ARC-1001 : --------------------------------------------------------
 ARC-1001 :   non_jtag_persist(none)  |    35 IOs     |    gpio    
 ARC-1001 :            jtag           |  F9/J6/G6/F6  |  dedicate  
 ARC-1001 : --------------------------------------------------------
-RUN-1003 : finish command "import_device dr1_90.db -package DR1M90GEG400" in  3.604293s wall, 3.359375s user + 0.125000s system = 3.484375s CPU (96.7%)
+RUN-1003 : finish command "import_device dr1_90.db -package DR1M90GEG400" in  3.576710s wall, 3.234375s user + 0.062500s system = 3.296875s CPU (92.2%)
 
 RUN-1004 : used memory is 400 MB, reserved memory is 391 MB, peak memory is 400 MB
 RUN-1002 : start command "set_param flow ooc_flow on"
@@ -58,12 +58,12 @@ RUN-1002 : start command "optimize_rtl"
 RUN-1001 : Open license file D:/exe/Anlu/TD/license/Anlogic.lic
 SYN-1001 : Stage 1 | Optimize RTL
 SYN-1001 : Stage 1.1 | Check Design Sanity
-SYN-1001 : End Stage 1.1 | Check Design Sanity; Time: 0.005691s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (274.6%); Memory(MB): used = 406, reserved = 391, peak = 406;
+SYN-1001 : End Stage 1.1 | Check Design Sanity; Time: 0.003354s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 406, reserved = 391, peak = 406;
 
 SYN-1079 : finish stage Check Design Sanity. Total instances: 5692, Total nets: 12814.
 
 SYN-1001 : Stage 1.2 | Initialize Design
-SYN-1001 : End Stage 1.2 | Initialize Design; Time: 0.069596s wall, 0.062500s user + 0.000000s system = 0.062500s CPU (89.8%); Memory(MB): used = 406, reserved = 391, peak = 406;
+SYN-1001 : End Stage 1.2 | Initialize Design; Time: 0.043278s wall, 0.031250s user + 0.000000s system = 0.031250s CPU (72.2%); Memory(MB): used = 406, reserved = 391, peak = 406;
 
 SYN-1079 : finish stage Initialize Design. Total instances: 2452, Total nets: 7998.
 
@@ -75,12 +75,12 @@ RUN-1001 :           instance           |  keep_hierarchy  |         down_module
 RUN-1001 : ------------------------------------------------------------------------------------------------------------
 RUN-1001 :   wrapper_cwc_top/U_cwc_ram  |       true       | anlogic05_cwc_ram(DATA_...  | D:\exe\Anlu\TD\ip/apm/a...  
 RUN-1001 : ------------------------------------------------------------------------------------------------------------
-SYN-1001 : End Stage 1.3 | Flatten Module; Time: 0.079809s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (97.9%); Memory(MB): used = 406, reserved = 391, peak = 406;
+SYN-1001 : End Stage 1.3 | Flatten Module; Time: 0.051749s wall, 0.062500s user + 0.000000s system = 0.062500s CPU (120.8%); Memory(MB): used = 406, reserved = 391, peak = 406;
 
 SYN-1079 : finish stage Flatten Module. Total instances: 3589, Total nets: 6365.
 
 SYN-1001 : Stage 1.4 | Uniform Instance
-SYN-1001 : End Stage 1.4 | Uniform Instance; Time: 0.020560s wall, 0.015625s user + 0.015625s system = 0.031250s CPU (152.0%); Memory(MB): used = 394, reserved = 389, peak = 406;
+SYN-1001 : End Stage 1.4 | Uniform Instance; Time: 0.013828s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (113.0%); Memory(MB): used = 394, reserved = 389, peak = 406;
 
 SYN-1079 : finish stage Uniform Instance. Total instances: 3189, Total nets: 5965.
 
@@ -88,7 +88,7 @@ SYN-1001 : Stage 1.5 | Optimize Design
 SYN-1032 : 5956/2 useful/useless nets, 3187/2 useful/useless insts
 SYN-1016 : Merged 165 instances.
 SYN-1016 : Merged 16 instances.
-SYN-1001 : End Stage 1.5 | Optimize Design; Time: 0.606654s wall, 0.578125s user + 0.015625s system = 0.593750s CPU (97.9%); Memory(MB): used = 396, reserved = 390, peak = 406;
+SYN-1001 : End Stage 1.5 | Optimize Design; Time: 0.450879s wall, 0.437500s user + 0.000000s system = 0.437500s CPU (97.0%); Memory(MB): used = 397, reserved = 390, peak = 406;
 
 SYN-1079 : finish stage Optimize Design. Total instances: 5090, Total nets: 5783.
 
@@ -103,31 +103,31 @@ SYN-1015 : Optimize round 2, 16 better
 SYN-3010 : Optimized 2 DFF(s)
 SYN-1014 : Optimize round 1
 SYN-1015 : Optimize round 1, 0 better
-SYN-1001 : End Stage 1.6 | Optimize Iteratively; Time: 1.905391s wall, 1.843750s user + 0.062500s system = 1.906250s CPU (100.0%); Memory(MB): used = 420, reserved = 412, peak = 429;
+SYN-1001 : End Stage 1.6 | Optimize Iteratively; Time: 1.572747s wall, 1.546875s user + 0.000000s system = 1.546875s CPU (98.4%); Memory(MB): used = 420, reserved = 412, peak = 429;
 
 SYN-1079 : finish stage Optimize Iteratively. Total instances: 5088, Total nets: 5781.
 
 SYN-1001 : Stage 1.7 | Check Design
-SYN-1001 : End Stage 1.7 | Check Design; Time: 0.001238s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 420, reserved = 412, peak = 429;
+SYN-1001 : End Stage 1.7 | Check Design; Time: 0.001138s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 420, reserved = 412, peak = 429;
 
 SYN-1079 : finish stage Check Design. Total instances: 5088, Total nets: 5781.
 
-SYN-1001 : End Stage 1 | Optimize RTL; Time: 2.690198s wall, 2.593750s user + 0.093750s system = 2.687500s CPU (99.9%); Memory(MB): used = 420, reserved = 412, peak = 429;
+SYN-1001 : End Stage 1 | Optimize RTL; Time: 2.138003s wall, 2.093750s user + 0.000000s system = 2.093750s CPU (97.9%); Memory(MB): used = 420, reserved = 412, peak = 429;
 
 SYN-1079 : finish stage Optimize RTL. Total instances: 5088, Total nets: 5781.
 
-RUN-1003 : finish command "optimize_rtl" in  2.716588s wall, 2.609375s user + 0.093750s system = 2.703125s CPU (99.5%)
+RUN-1003 : finish command "optimize_rtl" in  2.161953s wall, 2.125000s user + 0.000000s system = 2.125000s CPU (98.3%)
 
 RUN-1004 : used memory is 420 MB, reserved memory is 412 MB, peak memory is 429 MB
 RUN-1002 : start command "map_macro"
 SYN-1001 : Stage 2 | Map Reg
-SYN-1001 : End Stage 2 | Map Reg; Time: 0.093908s wall, 0.093750s user + 0.000000s system = 0.093750s CPU (99.8%); Memory(MB): used = 419, reserved = 411, peak = 429;
+SYN-1001 : End Stage 2 | Map Reg; Time: 0.070800s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (110.3%); Memory(MB): used = 419, reserved = 411, peak = 429;
 
 SYN-1079 : finish stage Map Reg. Total instances: 5088, Total nets: 5781.
 
 SYN-1001 : Stage 3 | Map IO
 SYN-2001 : Map 0 IOs to PADs of model 'auto_created_cwc1'
-SYN-1001 : End Stage 3 | Map IO; Time: 0.006590s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (237.1%); Memory(MB): used = 419, reserved = 412, peak = 429;
+SYN-1001 : End Stage 3 | Map IO; Time: 0.006303s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 419, reserved = 412, peak = 429;
 
 SYN-1001 : Stage 4 | Map Macro
 RUN-1002 : start command "update_pll_param -module auto_created_cwc1"
@@ -144,11 +144,11 @@ SYN-2501 : Optimize round 1
 SYN-2501 : Optimize round 1, 0 better
 SYN-2501 : Map 26 macro adder(s)
 SYN-1016 : Merged 322 instances.
-SYN-1001 : End Stage 4 | Map Macro; Time: 1.441586s wall, 1.390625s user + 0.031250s system = 1.421875s CPU (98.6%); Memory(MB): used = 428, reserved = 420, peak = 429;
+SYN-1001 : End Stage 4 | Map Macro; Time: 1.203653s wall, 1.156250s user + 0.000000s system = 1.156250s CPU (96.1%); Memory(MB): used = 428, reserved = 420, peak = 429;
 
 SYN-1079 : finish stage Map Macro. Total instances: 5350, Total nets: 6208.
 
-RUN-1003 : finish command "map_macro" in  1.545871s wall, 1.500000s user + 0.031250s system = 1.531250s CPU (99.1%)
+RUN-1003 : finish command "map_macro" in  1.283665s wall, 1.234375s user + 0.000000s system = 1.234375s CPU (96.2%)
 
 RUN-1004 : used memory is 428 MB, reserved memory is 420 MB, peak memory is 429 MB
 RUN-1002 : start command "map"
@@ -157,10 +157,10 @@ SYN-3001 : Collect 1179 PI 528 PO (no timing constraint) for mapping
 SYN-2581 : Mapping with K=6, #lut = 771 (3.62), #lev = 4 (1.37), #crit_level = 0, #edge = 2792
 SYN-2551 : Post LUT mapping optimization.
 SYN-2581 : Mapping with K=6, #lut = 761 (3.60), #lev = 4 (1.40), #crit_level = 0, #edge = 2740
-SYN-3001 : Logic optimization opt = 0.42 sec, map = 0.10 sec, post map opt = 0.65 sec.
-SYN-1001 : End Stage 5 | Map Gate; Time: 1.391367s wall, 1.390625s user + 0.000000s system = 1.390625s CPU (99.9%); Memory(MB): used = 438, reserved = 424, peak = 438;
+SYN-3001 : Logic optimization opt = 0.33 sec, map = 0.08 sec, post map opt = 0.52 sec.
+SYN-1001 : End Stage 5 | Map Gate; Time: 1.084816s wall, 1.062500s user + 0.000000s system = 1.062500s CPU (97.9%); Memory(MB): used = 438, reserved = 424, peak = 438;
 
-RUN-1003 : finish command "map" in  1.416502s wall, 1.421875s user + 0.000000s system = 1.421875s CPU (100.4%)
+RUN-1003 : finish command "map" in  1.109219s wall, 1.093750s user + 0.000000s system = 1.093750s CPU (98.6%)
 
 RUN-1004 : used memory is 438 MB, reserved memory is 424 MB, peak memory is 438 MB
 RUN-1002 : start command "pack"
@@ -175,7 +175,7 @@ RUN-1002 : start command "start_timer"
 TMR-2502 : Net delay update with mode: Synthesized
 RUN-1002 : start command "end_timer"
 SYN-4009 : Pack 2 carry chain into lslice
-SYN-1001 : End Stage 6 | Pack Gate; Time: 0.446008s wall, 0.437500s user + 0.000000s system = 0.437500s CPU (98.1%); Memory(MB): used = 438, reserved = 435, peak = 438;
+SYN-1001 : End Stage 6 | Pack Gate; Time: 0.327106s wall, 0.312500s user + 0.000000s system = 0.312500s CPU (95.5%); Memory(MB): used = 439, reserved = 435, peak = 439;
 
 RUN-1002 : start command "report_qor -step gate -file gate.qor"
 RUN-1002 : start command "start_timer"
@@ -251,9 +251,6 @@ RUN-0008 : Do critical warning check and 0 issue(s) found.
 RUN-0008 : Do timing check and 0 issue(s) found.
 RUN-0008 : Do area check and 0 issue(s) found.
 SYN-1001 : The design has 123 dangling syn_keep insts.
-RUN-1003 : finish command "pack" in  1.205806s wall, 1.187500s user + 0.000000s system = 1.187500s CPU (98.5%)
-
-RUN-1004 : used memory is 440 MB, reserved memory is 435 MB, peak memory is 440 MB
 RUN-1002 : start command "report_area -file auto_created_cwc1_gate.area"
 SYN-4034 : The count of slices with lut is 32.
 SYN-4035 : The count of slices with lut+ripple is 4.
