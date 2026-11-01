@@ -1,7 +1,7 @@
 AL_US_NUM : 1 : U : En :  :  : 
 AL_DS_NUM : 3 : U : En :  : 2 : 16
-AL_AXI_ID_WIDTH_USER : 1 : U : En :  :  : 
-AL_AXI_ID_WIDTH : 2 : G : En :  :  : 
+AL_AXI_ID_WIDTH_USER : 12 : U : En :  : 1 : 32
+AL_AXI_ID_WIDTH : 13 : G : En :  :  : 
 AL_AXI_ADDR_WIDTH : 32 : U : En :  :  : 
 AL_AXI_DATA_WIDTH : 32 : U : En : 32;;64;;128;;256;;512;;1024 :  : 
 AL_NUM_ADDR_RANGES : 1 : U : En :  :  : 
@@ -13,7 +13,7 @@ AL_AXI_RUSER_WIDTH : 1 : U : Dis :  :  :
 AL_AXI_BUSER_WIDTH : 1 : U : Dis :  :  : 
 AL_PROTOCOL_SEL : 0 : G : En :  :  : 
 AL_DS_AXI_BASE_ADDR : 192'h000000008020000000000000801000000000000080000000 : G : En :  :  : 
-AL_US_AXI_THREAD_ID_WIDTH : 32'h00000001 : G : En :  :  : 
+AL_US_AXI_THREAD_ID_WIDTH : 32'h0000000C : G : En :  :  : 
 AL_READ_REGISTER_TYPE : 0 : G : En :  :  : 
 AL_US_AXI_SINGLE_THREAD : 32'h00000000 : G : En :  :  : 
 AL_US_AXI_WRITE_ACCEPTANCE : 32'h00000001 : G : En :  :  : 
@@ -22,7 +22,7 @@ AL_DS_AXI_WRITE_ISSUING : 96'h000000040000000400000004 : G : En :  :  :
 AL_DS_AXI_READ_ISSUING : 96'h000000040000000400000004 : G : En :  :  : 
 AL_US_AXI_ARB_PRIORITY : 32'h00000000 : G : En :  :  : 
 AL_DS_AXI_SECURE : 96'h000000000000000000000000 : G : En :  :  : 
-AL_CONNECTIVITY_MODE : 1 : G : En :  :  : 
+AL_CONNECTIVITY_MODE : 0 : G : En :  :  : 
 protocol_axi4 : 1 : U : En :  :  : 
 protocol_axi3 : 0 : U : En :  :  : 
 protocol_axi4lite : 0 : U : En :  :  : 
@@ -314,7 +314,7 @@ DS1_BASEADDR_WIDTH12 : 0 : U : Dis :  :  :
 DS1_BASEADDR_WIDTH13 : 0 : U : Dis :  :  : 
 DS1_BASEADDR_WIDTH14 : 0 : U : Dis :  :  : 
 DS1_BASEADDR_WIDTH15 : 0 : U : Dis :  :  : 
-DS2_BASEADDR_WIDTH0 : 12 : U : En :  : 12 : 32
+DS2_BASEADDR_WIDTH0 : 12 : U : En :  :  : 
 DS2_BASEADDR_WIDTH1 : 0 : U : Dis :  :  : 
 DS2_BASEADDR_WIDTH2 : 0 : U : Dis :  :  : 
 DS2_BASEADDR_WIDTH3 : 0 : U : Dis :  :  : 
@@ -572,22 +572,22 @@ ds14range_baseaddr_width : 0000000C : G : En :  :  :
 ds15range_baseaddr_width : 0000000C : G : En :  :  : 
 AL_DS_AXI_ADDR_WIDTH : 96'h0000000C0000000C0000000C : G : En :  :  : 
 AL_US_AXI_BASE_ID : 32'h00000000 : G : En :  :  : 
-us0_thread_id_width : 1 : G : En :  :  : 
-us1_thread_id_width : 1 : G : Dis :  :  : 
-us2_thread_id_width : 1 : G : Dis :  :  : 
-us3_thread_id_width : 1 : G : Dis :  :  : 
-us4_thread_id_width : 1 : G : Dis :  :  : 
-us5_thread_id_width : 1 : G : Dis :  :  : 
-us6_thread_id_width : 1 : G : Dis :  :  : 
-us7_thread_id_width : 1 : G : Dis :  :  : 
-us8_thread_id_width : 1 : G : Dis :  :  : 
-us9_thread_id_width : 1 : G : Dis :  :  : 
-us10_thread_id_width : 1 : G : Dis :  :  : 
-us11_thread_id_width : 1 : G : Dis :  :  : 
-us12_thread_id_width : 1 : G : Dis :  :  : 
-us13_thread_id_width : 1 : G : Dis :  :  : 
-us14_thread_id_width : 1 : G : Dis :  :  : 
-us15_thread_id_width : 1 : G : Dis :  :  : 
+us0_thread_id_width : 12 : G : En :  :  : 
+us1_thread_id_width : 12 : G : Dis :  :  : 
+us2_thread_id_width : 12 : G : Dis :  :  : 
+us3_thread_id_width : 12 : G : Dis :  :  : 
+us4_thread_id_width : 12 : G : Dis :  :  : 
+us5_thread_id_width : 12 : G : Dis :  :  : 
+us6_thread_id_width : 12 : G : Dis :  :  : 
+us7_thread_id_width : 12 : G : Dis :  :  : 
+us8_thread_id_width : 12 : G : Dis :  :  : 
+us9_thread_id_width : 12 : G : Dis :  :  : 
+us10_thread_id_width : 12 : G : Dis :  :  : 
+us11_thread_id_width : 12 : G : Dis :  :  : 
+us12_thread_id_width : 12 : G : Dis :  :  : 
+us13_thread_id_width : 12 : G : Dis :  :  : 
+us14_thread_id_width : 12 : G : Dis :  :  : 
+us15_thread_id_width : 12 : G : Dis :  :  : 
 write_m0s0 : 1 : U : En :  :  : 
 write_m1s0 : 1 : U : En :  :  : 
 write_m2s0 : 1 : U : En :  :  : 
@@ -1134,7 +1134,7 @@ read_connectivity_ds14 : 00000001 : G : En :  :  :
 read_connectivity_ds15 : 00000001 : G : En :  :  : 
 AL_AXI_WRITE_CONNECTIVITY : 96'h000000010000000100000001 : G : En :  :  : 
 AL_AXI_READ_CONNECTIVITY : 96'h000000010000000100000001 : G : En :  :  : 
-single_thread_us0 : 0 : U : En :  :  : 
+single_thread_us0 : 0 : U : Dis :  :  : 
 single_thread_us1 : 0 : U : Dis :  :  : 
 single_thread_us2 : 0 : U : Dis :  :  : 
 single_thread_us3 : 0 : U : Dis :  :  : 
@@ -1150,7 +1150,7 @@ single_thread_us12 : 0 : U : Dis :  :  :
 single_thread_us13 : 0 : U : Dis :  :  : 
 single_thread_us14 : 0 : U : Dis :  :  : 
 single_thread_us15 : 0 : U : Dis :  :  : 
-ot_write_acceptance_us0 : 1 : U : En :  :  : 
+ot_write_acceptance_us0 : 1 : U : Dis :  :  : 
 ot_write_acceptance_us1 : 1 : U : Dis :  :  : 
 ot_write_acceptance_us2 : 1 : U : Dis :  :  : 
 ot_write_acceptance_us3 : 1 : U : Dis :  :  : 
@@ -1166,7 +1166,7 @@ ot_write_acceptance_us12 : 1 : U : Dis :  :  :
 ot_write_acceptance_us13 : 1 : U : Dis :  :  : 
 ot_write_acceptance_us14 : 1 : U : Dis :  :  : 
 ot_write_acceptance_us15 : 1 : U : Dis :  :  : 
-ot_read_acceptance_us0 : 1 : U : En :  :  : 
+ot_read_acceptance_us0 : 1 : U : Dis :  :  : 
 ot_read_acceptance_us1 : 1 : U : Dis :  :  : 
 ot_read_acceptance_us2 : 1 : U : Dis :  :  : 
 ot_read_acceptance_us3 : 1 : U : Dis :  :  : 
@@ -1182,9 +1182,9 @@ ot_read_acceptance_us12 : 1 : U : Dis :  :  :
 ot_read_acceptance_us13 : 1 : U : Dis :  :  : 
 ot_read_acceptance_us14 : 1 : U : Dis :  :  : 
 ot_read_acceptance_us15 : 1 : U : Dis :  :  : 
-ot_write_issuing_ds0 : 4 : U : En :  :  : 
-ot_write_issuing_ds1 : 4 : U : En :  :  : 
-ot_write_issuing_ds2 : 4 : U : En :  :  : 
+ot_write_issuing_ds0 : 4 : U : Dis :  :  : 
+ot_write_issuing_ds1 : 4 : U : Dis :  :  : 
+ot_write_issuing_ds2 : 4 : U : Dis :  :  : 
 ot_write_issuing_ds3 : 4 : U : Dis :  :  : 
 ot_write_issuing_ds4 : 4 : U : Dis :  :  : 
 ot_write_issuing_ds5 : 4 : U : Dis :  :  : 
@@ -1198,9 +1198,9 @@ ot_write_issuing_ds12 : 4 : U : Dis :  :  :
 ot_write_issuing_ds13 : 4 : U : Dis :  :  : 
 ot_write_issuing_ds14 : 4 : U : Dis :  :  : 
 ot_write_issuing_ds15 : 4 : U : Dis :  :  : 
-ot_read_issuing_ds0 : 4 : U : En :  :  : 
-ot_read_issuing_ds1 : 4 : U : En :  :  : 
-ot_read_issuing_ds2 : 4 : U : En :  :  : 
+ot_read_issuing_ds0 : 4 : U : Dis :  :  : 
+ot_read_issuing_ds1 : 4 : U : Dis :  :  : 
+ot_read_issuing_ds2 : 4 : U : Dis :  :  : 
 ot_read_issuing_ds3 : 4 : U : Dis :  :  : 
 ot_read_issuing_ds4 : 4 : U : Dis :  :  : 
 ot_read_issuing_ds5 : 4 : U : Dis :  :  : 
@@ -1311,6 +1311,6 @@ ds12_base_addr_lower_bound : 0x0000000000C00000 : G : En :  :  :
 ds13_base_addr_lower_bound : 0x0000000000D00000 : G : En :  :  : 
 ds14_base_addr_lower_bound : 0x0000000000E00000 : G : En :  :  : 
 ds15_base_addr_lower_bound : 0x0000000000F00000 : G : En :  :  : 
-conectivity_type : Multi-Data(SAMD) : U : En : Multi-Data(SAMD);;Shared-Data(SASD) :  : 
-read_channel_register : None : U : Dis : None;;Full;;Light;;Auto :  : 
+conectivity_type : Shared-Data(SASD) : U : En : Multi-Data(SAMD);;Shared-Data(SASD) :  : 
+read_channel_register : None : U : En : None;;Full;;Light;;Auto :  : 
 ds_num_min : 2 : G : En :  :  : 

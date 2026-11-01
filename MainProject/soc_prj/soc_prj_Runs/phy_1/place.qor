@@ -2,32 +2,32 @@
 | QoR metrics               |         value               |
 -----------------------------------------------------------
 | Timing                    |                             |
-|     Setup WNS             |        -2199                |
-|     Setup TNS             |     -1372833                |
-|     Num of violated S-EP  |          875                |
-|     FMAX                  |   212.811MHz                |
+|     Setup WNS             |        -2141                |
+|     Setup TNS             |     -1377241                |
+|     Num of violated S-EP  |          884                |
+|     FMAX                  |   215.471MHz                |
 |     SWNS path clock period |       2500ps                |
-|     Hold WNS              |         -546                |
-|     Hold TNS              |        -5662                |
-|     Num of violated H-EP  |           11                |
+|     Hold WNS              |         -666                |
+|     Hold TNS              |        -7208                |
+|     Num of violated H-EP  |           14                |
 -----------------------------------------------------------
 | Routing Resource          |                             |
-|     Wire length           |      4308173                |
-|     Route Net Num         |        55761                |
-|     DontRoute Net Num     |        32046                |
-|     RouteSinks Num        |       155097                |
+|     Wire length           |      4234205                |
+|     Route Net Num         |        55339                |
+|     DontRoute Net Num     |        32016                |
+|     RouteSinks Num        |       153432                |
 -----------------------------------------------------------
 | Utilization               |                             |
-|     #slices               |        34830                |
-|     slices percentage     |       66.37%                |
+|     #slices               |        34431                |
+|     slices percentage     |       65.61%                |
 |     #RAMs                 |           76                |
 |     #DSPs                 |           61                |
 |     #DRAMHARDCON          |            2                |
 -----------------------------------------------------------
 | Congestion                |                             |
 |     Top 1% tile util      |           68                |
-|     Top 1% tile avg util  |       75.32%                |
-|     Over 100% util #tile  |            0                |
+|     Top 1% tile avg util  |       74.33%                |
+|     Over 100% util #tile  |            1                |
 -----------------------------------------------------------
 Report place stage QoR done.
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:anlogic="http" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:design xmlns:xsi="http" xmlns:ipxact="http" xmlns:anlogic="http" xsi:schemaLocation="http">
     <ipxact:vendor>anlogic.com</ipxact:vendor>
     <ipxact:library>customized</ipxact:library>
     <ipxact:name>design_system</ipxact:name>
@@ -2887,13 +2887,13 @@
         </ipxact:interconnection>
     </ipxact:interconnections>
     <ipxact:ipCatalogDir>
-        <ipxact:name>D:/exe/Anlu/TD/ip/depot</ipxact:name>
         <ipxact:name>E:/FPGA/Anlu/ip/depot</ipxact:name>
+        <ipxact:name>D:/exe/Anlu/TD/ip/depot</ipxact:name>
         <ipxact:name>E:/Anlogic/TD_5.9.1_DR1_2025.1_151.508/ip/depot</ipxact:name>
     </ipxact:ipCatalogDir>
     <ipxact:vendorExtensions>
         <anlogic:device>DR1M90GEG400</anlogic:device>
-        <anlogic:version>197563 2026/05/12</anlogic:version>
+        <anlogic:version>167996 2025/07/10</anlogic:version>
         <anlogic:customTool>use_integrator</anlogic:customTool>
         <anlogic:directives>
             <anlogic:instantiations/>

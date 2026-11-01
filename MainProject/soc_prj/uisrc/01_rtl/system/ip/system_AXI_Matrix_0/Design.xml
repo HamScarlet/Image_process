@@ -11,15 +11,15 @@
             <ipxact:configurableElementValues>
                 <ipxact:configurableElementValue referenceId="AL_US_NUM">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="AL_DS_NUM">3</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="AL_AXI_ID_WIDTH_USER">1</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="AL_AXI_ID_WIDTH">2</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_AXI_ID_WIDTH_USER">12</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_AXI_ID_WIDTH">13</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="AL_AXI_ADDR_WIDTH">32</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="AL_AXI_DATA_WIDTH">32</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="AL_NUM_ADDR_RANGES">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="AL_AXI_SUPPORTS_USER_SIGNALS">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="AL_PROTOCOL_SEL">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="AL_DS_AXI_BASE_ADDR">192'h000000008020000000000000801000000000000080000000</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="AL_US_AXI_THREAD_ID_WIDTH">32'h00000001</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_US_AXI_THREAD_ID_WIDTH">32'h0000000C</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="AL_READ_REGISTER_TYPE">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="AL_US_AXI_SINGLE_THREAD">32'h00000000</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="AL_US_AXI_WRITE_ACCEPTANCE">32'h00000001</ipxact:configurableElementValue>
@@ -28,7 +28,7 @@
                 <ipxact:configurableElementValue referenceId="AL_DS_AXI_READ_ISSUING">96'h000000040000000400000004</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="AL_US_AXI_ARB_PRIORITY">32'h00000000</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="AL_DS_AXI_SECURE">96'h000000000000000000000000</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="AL_CONNECTIVITY_MODE">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="AL_CONNECTIVITY_MODE">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="protocol_axi4">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="protocol_axi3">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="protocol_axi4lite">0</ipxact:configurableElementValue>
@@ -72,7 +72,7 @@
                 <ipxact:configurableElementValue referenceId="ds15range_baseaddr_width">&quot;0000000C&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="AL_DS_AXI_ADDR_WIDTH">96'h0000000C0000000C0000000C</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="AL_US_AXI_BASE_ID">32'h00000000</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="us0_thread_id_width">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="us0_thread_id_width">12</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="write_m0s0">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="write_m1s0">1</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="write_m2s0">1</ipxact:configurableElementValue>
@@ -113,15 +113,6 @@
                 <ipxact:configurableElementValue referenceId="read_connectivity_ds15">&quot;00000001&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="AL_AXI_WRITE_CONNECTIVITY">96'h000000010000000100000001</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="AL_AXI_READ_CONNECTIVITY">96'h000000010000000100000001</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="single_thread_us0">0</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ot_write_acceptance_us0">1</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ot_read_acceptance_us0">1</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ot_write_issuing_ds0">4</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ot_write_issuing_ds1">4</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ot_write_issuing_ds2">4</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ot_read_issuing_ds0">4</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ot_read_issuing_ds1">4</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="ot_read_issuing_ds2">4</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="arb_priority_us0">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="support_secure_ds1">0</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="support_secure_ds2">0</ipxact:configurableElementValue>
@@ -191,7 +182,8 @@
                 <ipxact:configurableElementValue referenceId="ds13_base_addr_lower_bound">&quot;0x0000000000D00000&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ds14_base_addr_lower_bound">&quot;0x0000000000E00000&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ds15_base_addr_lower_bound">&quot;0x0000000000F00000&quot;</ipxact:configurableElementValue>
-                <ipxact:configurableElementValue referenceId="conectivity_type">&quot;Multi-Data(SAMD)&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="conectivity_type">&quot;Shared-Data(SASD)&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="read_channel_register">&quot;None&quot;</ipxact:configurableElementValue>
                 <ipxact:configurableElementValue referenceId="ds_num_min">2</ipxact:configurableElementValue>
             </ipxact:configurableElementValues>
         </ipxact:componentInstance>

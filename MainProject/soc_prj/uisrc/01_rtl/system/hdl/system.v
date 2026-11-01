@@ -42,7 +42,7 @@ module system (
     wire [3:0]        w_net__ARM_Processor_System_0__master_gp0_axi_arcache ; 
 
     wire [11:0]       w_port__ARM_Processor_System_0__master_gp0_axi_arid ;
-    wire [0:0]        w_port__AXI_Matrix_0__us0_arid ;
+    wire [11:0]       w_port__AXI_Matrix_0__us0_arid ;
     wire [11:0]       w_net__ARM_Processor_System_0__master_gp0_axi_arid ; 
 
     wire [3:0]        w_port__ARM_Processor_System_0__master_gp0_axi_arlen ;
@@ -78,7 +78,7 @@ module system (
     wire [3:0]        w_net__ARM_Processor_System_0__master_gp0_axi_awcache ; 
 
     wire [11:0]       w_port__ARM_Processor_System_0__master_gp0_axi_awid ;
-    wire [0:0]        w_port__AXI_Matrix_0__us0_awid ;
+    wire [11:0]       w_port__AXI_Matrix_0__us0_awid ;
     wire [11:0]       w_net__ARM_Processor_System_0__master_gp0_axi_awid ; 
 
     wire [3:0]        w_port__ARM_Processor_System_0__master_gp0_axi_awlen ;
@@ -128,7 +128,6 @@ module system (
     wire              w_port__ARM_Processor_System_0__p2f_clk0 ;
     wire              w_port__ARM_Processor_System_0__slave_hp0_axi_aclk ;
     wire              w_port__uiFDMA_0__M_AXI_ACLK ;
-    wire              w_port__ARM_Processor_System_0__master_gp0_axi_aclk ;
     wire              w_port__Processor_System_Reset_0__clk ;
     wire              w_net__ARM_Processor_System_0__p2f_clk0 ; 
 
@@ -140,6 +139,7 @@ module system (
     wire              w_port__AXI_GPIO_1__s_axi_aclk ;
     wire              w_port__AXI_Protocol_Converter_2__aclk ;
     wire              w_port__axi_lite_pwm_0__s_axi_aclk ;
+    wire              w_port__ARM_Processor_System_0__master_gp0_axi_aclk ;
     wire              w_net__ARM_Processor_System_0__p2f_clk1 ; 
 
     wire              w_port__ARM_Processor_System_0__p2f_rst0_n ;
@@ -288,9 +288,9 @@ module system (
     wire [3:0]        w_port__AXI_Protocol_Converter_0__us_axi_arcache ;
     wire [3:0]        w_net__AXI_Matrix_0__ds0_arcache ; 
 
-    wire [1:0]        w_port__AXI_Matrix_0__ds0_arid ;
+    wire [12:0]       w_port__AXI_Matrix_0__ds0_arid ;
     wire [3:0]        w_port__AXI_Protocol_Converter_0__us_axi_arid ;
-    wire [1:0]        w_net__AXI_Matrix_0__ds0_arid ; 
+    wire [12:0]       w_net__AXI_Matrix_0__ds0_arid ; 
 
     wire [7:0]        w_port__AXI_Matrix_0__ds0_arlen ;
     wire [7:0]        w_port__AXI_Protocol_Converter_0__us_axi_arlen ;
@@ -328,9 +328,9 @@ module system (
     wire [3:0]        w_port__AXI_Protocol_Converter_0__us_axi_awcache ;
     wire [3:0]        w_net__AXI_Matrix_0__ds0_awcache ; 
 
-    wire [1:0]        w_port__AXI_Matrix_0__ds0_awid ;
+    wire [12:0]       w_port__AXI_Matrix_0__ds0_awid ;
     wire [3:0]        w_port__AXI_Protocol_Converter_0__us_axi_awid ;
-    wire [1:0]        w_net__AXI_Matrix_0__ds0_awid ; 
+    wire [12:0]       w_net__AXI_Matrix_0__ds0_awid ; 
 
     wire [7:0]        w_port__AXI_Matrix_0__ds0_awlen ;
     wire [7:0]        w_port__AXI_Protocol_Converter_0__us_axi_awlen ;
@@ -392,9 +392,9 @@ module system (
     wire [3:0]        w_port__AXI_Protocol_Converter_1__us_axi_arcache ;
     wire [3:0]        w_net__AXI_Matrix_0__ds1_arcache ; 
 
-    wire [1:0]        w_port__AXI_Matrix_0__ds1_arid ;
+    wire [12:0]       w_port__AXI_Matrix_0__ds1_arid ;
     wire [3:0]        w_port__AXI_Protocol_Converter_1__us_axi_arid ;
-    wire [1:0]        w_net__AXI_Matrix_0__ds1_arid ; 
+    wire [12:0]       w_net__AXI_Matrix_0__ds1_arid ; 
 
     wire [7:0]        w_port__AXI_Matrix_0__ds1_arlen ;
     wire [7:0]        w_port__AXI_Protocol_Converter_1__us_axi_arlen ;
@@ -432,9 +432,9 @@ module system (
     wire [3:0]        w_port__AXI_Protocol_Converter_1__us_axi_awcache ;
     wire [3:0]        w_net__AXI_Matrix_0__ds1_awcache ; 
 
-    wire [1:0]        w_port__AXI_Matrix_0__ds1_awid ;
+    wire [12:0]       w_port__AXI_Matrix_0__ds1_awid ;
     wire [3:0]        w_port__AXI_Protocol_Converter_1__us_axi_awid ;
-    wire [1:0]        w_net__AXI_Matrix_0__ds1_awid ; 
+    wire [12:0]       w_net__AXI_Matrix_0__ds1_awid ; 
 
     wire [7:0]        w_port__AXI_Matrix_0__ds1_awlen ;
     wire [7:0]        w_port__AXI_Protocol_Converter_1__us_axi_awlen ;
@@ -496,9 +496,9 @@ module system (
     wire [3:0]        w_port__AXI_Protocol_Converter_2__us_axi_arcache ;
     wire [3:0]        w_net__AXI_Matrix_0__ds2_arcache ; 
 
-    wire [1:0]        w_port__AXI_Matrix_0__ds2_arid ;
+    wire [12:0]       w_port__AXI_Matrix_0__ds2_arid ;
     wire [3:0]        w_port__AXI_Protocol_Converter_2__us_axi_arid ;
-    wire [1:0]        w_net__AXI_Matrix_0__ds2_arid ; 
+    wire [12:0]       w_net__AXI_Matrix_0__ds2_arid ; 
 
     wire [7:0]        w_port__AXI_Matrix_0__ds2_arlen ;
     wire [7:0]        w_port__AXI_Protocol_Converter_2__us_axi_arlen ;
@@ -536,9 +536,9 @@ module system (
     wire [3:0]        w_port__AXI_Protocol_Converter_2__us_axi_awcache ;
     wire [3:0]        w_net__AXI_Matrix_0__ds2_awcache ; 
 
-    wire [1:0]        w_port__AXI_Matrix_0__ds2_awid ;
+    wire [12:0]       w_port__AXI_Matrix_0__ds2_awid ;
     wire [3:0]        w_port__AXI_Protocol_Converter_2__us_axi_awid ;
-    wire [1:0]        w_net__AXI_Matrix_0__ds2_awid ; 
+    wire [12:0]       w_net__AXI_Matrix_0__ds2_awid ; 
 
     wire [7:0]        w_port__AXI_Matrix_0__ds2_awlen ;
     wire [7:0]        w_port__AXI_Protocol_Converter_2__us_axi_awlen ;
@@ -596,9 +596,9 @@ module system (
     wire              w_port__ARM_Processor_System_0__master_gp0_axi_awready ;
     wire              w_net__AXI_Matrix_0__us0_awready ; 
 
-    wire [0:0]        w_port__AXI_Matrix_0__us0_bid ;
+    wire [11:0]       w_port__AXI_Matrix_0__us0_bid ;
     wire [11:0]       w_port__ARM_Processor_System_0__master_gp0_axi_bid ;
-    wire [0:0]        w_net__AXI_Matrix_0__us0_bid ; 
+    wire [11:0]       w_net__AXI_Matrix_0__us0_bid ; 
 
     wire [1:0]        w_port__AXI_Matrix_0__us0_bresp ;
     wire [1:0]        w_port__ARM_Processor_System_0__master_gp0_axi_bresp ;
@@ -612,9 +612,9 @@ module system (
     wire [31:0]       w_port__ARM_Processor_System_0__master_gp0_axi_rdata ;
     wire [31:0]       w_net__AXI_Matrix_0__us0_rdata ; 
 
-    wire [0:0]        w_port__AXI_Matrix_0__us0_rid ;
+    wire [11:0]       w_port__AXI_Matrix_0__us0_rid ;
     wire [11:0]       w_port__ARM_Processor_System_0__master_gp0_axi_rid ;
-    wire [0:0]        w_net__AXI_Matrix_0__us0_rid ; 
+    wire [11:0]       w_net__AXI_Matrix_0__us0_rid ; 
 
     wire              w_port__AXI_Matrix_0__us0_rlast ;
     wire              w_port__ARM_Processor_System_0__master_gp0_axi_rlast ;
@@ -677,7 +677,7 @@ module system (
     wire              w_net__AXI_Protocol_Converter_0__us_axi_awready ; 
 
     wire [3:0]        w_port__AXI_Protocol_Converter_0__us_axi_bid ;
-    wire [1:0]        w_port__AXI_Matrix_0__ds0_bid ;
+    wire [12:0]       w_port__AXI_Matrix_0__ds0_bid ;
     wire [3:0]        w_net__AXI_Protocol_Converter_0__us_axi_bid ; 
 
     wire [1:0]        w_port__AXI_Protocol_Converter_0__us_axi_bresp ;
@@ -693,7 +693,7 @@ module system (
     wire [31:0]       w_net__AXI_Protocol_Converter_0__us_axi_rdata ; 
 
     wire [3:0]        w_port__AXI_Protocol_Converter_0__us_axi_rid ;
-    wire [1:0]        w_port__AXI_Matrix_0__ds0_rid ;
+    wire [12:0]       w_port__AXI_Matrix_0__ds0_rid ;
     wire [3:0]        w_net__AXI_Protocol_Converter_0__us_axi_rid ; 
 
     wire              w_port__AXI_Protocol_Converter_0__us_axi_rlast ;
@@ -757,7 +757,7 @@ module system (
     wire              w_net__AXI_Protocol_Converter_1__us_axi_awready ; 
 
     wire [3:0]        w_port__AXI_Protocol_Converter_1__us_axi_bid ;
-    wire [1:0]        w_port__AXI_Matrix_0__ds1_bid ;
+    wire [12:0]       w_port__AXI_Matrix_0__ds1_bid ;
     wire [3:0]        w_net__AXI_Protocol_Converter_1__us_axi_bid ; 
 
     wire [1:0]        w_port__AXI_Protocol_Converter_1__us_axi_bresp ;
@@ -773,7 +773,7 @@ module system (
     wire [31:0]       w_net__AXI_Protocol_Converter_1__us_axi_rdata ; 
 
     wire [3:0]        w_port__AXI_Protocol_Converter_1__us_axi_rid ;
-    wire [1:0]        w_port__AXI_Matrix_0__ds1_rid ;
+    wire [12:0]       w_port__AXI_Matrix_0__ds1_rid ;
     wire [3:0]        w_net__AXI_Protocol_Converter_1__us_axi_rid ; 
 
     wire              w_port__AXI_Protocol_Converter_1__us_axi_rlast ;
@@ -837,7 +837,7 @@ module system (
     wire              w_net__AXI_Protocol_Converter_2__us_axi_awready ; 
 
     wire [3:0]        w_port__AXI_Protocol_Converter_2__us_axi_bid ;
-    wire [1:0]        w_port__AXI_Matrix_0__ds2_bid ;
+    wire [12:0]       w_port__AXI_Matrix_0__ds2_bid ;
     wire [3:0]        w_net__AXI_Protocol_Converter_2__us_axi_bid ; 
 
     wire [1:0]        w_port__AXI_Protocol_Converter_2__us_axi_bresp ;
@@ -853,7 +853,7 @@ module system (
     wire [31:0]       w_net__AXI_Protocol_Converter_2__us_axi_rdata ; 
 
     wire [3:0]        w_port__AXI_Protocol_Converter_2__us_axi_rid ;
-    wire [1:0]        w_port__AXI_Matrix_0__ds2_rid ;
+    wire [12:0]       w_port__AXI_Matrix_0__ds2_rid ;
     wire [3:0]        w_net__AXI_Protocol_Converter_2__us_axi_rid ; 
 
     wire              w_port__AXI_Protocol_Converter_2__us_axi_rlast ;
@@ -1167,7 +1167,6 @@ module system (
     assign p2f_clk0 = w_net__ARM_Processor_System_0__p2f_clk0 ;
     assign w_port__ARM_Processor_System_0__slave_hp0_axi_aclk = w_net__ARM_Processor_System_0__p2f_clk0 ;
     assign w_port__uiFDMA_0__M_AXI_ACLK = w_net__ARM_Processor_System_0__p2f_clk0 ;
-    assign w_port__ARM_Processor_System_0__master_gp0_axi_aclk = w_net__ARM_Processor_System_0__p2f_clk0 ;
     assign w_port__Processor_System_Reset_0__clk = w_net__ARM_Processor_System_0__p2f_clk0 ;
 
     assign w_net__ARM_Processor_System_0__p2f_clk1 = w_port__ARM_Processor_System_0__p2f_clk1 ;
@@ -1179,6 +1178,7 @@ module system (
     assign w_port__AXI_GPIO_1__s_axi_aclk = w_net__ARM_Processor_System_0__p2f_clk1 ;
     assign w_port__AXI_Protocol_Converter_2__aclk = w_net__ARM_Processor_System_0__p2f_clk1 ;
     assign w_port__axi_lite_pwm_0__s_axi_aclk = w_net__ARM_Processor_System_0__p2f_clk1 ;
+    assign w_port__ARM_Processor_System_0__master_gp0_axi_aclk = w_net__ARM_Processor_System_0__p2f_clk1 ;
 
     assign w_net__ARM_Processor_System_0__p2f_rst0_n = w_port__ARM_Processor_System_0__p2f_rst0_n ;
     assign p2f_rst0_n = w_net__ARM_Processor_System_0__p2f_rst0_n ;
@@ -1295,7 +1295,7 @@ module system (
     assign w_port__AXI_Protocol_Converter_0__us_axi_arcache = w_net__AXI_Matrix_0__ds0_arcache ;
 
     assign w_net__AXI_Matrix_0__ds0_arid = w_port__AXI_Matrix_0__ds0_arid ;
-    assign w_port__AXI_Protocol_Converter_0__us_axi_arid = {2'b0,w_net__AXI_Matrix_0__ds0_arid} ;
+    assign w_port__AXI_Protocol_Converter_0__us_axi_arid = w_net__AXI_Matrix_0__ds0_arid ;
 
     assign w_net__AXI_Matrix_0__ds0_arlen = w_port__AXI_Matrix_0__ds0_arlen ;
     assign w_port__AXI_Protocol_Converter_0__us_axi_arlen = w_net__AXI_Matrix_0__ds0_arlen ;
@@ -1325,7 +1325,7 @@ module system (
     assign w_port__AXI_Protocol_Converter_0__us_axi_awcache = w_net__AXI_Matrix_0__ds0_awcache ;
 
     assign w_net__AXI_Matrix_0__ds0_awid = w_port__AXI_Matrix_0__ds0_awid ;
-    assign w_port__AXI_Protocol_Converter_0__us_axi_awid = {2'b0,w_net__AXI_Matrix_0__ds0_awid} ;
+    assign w_port__AXI_Protocol_Converter_0__us_axi_awid = w_net__AXI_Matrix_0__ds0_awid ;
 
     assign w_net__AXI_Matrix_0__ds0_awlen = w_port__AXI_Matrix_0__ds0_awlen ;
     assign w_port__AXI_Protocol_Converter_0__us_axi_awlen = w_net__AXI_Matrix_0__ds0_awlen ;
@@ -1373,7 +1373,7 @@ module system (
     assign w_port__AXI_Protocol_Converter_1__us_axi_arcache = w_net__AXI_Matrix_0__ds1_arcache ;
 
     assign w_net__AXI_Matrix_0__ds1_arid = w_port__AXI_Matrix_0__ds1_arid ;
-    assign w_port__AXI_Protocol_Converter_1__us_axi_arid = {2'b0,w_net__AXI_Matrix_0__ds1_arid} ;
+    assign w_port__AXI_Protocol_Converter_1__us_axi_arid = w_net__AXI_Matrix_0__ds1_arid ;
 
     assign w_net__AXI_Matrix_0__ds1_arlen = w_port__AXI_Matrix_0__ds1_arlen ;
     assign w_port__AXI_Protocol_Converter_1__us_axi_arlen = w_net__AXI_Matrix_0__ds1_arlen ;
@@ -1403,7 +1403,7 @@ module system (
     assign w_port__AXI_Protocol_Converter_1__us_axi_awcache = w_net__AXI_Matrix_0__ds1_awcache ;
 
     assign w_net__AXI_Matrix_0__ds1_awid = w_port__AXI_Matrix_0__ds1_awid ;
-    assign w_port__AXI_Protocol_Converter_1__us_axi_awid = {2'b0,w_net__AXI_Matrix_0__ds1_awid} ;
+    assign w_port__AXI_Protocol_Converter_1__us_axi_awid = w_net__AXI_Matrix_0__ds1_awid ;
 
     assign w_net__AXI_Matrix_0__ds1_awlen = w_port__AXI_Matrix_0__ds1_awlen ;
     assign w_port__AXI_Protocol_Converter_1__us_axi_awlen = w_net__AXI_Matrix_0__ds1_awlen ;
@@ -1451,7 +1451,7 @@ module system (
     assign w_port__AXI_Protocol_Converter_2__us_axi_arcache = w_net__AXI_Matrix_0__ds2_arcache ;
 
     assign w_net__AXI_Matrix_0__ds2_arid = w_port__AXI_Matrix_0__ds2_arid ;
-    assign w_port__AXI_Protocol_Converter_2__us_axi_arid = {2'b0,w_net__AXI_Matrix_0__ds2_arid} ;
+    assign w_port__AXI_Protocol_Converter_2__us_axi_arid = w_net__AXI_Matrix_0__ds2_arid ;
 
     assign w_net__AXI_Matrix_0__ds2_arlen = w_port__AXI_Matrix_0__ds2_arlen ;
     assign w_port__AXI_Protocol_Converter_2__us_axi_arlen = w_net__AXI_Matrix_0__ds2_arlen ;
@@ -1481,7 +1481,7 @@ module system (
     assign w_port__AXI_Protocol_Converter_2__us_axi_awcache = w_net__AXI_Matrix_0__ds2_awcache ;
 
     assign w_net__AXI_Matrix_0__ds2_awid = w_port__AXI_Matrix_0__ds2_awid ;
-    assign w_port__AXI_Protocol_Converter_2__us_axi_awid = {2'b0,w_net__AXI_Matrix_0__ds2_awid} ;
+    assign w_port__AXI_Protocol_Converter_2__us_axi_awid = w_net__AXI_Matrix_0__ds2_awid ;
 
     assign w_net__AXI_Matrix_0__ds2_awlen = w_port__AXI_Matrix_0__ds2_awlen ;
     assign w_port__AXI_Protocol_Converter_2__us_axi_awlen = w_net__AXI_Matrix_0__ds2_awlen ;
@@ -1526,7 +1526,7 @@ module system (
     assign w_port__ARM_Processor_System_0__master_gp0_axi_awready = w_net__AXI_Matrix_0__us0_awready ;
 
     assign w_net__AXI_Matrix_0__us0_bid = w_port__AXI_Matrix_0__us0_bid ;
-    assign w_port__ARM_Processor_System_0__master_gp0_axi_bid = {11'b0,w_net__AXI_Matrix_0__us0_bid} ;
+    assign w_port__ARM_Processor_System_0__master_gp0_axi_bid = w_net__AXI_Matrix_0__us0_bid ;
 
     assign w_net__AXI_Matrix_0__us0_bresp = w_port__AXI_Matrix_0__us0_bresp ;
     assign w_port__ARM_Processor_System_0__master_gp0_axi_bresp = w_net__AXI_Matrix_0__us0_bresp ;
@@ -1538,7 +1538,7 @@ module system (
     assign w_port__ARM_Processor_System_0__master_gp0_axi_rdata = w_net__AXI_Matrix_0__us0_rdata ;
 
     assign w_net__AXI_Matrix_0__us0_rid = w_port__AXI_Matrix_0__us0_rid ;
-    assign w_port__ARM_Processor_System_0__master_gp0_axi_rid = {11'b0,w_net__AXI_Matrix_0__us0_rid} ;
+    assign w_port__ARM_Processor_System_0__master_gp0_axi_rid = w_net__AXI_Matrix_0__us0_rid ;
 
     assign w_net__AXI_Matrix_0__us0_rlast = w_port__AXI_Matrix_0__us0_rlast ;
     assign w_port__ARM_Processor_System_0__master_gp0_axi_rlast = w_net__AXI_Matrix_0__us0_rlast ;
@@ -1586,7 +1586,7 @@ module system (
     assign w_port__AXI_Matrix_0__ds0_awready = w_net__AXI_Protocol_Converter_0__us_axi_awready ;
 
     assign w_net__AXI_Protocol_Converter_0__us_axi_bid = w_port__AXI_Protocol_Converter_0__us_axi_bid ;
-    assign w_port__AXI_Matrix_0__ds0_bid = w_net__AXI_Protocol_Converter_0__us_axi_bid ;
+    assign w_port__AXI_Matrix_0__ds0_bid = {9'b0,w_net__AXI_Protocol_Converter_0__us_axi_bid} ;
 
     assign w_net__AXI_Protocol_Converter_0__us_axi_bresp = w_port__AXI_Protocol_Converter_0__us_axi_bresp ;
     assign w_port__AXI_Matrix_0__ds0_bresp = w_net__AXI_Protocol_Converter_0__us_axi_bresp ;
@@ -1598,7 +1598,7 @@ module system (
     assign w_port__AXI_Matrix_0__ds0_rdata = w_net__AXI_Protocol_Converter_0__us_axi_rdata ;
 
     assign w_net__AXI_Protocol_Converter_0__us_axi_rid = w_port__AXI_Protocol_Converter_0__us_axi_rid ;
-    assign w_port__AXI_Matrix_0__ds0_rid = w_net__AXI_Protocol_Converter_0__us_axi_rid ;
+    assign w_port__AXI_Matrix_0__ds0_rid = {9'b0,w_net__AXI_Protocol_Converter_0__us_axi_rid} ;
 
     assign w_net__AXI_Protocol_Converter_0__us_axi_rlast = w_port__AXI_Protocol_Converter_0__us_axi_rlast ;
     assign w_port__AXI_Matrix_0__ds0_rlast = w_net__AXI_Protocol_Converter_0__us_axi_rlast ;
@@ -1646,7 +1646,7 @@ module system (
     assign w_port__AXI_Matrix_0__ds1_awready = w_net__AXI_Protocol_Converter_1__us_axi_awready ;
 
     assign w_net__AXI_Protocol_Converter_1__us_axi_bid = w_port__AXI_Protocol_Converter_1__us_axi_bid ;
-    assign w_port__AXI_Matrix_0__ds1_bid = w_net__AXI_Protocol_Converter_1__us_axi_bid ;
+    assign w_port__AXI_Matrix_0__ds1_bid = {9'b0,w_net__AXI_Protocol_Converter_1__us_axi_bid} ;
 
     assign w_net__AXI_Protocol_Converter_1__us_axi_bresp = w_port__AXI_Protocol_Converter_1__us_axi_bresp ;
     assign w_port__AXI_Matrix_0__ds1_bresp = w_net__AXI_Protocol_Converter_1__us_axi_bresp ;
@@ -1658,7 +1658,7 @@ module system (
     assign w_port__AXI_Matrix_0__ds1_rdata = w_net__AXI_Protocol_Converter_1__us_axi_rdata ;
 
     assign w_net__AXI_Protocol_Converter_1__us_axi_rid = w_port__AXI_Protocol_Converter_1__us_axi_rid ;
-    assign w_port__AXI_Matrix_0__ds1_rid = w_net__AXI_Protocol_Converter_1__us_axi_rid ;
+    assign w_port__AXI_Matrix_0__ds1_rid = {9'b0,w_net__AXI_Protocol_Converter_1__us_axi_rid} ;
 
     assign w_net__AXI_Protocol_Converter_1__us_axi_rlast = w_port__AXI_Protocol_Converter_1__us_axi_rlast ;
     assign w_port__AXI_Matrix_0__ds1_rlast = w_net__AXI_Protocol_Converter_1__us_axi_rlast ;
@@ -1706,7 +1706,7 @@ module system (
     assign w_port__AXI_Matrix_0__ds2_awready = w_net__AXI_Protocol_Converter_2__us_axi_awready ;
 
     assign w_net__AXI_Protocol_Converter_2__us_axi_bid = w_port__AXI_Protocol_Converter_2__us_axi_bid ;
-    assign w_port__AXI_Matrix_0__ds2_bid = w_net__AXI_Protocol_Converter_2__us_axi_bid ;
+    assign w_port__AXI_Matrix_0__ds2_bid = {9'b0,w_net__AXI_Protocol_Converter_2__us_axi_bid} ;
 
     assign w_net__AXI_Protocol_Converter_2__us_axi_bresp = w_port__AXI_Protocol_Converter_2__us_axi_bresp ;
     assign w_port__AXI_Matrix_0__ds2_bresp = w_net__AXI_Protocol_Converter_2__us_axi_bresp ;
@@ -1718,7 +1718,7 @@ module system (
     assign w_port__AXI_Matrix_0__ds2_rdata = w_net__AXI_Protocol_Converter_2__us_axi_rdata ;
 
     assign w_net__AXI_Protocol_Converter_2__us_axi_rid = w_port__AXI_Protocol_Converter_2__us_axi_rid ;
-    assign w_port__AXI_Matrix_0__ds2_rid = w_net__AXI_Protocol_Converter_2__us_axi_rid ;
+    assign w_port__AXI_Matrix_0__ds2_rid = {9'b0,w_net__AXI_Protocol_Converter_2__us_axi_rid} ;
 
     assign w_net__AXI_Protocol_Converter_2__us_axi_rlast = w_port__AXI_Protocol_Converter_2__us_axi_rlast ;
     assign w_port__AXI_Matrix_0__ds2_rlast = w_net__AXI_Protocol_Converter_2__us_axi_rlast ;

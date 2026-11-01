@@ -58,8 +58,8 @@ AL_S32 main()
 
 //    AXI_GPIO_Init();
 //    al_printf("AXI GPIO Init successfully\r\n");
-//    TIM_PWM_Init();
-//    al_printf("TIM Init successfully\r\n");
+    TIM_PWM_Init();
+    al_printf("TIM Init successfully\r\n");
 
 
 //    AL_REG32_WRITE(0X80200000,0X01);
@@ -71,8 +71,8 @@ AL_S32 main()
     {
 //    	AXI_GPIO_Test();
 //    	al_printf("AXI GPIO Testing\r\n");
-//        TIM_PWM_test();
-//        al_printf("TIM Testing\r\n");
+        TIM_PWM_test();
+        al_printf("TIM Testing\r\n");
 
         UART_test();
     }
