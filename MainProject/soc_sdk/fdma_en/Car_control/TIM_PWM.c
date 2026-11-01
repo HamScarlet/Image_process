@@ -91,8 +91,10 @@ int PWM_Output(PWM_ID id, int cmd)
     static int pwm_status;
 
     pwm_status |= cmd << id;
+    pwm_status |= 1<<3;
     
     UI_Out32(REG_CTRL,pwm_status);
+    
     return 1;
 }
 

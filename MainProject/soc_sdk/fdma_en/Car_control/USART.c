@@ -120,11 +120,13 @@ void Cmd_Receive(COMMAND *cmd)
 
 void UART_test(void)
 {
+    UART_ReceiveData();
     if(RxDataReady)
     {
         UART_SendData(Rx_data,RxReceivedLength);
         while(AlUart_Hal_IsRxBusy(UartHandle));
-        UART_ReceiveData();
         RxDataReady = 0;
+        
+        
     }
 }

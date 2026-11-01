@@ -23,6 +23,7 @@
 #include "USART.h"
 #include "Servo.h"
 #include "Car_control.h"
+#include "Image.h"
 
 void Fclk_Init()
 {
@@ -56,24 +57,20 @@ AL_S32 main()
 
     UART_init();
 
+    IMAGE_INFO* Image_info = Image_init();
+
 //    AXI_GPIO_Init();
 //    al_printf("AXI GPIO Init successfully\r\n");
     TIM_PWM_Init();
     al_printf("TIM Init successfully\r\n");
-
-
-//    AL_REG32_WRITE(0X80200000,0X01);
-//    uint32_t r = AL_REG32_READ(0X80200000);
-//    al_printf("addr: %d\r\n", r);
-
 
     while(1)
     {
 //    	AXI_GPIO_Test();
 //    	al_printf("AXI GPIO Testing\r\n");
         TIM_PWM_test();
-        al_printf("TIM Testing\r\n");
-
+        Image_ReadResult(Image_info);
+        Image_Show(Image_info);
         UART_test();
     }
 
