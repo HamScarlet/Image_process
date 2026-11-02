@@ -16,6 +16,7 @@ typedef struct {
 }COMMAND;
 
 void Process_Cmd(COMMAND cmd);
-
+void car_init(void);
+void car_loop(void);
 
 #endif /* CAR_CONTROL_H_ */

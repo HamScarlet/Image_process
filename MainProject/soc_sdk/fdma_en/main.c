@@ -61,17 +61,21 @@ AL_S32 main()
 
 //    AXI_GPIO_Init();
 //    al_printf("AXI GPIO Init successfully\r\n");
-    TIM_PWM_Init();
-    al_printf("TIM Init successfully\r\n");
+    // TIM_PWM_Init();
+    // al_printf("TIM Init successfully\r\n");
+
+    car_init();
 
     while(1)
     {
 //    	AXI_GPIO_Test();
 //    	al_printf("AXI GPIO Testing\r\n");
-        TIM_PWM_test();
-        Image_ReadResult(Image_info);
-        Image_Show(Image_info);
-        UART_test();
+        // TIM_PWM_test();
+        // Image_ReadResult(Image_info);
+        // Image_Show(Image_info);
+        // UART_test();
+
+        car_loop();
     }
 
 

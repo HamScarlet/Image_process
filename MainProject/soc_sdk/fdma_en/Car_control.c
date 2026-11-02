@@ -29,14 +29,15 @@ COMMAND cmd = {0};
 
 void car_init(void)
 {
-	motor_init();
+	motor_Init();
 	Servo_init();
-	USART_init();
+	USART_Init();
+	TIM_PWM_Init();
 }
 
 void car_loop(void)
 {
-	Cmd_Receive(&cmd);
+	USART_GetCmd(&cmd);
 	Process_Cmd(cmd);
 }
 
@@ -61,12 +62,12 @@ void Process_Cmd(COMMAND cmd)
 				/* code */
 				break;
 
-			case 2:
+			case 2: //右转
 				SetSpeed(-speed,speed);
 				/* code */
 				break;
 
-			case 3:
+			case 3: //左转
 				SetSpeed(speed,-speed);
 				/* code */
 				break;
