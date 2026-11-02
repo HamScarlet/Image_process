@@ -3,24 +3,24 @@
 -----------------------------------------------------------
 | Timing                    |                             |
 |     Setup WNS             |        -4005                |
-|     Setup TNS             |     -3063469                |
+|     Setup TNS             |     -3063447                |
 |     Num of violated S-EP  |         1489                |
 |     Hold WNS              |         -353                |
 |     Hold TNS              |        -4236                |
 |     Num of violated H-EP  |           12                |
 -----------------------------------------------------------
 | Utilization               |                             |
-|     #registers            |        34368                |
-|     #luts                 |        17715                |
-|     #lut1                 |           98                |
-|     #lut1(~A)             |           96                |
-|     #slices               |        12278                |
-|     slices percentage     |       23.40%                |
+|     #registers            |        34429                |
+|     #luts                 |        17829                |
+|     #lut1                 |          103                |
+|     #lut1(~A)             |          101                |
+|     #slices               |        12364                |
+|     slices percentage     |       23.56%                |
 |     #RAMs                 |           72                |
-|     #DSPs                 |           61                |
+|     #DSPs                 |           64                |
 |     #f7mux                |        1.98%                |
-|     #MACROs               |          905                |
-|     #insts in MACRO       |        12772                |
+|     #MACROs               |          912                |
+|     #insts in MACRO       |        12864                |
 -----------------------------------------------------------
 | kept_net                  |                             |
 |     #syn_keep             |         1398                |
@@ -30,8 +30,8 @@
 |     #max_fanout_keep      |            0                |
 |     #async_reg            |            0                |
 -----------------------------------------------------------
-| Top 10% datanet fanout#   |        25.36                |
-| dff(single fanout)->dff   |         1584                |
+| Top 10% datanet fanout#   |        25.48                |
+| dff(single fanout)->dff   |         1608                |
 | dff(single fanout)->dram  |            8                |
 -----------------------------------------------------------
 | Over-quota path num*      |                             |
@@ -46,34 +46,34 @@ Note**: Rent shows the rent exponent value of the modules whose rent value excee
         Only modules under top are reported, and the threshold is defined as 0.7.
 
 Logic Level Distribution
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Clock                                                                                                                        |  Period             |  0     |  1     |  2     |  3    |  4    |  5    |  6    |  7    |  8   |  9   |  10
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  clk24m                                                                                                                       |  41.500ns (24MHz)   |  35    |  44    |  9     |  23   |  35   |  19   |  0    |  0    |  0   |  0   |  0
-  clk70m                                                                                                                       |  14.500ns (68MHz)   |  8     |  6     |  4     |  0    |  0    |  0    |  0    |  0    |  0   |  0   |  0
-  pclkx1                                                                                                                       |  20.000ns (50MHz)   |  1021  |  630   |  176   |  96   |  95   |  61   |  27   |  44   |  28  |  10  |  3
-  pclkx5                                                                                                                       |  4.000ns (250MHz)   |  16    |  33    |  0     |  0    |  0    |  0    |  0    |  0    |  0   |  0   |  0
-  sysclk                                                                                                                       |  10.000ns (100MHz)  |  0     |  0     |  0     |  0    |  0    |  0    |  0    |  0    |  0   |  0   |  0
-  system_inst/ARM_Processor_System_0/ARM_Processor_System_59fb6a0bf2ca_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.GEN_FCLK0            |  2.500ns (400MHz)   |  0     |  0     |  0     |  0    |  0    |  0    |  0    |  0    |  0   |  0   |  0
-  system_inst/ARM_Processor_System_0/ARM_Processor_System_59fb6a0bf2ca_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.GEN_PL_GP0S          |  20.000ns (50MHz)   |  24    |  39    |  1     |  2    |  0    |  0    |  0    |  0    |  0   |  0   |  0
-  system_inst/ARM_Processor_System_0/ARM_Processor_System_59fb6a0bf2ca_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.GEN_PL_HP0           |  5.000ns (200MHz)   |  68    |  69    |  0     |  0    |  0    |  0    |  0    |  0    |  0   |  0   |  0
-  system_inst/ARM_Processor_System_0/ARM_Processor_System_59fb6a0bf2ca_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.master_gp0_axi_aclk  |  20.000ns (50MHz)   |  0     |  0     |  0     |  0    |  0    |  0    |  0    |  0    |  0   |  0   |  0
-  system_inst/ARM_Processor_System_0/ARM_Processor_System_59fb6a0bf2ca_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.p2f_clk0             |  5.000ns (200MHz)   |  278   |  414   |  265   |  84   |  3    |  0    |  0    |  0    |  0   |  0   |  0
-  system_inst/ARM_Processor_System_0/ARM_Processor_System_59fb6a0bf2ca_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.p2f_clk1             |  20.000ns (50MHz)   |  7264  |  1039  |  2695  |  645  |  260  |  222  |  384  |  83   |  13  |  0   |  0
-  system_inst/ARM_Processor_System_0/ARM_Processor_System_59fb6a0bf2ca_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.slave_hp0_axi_aclk   |  5.000ns (200MHz)   |  0     |  0     |  0     |  0    |  0    |  0    |  0    |  0    |  0   |  0   |  0
-  Total                                                                                                                        |  NA                 |  8714  |  2274  |  3150  |  850  |  393  |  302  |  411  |  127  |  41  |  10  |  3
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Clock                                                                                                                        |  Period             |  0     |  1     |  2     |  3    |  4    |  5    |  6    |  7    |  8    |  9   |  10  |  12
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  clk24m                                                                                                                       |  41.500ns (24MHz)   |  35    |  43    |  9     |  23   |  27   |  28   |  0    |  0    |  0    |  0   |  0   |  0
+  clk70m                                                                                                                       |  14.500ns (68MHz)   |  8     |  6     |  4     |  0    |  0    |  0    |  0    |  0    |  0    |  0   |  0   |  0
+  pclkx1                                                                                                                       |  20.000ns (50MHz)   |  1023  |  652   |  202   |  94   |  92   |  60   |  27   |  44   |  4    |  10  |  3   |  24
+  pclkx5                                                                                                                       |  4.000ns (250MHz)   |  16    |  33    |  0     |  0    |  0    |  0    |  0    |  0    |  0    |  0   |  0   |  0
+  sysclk                                                                                                                       |  10.000ns (100MHz)  |  0     |  0     |  0     |  0    |  0    |  0    |  0    |  0    |  0    |  0   |  0   |  0
+  system_inst/ARM_Processor_System_0/ARM_Processor_System_59fb6a0bf2ca_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.GEN_FCLK0            |  2.500ns (400MHz)   |  0     |  0     |  0     |  0    |  0    |  0    |  0    |  0    |  0    |  0   |  0   |  0
+  system_inst/ARM_Processor_System_0/ARM_Processor_System_59fb6a0bf2ca_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.GEN_PL_GP0S          |  20.000ns (50MHz)   |  24    |  39    |  2     |  1    |  0    |  0    |  0    |  0    |  0    |  0   |  0   |  0
+  system_inst/ARM_Processor_System_0/ARM_Processor_System_59fb6a0bf2ca_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.GEN_PL_HP0           |  5.000ns (200MHz)   |  68    |  69    |  0     |  0    |  0    |  0    |  0    |  0    |  0    |  0   |  0   |  0
+  system_inst/ARM_Processor_System_0/ARM_Processor_System_59fb6a0bf2ca_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.master_gp0_axi_aclk  |  20.000ns (50MHz)   |  0     |  0     |  0     |  0    |  0    |  0    |  0    |  0    |  0    |  0   |  0   |  0
+  system_inst/ARM_Processor_System_0/ARM_Processor_System_59fb6a0bf2ca_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.p2f_clk0             |  5.000ns (200MHz)   |  278   |  382   |  281   |  100  |  3    |  0    |  0    |  0    |  0    |  0   |  0   |  0
+  system_inst/ARM_Processor_System_0/ARM_Processor_System_59fb6a0bf2ca_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.p2f_clk1             |  20.000ns (50MHz)   |  7264  |  1039  |  2695  |  645  |  284  |  91   |  381  |  56   |  150  |  0   |  0   |  0
+  system_inst/ARM_Processor_System_0/ARM_Processor_System_59fb6a0bf2ca_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.slave_hp0_axi_aclk   |  5.000ns (200MHz)   |  0     |  0     |  0     |  0    |  0    |  0    |  0    |  0    |  0    |  0   |  0   |  0
+  Total                                                                                                                        |  NA                 |  8716  |  2263  |  3193  |  863  |  406  |  179  |  408  |  100  |  154  |  10  |  3   |  24
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Hierarchical Rent Exponent Report
-+----------------------------------------------------------------------------------+
-|Inst                  |Model               |Rent     |Cell     |Pin     |Term     |
-+----------------------------------------------------------------------------------+
-|top                   |system_top          |0.14     |67995    |284988  |20       |
-|  u_uidbuf            |uidbuf_14           |0.62     |1265     |5775    |385      |
-|  system_inst         |system_2            |0.47     |8430     |38131   |318      |
-|  u_lane_stream_stats |lane_stream_stats_8 |0.42     |5084     |25633   |177      |
-|  u_hdmi_tx           |hdmi_tx_5           |0.35     |1854     |7011    |51       |
-|  u_isp_top           |isp_top_6           |0.33     |46800    |193805  |144      |
-+----------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------+
+|Inst                  |Model                |Rent     |Cell     |Pin     |Term     |
++-----------------------------------------------------------------------------------+
+|top                   |system_top           |0.14     |68262    |287149  |20       |
+|  u_uidbuf            |uidbuf_16            |0.62     |1266     |5773    |380      |
+|  system_inst         |system_2             |0.47     |8439     |38206   |318      |
+|  u_lane_stream_stats |lane_stream_stats_10 |0.42     |5094     |25684   |177      |
+|  u_hdmi_tx           |hdmi_tx_5            |0.35     |1855     |7029    |51       |
+|  u_isp_top           |isp_top_6            |0.33     |46797    |193798  |144      |
++-----------------------------------------------------------------------------------+
 Note: Cell represents total number of cells inside module; Pin represents total number of pins
       which have net connection inside module; Term represents total number of PIs and POs of module.
       Rent represents the relationship between number of terms and number of cells in module.

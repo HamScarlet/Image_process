@@ -1,0 +1,38 @@
+============================================================
+   Tang Dynasty, V6.2.168116
+   Copyright (c) 2012-2025 Anlogic Inc.
+   Executable = E:/FPGA/Anlu/bin/td.exe
+   Built at =   16:32:07 Jun 12 2025
+   Run by =     zhuji
+   Run Date =   Mon Nov  2 14:49:33 2026
+
+   Run on =     ZHUJIN
+============================================================
+PRG-8000 ERROR: host cast error: bad lexical cast: source type value could not be interpreted as target, using default: 5555
+GUI-5005 WARNING: Unknown file icon ...
+PRG-8000 ERROR: Connect server failed.
+GUI-5005 WARNING: Unknown file icon ...
+HDL-5007 WARNING: block identifier is required on this block in uisrc/03_ip/isp/brightness_adj/Brightness_adjustment.v(83)
+HDL-5007 WARNING: block identifier is required on this block in uisrc/03_ip/isp/contrast_adj/contrast_adj.v(95)
+HDL-5370 WARNING: parameter 'C0' becomes localparam in 'Saturation_adj' with formal parameter declaration list in uisrc/03_ip/isp/saturation_adj/Saturation_adj.v(136)
+HDL-5370 WARNING: parameter 'C1' becomes localparam in 'Saturation_adj' with formal parameter declaration list in uisrc/03_ip/isp/saturation_adj/Saturation_adj.v(137)
+HDL-5370 WARNING: parameter 'C2' becomes localparam in 'Saturation_adj' with formal parameter declaration list in uisrc/03_ip/isp/saturation_adj/Saturation_adj.v(138)
+PRJ-5303 WARNING: Run syn_1 failed.
+PRJ-8403 ERROR: File(E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/my_image_process/lane_result_axi.v) is already in fileSet(design_1).
+GUI-5001 WARNING: Failed to add the file: E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/my_image_process/lane_result_axi.v
+PRJ-8403 ERROR: File(E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/my_image_process/lane_result_cdc.v) is already in fileSet(design_1).
+GUI-5001 WARNING: Failed to add the file: E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/my_image_process/lane_result_cdc.v
+PRJ-8403 ERROR: File(E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/my_image_process/lane_result_latch.v) is already in fileSet(design_1).
+GUI-5001 WARNING: Failed to add the file: E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/my_image_process/lane_result_latch.v
+PRJ-8403 ERROR: File(E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/my_image_process/lane_rgb_gray.v) is already in fileSet(design_1).
+GUI-5001 WARNING: Failed to add the file: E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/my_image_process/lane_rgb_gray.v
+PRJ-8403 ERROR: File(E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/my_image_process/lane_stream_stats.v) is already in fileSet(design_1).
+GUI-5001 WARNING: Failed to add the file: E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/my_image_process/lane_stream_stats.v
+PRJ-8403 ERROR: File(E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/my_image_process/rgb4_downscale_8_15.v) is already in fileSet(design_1).
+GUI-5001 WARNING: Failed to add the file: E:/FPGA/anlu_prj/Image_process/MainProject/soc_prj/uisrc/01_rtl/my_image_process/rgb4_downscale_8_15.v
+HDL-5007 WARNING: block identifier is required on this block in uisrc/03_ip/isp/brightness_adj/Brightness_adjustment.v(83)
+HDL-5007 WARNING: block identifier is required on this block in uisrc/03_ip/isp/contrast_adj/contrast_adj.v(95)
+HDL-5370 WARNING: parameter 'C0' becomes localparam in 'Saturation_adj' with formal parameter declaration list in uisrc/03_ip/isp/saturation_adj/Saturation_adj.v(136)
+HDL-5370 WARNING: parameter 'C1' becomes localparam in 'Saturation_adj' with formal parameter declaration list in uisrc/03_ip/isp/saturation_adj/Saturation_adj.v(137)
+HDL-5370 WARNING: parameter 'C2' becomes localparam in 'Saturation_adj' with formal parameter declaration list in uisrc/03_ip/isp/saturation_adj/Saturation_adj.v(138)
+PRJ-5303 WARNING: Run phy_1 failed.

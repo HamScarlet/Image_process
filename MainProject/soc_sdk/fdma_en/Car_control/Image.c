@@ -30,7 +30,7 @@ int Image_ReadResult(IMAGE_INFO *info)
 {
     uint32_t status;
 
-    if (info == 0 || !Image_init())
+    if (info == 0)
         return 0;
 
     /* The PL copies all live fields to its snapshot bank on this write. */

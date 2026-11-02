@@ -24,6 +24,9 @@
 #include "Servo.h"
 #include "Car_control.h"
 #include "Image.h"
+#include "Al_systimer.h"
+
+AL_U64 tick;
 
 void Fclk_Init()
 {
@@ -71,8 +74,13 @@ AL_S32 main()
 //    	AXI_GPIO_Test();
 //    	al_printf("AXI GPIO Testing\r\n");
         // TIM_PWM_test();
-        // Image_ReadResult(Image_info);
-        // Image_Show(Image_info);
+        if(AlSys_GetTimerTickCount() - tick > AlSys_GetTimerFreq())
+        {
+            Image_ReadResult(Image_info);
+            Image_Show(Image_info);
+            tick = AlSys_GetTimerTickCount();
+        }
+        
         // UART_test();
 
         car_loop();

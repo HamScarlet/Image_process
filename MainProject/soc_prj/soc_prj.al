@@ -467,6 +467,14 @@
                     <Attr Name="CompileOrder" Val="65"/>
                 </FileInfo>
             </File>
+            <File Path="uisrc/01_rtl/my_image_process/lane_overlay.v">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="66"/>
+                </FileInfo>
+            </File>
         </Verilog>
         <System_Verilog>
             <File Path="uisrc/03_ip/alip/mipi_rx/channel_aligner_wrapper.enc.sv">

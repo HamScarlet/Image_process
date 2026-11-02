@@ -143,6 +143,9 @@ module system_top (
   wire lane_result_update_p2f;
   wire [75:0] lane_result_bundle_p2f;
   wire lane_cdc_overrun_p2f;
+  wire lane_overlay_update;
+  wire [75:0] lane_overlay_bundle;
+  wire lane_overlay_cdc_overrun;
   wire [75:0] lane_result_bundle_pixel = {
       lane_result_valid, lane_valid, lane_frame_count, lane_left_x,
       lane_right_x, lane_center_offset, lane_curve_class, lane_confidence
@@ -173,7 +176,9 @@ module system_top (
   wire 			vtc_last;  		//synthesis keep  //满足stream时序产生 later 信号,用于每行结束
 
   reg  [9:0] display_y;
+  reg  [9:0] display_x;
   wire       display_image_line;
+  wire [23:0] display_base_rgb;
 
   wire 			I_video_in_user;  //synthesis keep  
   wire 			I_video_in_valid; //synthesis keep  
@@ -190,20 +195,49 @@ module system_top (
   assign I_video_in_user = vtc_user;
   assign I_video_in_valid = vtc_de_valid & hdmi_video_ready;
   assign I_video_in_last = vtc_last;
-  assign I_video_in_data = (display_image_line && fdma_O_R_tvalid) ?
-                              fdma_O_R_tdata_24 : 24'd0;
+  assign display_base_rgb = (display_image_line && fdma_O_R_tvalid) ?
+                                fdma_O_R_tdata_24 : 24'd0;
+
+  // A second mailbox feeds the HDMI pixel domain. The PS/AXI mailbox remains
+  // independent, so display timing never depends on software reads.
+  lane_result_cdc #(.BUNDLE_WIDTH(76)) u_lane_result_cdc_display (
+      .src_clk       (S_hs_rx_clk),
+      .src_rst_n     (locked),
+      .I_src_update  (lane_frame_done),
+      .I_src_bundle  (lane_result_bundle_pixel),
+      .dst_clk       (pclkx1),
+      .dst_rst_n     (locked),
+      .O_dst_update  (lane_overlay_update),
+      .O_dst_bundle  (lane_overlay_bundle),
+      .O_dst_overrun (lane_overlay_cdc_overrun)
+  );
+
+  lane_overlay u_lane_overlay (
+      .I_enable   (lane_overlay_bundle[75] && lane_overlay_bundle[74]),
+      .I_x        (display_x),
+      .I_y        (display_y - IMAGE_TOP_OFFSET),
+      .I_left_x   (lane_overlay_bundle[41:32]),
+      .I_right_x  (lane_overlay_bundle[31:22]),
+      .I_rgb      (display_base_rgb),
+      .O_rgb      (I_video_in_data)
+  );
 
   // Align the 576-line image with each 600-line HDMI frame using 12-line top/bottom bars.
   always @(posedge pclkx1 or negedge locked) begin
-    if (!locked)
+    if (!locked) begin
       display_y <= 10'd0;
-    else if (vtc_user)
+      display_x <= 10'd0;
+    end else if (vtc_user) begin
       display_y <= 10'd0;
-    else if (vtc_last) begin
+      display_x <= 10'd0;
+    end else if (vtc_last) begin
+      display_x <= 10'd0;
       if (display_y == HDMI_ACTIVE_HEIGHT - 1)
         display_y <= 10'd0;
       else
         display_y <= display_y + 1'b1;
+    end else if (vtc_de_valid) begin
+      display_x <= display_x + 1'b1;
     end
   end
 

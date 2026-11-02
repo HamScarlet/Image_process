@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChipProbe project_name="soc_prj" chip_name="DR1M90GEG400" probe_num="1">
+		<probe_pin>
+				<source>system_inst/axi_lite_pwm_0/axi_lite_pwm/u_lane_result_axi/I_result_update</source>
+				<pad_location>A20</pad_location>
+				<port_name>system_inst/axi_lite_pwm_0/axi_lite_pwm/u_lane_result_axi/I_result_update_chipProbe</port_name>
+				<reg_num>0</reg_num>
+				<enable>true</enable>
+		</probe_pin>
+</ChipProbe>
