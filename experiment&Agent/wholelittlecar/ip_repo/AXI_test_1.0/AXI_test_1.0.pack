@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PackProject Version="110">
+    <ProjectName Name="AXI_test_1.0" Path="D:/FPGAproject/AnLuRun/PSPWM/ip_repo/AXI_test_1.0" Step="0"/>
+    <CompFile Filename="Component.xml"/>
+    <Dependency Filename="Dependency.tcl"/>
+    <Layout Filename="Layout.tcl"/>
+    <AbstractionInfo Count="0"/>
+    <Filesets Path=""/>
+    <Ports>
+        <Port Name="s_axi_aclk" Width="1"/>
+        <Port Name="s_axi_aresetn" Width="1"/>
+        <Port Name="s_axi_awaddr" Width="32"/>
+        <Port Name="s_axi_awvalid" Width="1"/>
+        <Port Name="s_axi_awready" Width="1"/>
+        <Port Name="s_axi_wdata" Width="32"/>
+        <Port Name="s_axi_wstrb" Width="4"/>
+        <Port Name="s_axi_wvalid" Width="1"/>
+        <Port Name="s_axi_wready" Width="1"/>
+        <Port Name="s_axi_bresp" Width="2"/>
+        <Port Name="s_axi_bvalid" Width="1"/>
+        <Port Name="s_axi_bready" Width="1"/>
+        <Port Name="s_axi_araddr" Width="32"/>
+        <Port Name="s_axi_arvalid" Width="1"/>
+        <Port Name="s_axi_arready" Width="1"/>
+        <Port Name="s_axi_rdata" Width="32"/>
+        <Port Name="s_axi_rresp" Width="2"/>
+        <Port Name="s_axi_rvalid" Width="1"/>
+        <Port Name="s_axi_rready" Width="1"/>
+    </Ports>
+</PackProject>

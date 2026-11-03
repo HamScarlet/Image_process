@@ -1,0 +1,11 @@
+============================================================
+   Tang Dynasty, V5.9.151508
+   Copyright (c) 2012-2025 Anlogic Inc.
+   Executable = D:/Anlu_2025_1/bin/td.exe
+   Built at =   12:47:27 Feb 21 2025
+   Run by =     VLKUS_Li
+   Run Date =   Mon Mar 24 15:24:00 2025
+
+   Run on =     DESKTOP-2EA0AIV
+============================================================
+TMR-6524 WARNING: Fails to find any valid -from targets, for constraint(s):  set_false_path -from [ get_regs {I_system/w_port__ARM_Processor_System_0__p2f_rst0_n} ] -to [ get_clocks {p2f_clk0} ].

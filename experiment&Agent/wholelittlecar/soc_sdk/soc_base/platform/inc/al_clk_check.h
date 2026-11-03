@@ -1,0 +1,214 @@
+/* ==========================================================================
+ * al_clk_check.h -- 时钟常量编译期自检 (手写文件, 由人维护)
+ * --------------------------------------------------------------------------
+ * 为什么本文件是手写的, 而不是写在 soc_plat.h 里面:
+ *   soc_plat.h / soc_plat.c / soc_plat.tcl 都是安路 TD 的 HPFTool **自动生成物**
+ *   (soc_plat.h 头部带 HPF_EXPORT_TIME / HPFTool_Version / BITSTREAM_GENERATE_TIME
+ *    等标记, 本工程为 "HPF_EXPORT_TIME: 2026/10/29 19:37:32")。
+ *   每次在 TD/FD 里重新导出(Export)硬件配置, 这几个文件都会被整体覆盖重写,
+ *   写进去的任何断言都会静默消失。而"会静默消失的检查"比没有检查更危险,
+ *   因为它会让人误以为防线还在。
+ *   所以本文件独立存在, 只依赖 soc_plat.h 里那些时钟宏的 **名字**,
+ *   不关心它们是怎么被生成的; 也不需要修改生成链路。
+ *
+ *   >>> 禁止把本文件的断言块搬回 soc_plat.h <<<
+ *   (搬回去 = 下次导出就没了 = 事故防线再次裸奔)
+ *   若希望它随导出一起生成, 正确做法是改 HPFTool 的导出模板,
+ *   而不是往生成物里手写 —— 那属于工具链层面的改动, 不在本文件范围。
+ *
+ * 谁引用本文件:
+ *   soc_base/dr1m90_fpsoc_cpu0/inc/al_hal.h 在 #include "soc_plat.h" 之后
+ *   紧接着 #include "al_clk_check.h", 因此凡是使用 HAL 的源文件都会自带这组检查。
+ *   本文件第一件事就是 #include "soc_plat.h", 所以单独包含本文件也成立,
+ *   不依赖调用方的包含顺序。
+ *
+ * --------------------------------------------------------------------------
+ * 为什么需要这组断言 (2026-10-29 现场故障, 排查耗时 70 分钟):
+ *   UART 输出全部是乱码, 编译/链接/启动都没有任何报错, 只能靠物理测量才发现。
+ *   根因是"常量假设的分频比"与"CRG 寄存器实际生效的分频比"悄无声息地脱钩:
+ *     (1) soc_plat.h 把 UART_CLOCK 定为 49,995,000, 隐含假设
+ *         UART 时钟 = IO_400_FREQ / 8 = 399,960,000 / 8 = 49,995,000 (50 MHz);
+ *     (2) 但 CRG 寄存器 0xF8801028 (IO400_DIV8_PARA) 被工具生成成了
+ *         0x00000008。它并不是"分频系数", 而是"档位选择码", 低 2 位才决定档位:
+ *             低 2 位 == 00b  ->  IO_400 / 32
+ *             低 2 位 == 01b  ->  IO_400 / 8
+ *             低 2 位 == 11b  ->  IO_400 / 1
+ *         0x00000008 的低 2 位是 00b, 硬件实际按 IO_400 / 32 执行:
+ *             399,960,000 / 32 = 12,498,750 Hz (约 12.5 MHz);
+ *     (3) 驱动于是按 49,995,000 算出分频值 27, 却作用在 12.5 MHz 的时钟上,
+ *         实际波特率约 28,932 -> 全乱码。
+ *   当时的修复: 把 0xF8801028 写成 0x01010101 (低 2 位 01b = IO_400/8 = 50 MHz),
+ *   驱动重新按 49,995,000 / 27 得到 115,729 baud (误差 +0.46%)。
+ *
+ *   这组断言把"IO_400 域必须走 /8 档"这个硬件事实钉在代码里。
+ *   只要有人(或工具重新生成)改动了时钟宏, 使它与该事实脱钩,
+ *   编译期立刻失败, 而不是等烧到板子上听乱码。
+ *
+ * 排障指引 (此处编译失败时先读这段, 不要直接删断言):
+ *   1) 先看 soc_plat.c 里 0xF8801028 写的是不是 0x01010101。
+ *      若不是, 说明硬件实际生效的是别的档位 (00b = /32, 11b = /1),
+ *      正确做法是把该寄存器改回 0x01010101, 而不是放宽这里的断言;
+ *   2) 若确实是设计变更(有意改用别的档位), 则同步把 UART_CLOCK /
+ *      P2F_CLOCK_0 / MMC0_IO_FREQ / MMC1_IO_FREQ 改成新档位对应的频率,
+ *      断言自然通过, 且常量与硬件重新自洽;
+ *   3) 极端情况下可临时用 -DAL_SKIP_CLK_ASSERT 整体跳过本文件的有效内容,
+ *      但必须记录原因与恢复计划 —— 跳过等于主动放弃这道防线。
+ *
+ * 兼容性与约束:
+ *   - 工具链: 安路 TD/FD 2026.1 (arm 交叉 C 编译器), 语言标准未知,
+ *     按最保守的 C89/C99 处理: 有 C11/C++11 内建静态断言才用, 否则退化为
+ *     经典的 typedef 负长度数组技巧, 不裸用 _Static_assert;
+ *   - 只产生 typedef, 不产生任何变量/函数/初始化代码: 零运行时开销、零行为改变;
+ *   - 每条断言独占一行, 用 __LINE__ 串联出唯一名字, 避免重复定义。
+ * ========================================================================== */
+
+#ifndef __AL_CLK_CHECK_H
+#define __AL_CLK_CHECK_H
+
+/* 先包含宏的来源, 保证无论谁先包含谁, 下面的时钟宏都是可见的 */
+#include "soc_plat.h"
+
+#ifndef AL_SKIP_CLK_ASSERT
+
+/* 是否能使用语言内建的静态断言 */
+#if defined(__cplusplus) && (__cplusplus >= 201103L)
+#define AL_CLKCHK_HAS_STATIC_ASSERT     1
+#elif defined(__STDC_VERSION__) && (__STDC_VERSION__ >= 201112L)
+#define AL_CLKCHK_HAS_STATIC_ASSERT     1
+#else
+#define AL_CLKCHK_HAS_STATIC_ASSERT     0
+#endif
+
+/* 两级拼接: 保证 __LINE__ 先展开再粘贴 (C89 亦可正常工作) */
+#define AL_CLKCHK_CAT3_(a, b, c)        a##b##c
+#define AL_CLKCHK_CAT3(a, b, c)         AL_CLKCHK_CAT3_(a, b, c)
+
+/* |a - b|, 仅用于编译期常量 */
+#define AL_CLKCHK_ABS_DIFF(a, b)        (((a) > (b)) ? ((a) - (b)) : ((b) - (a)))
+
+/*
+ * 基础断言: cond 为假则编译失败。
+ *   - C11/C++11: _Static_assert(cond, msg);
+ *   - 其它:      typedef char al_clkchk_<id><__LINE__>[(cond) ? 1 : -1],
+ *                cond 为假时数组长度为 -1, 编译器必然报错。typedef 位于文件
+ *                作用域, 不会触发 unused-typedef 之类的告警。
+ *   id 取一个能自解释的标识 (如 UART_MUST_EQ_IO400_DIV8), 这样在 C89/C99 路径下
+ *   编译器报 "size of array 'al_clkchk_UART_MUST_EQ_IO400_DIV8123' is negative"
+ *   时, 光看数组名就知道是哪条不变式被破坏了; 后缀行号保证名字唯一。
+ */
+#if AL_CLKCHK_HAS_STATIC_ASSERT
+#define AL_CLKCHK_ASSERT(cond, msg, id) \
+    _Static_assert((cond), msg)
+#else
+#define AL_CLKCHK_ASSERT(cond, msg, id) \
+    typedef char AL_CLKCHK_CAT3(al_clkchk_, id, __LINE__)[(cond) ? 1 : -1]
+#endif
+
+/*
+ * 相对容差断言: |a - b| / b <= 0.1%, 即 |a - b| <= b / 1000。
+ *   - 全程整数运算, 不引入浮点, 避免浮点在整型常量表达式里的可移植性问题;
+ *   - 刻意写成"除以 1000"而不是"乘以 1000": 若写成 |a-b| * 1000 <= b,
+ *     在 long 为 32 位的目标(arm-none-eabi AArch32)上, 4 倍量级偏差时
+ *     |a-b| * 1000 会溢出成负数, 条件反而成立, 断言被静默绕过 (已实测复现)。
+ *     除法形式两侧都不会溢出, 且 b 必须 >= 1000 才有意义(本处 b 约 1.25e7)。
+ */
+#define AL_CLKCHK_ASSERT_NEAR_0P1(a, b, id) \
+    AL_CLKCHK_ASSERT((AL_CLKCHK_ABS_DIFF((long)(a), (long)(b)) <= ((long)(b) / 1000L)), \
+                     "clock const deviates from IO_400 derived value by more than 0.1%", id)
+
+/* --- 1) IO_400 域走 /8 档的消费者: 必须精确等于 IO_400_FREQ / 8 = 49,995,000 --- */
+/*     UART_CLOCK 正是 2026-10-29 事故中被算错的那个常量, 这里是最直接的告警点。 */
+AL_CLKCHK_ASSERT((UART_CLOCK) == ((IO_400_FREQ) / 8),
+                 "UART_CLOCK must equal IO_400_FREQ/8 (CRG 0xF8801028 = /8 tier)", UART_MUST_EQ_IO400_DIV8);
+/*     P2F_CLOCK_0 与 UART_CLOCK 同源(PS-PL 侧的 IO_400/8), 二者必须同倍率。 */
+AL_CLKCHK_ASSERT((P2F_CLOCK_0) == ((IO_400_FREQ) / 8),
+                 "P2F_CLOCK_0 must equal IO_400_FREQ/8 (same IO_400 divider)", P2F0_MUST_EQ_IO400_DIV8);
+/*     MMC0/MMC1 的 IO 时钟同属 IO_400 域, 档位一旦写错它们会一起错。 */
+AL_CLKCHK_ASSERT((MMC0_IO_FREQ) == ((IO_400_FREQ) / 8),
+                 "MMC0_IO_FREQ must equal IO_400_FREQ/8 (same IO_400 divider)", MMC0_MUST_EQ_IO400_DIV8);
+AL_CLKCHK_ASSERT((MMC1_IO_FREQ) == ((IO_400_FREQ) / 8),
+                 "MMC1_IO_FREQ must equal IO_400_FREQ/8 (same IO_400 divider)", MMC1_MUST_EQ_IO400_DIV8);
+
+/* --- 2) IO_1000 与 IO_400 同出 IOPLL, 比值必须精确为 5 : 2 --- */
+/*     注意二者不能整除 (999,900,000 / 399,960,000 = 2.5), 因此写成交叉相乘,
+ *     避免整数除法截断把偏差掩盖掉; 同时 999,900,000 * 2 = 1,999,800,000
+ *     仍在 32 位 int 范围内, 不会溢出 (另加 long 强制转换更保险)。 */
+AL_CLKCHK_ASSERT((((long)(IO_1000_FREQ)) * 2L) == (((long)(IO_400_FREQ)) * 5L),
+                 "IO_1000_FREQ : IO_400_FREQ must be exactly 5 : 2 (one IOPLL)", IO1000_IO400_MUST_BE_5_TO_2);
+
+/* --- 3) GPIO 域 = IO_400 / 32, 但与宏值并非严格相等, 必须用容差断言 --- */
+/*     399,960,000 / 32 = 12,498,750, 而 GPIO_CLOCK = 12,500,000,
+ *     相对偏差 0.01% (工具生成时做了取整)。若写成精确相等会误报, 故放宽到 0.1%,
+ *     容差仍足以拦住"档位选错"这种 4 倍量级的错误。 */
+AL_CLKCHK_ASSERT_NEAR_0P1(GPIO_CLOCK, ((IO_400_FREQ) / 32), GPIO_MUST_BE_NEAR_IO400_DIV32);
+
+/* --- 4) 可选挂钩: 让"寄存器档位码"本身也能被编译期检查 --- */
+/*     本文件看不到 soc_plat.c 里 0xF8801028 的写入值, 因此预留一个纯编译期挂钩:
+ *     在包含本文件之前(例如 soc_plat.c 的 #include "soc_plat.h" 之前)加上
+ *         #define AL_IO400_DIV8_PARA  0x01010101
+ *     断言即自动校验低 2 位是否为 01b (/8 档)。未定义该宏时本段完全不参与
+ *     编译, 对现有代码零影响。 */
+#if defined(AL_IO400_DIV8_PARA)
+AL_CLKCHK_ASSERT((((AL_IO400_DIV8_PARA) & 0x3UL) == 0x1UL),
+                 "0xF8801028 low 2 bits must be 01b (= IO_400/8), not another tier", IO400_DIV8_PARA_MUST_SELECT_DIV8);
+#endif
+
+#endif /* AL_SKIP_CLK_ASSERT */
+
+
+/* ==========================================================================
+ * BSP 平台头注入自检 -- 「HAVE_*_DRIVER 整块缺失」编译期告警 (2026-10-30 事故)
+ * --------------------------------------------------------------------------
+ * 事故形态:
+ *   FD 的「Regenerate BSP Sources」会把 hpf 里的 soc_plat.h 原样拷进
+ *   platform/inc/, 然后在 `{{device}}` 锚点之后注入一组 #define HAVE_*_DRIVER。
+ *   这一次它报了 done, 却只做了拷贝、没做注入(完全静默), 于是宏全丢:
+ *     al_hal.h 里 19 个 #ifdef HAVE_* 全部不成立
+ *       -> AL_MPU_HalStruct / AL_UART_HalStruct 等类型未定义
+ *       -> 编译器在 al_mpu.c / al_log.c 里报出 72 条错误
+ *       -> 每一条都指向 SDK 内部文件, 没有一条指向真正的源头
+ *   实测排查耗时 40 分钟才定位到"少了一组宏"。
+ *
+ * 为什么这组检查写在这里, 而不是 soc_plat.h:
+ *   见本文件顶部 —— soc_plat.h 是 HPFTool 生成物, 每次导出都被整体覆盖,
+ *   写进去的检查会静默消失。本文件是手写件, 且被 al_hal.h 紧跟在
+ *   soc_plat.h 之后引入 => 天然的守门位置, 无需改动生成链路。
+ *
+ * 为什么用 #error 而不是静态断言:
+ *   静态断言只能比较常量; 这里要判定的是"宏有没有被定义",
+ *   纯预处理即可结论, #error 能顺带给出可操作的修复指引。
+ *
+ * 判据来源 (只按"已使能的外设"要求, 不会误报):
+ *   只要求 *PS_ENABLE 已使能的外设必须存在对应的 HAVE_*_DRIVER。
+ *   外设增删不会触发误报; 若 TD 将来改了使能宏的名字, 本检查静默不生效,
+ *   也不会产生假警报 —— 宁可漏报也不误报。
+ *
+ * 逃逸口: -DAL_SKIP_BSP_ASSERT
+ *   (跳过等于主动放弃这道防线, 必须在提交说明里写明原因与恢复计划)
+ * 一键修复: python tools/check_soc_plat.py --fix
+ * 案例记录: 03-排障记录\BSP导入问题\BSP平台头注入缺失-编译72错-20261030.md
+ * ========================================================================== */
+
+#ifndef AL_SKIP_BSP_ASSERT
+
+#if (defined(MPUPS_ENABLE)  && !defined(HAVE_MPUPS_DRIVER))  \
+ || (defined(DMAPS_ENABLE)  && !defined(HAVE_DMAPS_DRIVER))  \
+ || (defined(ADCPS_ENABLE)  && !defined(HAVE_ADCPS_DRIVER))  \
+ || (defined(GPIOPS_ENABLE) && !defined(HAVE_GPIOPS_DRIVER)) \
+ || ((defined(GBE0PS_ENABLE) || defined(GBE1PS_ENABLE)) && !defined(HAVE_GBEPS_DRIVER)) \
+ || (defined(QSPIPS_ENABLE)  && !defined(HAVE_QSPIPS_DRIVER)) \
+ || ((defined(MMC0PS_ENABLE) || defined(MMC1PS_ENABLE)) && !defined(HAVE_MMCPS_DRIVER)) \
+ || ((defined(UART0PS_ENABLE) || defined(UART1PS_ENABLE)) && !defined(HAVE_UARTPS_DRIVER)) \
+ || ((defined(USB0PS_ENABLE) || defined(USB1PS_ENABLE)) && !defined(HAVE_USBPS_DRIVER)) \
+ || ((defined(I2C0PS_ENABLE) || defined(I2C1PS_ENABLE)) && !defined(HAVE_IICPS_DRIVER)) \
+ || ((defined(SPI0PS_ENABLE) || defined(SPI1PS_ENABLE)) && !defined(HAVE_SPIPS_DRIVER)) \
+ || ((defined(TC0PS_ENABLE) || defined(TC1PS_ENABLE)) && !defined(HAVE_TCPS_DRIVER)) \
+ || (defined(WDTPS_ENABLE)  && !defined(HAVE_WDTPS_DRIVER)) \
+ || (defined(SMCPS_ENABLE)  && !defined(HAVE_SMCPS_DRIVER)) \
+ || ((defined(CAN0PS_ENABLE) || defined(CAN1PS_ENABLE)) && !defined(HAVE_CANPS_DRIVER))
+#error "BSP header incomplete: soc_plat.h has no HAVE_*_DRIVER for the enabled PS peripherals (FD 'Regenerate BSP Sources' copied the header but skipped the injection). Fix: cd to the project root and run  python tools/check_soc_plat.py --fix  then rebuild. Do NOT hand-delete this check; escape hatch: -DAL_SKIP_BSP_ASSERT"
+#endif
+
+#endif /* AL_SKIP_BSP_ASSERT */
+
+#endif /* __AL_CLK_CHECK_H */

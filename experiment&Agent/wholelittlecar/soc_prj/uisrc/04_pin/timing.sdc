@@ -1,0 +1,2 @@
+create_clock -name p2f_clk0 -period 10 -waveform {0 5} [get_nets {I_system/w_port__ARM_Processor_System_0__p2f_clk0}]
+set_false_path -from [get_regs {I_system/w_port__ARM_Processor_System_0__p2f_rst0_n}] -to [get_clocks {p2f_clk0}]

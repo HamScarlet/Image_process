@@ -1,0 +1,12 @@
+
+
+set_pin_assignment	{ GPIO }	{ LOCATION = V8;   IOSTANDARD = LVCMOS33;}
+set_pin_assignment	{ GPIO_1_gpio_io_o[0] }	{ LOCATION = U9;   IOSTANDARD = LVCMOS33;}
+set_pin_assignment	{ GPIO_1_gpio_io_o[1] }	{ LOCATION = U8;   IOSTANDARD = LVCMOS33;}
+set_pin_assignment	{ GPIO_1_gpio_io_o[2] }	{ LOCATION = V11;  IOSTANDARD = LVCMOS33;}
+set_pin_assignment	{ GPIO_1_gpio_io_o[3] }	{ LOCATION = V10;  IOSTANDARD = LVCMOS33;}
+set_pin_assignment	{ stby }	{ LOCATION = Y7;   IOSTANDARD = LVCMOS33;}
+set_pin_assignment	{ pwm_out[0] }	{ LOCATION = V6;   IOSTANDARD = LVCMOS33;}
+set_pin_assignment	{ pwm_out[1] }	{ LOCATION = U7;   IOSTANDARD = LVCMOS33;}
+set_pin_assignment	{ pwm_out[2] }	{ LOCATION = Y9;   IOSTANDARD = LVCMOS33;}
+set_pin_assignment	{ motor_enable }	{ LOCATION = M20;  IOSTANDARD = LVCMOS33;}

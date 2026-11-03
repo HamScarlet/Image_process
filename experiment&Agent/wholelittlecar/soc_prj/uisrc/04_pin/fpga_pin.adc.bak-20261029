@@ -1,0 +1,4 @@
+
+
+set_pin_assignment	{ GPIO     		}	{ LOCATION = K14;  IOSTANDARD = LVCMOS33;}
+set_pin_assignment	{ GPIO_1     	}	{ LOCATION = J14;  IOSTANDARD = LVCMOS33;}

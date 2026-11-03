@@ -1,0 +1,28 @@
+#[INFO] mpack V2025.11 (APP main), Windows 64bit (Release), Build 179168 2025/11/05, 10:11:24 Nov  6 2025 on WIN10-204
+#[INFO] Run at Fri Oct 30 20:05:48 2026
+
+# D:\exe\Anlu\TD\bin\mpack.exe -app_path D:/exe/Anlu/TD/bin/td.exe -proj_path D:/FPGAproject/AnLuRun/PSPWM/soc_prj -model_id com.anlogic.50466791
+
+gui_select_window IP_Packager
+#gui_click_toolbar_item NULL::AL_Action::AL_Action #[error] -- log id
+#gui_click_menu_item NULL::AL_Action::AL_Action #[error] -- log id
+#gui_select_dialog NULL::AL_Dialog::AL_Dialog #[error] -- log id
+gui_close_popup_menu
+#gui_click_push_button NULL::AL_PushButton::AL_PushButton #[error] -- log id
+#gui_select_dialog NULL::AL_Dialog::AL_Dialog #[error] -- log id
+gui_select_window IP_Packager
+#gui_set_line_edit_text NULL::AL_LineEdit::AL_LineEdit #[error] -- log id AXI_test
+#gui_click_tree_item NULL::AL_TreeWidget::AL_TreeWidget #[error] -- log id RTL.AXI_test_v 0
+#gui_double_click_tree_item NULL::AL_TreeWidget::AL_TreeWidget #[error] -- log id RTL.AXI_test_v 0
+#gui_click_tree_item NULL::AL_TreeWidget::AL_TreeWidget #[error] -- log id RTL.AXI_test_v 0
+#gui_tree_item_popup_menu NULL::AL_TreeWidget::AL_TreeWidget #[error] -- log id
+gui_close_popup_menu
+gui_resize_window_central IP_Packager 1689 1015
+#gui_click_tree_item NULL::AL_TreeWidget::AL_TreeWidget #[error] -- log id RTL.AXI_test_v 0
+#gui_tree_item_popup_menu NULL::AL_TreeWidget::AL_TreeWidget #[error] -- log id
+gui_close_popup_menu
+#gui_click_push_button NULL::AL_PushButton::AL_PushButton #[error] -- log id
+gui_resize_window IP_Packager 2880 1659
+gui_select_window IP_Packager
+gui_resize_window IP_Packager 1689 1088
+gui_select_window IP_Packager

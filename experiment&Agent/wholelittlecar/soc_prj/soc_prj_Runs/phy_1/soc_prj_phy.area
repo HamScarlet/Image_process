@@ -1,0 +1,219 @@
+standard
+***Report Model: system_top Device: DR1M90GEG400***
+
+Design Statistics
+#IO                        14   out of    126   11.11%
+  #input                    2
+  #output                  11
+  #inout                    1
+#lut6                    3278   out of  52480    6.25%
+#reg                     5221
+  #slice reg             5221   out of 104960    4.97%
+  #pad reg                  0
+
+Utilization Statistics
+#slice                   4812   out of  52480    9.17%
+  #used ram                 0
+    #dram lut               0
+    #shifter lut            0
+  #used logic            4812
+    #with luts           2655
+    #with adder           623
+    #reg only            1534
+#feedthrough             5915
+#f7mux                    312   out of  26240    1.19%
+#f8mux                    156   out of  13120    1.19%
+#eram                       0   out of    280    0.00%
+  #eram20k                  0
+  #fifo20k                  0
+#dsp                        0   out of    240    0.00%
+#soc                        1   out of      1  100.00%
+#pad                       14   out of    126   11.11%
+#pll                        0   out of      8    0.00%
+#gclk                       1   out of     32    3.12%
+#lclk                       0   out of     20    0.00%
+#sclk                       6   out of     72    8.33%
+#mlclk                      0   out of      8    0.00%
+#ioclk                      0   out of     16    0.00%
+
+
+Detailed IO Report
+
+         Name            Direction    Location    IOStandard    IOType    DriveStrength    PullType    PackReg    DiffResistor  
+         bt_rx             INPUT         T5        LVCMOS33      HRIO          N/A          PULLUP      NONE          NONE      
+      sonar_echo           INPUT         Y8        LVCMOS33      HRIO          N/A          PULLUP      NONE          NONE      
+  GPIO_1_gpio_io_o[3]     OUTPUT        V10        LVCMOS33      HRIO           8            NONE       NONE          NONE      
+  GPIO_1_gpio_io_o[2]     OUTPUT        V11        LVCMOS33      HRIO           8            NONE       NONE          NONE      
+  GPIO_1_gpio_io_o[1]     OUTPUT         U8        LVCMOS33      HRIO           8            NONE       NONE          NONE      
+  GPIO_1_gpio_io_o[0]     OUTPUT         U9        LVCMOS33      HRIO           8            NONE       NONE          NONE      
+         bt_tx            OUTPUT         T9        LVCMOS33      HRIO           8            NONE       NONE          NONE      
+     motor_enable         OUTPUT        M20        LVCMOS33      HRIO           8            NONE       NONE          NONE      
+      motor_stby          OUTPUT         Y7        LVCMOS33      HRIO           8            NONE       NONE          NONE      
+      pwm_out[2]          OUTPUT         Y9        LVCMOS33      HRIO           8            NONE       NONE          NONE      
+      pwm_out[1]          OUTPUT         U7        LVCMOS33      HRIO           8            NONE       NONE          NONE      
+      pwm_out[0]          OUTPUT         V6        LVCMOS33      HRIO           8            NONE       NONE          NONE      
+      sonar_trig          OUTPUT         Y6        LVCMOS33      HRIO           8            NONE       NONE          NONE      
+         GPIO              INOUT         V8        LVCMOS33      HRIO           8           PULLUP      NONE          NONE      
+
+Report Clock Domain Luts:
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Index   |  Name                                                                                                                          |  Frequency   |  LUT As Logic   |  LUT As Shifter   |  LUT As Dram   |  BRAM   |  DSP
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  #1      |  I_system/system_ARM_Processor_System_0_Inst/ARM_Processor_System_644123ab1028_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.GEN_PL_GP0S  |  50MHz       |  185            |  0                |  0             |  0      |  0
+  #2      |  I_system/system_ARM_Processor_System_0_Inst/ARM_Processor_System_644123ab1028_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.p2f_clk0     |  50MHz       |  3431           |  0                |  0             |  0      |  0
+  #3      |  p2f_clk0                                                                                                                      |  100MHz      |  3431           |  0                |  0             |  0      |  0
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Clock Resource Statistics
+Index     ClockNet                                                                     Type            DriverType         Driver                                                                                                                       ClockFanout        GclkLocation
+#1        I_system/system_AXI_GPIO_0_Inst/axi_gpio_top_3819c9412610_Inst/s_axi_aclk    InferredGclk    soc                I_system/system_ARM_Processor_System_0_Inst/ARM_Processor_System_644123ab1028_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.p2f_clk0    3107               x79y59z16
+
+Report Hierarchy Area:
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|Instance                                           |Module                                                                     |logic lut |ripple  |seq     |eram    |dsp     |dram lut |shifter lut |f7mux   |f8mux   |pll     |adc    |soc     |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|top                                                |system_top                                                                 |2655      |623     |5221    |0       |0       |0        |0           |312     |156     |0       |0      |1       |
+|  I_system                                         |system                                                                     |2651      |623     |5221    |0       |0       |0        |0           |312     |156     |0       |0      |1       |
+|    system_ARM_Processor_System_0_Inst             |system_ARM_Processor_System_1                                              |0         |0       |0       |0       |0       |0        |0           |0       |0       |0       |0      |1       |
+|      ARM_Processor_System_644123ab1028_Inst       |ARM_Processor_System_644123ab1028                                          |0         |0       |0       |0       |0       |0        |0           |0       |0       |0       |0      |1       |
+|    system_AXI_GPIO_0_Inst                         |system_AXI_GPIO_0                                                          |70        |0       |90      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|      axi_gpio_top_3819c9412610_Inst               |axi_gpio_top_3819c9412610                                                  |70        |0       |90      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|        U_axi_slave_if                             |axi_slave_if_3819c9412610                                                  |46        |0       |51      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|        U_intr_ctrl                                |intr_ctrl_3819c9412610                                                     |8         |0       |16      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|        U_gpio_ctrl                                |gpio_ctrl_3819c9412610                                                     |9         |0       |13      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|    system_AXI_GPIO_1_Inst                         |system_AXI_GPIO_1                                                          |50        |0       |57      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|      axi_gpio_top_Inst                            |axi_gpio_top_system_AXI_GPIO_1                                             |50        |0       |57      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|        vzzwsk                                     |axi_slave_if_system_AXI_GPIO_1                                             |38        |0       |36      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|        dxzdbm                                     |gpio_ctrl_system_AXI_GPIO_1                                                |8         |0       |14      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|    system_AXI_Matrix_0_Inst                       |system_AXI_Matrix_0                                                        |95        |0       |84      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|      axi_matrix_wrapper_Inst                      |axi_matrix_wrapper_system_AXI_Matrix_0                                     |95        |0       |84      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|        rvazhd                                     |axi_matrix_top_system_AXI_Matrix_0                                         |95        |0       |84      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|          zkbala$lgctmr                            |matrix_sasd_system_AXI_Matrix_0                                            |95        |0       |84      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            claiup                                 |mux_enc_system_AXI_Matrix_0                                                |1         |0       |0       |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            exdvbz$szuvsk                          |decerr_slave_system_AXI_Matrix_0                                           |17        |0       |13      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            gbfsnh                                 |mux_enc_system_AXI_Matrix_0                                                |20        |0       |0       |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            pndhsx                                 |addr_arbiter_sasd_system_AXI_Matrix_0                                      |44        |0       |58      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            taijby                                 |splitter_system_AXI_Matrix_0                                               |3         |0       |3       |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            qtmrhb                                 |splitter_system_AXI_Matrix_0                                               |2         |0       |2       |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|    system_AXI_Protocol_Converter_0_Inst           |system_AXI_Protocol_Converter_0                                            |251       |66      |403     |0       |0       |0        |0           |16      |8       |0       |0      |0       |
+|      axi_protocol_converter_top_5d2fe900d7ba_Inst |axi_protocol_converter_top_5d2fe900d7ba                                    |251       |66      |403     |0       |0       |0        |0           |16      |8       |0       |0      |0       |
+|        conversion_to_lite$axi_axilite             |axi_protocol_converter_lite_5d2fe900d7ba                                   |251       |66      |403     |0       |0       |0        |0           |16      |8       |0       |0      |0       |
+|          RD$ar_channel                            |axi_protocol_converter_lite_ar_5d2fe900d7ba                                |60        |33      |59      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            cmd_translator_0                       |axi_protocol_converter_lite_cmd_translator_5d2fe900d7ba                    |57        |33      |55      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|              incr_cmd                             |axi_protocol_converter_lite_incr_cmd_5d2fe900d7ba                          |20        |21      |17      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|              wrap_cmd                             |axi_protocol_converter_lite_wrap_cmd_5d2fe900d7ba                          |35        |12      |37      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            ar_cmd_fsm_0                           |axi_protocol_converter_lite_rd_cmd_fsm_5d2fe900d7ba                        |3         |0       |4       |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|          RD$r_channel                             |axi_protocol_converter_lite_r_5d2fe900d7ba                                 |55        |0       |140     |0       |0       |0        |0           |16      |8       |0       |0      |0       |
+|            rd_data_fifo_0                         |axi_protocol_converter_lite_simple_fifo_5d2fe900d7ba                       |35        |0       |101     |0       |0       |0        |0           |12      |6       |0       |0      |0       |
+|            transaction_fifo_0                     |axi_protocol_converter_lite_simple_fifo_5d2fe900d7ba                       |18        |0       |37      |0       |0       |0        |0           |4       |2       |0       |0      |0       |
+|          WR$aw_channel                            |axi_protocol_converter_lite_aw_5d2fe900d7ba                                |63        |33      |62      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            cmd_translator_w                       |axi_protocol_converter_lite_cmd_translator_5d2fe900d7ba                    |59        |33      |56      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|              incr_cmd                             |axi_protocol_converter_lite_incr_cmd_5d2fe900d7ba                          |25        |21      |18      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|              wrap_cmd                             |axi_protocol_converter_lite_wrap_cmd_5d2fe900d7ba                          |33        |12      |36      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            cmd_fsm_aw                             |axi_protocol_converter_lite_wr_cmd_fsm_5d2fe900d7ba                        |3         |0       |4       |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|          WR$b_channel                             |axi_protocol_converter_lite_b_5d2fe900d7ba                                 |17        |0       |27      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            bresp_fifo                             |axi_protocol_converter_lite_simple_fifo_5d2fe900d7ba                       |5         |0       |2       |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            bid_fifo                               |axi_protocol_converter_lite_simple_fifo_5d2fe900d7ba                       |3         |0       |14      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|          SI_REG                                   |axi_register_slice_top_5d2fe900d7ba                                        |54        |0       |113     |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            ar_slice                               |axi_register_slice_c_5d2fe900d7ba                                          |22        |0       |51      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            aw_slice                               |axi_register_slice_c_5d2fe900d7ba                                          |22        |0       |50      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            r_slice                                |axi_register_slice_c_5d2fe900d7ba                                          |9         |0       |11      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            b_slice                                |axi_register_slice_c_5d2fe900d7ba                                          |1         |0       |1       |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|    system_AXI_Protocol_Converter_1_Inst           |system_AXI_Protocol_Converter_1                                            |233       |48      |421     |0       |0       |0        |0           |24      |12      |0       |0      |0       |
+|      axi_protocol_converter_top_c94048ca636c_Inst |axi_protocol_converter_top_c94048ca636c                                    |233       |48      |421     |0       |0       |0        |0           |24      |12      |0       |0      |0       |
+|        conversion_to_lite$axi_axilite             |axi_protocol_converter_lite_c94048ca636c                                   |233       |48      |421     |0       |0       |0        |0           |24      |12      |0       |0      |0       |
+|          RD$ar_channel                            |axi_protocol_converter_lite_ar_c94048ca636c                                |51        |24      |48      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            cmd_translator_0                       |axi_protocol_converter_lite_cmd_translator_c94048ca636c                    |48        |24      |44      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|              incr_cmd                             |axi_protocol_converter_lite_incr_cmd_c94048ca636c                          |19        |15      |16      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|              wrap_cmd                             |axi_protocol_converter_lite_wrap_cmd_c94048ca636c                          |27        |9       |27      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            ar_cmd_fsm_0                           |axi_protocol_converter_lite_rd_cmd_fsm_c94048ca636c                        |3         |0       |4       |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|          RD$r_channel                             |axi_protocol_converter_lite_r_c94048ca636c                                 |65        |0       |203     |0       |0       |0        |0           |24      |12      |0       |0      |0       |
+|            rd_data_fifo_0                         |axi_protocol_converter_lite_simple_fifo_c94048ca636c                       |47        |0       |165     |0       |0       |0        |0           |20      |10      |0       |0      |0       |
+|            transaction_fifo_0                     |axi_protocol_converter_lite_simple_fifo_c94048ca636c                       |17        |0       |37      |0       |0       |0        |0           |4       |2       |0       |0      |0       |
+|          SI_REG                                   |axi_register_slice_top_c94048ca636c                                        |40        |0       |87      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            aw_slice                               |axi_register_slice_c_c94048ca636c                                          |15        |0       |36      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            ar_slice                               |axi_register_slice_c_c94048ca636c                                          |13        |0       |36      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            r_slice                                |axi_register_slice_c_c94048ca636c                                          |10        |0       |13      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            b_slice                                |axi_register_slice_c_c94048ca636c                                          |2         |0       |2       |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|          WR$aw_channel                            |axi_protocol_converter_lite_aw_c94048ca636c                                |57        |24      |55      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            cmd_translator_w                       |axi_protocol_converter_lite_cmd_translator_c94048ca636c                    |54        |24      |51      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|              incr_cmd                             |axi_protocol_converter_lite_incr_cmd_c94048ca636c                          |20        |15      |11      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|              wrap_cmd                             |axi_protocol_converter_lite_wrap_cmd_c94048ca636c                          |32        |9       |39      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            cmd_fsm_aw                             |axi_protocol_converter_lite_wr_cmd_fsm_c94048ca636c                        |3         |0       |4       |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|          WR$b_channel                             |axi_protocol_converter_lite_b_c94048ca636c                                 |20        |0       |28      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            bresp_fifo                             |axi_protocol_converter_lite_simple_fifo_c94048ca636c                       |5         |0       |2       |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            bid_fifo                               |axi_protocol_converter_lite_simple_fifo_c94048ca636c                       |6         |0       |15      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|    system_AXI_Protocol_Converter_2_Inst           |system_AXI_Protocol_Converter_2                                            |533       |42      |1395    |0       |0       |0        |0           |136     |68      |0       |0      |0       |
+|      axi_protocol_converter_merge_Inst            |axi_protocol_converter_merge_system_AXI_Protocol_Converter_2               |533       |42      |1395    |0       |0       |0        |0           |136     |68      |0       |0      |0       |
+|        conversion_to_lite$axi_axilite             |axi_protocol_converter_lite_system_AXI_Protocol_Converter_2                |533       |42      |1395    |0       |0       |0        |0           |136     |68      |0       |0      |0       |
+|          RD$ar_channel                            |axi_protocol_converter_lite_ar_system_AXI_Protocol_Converter_2             |49        |21      |44      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            cmd_translator_0                       |axi_protocol_converter_lite_cmd_translator_system_AXI_Protocol_Converter_2 |46        |21      |40      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|              incr_cmd                             |axi_protocol_converter_lite_incr_cmd_system_AXI_Protocol_Converter_2       |18        |13      |13      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|              wrap_cmd                             |axi_protocol_converter_lite_wrap_cmd_system_AXI_Protocol_Converter_2       |26        |8       |26      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            ar_cmd_fsm_0                           |axi_protocol_converter_lite_rd_cmd_fsm_system_AXI_Protocol_Converter_2     |3         |0       |4       |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|          RD$r_channel                             |axi_protocol_converter_lite_r_system_AXI_Protocol_Converter_2              |334       |0       |1122    |0       |0       |0        |0           |136     |68      |0       |0      |0       |
+|            rd_data_fifo_0                         |axi_protocol_converter_lite_simple_fifo_system_AXI_Protocol_Converter_2    |313       |0       |1083    |0       |0       |0        |0           |132     |66      |0       |0      |0       |
+|            transaction_fifo_0                     |axi_protocol_converter_lite_simple_fifo_system_AXI_Protocol_Converter_2    |19        |0       |37      |0       |0       |0        |0           |4       |2       |0       |0      |0       |
+|          SI_REG                                   |axi_register_slice_top_system_AXI_Protocol_Converter_2                     |80        |0       |145     |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            ar_slice                               |axi_register_slice_c_system_AXI_Protocol_Converter_2                       |17        |0       |38      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            r_slice                                |axi_register_slice_c_system_AXI_Protocol_Converter_2                       |47        |0       |70      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            b_slice                                |axi_register_slice_c_system_AXI_Protocol_Converter_2                       |5         |0       |4       |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            aw_slice                               |axi_register_slice_c_system_AXI_Protocol_Converter_2                       |11        |0       |33      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|          WR$aw_channel                            |axi_protocol_converter_lite_aw_system_AXI_Protocol_Converter_2             |54        |21      |49      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            cmd_translator_w                       |axi_protocol_converter_lite_cmd_translator_system_AXI_Protocol_Converter_2 |50        |21      |44      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|              incr_cmd                             |axi_protocol_converter_lite_incr_cmd_system_AXI_Protocol_Converter_2       |20        |13      |14      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|              wrap_cmd                             |axi_protocol_converter_lite_wrap_cmd_system_AXI_Protocol_Converter_2       |29        |8       |29      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            cmd_fsm_aw                             |axi_protocol_converter_lite_wr_cmd_fsm_system_AXI_Protocol_Converter_2     |4         |0       |4       |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|          WR$b_channel                             |axi_protocol_converter_lite_b_system_AXI_Protocol_Converter_2              |16        |0       |35      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            bresp_fifo                             |axi_protocol_converter_lite_simple_fifo_system_AXI_Protocol_Converter_2    |5         |0       |6       |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            bid_fifo                               |axi_protocol_converter_lite_simple_fifo_system_AXI_Protocol_Converter_2    |1         |0       |17      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|    system_AXI_Protocol_Converter_3_Inst           |system_AXI_Protocol_Converter_3                                            |540       |42      |1391    |0       |0       |0        |0           |136     |68      |0       |0      |0       |
+|      axi_protocol_converter_merge_Inst            |axi_protocol_converter_merge_system_AXI_Protocol_Converter_3               |540       |42      |1391    |0       |0       |0        |0           |136     |68      |0       |0      |0       |
+|        conversion_to_lite$axi_axilite             |axi_protocol_converter_lite_system_AXI_Protocol_Converter_3                |540       |42      |1391    |0       |0       |0        |0           |136     |68      |0       |0      |0       |
+|          RD$ar_channel                            |axi_protocol_converter_lite_ar_system_AXI_Protocol_Converter_3             |51        |21      |42      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            cmd_translator_0                       |axi_protocol_converter_lite_cmd_translator_system_AXI_Protocol_Converter_3 |48        |21      |38      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|              incr_cmd                             |axi_protocol_converter_lite_incr_cmd_system_AXI_Protocol_Converter_3       |17        |13      |14      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|              wrap_cmd                             |axi_protocol_converter_lite_wrap_cmd_system_AXI_Protocol_Converter_3       |29        |8       |23      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            ar_cmd_fsm_0                           |axi_protocol_converter_lite_rd_cmd_fsm_system_AXI_Protocol_Converter_3     |3         |0       |4       |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|          RD$r_channel                             |axi_protocol_converter_lite_r_system_AXI_Protocol_Converter_3              |339       |0       |1120    |0       |0       |0        |0           |136     |68      |0       |0      |0       |
+|            rd_data_fifo_0                         |axi_protocol_converter_lite_simple_fifo_system_AXI_Protocol_Converter_3    |322       |0       |1079    |0       |0       |0        |0           |132     |66      |0       |0      |0       |
+|            transaction_fifo_0                     |axi_protocol_converter_lite_simple_fifo_system_AXI_Protocol_Converter_3    |16        |0       |40      |0       |0       |0        |0           |4       |2       |0       |0      |0       |
+|          SI_REG                                   |axi_register_slice_top_system_AXI_Protocol_Converter_3                     |80        |0       |152     |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            aw_slice                               |axi_register_slice_c_system_AXI_Protocol_Converter_3                       |16        |0       |38      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            b_slice                                |axi_register_slice_c_system_AXI_Protocol_Converter_3                       |5         |0       |5       |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            ar_slice                               |axi_register_slice_c_system_AXI_Protocol_Converter_3                       |18        |0       |38      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            r_slice                                |axi_register_slice_c_system_AXI_Protocol_Converter_3                       |41        |0       |71      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|          WR$aw_channel                            |axi_protocol_converter_lite_aw_system_AXI_Protocol_Converter_3             |51        |21      |47      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            cmd_translator_w                       |axi_protocol_converter_lite_cmd_translator_system_AXI_Protocol_Converter_3 |47        |21      |39      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|              incr_cmd                             |axi_protocol_converter_lite_incr_cmd_system_AXI_Protocol_Converter_3       |18        |13      |13      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|              wrap_cmd                             |axi_protocol_converter_lite_wrap_cmd_system_AXI_Protocol_Converter_3       |28        |8       |24      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            cmd_fsm_aw                             |axi_protocol_converter_lite_wr_cmd_fsm_system_AXI_Protocol_Converter_3     |4         |0       |5       |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|          WR$b_channel                             |axi_protocol_converter_lite_b_system_AXI_Protocol_Converter_3              |19        |0       |30      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            bresp_fifo                             |axi_protocol_converter_lite_simple_fifo_system_AXI_Protocol_Converter_3    |8         |0       |6       |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|            bid_fifo                               |axi_protocol_converter_lite_simple_fifo_system_AXI_Protocol_Converter_3    |2         |0       |14      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|    system_AXI_test_0_Inst                         |system_AXI_test_0                                                          |126       |85      |233     |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|      AXI_test_Inst                                |AXI_test_system_AXI_test_0                                                 |126       |85      |233     |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|    system_axi_lite_pwm_0_Inst                     |system_axi_lite_pwm_0                                                      |753       |340     |1147    |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|      axi_lite_pwm_Inst                            |axi_lite_pwm_system_axi_lite_pwm_0                                         |753       |340     |1147    |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|        u_bt                                       |axi_lite_uart_bt_system_axi_lite_pwm_0                                     |82        |63      |82      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|        u_guard                                    |axi_lite_guard_system_axi_lite_pwm_0                                       |10        |32      |33      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|        u_pwm0                                     |axi_lite_pwm_channel_system_axi_lite_pwm_0                                 |102       |64      |138     |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|        u_pwm1                                     |axi_lite_pwm_channel_system_axi_lite_pwm_0                                 |96        |64      |168     |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|        u_pwm2                                     |axi_lite_pwm_channel_system_axi_lite_pwm_0                                 |95        |64      |148     |0       |0       |0        |0           |0       |0       |0       |0      |0       |
+|        u_sonar                                    |axi_lite_sonar_system_axi_lite_pwm_0                                       |33        |21      |45      |0       |0       |0        |0           |0       |0       |0       |0      |0       |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
+DataNet Average Fanout:
+
+   Index     Fanout     Nets  
+    #1          1       5077  
+    #2          2       3432  
+    #3          3       302   
+    #4          4       161   
+    #5        5-10      299   
+    #6        11-50     180   
+    #7       51-100      9    
+    #8       101-500     1    
+  Average     2.12            

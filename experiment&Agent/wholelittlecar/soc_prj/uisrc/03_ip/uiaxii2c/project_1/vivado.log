@@ -1,0 +1,71 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Mon Aug  7 10:42:38 2023
+# Process ID: 108856
+# Current directory: H:/01_bk_code/01_fpga/80_ip/milianke_ip_20230801/19_uiadv7611cfg/milianke_ip_uiadv7611cfg/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent116220 H:\01_bk_code\01_fpga\80_ip\milianke_ip_20230801\19_uiadv7611cfg\milianke_ip_uiadv7611cfg\project_1\project_1.xpr
+# Log file: H:/01_bk_code/01_fpga/80_ip/milianke_ip_20230801/19_uiadv7611cfg/milianke_ip_uiadv7611cfg/project_1/vivado.log
+# Journal file: H:/01_bk_code/01_fpga/80_ip/milianke_ip_20230801/19_uiadv7611cfg/milianke_ip_uiadv7611cfg/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project H:/01_bk_code/01_fpga/80_ip/milianke_ip_20230801/19_uiadv7611cfg/milianke_ip_uiadv7611cfg/project_1/project_1.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'H:/01_bk_code/01_fpga/80_ip/milianke_ip_20230801/19_uiadv7611cfg/milianke_ip_uiadv7611cfg/project_1'
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'H:/01_bk_code/01_fpga/80_ip/milianke_ip_20230801/19_uiadv7611cfg/milianke_ip_uiadv7611cfg/project_1/project_1.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'h:/01_bk_code/01_fpga/80_ip/milianke_ip_20230801/19_uiadv7611cfg/milianke_ip_uiadv7611cfg'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'h:/01_bk_code/01_fpga/80_ip/milianke_ip_20230801/19_uiadv7611cfg/milianke_ip_uiadv7611cfg' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'h:/01_bk_code/01_fpga/80_ip/milianke_ip_20230801/19_uiadv7611cfg/milianke_ip_uiadv7611cfg/project_1'.)
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
+update_compile_order -fileset sources_1
+ipx::open_ipxact_file {H:\01_bk_code\01_fpga\80_ip\milianke_ip_20230801\19_uiadv7611cfg\milianke_ip_uiadv7611cfg\component.xml}
+WARNING: [IP_Flow 19-5226] Project source file 'h:/01_bk_code/01_fpga/80_ip/milianke_ip_20230801/19_uiadv7611cfg/milianke_ip_uiadv7611cfg/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'h:/01_bk_code/01_fpga/80_ip/milianke_ip_20230801/19_uiadv7611cfg/milianke_ip_uiadv7611cfg/ui7611reg.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'h:/01_bk_code/01_fpga/80_ip/milianke_ip_20230801/19_uiadv7611cfg/milianke_ip_uiadv7611cfg/uii2c.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'h:/01_bk_code/01_fpga/80_ip/milianke_ip_20230801/19_uiadv7611cfg/milianke_ip_uiadv7611cfg/uicfg7611.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'h:/01_bk_code/01_fpga/80_ip/milianke_ip_20230801/19_uiadv7611cfg/milianke_ip_uiadv7611cfg/ui7611reg.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'h:/01_bk_code/01_fpga/80_ip/milianke_ip_20230801/19_uiadv7611cfg/milianke_ip_uiadv7611cfg/uii2c.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+WARNING: [IP_Flow 19-3898] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'h:/01_bk_code/01_fpga/80_ip/milianke_ip_20230801/19_uiadv7611cfg/milianke_ip_uiadv7611cfg/uicfg7611.v' is not found in the project sources. It will be removed from the packaged IP when the sources are merged. If still required, please add this file to the project and re-package.
+ipx::merge_project_changes ports [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'h:/01_bk_code/01_fpga/80_ip/milianke_ip_20230801/19_uiadv7611cfg/milianke_ip_uiadv7611cfg/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-4300] HDL parameter 'CLK_DIV' has its value changed from '499' to '0x01F3'.
+launch_runs synth_1 -jobs 16
+[Mon Aug  7 10:45:14 2023] Launched synth_1...
+Run output will be captured here: H:/01_bk_code/01_fpga/80_ip/milianke_ip_20230801/19_uiadv7611cfg/milianke_ip_uiadv7611cfg/project_1/project_1.runs/synth_1/runme.log
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'h:/01_bk_code/01_fpga/80_ip/milianke_ip_20230801/19_uiadv7611cfg/milianke_ip_uiadv7611cfg/component.xml' ignored by IP packager.
+set_property widget {textEdit} [ipgui::get_guiparamspec -name "CLK_DIV" -component [ipx::current_core] ]
+set_property value 499 [ipx::get_user_parameters CLK_DIV -of_objects [ipx::current_core]]
+set_property value 499 [ipx::get_hdl_parameters CLK_DIV -of_objects [ipx::current_core]]
+set_property widget {hexEdit} [ipgui::get_guiparamspec -name "CLK_DIV" -component [ipx::current_core] ]
+set_property value 0x01 [ipx::get_user_parameters CLK_DIV -of_objects [ipx::current_core]]
+set_property value 0x01 [ipx::get_hdl_parameters CLK_DIV -of_objects [ipx::current_core]]
+set_property value_bit_string_length 8 [ipx::get_user_parameters CLK_DIV -of_objects [ipx::current_core]]
+set_property value_bit_string_length 8 [ipx::get_hdl_parameters CLK_DIV -of_objects [ipx::current_core]]
+set_property value_format bitString [ipx::get_user_parameters CLK_DIV -of_objects [ipx::current_core]]
+set_property value_format bitString [ipx::get_hdl_parameters CLK_DIV -of_objects [ipx::current_core]]
+set_property widget {textEdit} [ipgui::get_guiparamspec -name "CLK_DIV" -component [ipx::current_core] ]
+set_property value 499 [ipx::get_user_parameters CLK_DIV -of_objects [ipx::current_core]]
+set_property value 499 [ipx::get_hdl_parameters CLK_DIV -of_objects [ipx::current_core]]
+set_property value_format long [ipx::get_user_parameters CLK_DIV -of_objects [ipx::current_core]]
+set_property value_format long [ipx::get_hdl_parameters CLK_DIV -of_objects [ipx::current_core]]
+set_property value_bit_string_length 0 [ipx::get_user_parameters CLK_DIV -of_objects [ipx::current_core]]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 3 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+WARNING: [IP_Flow 19-3157] Bus Interface 'I_rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'I_rst_n' is not *resetn - please double check the POLARITY setting.
+WARNING: [IP_Flow 19-5661] Bus Interface 'I_clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path h:/01_bk_code/01_fpga/80_ip/milianke_ip_20230801/19_uiadv7611cfg/milianke_ip_uiadv7611cfg
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'h:/01_bk_code/01_fpga/80_ip/milianke_ip_20230801/19_uiadv7611cfg/milianke_ip_uiadv7611cfg'
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Aug  7 10:48:38 2023...

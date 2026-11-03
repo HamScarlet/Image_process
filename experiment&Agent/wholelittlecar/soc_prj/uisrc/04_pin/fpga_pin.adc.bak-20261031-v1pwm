@@ -1,0 +1,8 @@
+
+
+set_pin_assignment	{ GPIO     		}	{ LOCATION = K14;  IOSTANDARD = LVCMOS33;}
+set_pin_assignment	{ GPIO_1     	}	{ LOCATION = J14;  IOSTANDARD = LVCMOS33;}
+set_pin_assignment	{ pwm_out[0] 	}	{ LOCATION = T19;  IOSTANDARD = LVCMOS33;}
+set_pin_assignment	{ pwm_out[1] 	}	{ LOCATION = R19;  IOSTANDARD = LVCMOS33;}
+set_pin_assignment	{ pwm_out[2] 	}	{ LOCATION = J15;  IOSTANDARD = LVCMOS33;}
+set_pin_assignment	{ motor_enable 	}	{ LOCATION = M20;  IOSTANDARD = LVCMOS33;}

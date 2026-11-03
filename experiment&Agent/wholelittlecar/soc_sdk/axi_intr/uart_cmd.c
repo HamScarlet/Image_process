@@ -1,0 +1,586 @@
+/*
+ * uart_cmd.c - V7 串口命令链的实现
+ *
+ * ============================================================================
+ * 【为什么不用 refer 那份 USART.c】
+ *   refer 的 Car_control/USART.c 是个半成品骨架，四处硬伤，直接搬会踩雷：
+ *
+ *   ① `uint8_t index;` 声明后**没初始化**就用 `while(index < BUF_SIZE)`
+ *      —— 未定义行为，可能一次都不进循环，也可能直接跑飞。
+ *   ② 循环体里 `Rx_data[index++]` 之后又在 else 分支里读 `Rx_data[index]`
+ *      —— 读的是下一个字节，且 index 到 32 时**越界读 Rx_data[32]**。
+ *   ③ `Cmd_Receive()` 把数据解析完就返回，**没有清 RxDataReady**；
+ *      下一轮 `UART_ReceiveData()` 看到 RxDataReady 非 0 直接 return 不再挂接收
+ *      —— 串口只工作一帧就哑了。
+ *   ④ `UART_SendData()` 里 `uint8_t tx_data[100]` 是**栈上临时缓冲**，
+ *      却交给异步发送（注释自己都写了 "caller must keep data valid"）
+ *      —— 函数返回后缓冲区失效，发出去的是垃圾。
+ *
+ *   本文件用"计数式状态机 + 寄存器轮询"重写：没有动态缓冲、没有递归、
+ *   没有"读完不清标志"，每一条路径都能用合成字节流在 V7_ParserSelfTest 里验证。
+ *
+ * ============================================================================
+ * 【为什么用寄存器轮询，而不是中断】
+ *   1) 判据要求响应 < 20 ms，而 115200 下一帧 10 字节只要 0.87 ms ——
+ *      轮询的余量是 20 倍以上，中断并不带来可感知的收益。
+ *   2) 中断版要处理回调上下文（refer 那份就是在这里埋了坑），
+ *      还要和以后 PL 侧的中断抢资源；V7 之后还有 V8 的主循环要跑，
+ *      轮询让"主循环时序"保持完全可预测。
+ *   3) 本工程此前所有外设都是轮询（PWM/GPIO 全是），多一种机制就多一类故障。
+ *
+ *   UART1 是 DW_apb_uart（16550 兼容），寄存器与 uart_probe.c 用的是同一套：
+ *     0x00 RBR（读）/ THR（写）   0x04 IER   0x08 FCR（写）/ IIR（读）
+ *     0x0C LCR                    0x14 LSR
+ *   LSR.bit0 = DR（收到数据）；读 RBR 会把这个字节从 FIFO 里弹走。
+ * ============================================================================
+ */
+
+#include <stdio.h>
+
+#include "al_core.h"
+#include "al_systimer.h"
+#include "ui_io.h"
+#include "ui_type.h"
+#include "TIM_PWM.h"
+#include "TIM_GPIO.h"
+#include "uart_cmd.h"
+
+/* ---------------- UART1 寄存器 ---------------- */
+#define UART1_BASE          0xF8401000U
+#define UART1_RBR           (UART1_BASE + 0x00U)
+#define UART1_IER           (UART1_BASE + 0x04U)
+#define UART1_FCR           (UART1_BASE + 0x08U)
+#define UART1_LSR           (UART1_BASE + 0x14U)
+
+#define LSR_DR              0x01U   /* bit0：接收数据就绪 */
+#define LSR_RFE             0x80U   /* bit7：FIFO 里还有错帧 */
+
+#define FCR_ENABLE          0x01U   /* 使能 FIFO                */
+#define FCR_CLR_RX          0x02U   /* 清空接收 FIFO            */
+#define FCR_CLR_TX          0x04U   /* 清空发送 FIFO            */
+
+/* 一次最多从 FIFO 里捞这么多字节。FIFO 只有 16 字节，64 是安全上限，
+ * 作用是防止"线路一直被灌"时死在这个 while 里出不来。 */
+#define V7_RX_DRAIN_MAX     64U
+
+/* ---------------- 解析器状态 ---------------- */
+#define P_HEAD              0U
+#define P_CMD               1U
+#define P_ARG               2U
+#define P_TAIL              3U
+
+V7_Stats g_v7;
+
+static u32 s_state;
+static u32 s_head_cnt;
+static u32 s_tail_cnt;
+static u8  s_rx_cmd;
+static u8  s_rx_arg;
+
+static u32 s_has_pend;
+static u8  s_pend_cmd;
+static u8  s_pend_arg;
+
+static u32 s_cur_dir;
+static u32 s_cur_c0;
+static u32 s_cur_c1;
+
+static u8  s_last_p_cmd;
+static u16 s_last_p_arg;
+static u32 s_printed;
+
+static u32 s_ms_per_tick;
+static u32 s_last_byte_ms;
+static u32 s_last_good_ms;
+static u32 s_last_hb_ms;
+
+/* ===========================================================================
+ *  小工具
+ * ========================================================================= */
+
+static u32 V7_NowMs(void)
+{
+    AL_U64 tick = AlSys_GetTimerTickCount();
+
+    if (s_ms_per_tick == 0U) {
+        return 0U;
+    }
+    return (u32)(tick / (AL_U64)s_ms_per_tick);
+}
+
+static void V7_ResetParser(void)
+{
+    s_state     = P_HEAD;
+    s_head_cnt  = 0U;
+    s_tail_cnt  = 0U;
+}
+
+static const char *V7_CmdName(u8 cmd)
+{
+    switch (cmd) {
+    case V7_CMD_STOP:   return "STOP  ";
+    case V7_CMD_FWD:    return "FWD   ";
+    case V7_CMD_BACK:   return "BACK  ";
+    case V7_CMD_SPIN_L: return "SPIN_L";
+    case V7_CMD_SPIN_R: return "SPIN_R";
+    case V7_CMD_ARC_L:  return "ARC_L ";
+    case V7_CMD_ARC_R:  return "ARC_R ";
+    case V7_CMD_SPD_UP: return "SPD_UP";
+    case V7_CMD_SPD_DN: return "SPD_DN";
+    case V7_CMD_SPD_RST:return "SPD_RST";
+    case V7_CMD_GRD_CLR:return "GRD_CLR";
+    case V7_CMD_PING:   return "PING  ";
+    default:            return "??????";
+    }
+}
+
+/* ===========================================================================
+ *  解析：一个字节一个字节地喂，收齐一帧返回 1
+ *
+ *  为什么用"计数式"而不是"查找式"：
+ *    查找式（见到 4 个 0x55 就开始扫 0x56）在载荷含 0x56 时会提前收帧；
+ *    计数式在 P_CMD / P_ARG 状态里**无条件**吃掉 2 个字节，载荷是什么都不影响。
+ *    V7_ParserSelfTest 的第 4 例专门验这件事。
+ * ========================================================================= */
+u32 V7_FeedByte(u8 b, u8 *cmd, u8 *arg)
+{
+    g_v7.bytes++;
+
+    switch (s_state) {
+    case P_HEAD:
+        if (b == V7_HEAD) {
+            s_head_cnt++;
+            if (s_head_cnt >= V7_HEAD_LEN) {
+                s_head_cnt = 0U;
+                s_state = P_CMD;
+            }
+        } else {
+            /* 本该是帧头却不是 —— 记一次噪声，并**把已数到的帧头清零**。
+             *
+             * ★ 这一行是 2026-11-01 用等价状态机在 PC 上跑 12 组用例 +
+             *   9000 组模糊测试找出来的。不清零的话，只要线上出现一个
+             *   孤立的 0x55（如 `55 AA` 之后再接正常帧），计数就会从 1
+             *   开始累加，4 个真帧头里只吃 3 个就提前进入 P_CMD，
+             *   于是把第 4 个 0x55 当成命令字节 —— **整帧静默丢失，
+             *   而且此后每帧都错位**，现象是"发命令偶尔没反应"。 */
+            s_head_cnt = 0U;
+            g_v7.noise++;
+        }
+        break;
+
+    case P_CMD:
+        /* 命令字节不可能是 0x55（合法 cmd 只有 00–06 与 7F）。
+         *
+         * 在这里撞上 0x55，说明帧头"多吃了"——典型来源两种：
+         *   ① 上一帧被截断，残留的 2~3 个 0x55 与本帧的 4 个连成一串；
+         *   ② 线上噪声恰好凑了几个 0x55。
+         * 此时**原地吞掉这个 0x55 继续等真正的 cmd**，而不是把它当命令。
+         * 效果：一串任意长（≥4）的 0x55 都能对齐到它的最后一组，
+         * 因为"等到不是 0x55 的那个字节"天然就是这串的末尾。
+         * 代价为零：0x55 本来就不是合法命令，吞掉不丢任何有效信息。 */
+        if (b == V7_HEAD) {
+            s_head_cnt = 0U;
+        } else {
+            s_rx_cmd = b;
+            s_state = P_ARG;
+        }
+        break;
+
+    case P_ARG:
+        s_rx_arg = b;
+        s_tail_cnt = 0U;
+        s_state = P_TAIL;
+        break;
+
+    case P_TAIL:
+        if (b == V7_TAIL) {
+            s_tail_cnt++;
+            if (s_tail_cnt >= V7_TAIL_LEN) {
+                s_tail_cnt = 0U;
+                s_state = P_HEAD;
+                *cmd = s_rx_cmd;
+                *arg = s_rx_arg;
+                g_v7.good++;
+                return 1U;
+            }
+        } else {
+            /* 帧尾对不上 —— 整帧作废。
+             * 但当前这个字节可能是下一帧的第一个帧头，不能直接丢：
+             * 这正是"错帧之后能立刻自愈"的关键一行。 */
+            g_v7.bad_tail++;
+            s_tail_cnt = 0U;
+            s_state = P_HEAD;
+            if (b == V7_HEAD) {
+                s_head_cnt = 1U;
+            } else {
+                s_head_cnt = 0U;
+                g_v7.noise++;
+            }
+        }
+        break;
+
+    default:
+        V7_ResetParser();
+        break;
+    }
+
+    return 0U;
+}
+
+/* ===========================================================================
+ *  收字节：把 RX FIFO 里的东西一次捞干净
+ * ========================================================================= */
+static void V7_PollRx(void)
+{
+    u32 guard = V7_RX_DRAIN_MAX;
+    u8  c;
+
+    while (guard != 0U) {
+        guard--;
+
+        if ((UI_In32((void *)UART1_LSR) & LSR_DR) == 0U) {
+            break;
+        }
+
+        c = (u8)(UI_In32((void *)UART1_RBR) & 0xFFU);
+        s_last_byte_ms = V7_NowMs();
+
+        if (V7_FeedByte(c, &s_rx_cmd, &s_rx_arg) != 0U) {
+            /* 命令合并：本轮收到几帧都只留最后一帧，
+             * 于是"连发两条只执行最后一条"是天然结果，不需要额外去抖。 */
+            s_pend_cmd = s_rx_cmd;
+            s_pend_arg = s_rx_arg;
+            s_has_pend = 1U;
+        }
+    }
+}
+
+/* ===========================================================================
+ *  执行
+ *
+ *  ★ 2026-11-02 V8：本函数从 static 改成对外可见。
+ *    原因：V8 的命令来源从"日志口 USART1 的 10 字节帧"变成"蓝牙的单字节"，
+ *    但**执行部分一个字都不用改** —— 方向编码、60% 限幅、20 ms 换向保护、
+ *    差速算法全在这里，V7 已经上板验过。V8 只是换了个入口调它。
+ *
+ *    刻意保留 s_cur_dir / s_cur_c0 / s_cur_c1 三个文件内静态状态：
+ *    "现在是什么方向"必须只有一份真相。如果 V8 在 main.c 里另存一份，
+ *    两边一旦不同步，换向保护就会漏判（该刹的时候直接反接）。
+ * ========================================================================= */
+static void V7_LogCmd(u8 cmd, u32 pct, u32 c0, u32 c1)
+{
+    /* 同一条命令重复发不刷屏（ARC 类命令可能 20 Hz 连发） */
+    if ((s_printed != 0U) && (s_last_p_cmd == cmd) && (s_last_p_arg == (u16)pct)) {
+        return;
+    }
+    s_printed    = 1U;
+    s_last_p_cmd = cmd;
+    s_last_p_arg = (u16)pct;
+
+    printf("[V7] %s cmd=0x%02X ARG=%u%% -> L=%u R=%u dir=0x%X t=%u ms\r\n",
+           V7_CmdName(cmd), (unsigned)cmd, (unsigned)pct,
+           (unsigned)c0, (unsigned)c1, (unsigned)s_cur_dir,
+           (unsigned)V7_NowMs());
+}
+
+void V7_Apply(u8 cmd, u8 arg)
+{
+    u32 dir;
+    u32 c0 = 0U;
+    u32 c1 = 0U;
+    u32 pct;
+    u32 ccr;
+
+    /* PING 只回话，绝不碰电机 */
+    if (cmd == V7_CMD_PING) {
+        printf("@ACK ping t=%u ms\r\n", (unsigned)V7_NowMs());
+        return;
+    }
+
+    pct = (u32)arg;
+    if (pct > 100U) {
+        pct = 100U;
+    }
+    if (pct > V7_MAX_DUTY_PCT) {
+        printf("    ARG %u%% over limit -> clamped to %u%%\r\n",
+               (unsigned)pct, (unsigned)V7_MAX_DUTY_PCT);
+        pct = V7_MAX_DUTY_PCT;
+    }
+    /* ARR = 9999 ⇒ 一个周期 10000 拍 ⇒ 1% 恰好 100 拍，换算不用除法 */
+    ccr = pct * 100U;
+
+    switch (cmd) {
+    case V7_CMD_FWD:
+        dir = DIR_BOTH(1, 1); c0 = ccr;      c1 = ccr;      break;
+    case V7_CMD_BACK:
+        dir = DIR_BOTH(0, 0); c0 = ccr;      c1 = ccr;      break;
+    case V7_CMD_SPIN_L:
+        dir = DIR_BOTH(0, 1); c0 = ccr;      c1 = ccr;      break;
+    case V7_CMD_SPIN_R:
+        dir = DIR_BOTH(1, 0); c0 = ccr;      c1 = ccr;      break;
+    case V7_CMD_ARC_L:
+        /* 车头向左 = 右轮是外侧 = 右轮快（V5 实测） */
+        dir = DIR_BOTH(1, 1); c0 = ccr / 2U; c1 = ccr;      break;
+    case V7_CMD_ARC_R:
+        dir = DIR_BOTH(1, 1); c0 = ccr;      c1 = ccr / 2U; break;
+    case V7_CMD_STOP:
+        dir = MOTOR_DIR_BRAKE; c0 = 0U; c1 = 0U;            break;
+    default:
+        /* 未知命令 = 不动。宁可没反应，也不能因为一个坏字节让车动起来。 */
+        printf("    unknown cmd 0x%02X -> ignored\r\n", (unsigned)cmd);
+        return;
+    }
+
+    /* 方向反转保护：从"正在转"切到"要往反方向转"时，先断电 + 刹停。
+     * 带载直接反接的反向电流最大，是最容易烧驱动管的动作（V4 起就守这条）。
+     * 若来源或目标本来就是刹停/滑行，就不用多这 20 ms。 */
+    if ((dir != s_cur_dir) &&
+        (s_cur_dir != MOTOR_DIR_COAST) &&
+        (s_cur_dir != MOTOR_DIR_BRAKE) &&
+        ((c0 | c1) != 0U)) {
+        PWM_SetBoth(0U, 0U);
+        Gpio1_WriteData(MOTOR_DIR_BRAKE);
+        AlSys_MDelay((AL_U64)V7_REVERSE_BRAKE_MS);
+    }
+
+    Gpio1_WriteData(dir);
+    PWM_SetBoth(c0, c1);
+
+    s_cur_dir = dir;
+    s_cur_c0  = c0;
+    s_cur_c1  = c1;
+
+    V7_LogCmd(cmd, pct, c0, c1);
+
+    /* 差速弯的内侧轮如果低于死区，落地后会变成"原地转"，提醒一句 */
+    if (((cmd == V7_CMD_ARC_L) || (cmd == V7_CMD_ARC_R)) && (pct < 50U)) {
+        printf("    note: inner duty %u%% may be below the dead zone (V5: 30%% was the floor)\r\n",
+               (unsigned)(pct / 2U));
+    }
+}
+
+/* ===========================================================================
+ *  对外接口
+ * ========================================================================= */
+void V7_Init(void)
+{
+    u32 st;
+    u32 ier;
+
+    s_ms_per_tick = (u32)(AlSys_GetTimerFreq() / 1000ULL);
+    if (s_ms_per_tick == 0U) {
+        s_ms_per_tick = 1U;
+    }
+
+    /* ① 打开 RX FIFO
+     *    不开的话，16550 只能缓存 1 个字节：115200 下 87 µs 就会溢出，
+     *    而一条 printf 大约要 1 ms —— 日志会把命令字节冲掉。
+     *    开 FIFO 后 16 字节缓冲给了约 1.4 ms 的余量，够一条短 printf 用。 */
+    UI_Out32((void *)UART1_FCR, FCR_ENABLE | FCR_CLR_RX | FCR_CLR_TX);
+
+    ier = UI_In32((void *)UART1_IER) & 0xFFU;
+    printf("\r\n[V7] UART1 base=0x%08X IER=0x%02X (%s)\r\n",
+           (unsigned)UART1_BASE, (unsigned)ier,
+           (ier == 0U) ? "polling, as expected" : "WARNING: some IRQ enabled");
+
+    /* ② 解析器自测：纯软件、先于任何硬件动作。不通过就别信后面的现象。 */
+    st = V7_ParserSelfTest();
+    printf("[V7] parser self-test = %u (%s)\r\n", (unsigned)st, (st == 0U) ? "OK" : "FAIL");
+    if (st != 0U) {
+        printf("[V7] case %u failed -- frame parser is broken, fix it before testing the car\r\n",
+               (unsigned)st);
+    }
+
+    /* ③ 电机置安全态：方向滑行、占空比 0、STBY 拉高 */
+    Motor_Init();
+    PWM_SetBoth(0U, 0U);
+    PWM_SetMotor(0U, 1U);
+    s_cur_dir = MOTOR_DIR_COAST;
+    s_cur_c0  = 0U;
+    s_cur_c1  = 0U;
+
+    /* ④ 时间基准 */
+    s_last_good_ms = V7_NowMs();
+    s_last_byte_ms = s_last_good_ms;
+    s_last_hb_ms   = s_last_good_ms;
+
+    printf("[V7] STBY=1 (LED4 on), duty=0, dir=COAST -> wheels must stay still\r\n");
+    printf("[V7] frame: 55 55 55 55 | CMD | ARG | 56 56 56 56  (10 bytes)\r\n");
+    printf("[V7] e.g.   55 55 55 55 |  01 |  32 | 56 56 56 56  -> FWD 50%%\r\n");
+    printf("[V7] watchdog: %u ms without a valid frame -> auto STOP\r\n",
+           (unsigned)V7_WDG_MS);
+}
+
+void V7_Task(void)
+{
+    u32 now;
+
+    V7_PollRx();
+    now = V7_NowMs();
+
+    /* 半帧超时：帧收到一半停住了，丢掉重来。
+     * 没有这条，一个被截断的帧会让状态机永久卡在 P_CMD/P_ARG/P_TAIL。 */
+    if ((s_state != P_HEAD) && ((u32)(now - s_last_byte_ms) > V7_FRAME_GAP_MS)) {
+        V7_ResetParser();
+        g_v7.gaps++;
+    }
+
+    /* 执行：每 tick 至多一次，用本轮收到的最后一帧 */
+    if (s_has_pend != 0U) {
+        s_has_pend = 0U;
+        s_last_good_ms = now;
+        V7_Apply(s_pend_cmd, s_pend_arg);
+    }
+
+    /* 看门狗：车还在动但命令断了 -> 停 */
+    if (((s_cur_c0 | s_cur_c1) != 0U) &&
+        ((u32)(now - s_last_good_ms) > V7_WDG_MS)) {
+        g_v7.wdg++;
+        printf("!! [V7] watchdog: no valid frame for %u ms -> STOP\r\n",
+               (unsigned)V7_WDG_MS);
+        V7_Apply(V7_CMD_STOP, 0U);
+        s_last_good_ms = now;
+    }
+
+    /* 心跳：证明主循环还在跑，也给出计数器快照。
+     * 发帧后如果 bytes 一直不涨 -> 线路/波特率问题，不是解析问题；
+     * bytes 涨但 noise 也涨 -> 帧头对不上（多半是波特率或字节序错）。 */
+    if ((u32)(now - s_last_hb_ms) >= V7_HEARTBEAT_MS) {
+        s_last_hb_ms = now;
+        printf("[V7] alive %u ms | L=%u R=%u dir=0x%X | bytes=%u good=%u noise=%u bad_tail=%u gaps=%u wdg=%u\r\n",
+               (unsigned)now, (unsigned)s_cur_c0, (unsigned)s_cur_c1,
+               (unsigned)s_cur_dir,
+               (unsigned)g_v7.bytes, (unsigned)g_v7.good,
+               (unsigned)g_v7.noise, (unsigned)g_v7.bad_tail,
+               (unsigned)g_v7.gaps, (unsigned)g_v7.wdg);
+    }
+}
+
+void V7_PrintStats(void)
+{
+    printf("[V7] bytes=%u good=%u noise=%u bad_tail=%u gaps=%u wdg=%u\r\n",
+           (unsigned)g_v7.bytes, (unsigned)g_v7.good,
+           (unsigned)g_v7.noise, (unsigned)g_v7.bad_tail,
+           (unsigned)g_v7.gaps, (unsigned)g_v7.wdg);
+}
+
+/* ===========================================================================
+ *  解析器自测（不碰硬件）
+ *
+ *  八个用例覆盖：正常帧 / 帧头少一个 / 帧尾少一个 / 载荷含 0x56 /
+ *  两帧连发 / 前面有垃圾后再来正常帧 / 垃圾里夹孤立 0x55 / 残留帧头连成 7 个 0x55。
+ *  第 7、8 例是 2026-11-01 在 PC 上用等价状态机跑出来的两个真 bug 的回归用例。
+ *  返回 0 = 全过；n = 第 n 例不符。
+ * ========================================================================= */
+static u32 V7_FeedBuf(const u8 *buf, u32 len, u8 *cmd, u8 *arg)
+{
+    u32 i;
+    u32 frames = 0U;
+
+    for (i = 0U; i < len; i++) {
+        if (V7_FeedByte(buf[i], cmd, arg) != 0U) {
+            frames++;
+        }
+    }
+    return frames;
+}
+
+u32 V7_ParserSelfTest(void)
+{
+    static const u8 c1[] = { 0x55, 0x55, 0x55, 0x55, 0x01, 0x32, 0x56, 0x56, 0x56, 0x56 };
+    static const u8 c2[] = { 0x55, 0x55, 0x55,       0x01, 0x32, 0x56, 0x56, 0x56, 0x56 };
+    static const u8 c3[] = { 0x55, 0x55, 0x55, 0x55, 0x01, 0x32, 0x56, 0x56, 0x56       };
+    static const u8 c4[] = { 0x55, 0x55, 0x55, 0x55, 0x05, 0x56, 0x56, 0x56, 0x56, 0x56 };
+    static const u8 c5[] = { 0x55, 0x55, 0x55, 0x55, 0x01, 0x32, 0x56, 0x56, 0x56, 0x56,
+                             0x55, 0x55, 0x55, 0x55, 0x00, 0x00, 0x56, 0x56, 0x56, 0x56 };
+    static const u8 c6[] = { 0xAA, 0x13,
+                             0x55, 0x55, 0x55, 0x55, 0x01, 0x32, 0x56, 0x56, 0x56, 0x56 };
+    /* 7) 垃圾里带一个孤立 0x55（不相邻帧头）：不清零 head_cnt 会整帧丢失 */
+    static const u8 c7[] = { 0x55, 0xAA,
+                             0x55, 0x55, 0x55, 0x55, 0x01, 0x32, 0x56, 0x56, 0x56, 0x56 };
+    /* 8) 上一帧被截断，残留 3 个 0x55 与本帧帧头连成一串 7 个 0x55 */
+    static const u8 c8[] = { 0x55, 0x55, 0x55,
+                             0x55, 0x55, 0x55, 0x55, 0x01, 0x32, 0x56, 0x56, 0x56, 0x56 };
+
+    V7_Stats save = g_v7;
+    u32 bad = 0U;
+    u32 frames;
+    u8  cmd = 0U;
+    u8  arg = 0U;
+
+    /* 1) 正常帧：应收到 1 帧，cmd/arg 正确 */
+    V7_ResetParser();
+    frames = V7_FeedBuf(c1, (u32)sizeof(c1), &cmd, &arg);
+    if ((frames != 1U) || (cmd != V7_CMD_FWD) || (arg != 0x32U)) {
+        bad = 1U;
+    }
+
+    /* 2) 帧头只有 3 个：不应成帧 */
+    if (bad == 0U) {
+        V7_ResetParser();
+        frames = V7_FeedBuf(c2, (u32)sizeof(c2), &cmd, &arg);
+        if (frames != 0U) {
+            bad = 2U;
+        }
+    }
+
+    /* 3) 帧尾只有 3 个：不应成帧 */
+    if (bad == 0U) {
+        V7_ResetParser();
+        frames = V7_FeedBuf(c3, (u32)sizeof(c3), &cmd, &arg);
+        if (frames != 0U) {
+            bad = 3U;
+        }
+    }
+
+    /* 4) 载荷里正好有 0x56：计数式解析不应被它带偏 */
+    if (bad == 0U) {
+        V7_ResetParser();
+        frames = V7_FeedBuf(c4, (u32)sizeof(c4), &cmd, &arg);
+        if ((frames != 1U) || (cmd != V7_CMD_ARC_L) || (arg != 0x56U)) {
+            bad = 4U;
+        }
+    }
+
+    /* 5) 两帧连发：应收到 2 帧，且最后一帧是 STOP */
+    if (bad == 0U) {
+        V7_ResetParser();
+        frames = V7_FeedBuf(c5, (u32)sizeof(c5), &cmd, &arg);
+        if ((frames != 2U) || (cmd != V7_CMD_STOP)) {
+            bad = 5U;
+        }
+    }
+
+    /* 6) 前面有垃圾（不含 0x55），再发正常帧：应能重新对齐并收到 1 帧 */
+    if (bad == 0U) {
+        V7_ResetParser();
+        frames = V7_FeedBuf(c6, (u32)sizeof(c6), &cmd, &arg);
+        if ((frames != 1U) || (cmd != V7_CMD_FWD) || (arg != 0x32U)) {
+            bad = 6U;
+        }
+    }
+
+    /* 7) 垃圾里夹一个孤立 0x55，再发正常帧：仍应收到 1 帧
+     *    —— 验 P_HEAD 里"非 0x55 必须清零 head_cnt"那一行 */
+    if (bad == 0U) {
+        V7_ResetParser();
+        frames = V7_FeedBuf(c7, (u32)sizeof(c7), &cmd, &arg);
+        if ((frames != 1U) || (cmd != V7_CMD_FWD) || (arg != 0x32U)) {
+            bad = 7U;
+        }
+    }
+
+    /* 8) 残留 3 个 0x55 与帧头连成 7 个：仍应收到 1 帧
+     *    —— 验 P_CMD 里"撞上 0x55 就原地吞掉"那条路 */
+    if (bad == 0U) {
+        V7_ResetParser();
+        frames = V7_FeedBuf(c8, (u32)sizeof(c8), &cmd, &arg);
+        if ((frames != 1U) || (cmd != V7_CMD_FWD) || (arg != 0x32U)) {
+            bad = 8U;
+        }
+    }
+
+    g_v7 = save;
+    V7_ResetParser();
+    return bad;
+}

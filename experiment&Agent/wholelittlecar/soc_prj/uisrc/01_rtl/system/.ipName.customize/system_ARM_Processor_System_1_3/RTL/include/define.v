@@ -1,0 +1,4 @@
+`define F2P_IRQ_Available_644123ab1028
+`define P2F_Reset0_Available_644123ab1028
+`define Master_AXI_GP0_Interface_644123ab1028
+`define SD0_cd_Dot_Enable_644123ab1028
